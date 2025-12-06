@@ -170,10 +170,6 @@ export default function Home({ lang }) {
         </section>
 
         <footer className="pt-16 mt-16 border-t border-slate-200 text-center pb-8">
-          <div className="flex justify-center items-center gap-2 text-slate-600 mb-6">
-            <School size={16} />
-            <span className="font-medium">{t(SITE_DATA.profile.university)}</span>
-          </div>
           <p className="text-slate-400 text-sm">
             © {new Date().getFullYear()} {t(SITE_DATA.profile.name)}.<br/>
             Designed with <span className="text-indigo-400">React</span> & <span className="text-indigo-400">Tailwind</span>.
