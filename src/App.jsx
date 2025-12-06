@@ -11,7 +11,7 @@ export default function App() {
   const [lang, setLang] = useState('zh');
 
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="min-h-screen bg-slate-50">
         <Navbar lang={lang} setLang={setLang} />
         <Routes>
