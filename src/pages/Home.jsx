@@ -45,7 +45,7 @@ export default function Home({ lang }) {
             <div className="relative order-1 md:order-2 shrink-0 flex flex-col items-center">
               <div className="w-64 h-64 md:w-72 md:h-72 relative z-10 mb-6">
                 <img 
-                  src={SITE_DATA.profile.avatar} 
+                  src={import.meta.env.BASE_URL + 'avatar.png'} 
                   alt="Profile" 
                   className="w-full h-full rounded-2xl object-cover shadow-2xl border-4 border-white rotate-3 hover:rotate-0 transition-transform duration-500"
                 />
