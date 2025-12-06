@@ -7,7 +7,7 @@ export const SITE_DATA = {
     university: { zh: "北京大学人口研究所", en: "Peking University Institute of Population Research" },
     email: "lijiajia95@hotmail.com",
     location: { zh: "北京市海淀区颐和园路5号，北京大学", en: "Peking University, 5 Yiheyuan Road, Haidian, Beijing" },
-    avatar: "/src/components/fig.png",
+    avatar: "/avatar.png",
     github: "https://github.com/jason-jj-li",
     linkedin: "https://linkedin.com",
     scholar: "https://scholar.google.com/citations?user=W4ZFySoAAAAJ&hl=zh-CN&authuser=1",
