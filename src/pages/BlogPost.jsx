@@ -85,7 +85,12 @@ export default function BlogPost({ lang }) {
             {post.title}
           </h1>
 
-          {post.htmlUrl ? (
+          {post.htmlContent ? (
+            <div
+              className="space-y-4 leading-relaxed text-slate-700"
+              dangerouslySetInnerHTML={{ __html: post.htmlContent }}
+            />
+          ) : post.htmlUrl ? (
             <div className="border border-slate-200 rounded-xl overflow-hidden">
               <iframe
                 src={post.htmlUrl}

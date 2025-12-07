@@ -16,6 +16,12 @@ const htmlAssets = import.meta.glob('/content/blog/**/*.html', {
   eager: true,
 });
 
+const htmlRawAssets = import.meta.glob('/content/blog/**/*.html', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+});
+
 function escapeHtml(value) {
   return value
     .replace(/&/g, '&amp;')
@@ -111,11 +117,19 @@ function resolveHtmlUrl(mdPath, htmlName) {
   return htmlAssets[key] || null;
 }
 
+function resolveHtmlContent(mdPath, htmlName) {
+  if (!htmlName) return null;
+  const dir = mdPath.slice(0, mdPath.lastIndexOf('/'));
+  const key = `${dir}/${htmlName}`;
+  return htmlRawAssets[key] || null;
+}
+
 function normalizePost(path, raw) {
   const { data, body } = parseFrontmatter(raw);
   const slug = data.slug || path.split('/').pop().replace(/\.md$/, '');
   const notebookUrl = resolveNotebookUrl(path, data.notebook);
   const htmlUrl = resolveHtmlUrl(path, data.html || data.html_file);
+  const htmlContent = resolveHtmlContent(path, data.html || data.html_file);
   const plainText = markdownToPlainText(body);
   const shortSummary = plainText.length > 220 ? `${plainText.slice(0, 220)}...` : plainText;
 
@@ -126,6 +140,7 @@ function normalizePost(path, raw) {
     source: data.source || 'markdown',
     notebookUrl,
     htmlUrl,
+    htmlContent,
     title: { zh: data.title_zh || data.title, en: data.title_en || data.title },
     summary: {
       zh: data.summary_zh || shortSummary,
