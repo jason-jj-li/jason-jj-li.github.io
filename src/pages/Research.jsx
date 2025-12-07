@@ -26,7 +26,7 @@ export default function Research({ lang }) {
           <a
             key={key}
             href={links[key]}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 text-xs font-semibold border border-slate-200 hover:bg-indigo-50 hover:text-indigo-700 transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[rgba(255,255,255,0.06)] text-slate-100 text-xs font-semibold border border-[rgba(148,163,184,0.35)] hover:border-cyan-300 hover:text-cyan-100 transition-colors"
           >
             <ExternalLink size={12} />
             <span>{linkLabels[key] || key}</span>
@@ -51,7 +51,7 @@ export default function Research({ lang }) {
           <a
             key={key}
             href={links[key]}
-            className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold border border-slate-200 bg-white hover:border-indigo-200 hover:text-indigo-700 transition-colors"
+            className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold border border-[rgba(148,163,184,0.35)] bg-[rgba(255,255,255,0.06)] text-slate-100 hover:border-cyan-300 hover:text-cyan-100 transition-colors"
           >
             <ExternalLink size={12} />
             <span>{labelMap[key] || key}</span>
@@ -74,17 +74,17 @@ export default function Research({ lang }) {
   const displayedPublications = sortedPublications.filter((pub) => pub.year === selectedPubYear);
 
   return (
-    <div className="min-h-screen bg-slate-50 pt-24 pb-16">
+    <div className="min-h-screen pt-24 pb-16">
       <div className="max-w-5xl mx-auto px-6 space-y-8">
         <SectionHeader
           icon={<Brain size={20} />}
           title={lang === 'zh' ? '研究方向：生命历程健康不平等' : 'Research Interests: Life-Course Health Inequalities'}
         />
 
-        <div className="card rounded-2xl p-6 md:p-10 bg-white/80 border border-slate-200 relative overflow-hidden">
+        <div className="card rounded-2xl p-6 md:p-10 relative overflow-hidden">
           {/* 动态连接线 */}
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute left-1/2 top-16 -translate-x-1/2 w-px h-[calc(50%-4rem)] bg-gradient-to-b from-indigo-300 via-indigo-200 to-transparent animate-pulse"></div>
+            <div className="absolute left-1/2 top-16 -translate-x-1/2 w-px h-[calc(50%-4rem)] bg-gradient-to-b from-cyan-300 via-indigo-200 to-transparent animate-pulse"></div>
             <svg className="absolute left-1/2 top-[50%] -translate-x-1/2 -translate-y-1/2 w-[80%] h-[60%]" style={{opacity: 0.3}}>
               <line x1="50%" y1="0" x2="16%" y2="100%" stroke="url(#gradient1)" strokeWidth="2" strokeDasharray="5,5" className="animate-dash" />
               <line x1="50%" y1="0" x2="50%" y2="100%" stroke="url(#gradient2)" strokeWidth="2" strokeDasharray="5,5" className="animate-dash" style={{animationDelay: '0.2s'}} />
@@ -112,10 +112,10 @@ export default function Research({ lang }) {
               <GitBranch size={26} />
             </div>
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-50 mb-2">
                 {lang === 'zh' ? '生命历程健康不平等' : 'Life-Course Health Inequalities'}
               </h3>
-              <p className="text-slate-600 text-sm md:text-base max-w-2xl leading-relaxed">
+              <p className="text-slate-300 text-sm md:text-base max-w-2xl leading-relaxed">
                 {lang === 'zh'
                   ? '以童年逆境为切入，跨国比较制度与文化如何放大或缓冲风险，再衔接环境与社会风险的叠加效应，构建机制—情境—应用的研究闭环。从以下三个方面开展研究：'
                   : 'Using childhood adversity as the entry point, this research compares how institutions and cultures amplify or buffer risks across countries, then examines the interactive effects of environmental and social risks to construct a mechanism—context—application loop. Three research foci:'}
@@ -131,30 +131,30 @@ export default function Research({ lang }) {
                 desc: lang === 'zh'
                   ? '分析ACEs如何在生命历程中导致多种健康结局的风险，并识别可介入节点。'
                   : 'Examine how ACEs generate risks for multiple health outcomes across the life course and identify critical intervention points.',
-                gradient: 'from-indigo-50 to-purple-50',
-                borderColor: 'border-indigo-200',
-                iconColor: 'text-indigo-600',
-                dotColor: 'bg-indigo-500'
+                gradient: 'from-[rgba(124,58,237,0.12)] to-[rgba(56,189,248,0.12)]',
+                borderColor: 'border-[rgba(148,163,184,0.35)]',
+                iconColor: 'text-cyan-200',
+                dotColor: 'bg-cyan-300'
               },
               {
                 title: lang === 'zh' ? '跨国比较与制度调节' : 'Cross-national Comparisons & Institutional Contexts',
                 desc: lang === 'zh'
                   ? '基于跨国数据，比较同一早期风险在不同制度与文化情境下如何转化为不同程度的健康不平等。'
                   : 'Leverage cross-national data to compare how the same early-life risks translate into varying degrees of health inequality across diverse institutional and cultural contexts.',
-                gradient: 'from-purple-50 to-pink-50',
-                borderColor: 'border-purple-200',
-                iconColor: 'text-purple-600',
-                dotColor: 'bg-purple-500'
+                gradient: 'from-[rgba(59,130,246,0.12)] to-[rgba(168,85,247,0.12)]',
+                borderColor: 'border-[rgba(148,163,184,0.35)]',
+                iconColor: 'text-indigo-200',
+                dotColor: 'bg-indigo-300'
               },
               {
                 title: lang === 'zh' ? '环境与社会风险叠加' : 'Environmental & Social Risk Interactions',
                 desc: lang === 'zh'
                   ? '在资源约束与全球南方情境中，评估环境与社会因素的交互作用，如何在生命历程中形成健康不平等。'
                   : 'In resource-constrained and Global South settings, evaluate how interactions between environmental and social factors compound to generate health inequalities across the life course.',
-                gradient: 'from-pink-50 to-rose-50',
-                borderColor: 'border-pink-200',
-                iconColor: 'text-pink-600',
-                dotColor: 'bg-pink-500'
+                gradient: 'from-[rgba(79,70,229,0.12)] to-[rgba(236,72,153,0.12)]',
+                borderColor: 'border-[rgba(148,163,184,0.35)]',
+                iconColor: 'text-purple-200',
+                dotColor: 'bg-purple-300'
               },
             ].map((node, idx) => (
               <div 
@@ -164,9 +164,9 @@ export default function Research({ lang }) {
                 <div>
                   <div className="flex items-start gap-3 mb-3">
                     <div className={`mt-1.5 w-2.5 h-2.5 rounded-full ${node.dotColor} flex-shrink-0`}></div>
-                    <h4 className="font-bold text-slate-900 text-base leading-tight">{node.title}</h4>
+                    <h4 className="font-bold text-slate-50 text-base leading-tight">{node.title}</h4>
                   </div>
-                  <p className="text-sm text-slate-700 leading-relaxed">{node.desc}</p>
+                  <p className="text-sm text-slate-200 leading-relaxed">{node.desc}</p>
               </div>
             </div>
           ))}
@@ -174,32 +174,33 @@ export default function Research({ lang }) {
 
         {/* 研究逻辑流程 */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-3 mt-8 px-2">
-          <div className="flex-1 px-5 py-3 rounded-xl bg-gradient-to-br from-indigo-50 to-indigo-100 border border-indigo-200 shadow-sm">
-            <p className="text-sm font-semibold text-slate-800 text-center">
+          <div className="flex-1 px-5 py-3 rounded-xl bg-gradient-to-br from-[rgba(59,130,246,0.15)] to-[rgba(56,189,248,0.12)] border border-[rgba(148,163,184,0.35)] shadow-sm">
+            <p className="text-sm font-semibold text-slate-100 text-center">
               {lang === 'zh' ? '追踪早期暴露的生命历程效应' : 'Track life-course effects of early exposures'}
             </p>
           </div>
-          <ArrowRight size={20} className="text-indigo-400 hidden md:block" />
-          <div className="flex-1 px-5 py-3 rounded-xl bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 shadow-sm">
-            <p className="text-sm font-semibold text-slate-800 text-center">
+          <ArrowRight size={20} className="text-cyan-300 hidden md:block" />
+          <div className="flex-1 px-5 py-3 rounded-xl bg-gradient-to-br from-[rgba(147,51,234,0.15)] to-[rgba(59,130,246,0.12)] border border-[rgba(148,163,184,0.35)] shadow-sm">
+            <p className="text-sm font-semibold text-slate-100 text-center">
               {lang === 'zh' ? '比较情境下的调节机制' : 'Compare contextual moderation'}
             </p>
           </div>
-          <ArrowRight size={20} className="text-purple-400 hidden md:block" />
-          <div className="flex-1 px-5 py-3 rounded-xl bg-gradient-to-br from-pink-50 to-pink-100 border border-pink-200 shadow-sm">
-            <p className="text-sm font-semibold text-slate-800 text-center">
+          <ArrowRight size={20} className="text-purple-300 hidden md:block" />
+          <div className="flex-1 px-5 py-3 rounded-xl bg-gradient-to-br from-[rgba(236,72,153,0.16)] to-[rgba(124,58,237,0.12)] border border-[rgba(148,163,184,0.35)] shadow-sm">
+            <p className="text-sm font-semibold text-slate-100 text-center">
               {lang === 'zh' ? '评估风险叠加与干预优先级' : 'Assess risk interactions & intervention priorities'}
             </p>
           </div>
         </div>
         </div>
-        <div className="h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent my-4"></div>
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-[rgba(148,163,184,0.35)] to-transparent my-4"></div>
 
         <SectionHeader
           icon={<FileText size={20} />}
           title={lang === 'zh' ? '发表论文' : 'Publications'}
           subtitle={lang === 'zh' ? '按年份浏览论文与链接。' : 'Browse papers by year with links.'}
         />
+        <div id="pubs"></div>
 
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
           <div className="flex items-center gap-2 flex-wrap">
@@ -213,8 +214,8 @@ export default function Research({ lang }) {
                   onClick={() => setSelectedPubYear(year)}
                   className={`px-3 py-1 rounded-full text-xs font-semibold border transition-all ${
                     selectedPubYear === year
-                      ? 'bg-indigo-600 text-white border-indigo-600'
-                      : 'border-slate-200 text-slate-500 hover:border-indigo-200'
+                      ? 'bg-gradient-to-r from-indigo-600 to-cyan-500 text-white border-indigo-500'
+                      : 'border-[rgba(148,163,184,0.35)] text-slate-200 hover:border-cyan-300'
                   }`}
                 >
                   {year}
@@ -223,7 +224,7 @@ export default function Research({ lang }) {
               {publicationYears.length > 5 && (
                 <button
                   onClick={() => setShowOlderPubYears((v) => !v)}
-                  className="px-3 py-1 rounded-full text-xs font-semibold border border-slate-200 text-slate-500 hover:border-indigo-200 transition-all"
+                  className="px-3 py-1 rounded-full text-xs font-semibold border border-[rgba(148,163,184,0.35)] text-slate-200 hover:border-cyan-300 transition-all"
                 >
                   {showOlderPubYears ? (lang === 'zh' ? '收起' : 'Less') : (lang === 'zh' ? '更多年份' : 'More years')}
                 </button>
@@ -234,7 +235,7 @@ export default function Research({ lang }) {
             {SITE_DATA.profile?.scholar && (
               <a
                 href={SITE_DATA.profile.scholar}
-                className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border border-slate-200 text-slate-600 hover:border-indigo-200 hover:text-indigo-700 transition-colors bg-white"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border border-[rgba(148,163,184,0.35)] text-slate-100 hover:border-cyan-300 hover:text-cyan-100 transition-colors bg-[rgba(255,255,255,0.04)]"
               >
                 Scholar <ExternalLink size={12} />
               </a>
@@ -242,7 +243,7 @@ export default function Research({ lang }) {
             {SITE_DATA.profile?.orcid && (
               <a
                 href={SITE_DATA.profile.orcid}
-                className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border border-indigo-200 text-indigo-700 bg-indigo-50 hover:bg-indigo-100 transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border border-[rgba(148,163,184,0.35)] text-slate-100 bg-[rgba(255,255,255,0.04)] hover:border-cyan-300 hover:text-cyan-100 transition-colors"
               >
                 ORCID <ExternalLink size={12} />
               </a>
@@ -256,23 +257,23 @@ export default function Research({ lang }) {
             return (
               <div
                 key={idx}
-                className={`card card-hover rounded-2xl p-5 md:p-6 border-l-4 ${isFirstAuthor ? 'border-l-purple-400 bg-gradient-to-r from-white via-purple-50/40 to-white' : 'border-l-slate-200'}`}
+                className={`card card-hover rounded-2xl p-5 md:p-6 border-l-4 ${isFirstAuthor ? 'border-l-purple-400 bg-gradient-to-r from-[rgba(124,58,237,0.16)] via-[rgba(56,189,248,0.08)] to-[rgba(15,23,42,0.8)]' : 'border-l-[rgba(148,163,184,0.35)]'}`}
               >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-2">
-                  <h4 className="text-lg font-bold text-slate-900 leading-snug flex items-center gap-2">
-                    {isFirstAuthor && <Award size={16} className="text-purple-600" />}
+                  <h4 className="text-lg font-bold text-slate-50 leading-snug flex items-center gap-2">
+                    {isFirstAuthor && <Award size={16} className="text-purple-300" />}
                     {pub.title}
                   </h4>
                   <span className="tag-ghost">{pub.year}</span>
                 </div>
-                <p className="text-slate-600 text-sm mb-2 leading-relaxed">{pub.authors}</p>
+                <p className="text-slate-300 text-sm mb-2 leading-relaxed">{pub.authors}</p>
                 <div className="flex flex-wrap items-center gap-2 mb-3">
                   <span className="tag-ghost flex items-center gap-1">
-                    <Code size={12} className="text-indigo-500" />
+                    <Code size={12} className="text-cyan-200" />
                     {pub.venue}
                   </span>
                   {isFirstAuthor && (
-                    <span className="tag-ghost bg-purple-50 text-purple-700 border-purple-200">
+                    <span className="tag-ghost bg-[rgba(124,58,237,0.25)] text-purple-100 border-[rgba(148,163,184,0.35)]">
                       {lang === 'zh' ? '一作' : 'First author'}
                     </span>
                   )}
@@ -291,12 +292,12 @@ export default function Research({ lang }) {
 
 const SectionHeader = ({ icon, title, subtitle }) => (
   <div className="flex items-start gap-3">
-    <div className="p-2 bg-white rounded-lg shadow-sm border border-slate-100 text-indigo-500">
+    <div className="p-2 bg-[rgba(255,255,255,0.06)] rounded-lg shadow-sm border border-[rgba(148,163,184,0.35)] text-cyan-200">
       {icon}
     </div>
     <div>
-      <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 tracking-tight">{title}</h2>
-      {subtitle && <p className="text-slate-500 mt-1">{subtitle}</p>}
+      <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-50 tracking-tight">{title}</h2>
+      {subtitle && <p className="text-slate-300 mt-1">{subtitle}</p>}
     </div>
   </div>
 );

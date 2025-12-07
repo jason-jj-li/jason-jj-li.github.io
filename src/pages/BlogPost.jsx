@@ -17,16 +17,23 @@ export default function BlogPost({ lang }) {
   const { slug } = useParams();
   const post = getPostBySlug(slug, lang);
   const htmlScopedStyles = `
-    .post-html {
-      overflow-x: auto;
-    }
+    .post-html { overflow-x: auto; color: #0f172a; }
     .post-html pre {
       overflow-x: auto;
       white-space: pre;
+      background: #f8fafc;
+      color: #0f172a;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 12px;
     }
     .post-html code {
       white-space: pre-wrap;
       word-break: break-word;
+      background: #f8fafc;
+      color: #0f172a;
+      border-radius: 6px;
+      padding: 2px 5px;
     }
     .post-html table {
       width: 100%;
@@ -34,21 +41,22 @@ export default function BlogPost({ lang }) {
       overflow-x: auto;
       border-collapse: collapse;
     }
+    .post-html th, .post-html td {
+      padding: 8px;
+      border: 1px solid #e2e8f0;
+    }
     .post-html img, .post-html iframe {
       max-width: 100%;
       height: auto;
     }
-    .post-html * {
-      box-sizing: border-box;
-      max-width: 100%;
-    }
+    .post-html * { box-sizing: border-box; max-width: 100%; }
   `;
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-slate-50 pt-24 pb-16">
+      <div className="min-h-screen pt-24 pb-16">
         <div className="max-w-3xl mx-auto px-6">
-          <div className="bg-white border border-slate-200 rounded-xl p-8 shadow-sm">
+          <div className="rounded-xl p-8 shadow-sm border border-slate-200 bg-white text-slate-900">
             <p className="text-slate-700 mb-4">
               {lang === 'zh' ? '未找到文章。' : 'Post not found.'}
             </p>
@@ -68,8 +76,8 @@ export default function BlogPost({ lang }) {
     : lang === 'zh' ? 'Markdown 文章' : 'Markdown Post';
 
   return (
-    <div className="min-h-screen bg-slate-50 pt-24 pb-20">
-      <div className="max-w-5xl mx-auto px-4 md:px-8">
+    <div className="min-h-screen pt-24 pb-20">
+      <div className="max-w-5xl mx-auto px-4 md:px-8 article-shell rounded-3xl">
         <div className="flex items-center gap-3 mb-6">
           <Link
             to="/blog"
@@ -80,7 +88,7 @@ export default function BlogPost({ lang }) {
           </Link>
         </div>
 
-        <article className="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 md:p-8">
+        <article className="rounded-2xl shadow-sm p-6 md:p-8 border border-slate-200 bg-white text-slate-900">
           <div className="flex flex-wrap items-center gap-3 text-sm text-slate-500 mb-4">
             {dateLabel && (
               <span className="inline-flex items-center gap-1">
@@ -113,7 +121,7 @@ export default function BlogPost({ lang }) {
           </h1>
 
           {post.htmlContent ? (
-            <div className="post-html space-y-4 leading-relaxed text-slate-700" style={{ overflowX: 'auto' }}>
+            <div className="post-html space-y-4 leading-relaxed text-slate-800" style={{ overflowX: 'auto' }}>
               <style>
                 {htmlScopedStyles}
                 {(post.htmlStyles || []).join('\n')}
@@ -131,7 +139,7 @@ export default function BlogPost({ lang }) {
             </div>
           ) : (
             <div
-              className="space-y-4 leading-relaxed text-slate-700"
+              className="space-y-4 leading-relaxed text-slate-800"
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
           )}

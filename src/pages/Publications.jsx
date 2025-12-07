@@ -87,6 +87,11 @@ export default function Publications({ lang }) {
 
                   <div className="flex items-center gap-3">
                     <div className="flex gap-2">
+                      {pub.links.paper && (
+                        <a href={pub.links.paper} className="flex items-center gap-1.5 px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-semibold rounded transition-colors border border-slate-200">
+                          <ExternalLink size={12} /> <span>{lang === 'zh' ? 'DOI/原文' : 'DOI/Link'}</span>
+                        </a>
+                      )}
                       {pub.links.pdf && (
                         <a href={pub.links.pdf} className="flex items-center gap-1.5 px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-semibold rounded transition-colors border border-slate-200">
                           <FileText size={12} /> <span>PDF</span>

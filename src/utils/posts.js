@@ -148,6 +148,8 @@ function sanitizeHtmlContent(rawHtml) {
 function normalizePost(path, raw) {
   const { data, body } = parseFrontmatter(raw);
   const slug = data.slug || path.split('/').pop().replace(/\.md$/, '');
+  const tagValue = data.tag || (Array.isArray(data.tags) ? data.tags[0] : undefined);
+  const sourceValue = data.source === 'jupyter' ? 'notebook' : (data.source || 'markdown');
   const notebookUrl = resolveNotebookUrl(path, data.notebook);
   const htmlUrl = resolveHtmlUrl(path, data.html || data.html_file);
   const htmlContentRaw = resolveHtmlContent(path, data.html || data.html_file);
@@ -160,8 +162,8 @@ function normalizePost(path, raw) {
   return {
     slug,
     date: data.date || '',
-    tag: data.tag || 'Article',
-    source: data.source || 'markdown',
+    tag: tagValue || 'Article',
+    source: sourceValue,
     notebookUrl,
     htmlUrl,
     htmlContent,
