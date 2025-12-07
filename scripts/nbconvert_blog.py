@@ -18,20 +18,25 @@ def main():
 
   for nb_path in notebooks:
     rel = nb_path.relative_to(repo_root)
-    print(f"Converting {rel} -> markdown")
+    print(f"Converting {rel} -> HTML")
     try:
       subprocess.run(
         [
+          sys.executable,
+          "-m",
           "jupyter",
           "nbconvert",
           "--to",
-          "markdown",
+          "html",
           "--output-dir",
           str(nb_path.parent),
+          "--template",
+          "lab",
           str(nb_path),
         ],
         check=True,
       )
+      print(f"✓ Successfully converted {rel}")
     except subprocess.CalledProcessError as exc:
       print(f"Failed to convert {rel}: {exc}")
       return exc.returncode
