@@ -114,7 +114,10 @@ export default function BlogPost({ lang }) {
 
           {post.htmlContent ? (
             <div className="post-html space-y-4 leading-relaxed text-slate-700" style={{ overflowX: 'auto' }}>
-              <style>{htmlScopedStyles}</style>
+              <style>
+                {htmlScopedStyles}
+                {(post.htmlStyles || []).join('\n')}
+              </style>
               <div dangerouslySetInnerHTML={{ __html: post.htmlContent }} />
             </div>
           ) : post.htmlUrl ? (

@@ -126,6 +126,13 @@ function resolveHtmlContent(mdPath, htmlName) {
 
 function sanitizeHtmlContent(rawHtml) {
   if (!rawHtml) return null;
+
+  const styles = [];
+  rawHtml.replace(/<style[^>]*>([\s\S]*?)<\/style>/gi, (_, css) => {
+    if (css && css.trim()) styles.push(css.trim());
+    return '';
+  });
+
   let content = rawHtml.replace(/<!doctype[^>]*>/gi, '');
   content = content.replace(/<head[^>]*>[\s\S]*?<\/head>/gi, '');
 
@@ -134,8 +141,8 @@ function sanitizeHtmlContent(rawHtml) {
     content = bodyMatch[1];
   }
 
-  content = content.replace(/<\/?html[^>]*>/gi, '');
-  return content.trim();
+  content = content.replace(/<\/?html[^>]*>/gi, '').trim();
+  return { content, styles };
 }
 
 function normalizePost(path, raw) {
@@ -144,7 +151,9 @@ function normalizePost(path, raw) {
   const notebookUrl = resolveNotebookUrl(path, data.notebook);
   const htmlUrl = resolveHtmlUrl(path, data.html || data.html_file);
   const htmlContentRaw = resolveHtmlContent(path, data.html || data.html_file);
-  const htmlContent = sanitizeHtmlContent(htmlContentRaw);
+  const sanitized = sanitizeHtmlContent(htmlContentRaw);
+  const htmlContent = sanitized?.content || null;
+  const htmlStyles = sanitized?.styles || [];
   const plainText = markdownToPlainText(body);
   const shortSummary = plainText.length > 220 ? `${plainText.slice(0, 220)}...` : plainText;
 
@@ -156,6 +165,7 @@ function normalizePost(path, raw) {
     notebookUrl,
     htmlUrl,
     htmlContent,
+    htmlStyles,
     title: { zh: data.title_zh || data.title, en: data.title_en || data.title },
     summary: {
       zh: data.summary_zh || shortSummary,
