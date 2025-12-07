@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "nbconvert:blog": "python scripts/nbconvert_blog.py"
   },
   "dependencies": {
     "lucide-react": "^0.454.0",

@@ -10,6 +10,12 @@ const notebookAssets = import.meta.glob('/content/blog/**/*.ipynb', {
   eager: true,
 });
 
+const htmlAssets = import.meta.glob('/content/blog/**/*.html', {
+  query: '?url',
+  import: 'default',
+  eager: true,
+});
+
 function escapeHtml(value) {
   return value
     .replace(/&/g, '&amp;')
@@ -98,10 +104,18 @@ function resolveNotebookUrl(mdPath, notebookName) {
   return notebookAssets[key] || null;
 }
 
+function resolveHtmlUrl(mdPath, htmlName) {
+  if (!htmlName) return null;
+  const dir = mdPath.slice(0, mdPath.lastIndexOf('/'));
+  const key = `${dir}/${htmlName}`;
+  return htmlAssets[key] || null;
+}
+
 function normalizePost(path, raw) {
   const { data, body } = parseFrontmatter(raw);
   const slug = data.slug || path.split('/').pop().replace(/\.md$/, '');
   const notebookUrl = resolveNotebookUrl(path, data.notebook);
+  const htmlUrl = resolveHtmlUrl(path, data.html || data.html_file);
   const plainText = markdownToPlainText(body);
   const shortSummary = plainText.length > 220 ? `${plainText.slice(0, 220)}...` : plainText;
 
@@ -111,6 +125,7 @@ function normalizePost(path, raw) {
     tag: data.tag || 'Article',
     source: data.source || 'markdown',
     notebookUrl,
+    htmlUrl,
     title: { zh: data.title_zh || data.title, en: data.title_en || data.title },
     summary: {
       zh: data.summary_zh || shortSummary,

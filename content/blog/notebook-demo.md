@@ -6,17 +6,15 @@ date: 2024-11-10
 tag: Methods
 source: notebook
 notebook: notebook-demo.ipynb
+html: notebook-demo.html
 summary_zh: "用一个简单的 Jupyter 笔记本演示如何加载 CHARLS 风格数据并快速得到衰弱得分。"
 summary_en: "A tiny Jupyter notebook showing how to load a CHARLS-style dataset and compute a frailty score."
 ---
 
-### Notebook 思路 / Notebook Outline
-- 读入 CSV（或 Stata）数据并保留关键变量
-- 计算衰弱指标：体重变化、步速、自评健康、慢性病数量、ADL
-- 合成一个 0-5 的 `frailty_score`，并导出结果
-- 需要更多展示时，可在 notebook 里加入可视化与模型输出
+# CHARLS Frailty Mini Demo
 
-### 关键代码片段
+A short notebook showing how to calculate a simple frailty score from a CHARLS-style dataset.
+
 ```python
 import pandas as pd
 import numpy as np
@@ -42,9 +40,5 @@ def frailty_score(row):
 
 df["frailty_score"] = df.apply(frailty_score, axis=1)
 df.to_csv("frailty_demo_output.csv", index=False)
+df
 ```
-
-### 如何发布
-- 把原始 `.ipynb` 放在同一目录（见 `notebook-demo.ipynb`），便于下载或在线查看。
-- 发布前可用 `jupyter nbconvert --to markdown notebook-demo.ipynb` 生成同名 `.md`，站点会自动渲染。
-- 如果想直接挂载 notebook，可把 `.ipynb` 路径写在 frontmatter 的 `notebook` 字段，前端会显示下载按钮。

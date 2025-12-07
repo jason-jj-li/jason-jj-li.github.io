@@ -37,7 +37,7 @@ export default function BlogPost({ lang }) {
 
   const dateLabel = formatDateLabel(post.date, lang);
   const sourceLabel = post.source === 'notebook'
-    ? lang === 'zh' ? '来自 Jupyter Notebook' : 'From Jupyter Notebook'
+    ? lang === 'zh' ? '来自 Jupyter Notebook（本地已编译 HTML）' : 'From Jupyter Notebook (precompiled HTML)'
     : lang === 'zh' ? 'Markdown 文章' : 'Markdown Post';
 
   return (
@@ -85,10 +85,21 @@ export default function BlogPost({ lang }) {
             {post.title}
           </h1>
 
-          <div
-            className="space-y-4 leading-relaxed text-slate-700"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
+          {post.htmlUrl ? (
+            <div className="border border-slate-200 rounded-xl overflow-hidden">
+              <iframe
+                src={post.htmlUrl}
+                title={post.title}
+                className="w-full"
+                style={{ minHeight: '720px' }}
+              />
+            </div>
+          ) : (
+            <div
+              className="space-y-4 leading-relaxed text-slate-700"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            />
+          )}
         </article>
       </div>
     </div>
