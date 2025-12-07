@@ -90,8 +90,8 @@ export default function BlogPost({ lang }) {
               <iframe
                 src={post.htmlUrl}
                 title={post.title}
-                className="w-full"
-                style={{ minHeight: '720px' }}
+                className="w-full min-h-[1200px] border-0"
+                style={{ height: '100vh' }}
               />
             </div>
           ) : (
