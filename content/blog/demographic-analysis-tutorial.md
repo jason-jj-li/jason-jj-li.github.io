@@ -9,7 +9,7 @@ notebook: demographic-analysis-tutorial.ipynb
 html: demographic-analysis-tutorial.html
 ---
 
-# Complete Guide to Demographic Analysis with Python
+# Easy Demographic Analysis Tutorial with Python:101
 
 This comprehensive tutorial covers demographic analysis using Python, from basic concepts to advanced techniques.
 
