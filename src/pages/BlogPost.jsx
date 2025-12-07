@@ -69,7 +69,7 @@ export default function BlogPost({ lang }) {
 
   return (
     <div className="min-h-screen bg-slate-50 pt-24 pb-20">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-4 md:px-8">
         <div className="flex items-center gap-3 mb-6">
           <Link
             to="/blog"
@@ -80,7 +80,7 @@ export default function BlogPost({ lang }) {
           </Link>
         </div>
 
-        <article className="bg-white border border-slate-200 rounded-2xl shadow-sm p-8">
+        <article className="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 md:p-8">
           <div className="flex flex-wrap items-center gap-3 text-sm text-slate-500 mb-4">
             {dateLabel && (
               <span className="inline-flex items-center gap-1">

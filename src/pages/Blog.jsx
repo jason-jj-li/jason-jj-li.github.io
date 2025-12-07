@@ -17,7 +17,7 @@ export default function Blog({ lang }) {
 
   return (
     <div className="min-h-screen bg-slate-50 pt-24 pb-16">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="flex items-center gap-3 pb-4 mb-12">
           <div className="p-2 bg-white rounded-lg shadow-sm border border-slate-100 text-indigo-500">
             <BookOpen size={20} />
@@ -52,7 +52,7 @@ export default function Blog({ lang }) {
               <Link
                 key={post.slug}
                 to={`/blog/${post.slug}`}
-                className="flex flex-col md:flex-row gap-6 p-8 bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group"
+                className="flex flex-col md:flex-row gap-6 p-6 md:p-8 bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group"
               >
                 <div className="shrink-0 flex md:flex-col items-center md:items-start gap-2 text-slate-400 md:w-24">
                   <div className="text-center">
