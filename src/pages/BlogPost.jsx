@@ -16,6 +16,33 @@ const formatDateLabel = (value, lang) => {
 export default function BlogPost({ lang }) {
   const { slug } = useParams();
   const post = getPostBySlug(slug, lang);
+  const htmlScopedStyles = `
+    .post-html {
+      overflow-x: auto;
+    }
+    .post-html pre {
+      overflow-x: auto;
+      white-space: pre;
+    }
+    .post-html code {
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .post-html table {
+      width: 100%;
+      display: block;
+      overflow-x: auto;
+      border-collapse: collapse;
+    }
+    .post-html img, .post-html iframe {
+      max-width: 100%;
+      height: auto;
+    }
+    .post-html * {
+      box-sizing: border-box;
+      max-width: 100%;
+    }
+  `;
 
   if (!post) {
     return (
@@ -86,10 +113,10 @@ export default function BlogPost({ lang }) {
           </h1>
 
           {post.htmlContent ? (
-            <div
-              className="space-y-4 leading-relaxed text-slate-700"
-              dangerouslySetInnerHTML={{ __html: post.htmlContent }}
-            />
+            <div className="post-html space-y-4 leading-relaxed text-slate-700" style={{ overflowX: 'auto' }}>
+              <style>{htmlScopedStyles}</style>
+              <div dangerouslySetInnerHTML={{ __html: post.htmlContent }} />
+            </div>
           ) : post.htmlUrl ? (
             <div className="border border-slate-200 rounded-xl overflow-hidden">
               <iframe

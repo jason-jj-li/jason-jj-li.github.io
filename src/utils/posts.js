@@ -124,12 +124,27 @@ function resolveHtmlContent(mdPath, htmlName) {
   return htmlRawAssets[key] || null;
 }
 
+function sanitizeHtmlContent(rawHtml) {
+  if (!rawHtml) return null;
+  let content = rawHtml.replace(/<!doctype[^>]*>/gi, '');
+  content = content.replace(/<head[^>]*>[\s\S]*?<\/head>/gi, '');
+
+  const bodyMatch = content.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+  if (bodyMatch) {
+    content = bodyMatch[1];
+  }
+
+  content = content.replace(/<\/?html[^>]*>/gi, '');
+  return content.trim();
+}
+
 function normalizePost(path, raw) {
   const { data, body } = parseFrontmatter(raw);
   const slug = data.slug || path.split('/').pop().replace(/\.md$/, '');
   const notebookUrl = resolveNotebookUrl(path, data.notebook);
   const htmlUrl = resolveHtmlUrl(path, data.html || data.html_file);
-  const htmlContent = resolveHtmlContent(path, data.html || data.html_file);
+  const htmlContentRaw = resolveHtmlContent(path, data.html || data.html_file);
+  const htmlContent = sanitizeHtmlContent(htmlContentRaw);
   const plainText = markdownToPlainText(body);
   const shortSummary = plainText.length > 220 ? `${plainText.slice(0, 220)}...` : plainText;
 
