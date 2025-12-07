@@ -1,9 +1,19 @@
 import React from 'react';
-import { BookOpen, ExternalLink, Calendar } from 'lucide-react';
-import { SITE_DATA } from '../data/siteData';
+import { Link } from 'react-router-dom';
+import { BookOpen, ExternalLink, Notebook as NotebookIcon, FileText } from 'lucide-react';
+import { getPosts } from '../utils/posts';
+
+const formatDate = (value, lang) => {
+  const date = new Date(value);
+  if (Number.isNaN(date)) return { day: '--', label: '' };
+  return {
+    day: String(date.getDate()).padStart(2, '0'),
+    label: date.toLocaleString(lang === 'zh' ? 'zh-CN' : 'en-US', { month: 'short', year: 'numeric' })
+  };
+};
 
 export default function Blog({ lang }) {
-  const t = (obj) => (typeof obj === 'string' ? obj : obj[lang] || obj['en']);
+  const posts = getPosts(lang);
 
   return (
     <div className="min-h-screen bg-slate-50 pt-24 pb-16">
@@ -12,48 +22,73 @@ export default function Blog({ lang }) {
           <div className="p-2 bg-white rounded-lg shadow-sm border border-slate-100 text-indigo-500">
             <BookOpen size={20} />
           </div>
-          <h1 className="text-4xl font-serif font-bold text-slate-900 tracking-tight">
-            {lang === 'zh' ? '博客文章' : 'Blog Posts'}
-          </h1>
+          <div>
+            <h1 className="text-4xl font-serif font-bold text-slate-900 tracking-tight">
+              {lang === 'zh' ? '博客文章' : 'Blog Posts'}
+            </h1>
+            <p className="text-slate-500 mt-1">
+              {lang === 'zh'
+                ? '每篇文章都是单独文件，支持 Markdown 与 Jupyter Notebook'
+                : 'Each post is its own file—Markdown or Jupyter Notebook backed.'}
+            </p>
+          </div>
         </div>
-        
+
+        {posts.length === 0 && (
+          <div className="bg-white border border-dashed border-slate-200 rounded-xl p-8 text-center text-slate-500">
+            {lang === 'zh' ? '暂无文章，添加 .md 或 .ipynb 即可出现这里。' : 'No posts yet. Add a .md or .ipynb and it will show up here.'}
+          </div>
+        )}
+
         <div className="grid gap-6">
-          {SITE_DATA.posts.map((post, idx) => (
-            <a 
-              key={idx}
-              href={post.link} 
-              className="flex flex-col md:flex-row gap-6 p-8 bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group"
-            >
-              <div className="shrink-0 flex md:flex-col items-center md:items-start gap-2 text-slate-400 md:w-24">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-slate-300 group-hover:text-indigo-400 transition-colors">
-                    {post.date.split('-')[2]}
-                  </div>
-                  <div className="text-xs uppercase tracking-wider font-bold mt-1">
-                    {new Date(post.date).toLocaleString(lang === 'zh' ? 'zh-CN' : 'en-US', { month: 'short', year: 'numeric' })}
+          {posts.map((post) => {
+            const date = formatDate(post.date, lang);
+            const isNotebook = post.source === 'notebook';
+            const sourceLabel = isNotebook
+              ? lang === 'zh' ? 'Jupyter 笔记' : 'Jupyter Notebook'
+              : lang === 'zh' ? 'Markdown 文章' : 'Markdown Post';
+
+            return (
+              <Link
+                key={post.slug}
+                to={`/blog/${post.slug}`}
+                className="flex flex-col md:flex-row gap-6 p-8 bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group"
+              >
+                <div className="shrink-0 flex md:flex-col items-center md:items-start gap-2 text-slate-400 md:w-24">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-slate-300 group-hover:text-indigo-400 transition-colors">
+                      {date.day}
+                    </div>
+                    <div className="text-xs uppercase tracking-wider font-bold mt-1">
+                      {date.label}
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div className="flex-1 border-l-0 md:border-l-2 border-slate-100 md:pl-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">
-                    {post.tag || "Article"}
-                  </span>
+
+                <div className="flex-1 border-l-0 md:border-l-2 border-slate-100 md:pl-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">
+                      {post.tag || (lang === 'zh' ? '文章' : 'Article')}
+                    </span>
+                    <span className="text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-full flex items-center gap-1">
+                      {isNotebook ? <NotebookIcon size={14} /> : <FileText size={14} />}
+                      {sourceLabel}
+                    </span>
+                  </div>
+                  <h3 className="font-bold text-slate-900 text-2xl mb-3 group-hover:text-indigo-600 transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    {post.summary}
+                  </p>
                 </div>
-                <h3 className="font-bold text-slate-900 text-2xl mb-3 group-hover:text-indigo-600 transition-colors">
-                  {t(post.title)}
-                </h3>
-                <p className="text-slate-600 leading-relaxed">
-                  {t(post.desc)}
-                </p>
-              </div>
-              
-              <div className="self-center opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-indigo-400">
-                <ExternalLink size={24} />
-              </div>
-            </a>
-          ))}
+
+                <div className="self-center opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-indigo-400">
+                  <ExternalLink size={24} />
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>

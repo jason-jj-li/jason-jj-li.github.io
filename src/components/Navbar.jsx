@@ -15,6 +15,11 @@ export default function Navbar({ lang, setLang }) {
     { path: '/blog', label: { zh: '博客', en: 'Blog' } },
   ];
 
+  const isActive = (path) => {
+    if (path === '/') return location.pathname === '/';
+    return location.pathname.startsWith(path);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-lg border-b border-slate-200 z-50 transition-all duration-300">
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -34,7 +39,7 @@ export default function Navbar({ lang, setLang }) {
               key={item.path}
               to={item.path}
               className={`relative px-3 py-1.5 text-sm font-medium rounded-full transition-all duration-300 ${
-                location.pathname === item.path
+                isActive(item.path)
                   ? 'text-slate-900 bg-white shadow-sm'
                   : 'text-slate-500 hover:text-slate-700'
               }`}
