@@ -118,6 +118,54 @@ export const SITE_DATA = {
 
   openResources: [
     {
+      name: { zh: "QualInsight", en: "QualInsight" },
+      type: { zh: "工具", en: "Tooling" },
+      desc: {
+        zh: "AI 辅助定性研究平台，支持编码分析、主题识别、情感分析、话语分析、叙事分析等，无需数据库，保护数据隐私。",
+        en: "AI-assisted qualitative research platform supporting coding analysis, theme identification, sentiment analysis, discourse analysis, and narrative analysis. No database required, data privacy assured."
+      },
+      link: "https://github.com/jason-jj-li/AI_quali",
+      version: "v4.1",
+      updated: "2025-01-16",
+      stack: ["Python", "Streamlit", "Plotly"],
+      useCases: {
+        zh: [
+          "🏷️ AI 编码：演绎/归纳编码，分层结构，智能缓存",
+          "🎯 主题分析：AI 主题识别，层次关系，跨案例比较",
+          "📊 可视化：10+ 种图表类型（热力图、网络图等）",
+          "🔬 高级分析：情感、话语、叙事分析，编码信度",
+          "📝 报告生成：IMRAD 结构，双语支持",
+          "💾 导出系统：多格式导出，项目打包"
+        ],
+        en: [
+          "🏷️ AI Coding: Deductive/Inductive coding, hierarchical structure, smart caching",
+          "🎯 Theme Analysis: AI theme identification, hierarchical relationships, cross-case analysis",
+          "📊 Visualization: 10+ chart types (heatmaps, network graphs)",
+          "🔬 Advanced Analysis: Sentiment, discourse, narrative analysis, coding reliability",
+          "📝 Report Generation: IMRAD structure, bilingual support",
+          "💾 Export System: Multi-format export, project packaging"
+        ]
+      },
+      advantages: {
+        zh: [
+          "✅ 单会话分析：上传 → 分析 → 下载",
+          "✅ 无需数据库：数据存储在浏览器会话中",
+          "✅ 隐私保护：本地运行或可选云端 LLM",
+          "✅ 多 LLM 支持：OpenAI、Anthropic、Deepseek、LM Studio",
+          "✅ 开箱即用：pip install + streamlit run 即可启动",
+          "✅ MIT 许可：开源免费，欢迎贡献"
+        ],
+        en: [
+          "✅ Single-session workflow: Upload → Analyze → Download",
+          "✅ No database: Data stored in browser session",
+          "✅ Privacy: Run locally or optional cloud LLMs",
+          "✅ Multiple LLMs: OpenAI, Anthropic, Deepseek, LM Studio",
+          "✅ Ready to use: pip install + streamlit run",
+          "✅ MIT License: Open source, contributions welcome"
+        ]
+      }
+    },
+    {
       name: { zh: "auto_sim_ai", en: "auto_sim_ai" },
       type: { zh: "工具", en: "Tooling" },
       desc: {
@@ -169,40 +217,53 @@ export const SITE_DATA = {
 
   highlights: [
     {
-      date: "2025-11-15",
-      title: { 
-        zh: "疼痛发生率与多部位轨迹研究发表", 
-        en: "Pain Incidence and Trajectories Study Published" 
+      date: "2025-01-16",
+      title: {
+        zh: "QualInsight v4.1 发布",
+        en: "QualInsight v4.1 Released"
       },
-      desc: { 
-        zh: "PAIN Reports 发表我们关于童年逆境与中老年疼痛轨迹的研究成果。", 
-        en: "Our study on adverse childhood experiences and pain trajectories published in PAIN Reports." 
+      desc: {
+        zh: "AI 辅助定性研究平台发布，支持编码分析、主题识别、情感/话语/叙事分析、可视化与报告生成。",
+        en: "AI-assisted qualitative research platform released with coding, theme analysis, sentiment/discourse/narrative analysis, visualization, and report generation."
+      },
+      tag: { zh: "工具", en: "Tool" },
+      link: "https://github.com/jason-jj-li/AI_quali"
+    },
+    {
+      date: "2025-11-15",
+      title: {
+        zh: "疼痛发生率与多部位轨迹研究发表",
+        en: "Pain Incidence and Trajectories Study Published"
+      },
+      desc: {
+        zh: "PAIN Reports 发表我们关于童年逆境与中老年疼痛轨迹的研究成果。",
+        en: "Our study on adverse childhood experiences and pain trajectories published in PAIN Reports."
       },
       tag: { zh: "论文", en: "Publication" },
       link: "#"
     },
     {
       date: "2025-11-10",
-      title: { 
-        zh: "心血管疾病跨国比较研究发表", 
-        en: "Cross-Country CVD Study Published" 
+      title: {
+        zh: "心血管疾病跨国比较研究发表",
+        en: "Cross-Country CVD Study Published"
       },
-      desc: { 
-        zh: "Journal of Global Health 发表基于 HRS/ELSA/SHARE/CHARLS 的年龄-时期-队列分析。", 
-        en: "Age-period-cohort analysis across HRS, ELSA, SHARE, and CHARLS published in Journal of Global Health." 
+      desc: {
+        zh: "Journal of Global Health 发表基于 HRS/ELSA/SHARE/CHARLS 的年龄-时期-队列分析。",
+        en: "Age-period-cohort analysis across HRS, ELSA, SHARE, and CHARLS published in Journal of Global Health."
       },
       tag: { zh: "论文", en: "Publication" },
       link: "https://doi.org/10.7189/jogh.15.04260"
     },
     {
       date: "2025-11-01",
-      title: { 
-        zh: "auto_sim_ai 工具包发布", 
-        en: "auto_sim_ai Toolkit Released" 
+      title: {
+        zh: "auto_sim_ai 工具包发布",
+        en: "auto_sim_ai Toolkit Released"
       },
-      desc: { 
-        zh: "开源 LLM 驱动的虚拟受访者仿真系统，可用于健康干预测试与问卷模拟。", 
-        en: "Open-source LLM-driven virtual respondent simulation system for health intervention testing and survey simulation." 
+      desc: {
+        zh: "开源 LLM 驱动的虚拟受访者仿真系统，可用于健康干预测试与问卷模拟。",
+        en: "Open-source LLM-driven virtual respondent simulation system for health intervention testing and survey simulation."
       },
       tag: { zh: "工具", en: "Tool" },
       link: "https://github.com/jason-jj-li/auto_sim_ai"
