@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Python Statistical Analysis in Practice — 01: Simulation Basics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="python-stats-01-simulation-basics_files/libs/clipboard/clipboard.min.js"></script>
+<script src="python-stats-01-simulation-basics_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="python-stats-01-simulation-basics_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="python-stats-01-simulation-basics_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="python-stats-01-simulation-basics_files/libs/quarto-html/popper.min.js"></script>
+<script src="python-stats-01-simulation-basics_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="python-stats-01-simulation-basics_files/libs/quarto-html/anchor.min.js"></script>
+<link href="python-stats-01-simulation-basics_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="python-stats-01-simulation-basics_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="python-stats-01-simulation-basics_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="python-stats-01-simulation-basics_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="python-stats-01-simulation-basics_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Python Statistical Analysis in Practice — 01: Simulation Basics</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><em>Author: Jason JJ Li · Peking University Institute of Population Research</em></p>
+<p>This first tutorial introduces the core technique used throughout this series: <strong>learning statistics by generating your own data</strong>. When you simulate data with known parameters, you always know the “true answer” — so you can directly verify how well any statistical method works.</p>
+<p><strong>The four-step loop used in every post:</strong> 1. <strong>Simulate</strong> — generate data with known parameters<br>
+2. <strong>Estimate</strong> — apply a statistical method<br>
+3. <strong>Verify</strong> — compare estimates against the known truth<br>
+4. <strong>Explore</strong> — vary conditions and observe how results change</p>
+<hr>
+<section id="part-1-environment-setup" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-environment-setup">Part 1: Environment Setup</h2>
+<div id="bca0b159" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.gridspec <span class="im">as</span> gridspec</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">'ignore'</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">'seaborn-v0_8-whitegrid'</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">'display.precision'</span>, <span class="dv">3</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">'display.float_format'</span>, <span class="st">'</span><span class="sc">{:.3f}</span><span class="st">'</span>.<span class="bu">format</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>COLORS <span class="op">=</span> {</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'primary'</span>:   <span class="st">'#2E86AB'</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'secondary'</span>: <span class="st">'#A23B72'</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'accent'</span>:    <span class="st">'#F18F01'</span>,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'success'</span>:   <span class="st">'#27AE60'</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'danger'</span>:    <span class="st">'#E74C3C'</span>,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'neutral'</span>:   <span class="st">'#95A5A6'</span>,</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Global random number generator — set once, reuse everywhere</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>RNG <span class="op">=</span> np.random.default_rng(<span class="dv">42</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Libraries loaded successfully.'</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'NumPy  : </span><span class="sc">{</span>np<span class="sc">.</span>__version__<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Pandas : </span><span class="sc">{</span>pd<span class="sc">.</span>__version__<span class="sc">}</span><span class="ss">'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Libraries loaded successfully.
+NumPy  : 2.4.2
+Pandas : 2.3.3</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="part-2-why-simulated-data" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-why-simulated-data">Part 2: Why Simulated Data?</h2>
+<p>Traditional statistics courses rely on real datasets — but you never know the <em>true</em> parameter values, so you can never verify whether your estimates are accurate.</p>
+<p>Simulated data solves this:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Problem with real data</th>
+<th>Simulation solution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hard to obtain</td>
+<td>One line of code generates any dataset</td>
+</tr>
+<tr class="even">
+<td>True answer unknown</td>
+<td>We set the true parameters ourselves</td>
+</tr>
+<tr class="odd">
+<td>Can’t test edge cases</td>
+<td>Precisely control sample size, distributions, missing rates</td>
+</tr>
+<tr class="even">
+<td>Hard to reproduce</td>
+<td>Random seed guarantees identical results</td>
+</tr>
+<tr class="odd">
+<td>Effect size is abstract</td>
+<td>Set the true effect, then observe estimated effect</td>
+</tr>
+</tbody>
+</table>
+<section id="the-random-seed-reproducibility-starts-here" class="level3">
+<h3 class="anchored" data-anchor-id="the-random-seed-reproducibility-starts-here">2.1 The Random Seed: Reproducibility Starts Here</h3>
+<div id="4d70aea9" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Without a seed: results change every run</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'=== Without seed ==='</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>).<span class="bu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'  Run </span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># With a fixed seed: always identical</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'=== With seed=42 ==='</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    rng <span class="op">=</span> np.random.default_rng(<span class="dv">42</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> rng.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>).<span class="bu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'  Run </span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'✓ With a seed, every run produces the exact same numbers.'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>=== Without seed ===
+  Run 1: [-1.946 -1.169  0.57  -0.437  1.908]
+  Run 2: [ 0.232  0.153  1.464  2.197 -0.305]
+  Run 3: [-1.416  0.811  0.565  1.149 -0.693]
+
+=== With seed=42 ===
+  Run 1: [ 0.305 -1.04   0.75   0.941 -1.951]
+  Run 2: [ 0.305 -1.04   0.75   0.941 -1.951]
+  Run 3: [ 0.305 -1.04   0.75   0.941 -1.951]
+
+✓ With a seed, every run produces the exact same numbers.</code></pre>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="part-3-generating-common-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-generating-common-distributions">Part 3: Generating Common Distributions</h2>
+<section id="the-five-distributions-used-in-this-series" class="level3">
+<h3 class="anchored" data-anchor-id="the-five-distributions-used-in-this-series">3.1 The Five Distributions Used in This Series</h3>
+<div id="51102419" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>RNG <span class="op">=</span> np.random.default_rng(<span class="dv">42</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">2000</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>distributions <span class="op">=</span> {</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Normal</span><span class="ch">\n</span><span class="st">μ=100, σ=15'</span>:       RNG.normal(loc<span class="op">=</span><span class="dv">100</span>, scale<span class="op">=</span><span class="dv">15</span>, size<span class="op">=</span>N),</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Uniform</span><span class="ch">\n</span><span class="st">[0, 1]'</span>:            RNG.uniform(low<span class="op">=</span><span class="dv">0</span>, high<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span>N),</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Binomial</span><span class="ch">\n</span><span class="st">n=10, p=0.3'</span>:      RNG.binomial(n<span class="op">=</span><span class="dv">10</span>, p<span class="op">=</span><span class="fl">0.3</span>, size<span class="op">=</span>N).astype(<span class="bu">float</span>),</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Poisson</span><span class="ch">\n</span><span class="st">λ=4'</span>:               RNG.poisson(lam<span class="op">=</span><span class="dv">4</span>, size<span class="op">=</span>N).astype(<span class="bu">float</span>),</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Exponential</span><span class="ch">\n</span><span class="st">scale=2'</span>:       RNG.exponential(scale<span class="op">=</span><span class="dv">2</span>, size<span class="op">=</span>N),</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">5</span>, figsize<span class="op">=</span>(<span class="dv">18</span>, <span class="dv">4</span>))</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>fig.suptitle(<span class="st">'Five Common Distributions — n = 2,000 each'</span>, fontsize<span class="op">=</span><span class="dv">14</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>, y<span class="op">=</span><span class="fl">1.02</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax, (name, data) <span class="kw">in</span> <span class="bu">zip</span>(axes, distributions.items()):</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    ax.hist(data, bins<span class="op">=</span><span class="dv">35</span>, color<span class="op">=</span>COLORS[<span class="st">'primary'</span>], edgecolor<span class="op">=</span><span class="st">'white'</span>, alpha<span class="op">=</span><span class="fl">0.85</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    ax.set_title(name, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'Value'</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'Count'</span>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    ax.axvline(np.mean(data), color<span class="op">=</span>COLORS[<span class="st">'danger'</span>], linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="fl">1.5</span>, label<span class="op">=</span><span class="ss">f'Mean=</span><span class="sc">{</span>np<span class="sc">.</span>mean(data)<span class="sc">:.2f}</span><span class="ss">'</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    ax.legend(fontsize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">Summary statistics:'</span>)</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>summary <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    name.replace(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>, <span class="st">' '</span>): {<span class="st">'Mean'</span>: d.mean(), <span class="st">'Std'</span>: d.std(), <span class="st">'Min'</span>: d.<span class="bu">min</span>(), <span class="st">'Max'</span>: d.<span class="bu">max</span>()}</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name, d <span class="kw">in</span> distributions.items()</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>}).T</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(summary.<span class="bu">round</span>(<span class="dv">3</span>).to_string())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="python-stats-01-simulation-basics_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Summary statistics:
+                       Mean    Std    Min     Max
+Normal μ=100, σ=15   99.173 15.027 45.274 147.683
+Uniform [0, 1]        0.494  0.289  0.001   1.000
+Binomial n=10, p=0.3  2.957  1.433  0.000   8.000
+Poisson λ=4           4.009  2.053  0.000  13.000
+Exponential scale=2   1.978  1.920  0.000  14.393</code></pre>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="part-4-three-step-data-validation" class="level2">
+<h2 class="anchored" data-anchor-id="part-4-three-step-data-validation">Part 4: Three-Step Data Validation</h2>
+<p>Before applying any statistical method, always validate that your simulated data looks as expected.</p>
+<section id="step-1-summary-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-summary-statistics">Step 1 — Summary statistics</h3>
+</section>
+<section id="step-2-histogram" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-histogram">Step 2 — Histogram</h3>
+</section>
+<section id="step-3-q-q-plot" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-q-q-plot">Step 3 — Q-Q plot</h3>
+<div id="3e9267d4" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulate a dataset with known parameters</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>TRUE_MEAN <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>TRUE_STD  <span class="op">=</span> <span class="dv">15</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>N_SAMPLES <span class="op">=</span> <span class="dv">200</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>RNG <span class="op">=</span> np.random.default_rng(<span class="dv">42</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> RNG.normal(loc<span class="op">=</span>TRUE_MEAN, scale<span class="op">=</span>TRUE_STD, size<span class="op">=</span>N_SAMPLES)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Step 1: Summary statistics ---</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'=== Step 1: Summary Statistics ==='</span>)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'  n          : </span><span class="sc">{</span><span class="bu">len</span>(data)<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'  True mean  : </span><span class="sc">{</span>TRUE_MEAN<span class="sc">}</span><span class="ss">   | Estimated: </span><span class="sc">{</span>data<span class="sc">.</span>mean()<span class="sc">:.3f}</span><span class="ss">'</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'  True std   : </span><span class="sc">{</span>TRUE_STD<span class="sc">}</span><span class="ss">    | Estimated: </span><span class="sc">{</span>data<span class="sc">.</span>std(ddof<span class="op">=</span><span class="dv">1</span>)<span class="sc">:.3f}</span><span class="ss">'</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'  Median     : </span><span class="sc">{</span>np<span class="sc">.</span>median(data)<span class="sc">:.3f}</span><span class="ss">'</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'  IQR        : </span><span class="sc">{</span>np<span class="sc">.</span>percentile(data, <span class="dv">75</span>) <span class="op">-</span> np<span class="sc">.</span>percentile(data, <span class="dv">25</span>)<span class="sc">:.3f}</span><span class="ss">'</span>)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'  Skewness   : </span><span class="sc">{</span>stats<span class="sc">.</span>skew(data)<span class="sc">:.3f}</span><span class="ss">  (0 = symmetric)'</span>)</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'  Kurtosis   : </span><span class="sc">{</span>stats<span class="sc">.</span>kurtosis(data)<span class="sc">:.3f}</span><span class="ss">  (0 = normal tails)'</span>)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Steps 2 &amp; 3: Visual validation ---</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">4</span>))</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>fig.suptitle(<span class="ss">f'Validation — Normal(μ=</span><span class="sc">{</span>TRUE_MEAN<span class="sc">}</span><span class="ss">, σ=</span><span class="sc">{</span>TRUE_STD<span class="sc">}</span><span class="ss">), n=</span><span class="sc">{</span>N_SAMPLES<span class="sc">}</span><span class="ss">'</span>,</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>             fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Histogram</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>ax1.hist(data, bins<span class="op">=</span><span class="dv">25</span>, density<span class="op">=</span><span class="va">True</span>, color<span class="op">=</span>COLORS[<span class="st">'primary'</span>], edgecolor<span class="op">=</span><span class="st">'white'</span>, alpha<span class="op">=</span><span class="fl">0.8</span>, label<span class="op">=</span><span class="st">'Simulated data'</span>)</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>x_range <span class="op">=</span> np.linspace(data.<span class="bu">min</span>(), data.<span class="bu">max</span>(), <span class="dv">200</span>)</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>ax1.plot(x_range, stats.norm.pdf(x_range, TRUE_MEAN, TRUE_STD),</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>         color<span class="op">=</span>COLORS[<span class="st">'danger'</span>], linewidth<span class="op">=</span><span class="fl">2.5</span>, label<span class="op">=</span><span class="st">'True PDF'</span>)</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>ax1.axvline(data.mean(), color<span class="op">=</span>COLORS[<span class="st">'accent'</span>], linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="fl">1.5</span>, label<span class="op">=</span><span class="ss">f'Estimated mean=</span><span class="sc">{</span>data<span class="sc">.</span>mean()<span class="sc">:.1f}</span><span class="ss">'</span>)</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>ax1.axvline(TRUE_MEAN,   color<span class="op">=</span>COLORS[<span class="st">'success'</span>], linestyle<span class="op">=</span><span class="st">':'</span>,  linewidth<span class="op">=</span><span class="fl">1.5</span>, label<span class="op">=</span><span class="ss">f'True mean=</span><span class="sc">{</span>TRUE_MEAN<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'Value'</span>)<span class="op">;</span> ax1.set_ylabel(<span class="st">'Density'</span>)</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'Step 2: Histogram + True PDF'</span>)</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>ax1.legend(fontsize<span class="op">=</span><span class="dv">9</span>)</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Q-Q plot</span></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>stats.probplot(data, dist<span class="op">=</span><span class="st">'norm'</span>, plot<span class="op">=</span>ax2)</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'Step 3: Q-Q Plot (points on line = normal)'</span>)</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>ax2.get_lines()[<span class="dv">0</span>].<span class="bu">set</span>(color<span class="op">=</span>COLORS[<span class="st">'primary'</span>], alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>ax2.get_lines()[<span class="dv">1</span>].<span class="bu">set</span>(color<span class="op">=</span>COLORS[<span class="st">'danger'</span>], linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>=== Step 1: Summary Statistics ===
+  n          : 200
+  True mean  : 100   | Estimated: 99.543
+  True std   : 15    | Estimated: 13.229
+  Median     : 99.222
+  IQR        : 17.874
+  Skewness   : 0.261  (0 = symmetric)
+  Kurtosis   : -0.005  (0 = normal tails)</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="python-stats-01-simulation-basics_files/figure-html/cell-5-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="part-5-building-the-simulation-toolkit" class="level2">
+<h2 class="anchored" data-anchor-id="part-5-building-the-simulation-toolkit">Part 5: Building the Simulation Toolkit</h2>
+<p>These five functions are reused in every subsequent post. Providing them here once avoids repetition.</p>
+<div id="696b6aba" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================================================</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#  simulation_toolkit.py  —  core helpers for this series</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================================================</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>_RNG <span class="op">=</span> np.random.default_rng(<span class="dv">42</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> set_seed(seed: <span class="bu">int</span> <span class="op">=</span> <span class="dv">42</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Reset the global RNG with a new seed."""</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> _RNG</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    _RNG <span class="op">=</span> np.random.default_rng(seed)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Random seed set to: </span><span class="sc">{</span>seed<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> simulate_normal(n: <span class="bu">int</span>, mean: <span class="bu">float</span> <span class="op">=</span> <span class="dv">0</span>, std: <span class="bu">float</span> <span class="op">=</span> <span class="dv">1</span>, seed: <span class="bu">int</span> <span class="op">=</span> <span class="va">None</span>) <span class="op">-&gt;</span> np.ndarray:</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Generate n samples from Normal(mean, std)."""</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    rng <span class="op">=</span> np.random.default_rng(seed) <span class="cf">if</span> seed <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="cf">else</span> _RNG</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> rng.normal(loc<span class="op">=</span>mean, scale<span class="op">=</span>std, size<span class="op">=</span>n)</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> simulate_two_groups(</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    n1: <span class="bu">int</span>, n2: <span class="bu">int</span>, mean1: <span class="bu">float</span>, mean2: <span class="bu">float</span>,</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    std: <span class="bu">float</span> <span class="op">=</span> <span class="dv">1</span>, seed: <span class="bu">int</span> <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>) <span class="op">-&gt;</span> pd.DataFrame:</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Generate two independent normal samples and return as a tidy DataFrame."""</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>    rng <span class="op">=</span> np.random.default_rng(seed) <span class="cf">if</span> seed <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="cf">else</span> _RNG</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    g1 <span class="op">=</span> rng.normal(loc<span class="op">=</span>mean1, scale<span class="op">=</span>std, size<span class="op">=</span>n1)</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>    g2 <span class="op">=</span> rng.normal(loc<span class="op">=</span>mean2, scale<span class="op">=</span>std, size<span class="op">=</span>n2)</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pd.DataFrame({</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>        <span class="st">'group'</span>:     [<span class="st">'Group A'</span>] <span class="op">*</span> n1 <span class="op">+</span> [<span class="st">'Group B'</span>] <span class="op">*</span> n2,</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>        <span class="st">'value'</span>:     np.concatenate([g1, g2]),</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>        <span class="st">'true_mean'</span>: [mean1] <span class="op">*</span> n1    <span class="op">+</span> [mean2] <span class="op">*</span> n2,</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> simulate_regression(</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>    n: <span class="bu">int</span>, beta0: <span class="bu">float</span> <span class="op">=</span> <span class="dv">0</span>, beta1: <span class="bu">float</span> <span class="op">=</span> <span class="dv">1</span>,</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>    noise_std: <span class="bu">float</span> <span class="op">=</span> <span class="dv">1</span>, seed: <span class="bu">int</span> <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>) <span class="op">-&gt;</span> pd.DataFrame:</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Generate data from y = beta0 + beta1*x + epsilon."""</span></span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>    rng <span class="op">=</span> np.random.default_rng(seed) <span class="cf">if</span> seed <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="cf">else</span> _RNG</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> rng.uniform(<span class="dv">0</span>, <span class="dv">10</span>, n)</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>    y_true <span class="op">=</span> beta0 <span class="op">+</span> beta1 <span class="op">*</span> x</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> y_true <span class="op">+</span> rng.normal(<span class="dv">0</span>, noise_std, n)</span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pd.DataFrame({<span class="st">'x'</span>: x, <span class="st">'y'</span>: y, <span class="st">'y_true'</span>: y_true})</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> simulate_logistic(</span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>    n: <span class="bu">int</span>, beta0: <span class="bu">float</span> <span class="op">=</span> <span class="dv">0</span>, beta1: <span class="bu">float</span> <span class="op">=</span> <span class="dv">1</span>, seed: <span class="bu">int</span> <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>) <span class="op">-&gt;</span> pd.DataFrame:</span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Generate binary outcome data from a logistic model."""</span></span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>    rng <span class="op">=</span> np.random.default_rng(seed) <span class="cf">if</span> seed <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="cf">else</span> _RNG</span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> rng.uniform(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, n)</span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a>    p <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(<span class="op">-</span>(beta0 <span class="op">+</span> beta1 <span class="op">*</span> x)))</span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> rng.binomial(<span class="dv">1</span>, p)</span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pd.DataFrame({<span class="st">'x'</span>: x, <span class="st">'p_true'</span>: p, <span class="st">'y'</span>: y})</span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> verify_estimate(</span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a>    estimate: <span class="bu">float</span>, true_value: <span class="bu">float</span>, label: <span class="bu">str</span> <span class="op">=</span> <span class="st">'Parameter'</span></span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
+<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Print a comparison table and return relative error (%)"""</span></span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a>    rel_err <span class="op">=</span> <span class="bu">abs</span>(estimate <span class="op">-</span> true_value) <span class="op">/</span> <span class="bu">abs</span>(true_value) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a>    bias    <span class="op">=</span> estimate <span class="op">-</span> true_value</span>
+<span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>label<span class="sc">}</span><span class="ss">:'</span>)</span>
+<span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'  True value  : </span><span class="sc">{</span>true_value<span class="sc">:.4f}</span><span class="ss">'</span>)</span>
+<span id="cb9-66"><a href="#cb9-66" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'  Estimate    : </span><span class="sc">{</span>estimate<span class="sc">:.4f}</span><span class="ss">'</span>)</span>
+<span id="cb9-67"><a href="#cb9-67" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'  Bias        : </span><span class="sc">{</span>bias<span class="sc">:+.4f}</span><span class="ss">'</span>)</span>
+<span id="cb9-68"><a href="#cb9-68" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'  Relative err: </span><span class="sc">{</span>rel_err<span class="sc">:.2f}</span><span class="ss">%'</span>)</span>
+<span id="cb9-69"><a href="#cb9-69" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> rel_err</span>
+<span id="cb9-70"><a href="#cb9-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-71"><a href="#cb9-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-72"><a href="#cb9-72" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'simulation_toolkit loaded. Available functions:'</span>)</span>
+<span id="cb9-73"><a href="#cb9-73" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'  set_seed(), simulate_normal(), simulate_two_groups(),'</span>)</span>
+<span id="cb9-74"><a href="#cb9-74" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'  simulate_regression(), simulate_logistic(), verify_estimate()'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>simulation_toolkit loaded. Available functions:
+  set_seed(), simulate_normal(), simulate_two_groups(),
+  simulate_regression(), simulate_logistic(), verify_estimate()</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="part-6-toolkit-in-action" class="level2">
+<h2 class="anchored" data-anchor-id="part-6-toolkit-in-action">Part 6: Toolkit in Action</h2>
+<p>A quick demonstration of each function, plus a preview of how all four posts in this series will use them.</p>
+<div id="7219ceb6" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># --- simulate_normal + verify_estimate ---</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'--- simulate_normal ---'</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>sample <span class="op">=</span> simulate_normal(n<span class="op">=</span><span class="dv">500</span>, mean<span class="op">=</span><span class="dv">50</span>, std<span class="op">=</span><span class="dv">10</span>, seed<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>verify_estimate(sample.mean(), true_value<span class="op">=</span><span class="dv">50</span>, label<span class="op">=</span><span class="st">'Mean'</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>verify_estimate(sample.std(ddof<span class="op">=</span><span class="dv">1</span>), true_value<span class="op">=</span><span class="dv">10</span>, label<span class="op">=</span><span class="st">'Std'</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co"># --- simulate_two_groups ---</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'--- simulate_two_groups ---'</span>)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>df_groups <span class="op">=</span> simulate_two_groups(n1<span class="op">=</span><span class="dv">100</span>, n2<span class="op">=</span><span class="dv">100</span>, mean1<span class="op">=</span><span class="dv">10</span>, mean2<span class="op">=</span><span class="dv">12</span>, std<span class="op">=</span><span class="dv">2</span>, seed<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_groups.groupby(<span class="st">'group'</span>)[<span class="st">'value'</span>].describe().<span class="bu">round</span>(<span class="dv">3</span>).to_string())</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="co"># --- simulate_regression ---</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'--- simulate_regression ---'</span>)</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>df_reg <span class="op">=</span> simulate_regression(n<span class="op">=</span><span class="dv">200</span>, beta0<span class="op">=</span><span class="dv">5</span>, beta1<span class="op">=</span><span class="fl">2.5</span>, noise_std<span class="op">=</span><span class="dv">3</span>, seed<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_reg.describe().<span class="bu">round</span>(<span class="dv">3</span>).to_string())</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="co"># --- simulate_logistic ---</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'--- simulate_logistic ---'</span>)</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>df_logit <span class="op">=</span> simulate_logistic(n<span class="op">=</span><span class="dv">500</span>, beta0<span class="op">=-</span><span class="dv">1</span>, beta1<span class="op">=</span><span class="fl">1.5</span>, seed<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Outcome prevalence: </span><span class="sc">{</span>df_logit<span class="sc">.</span>y<span class="sc">.</span>mean()<span class="sc">:.2%}</span><span class="ss">'</span>)</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_logit[[<span class="st">'x'</span>, <span class="st">'p_true'</span>, <span class="st">'y'</span>]].describe().<span class="bu">round</span>(<span class="dv">3</span>).to_string())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>--- simulate_normal ---
+Mean:
+  True value  : 50.0000
+  Estimate    : 49.8687
+  Bias        : -0.1313
+  Relative err: 0.26%
+Std:
+  True value  : 10.0000
+  Estimate    : 9.5993
+  Bias        : -0.4007
+  Relative err: 4.01%
+
+--- simulate_two_groups ---
+          count   mean   std   min    25%    50%    75%    max
+group                                                         
+Group A 100.000  9.899 1.553 6.098  8.912  9.996 11.070 14.283
+Group B 100.000 11.979 1.959 7.736 10.506 11.741 12.987 17.828
+
+--- simulate_regression ---
+            x       y  y_true
+count 200.000 200.000 200.000
+mean    4.939  17.396  17.347
+std     2.823   8.186   7.058
+min     0.074  -0.649   5.184
+25%     2.522  10.592  11.305
+50%     4.790  18.155  16.975
+75%     7.472  24.316  23.681
+max     9.924  34.818  29.809
+
+--- simulate_logistic ---
+Outcome prevalence: 39.60%
+            x  p_true       y
+count 500.000 500.000 500.000
+mean   -0.026   0.390   0.396
+std     1.721   0.359   0.490
+min    -2.967   0.004   0.000
+25%    -1.584   0.033   0.000
+50%     0.005   0.271   0.000
+75%     1.483   0.773   1.000
+max     2.995   0.970   1.000</code></pre>
+</div>
+</div>
+<div id="f55855bd" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Visual overview of all four function outputs ---</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">4</span>, figsize<span class="op">=</span>(<span class="dv">18</span>, <span class="dv">4</span>))</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>fig.suptitle(<span class="st">'Simulation Toolkit — Output Preview'</span>, fontsize<span class="op">=</span><span class="dv">13</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Panel A: simulate_normal</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>data_norm <span class="op">=</span> simulate_normal(<span class="dv">500</span>, mean<span class="op">=</span><span class="dv">50</span>, std<span class="op">=</span><span class="dv">10</span>, seed<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].hist(data_norm, bins<span class="op">=</span><span class="dv">30</span>, color<span class="op">=</span>COLORS[<span class="st">'primary'</span>], edgecolor<span class="op">=</span><span class="st">'white'</span>, alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].axvline(<span class="dv">50</span>, color<span class="op">=</span>COLORS[<span class="st">'danger'</span>], linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'True mean=50'</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_title(<span class="st">'A. simulate_normal</span><span class="ch">\n</span><span class="st">(μ=50, σ=10, n=500)'</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].legend(fontsize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Panel B: simulate_two_groups</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> simulate_two_groups(<span class="dv">100</span>, <span class="dv">100</span>, mean1<span class="op">=</span><span class="dv">10</span>, mean2<span class="op">=</span><span class="dv">12</span>, std<span class="op">=</span><span class="dv">2</span>, seed<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> grp, color <span class="kw">in</span> <span class="bu">zip</span>([<span class="st">'Group A'</span>, <span class="st">'Group B'</span>], [COLORS[<span class="st">'primary'</span>], COLORS[<span class="st">'secondary'</span>]]):</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    axes[<span class="dv">1</span>].hist(df2[df2.group <span class="op">==</span> grp][<span class="st">'value'</span>], bins<span class="op">=</span><span class="dv">20</span>, alpha<span class="op">=</span><span class="fl">0.7</span>, color<span class="op">=</span>color, edgecolor<span class="op">=</span><span class="st">'white'</span>, label<span class="op">=</span>grp)</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_title(<span class="st">'B. simulate_two_groups</span><span class="ch">\n</span><span class="st">(μ₁=10, μ₂=12, σ=2)'</span>)</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].legend(fontsize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Panel C: simulate_regression</span></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>df_r <span class="op">=</span> simulate_regression(<span class="dv">200</span>, beta0<span class="op">=</span><span class="dv">5</span>, beta1<span class="op">=</span><span class="fl">2.5</span>, noise_std<span class="op">=</span><span class="dv">3</span>, seed<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].scatter(df_r.x, df_r.y, alpha<span class="op">=</span><span class="fl">0.4</span>, s<span class="op">=</span><span class="dv">15</span>, color<span class="op">=</span>COLORS[<span class="st">'primary'</span>], label<span class="op">=</span><span class="st">'Observed'</span>)</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>x_line <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].plot(x_line, <span class="dv">5</span> <span class="op">+</span> <span class="fl">2.5</span> <span class="op">*</span> x_line, color<span class="op">=</span>COLORS[<span class="st">'danger'</span>], linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'True line'</span>)</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].set_title(<span class="st">'C. simulate_regression</span><span class="ch">\n</span><span class="st">(β₀=5, β₁=2.5)'</span>)</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].legend(fontsize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Panel D: simulate_logistic</span></span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>df_l <span class="op">=</span> simulate_logistic(<span class="dv">500</span>, beta0<span class="op">=-</span><span class="dv">1</span>, beta1<span class="op">=</span><span class="fl">1.5</span>, seed<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">3</span>].scatter(df_l.x, df_l.y, alpha<span class="op">=</span><span class="fl">0.15</span>, s<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span>COLORS[<span class="st">'primary'</span>], label<span class="op">=</span><span class="st">'Observed y'</span>)</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>x_s <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">200</span>)</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>p_s <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(<span class="op">-</span>(<span class="op">-</span><span class="dv">1</span> <span class="op">+</span> <span class="fl">1.5</span> <span class="op">*</span> x_s)))</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">3</span>].plot(x_s, p_s, color<span class="op">=</span>COLORS[<span class="st">'danger'</span>], linewidth<span class="op">=</span><span class="fl">2.5</span>, label<span class="op">=</span><span class="st">'True P(y=1)'</span>)</span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">3</span>].set_title(<span class="st">'D. simulate_logistic</span><span class="ch">\n</span><span class="st">(β₀=-1, β₁=1.5)'</span>)</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">3</span>].legend(fontsize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> axes:</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'x / value'</span>)</span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="python-stats-01-simulation-basics_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="part-7-parameter-sweep-how-sample-size-affects-accuracy" class="level2">
+<h2 class="anchored" data-anchor-id="part-7-parameter-sweep-how-sample-size-affects-accuracy">Part 7: Parameter Sweep — How Sample Size Affects Accuracy</h2>
+<p>The Law of Large Numbers says that estimates improve as n increases. Let’s verify this directly.</p>
+<div id="fb49eea3" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>TRUE_MEAN <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>TRUE_STD  <span class="op">=</span> <span class="dv">15</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>sample_sizes   <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">30</span>, <span class="dv">50</span>, <span class="dv">100</span>, <span class="dv">300</span>, <span class="dv">500</span>, <span class="dv">1000</span>, <span class="dv">3000</span>]</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>n_repetitions  <span class="op">=</span> <span class="dv">500</span>  <span class="co"># repeat each sample size 500 times</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> []</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> sample_sizes:</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    rng <span class="op">=</span> np.random.default_rng(<span class="dv">42</span>)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    estimates <span class="op">=</span> [rng.normal(TRUE_MEAN, TRUE_STD, n).mean() <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_repetitions)]</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    results.append({</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">'n'</span>:          n,</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">'mean_est'</span>:   np.mean(estimates),</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">'std_est'</span>:    np.std(estimates),</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">'mae'</span>:        np.mean(np.<span class="bu">abs</span>(np.array(estimates) <span class="op">-</span> TRUE_MEAN)),</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">'theoretical_se'</span>: TRUE_STD <span class="op">/</span> np.sqrt(n),</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>df_sweep <span class="op">=</span> pd.DataFrame(results)</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Results (averaged over 500 repetitions per n):'</span>)</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_sweep.to_string(index<span class="op">=</span><span class="va">False</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Results (averaged over 500 repetitions per n):
+   n  mean_est  std_est   mae  theoretical_se
+  10    99.702    4.878 3.930           4.743
+  30    99.854    2.779 2.207           2.739
+  50   100.125    2.153 1.728           2.121
+ 100    99.992    1.559 1.228           1.500
+ 300    99.950    0.868 0.694           0.866
+ 500   100.002    0.690 0.546           0.671
+1000    99.992    0.465 0.360           0.474
+3000   100.009    0.270 0.213           0.274</code></pre>
+</div>
+</div>
+<div id="bd06bc3b" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">13</span>, <span class="dv">5</span>))</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>fig.suptitle(<span class="st">'Law of Large Numbers — How Sample Size Affects Estimation Accuracy'</span>,</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>             fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Left: MAE vs n</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>ax1.plot(df_sweep[<span class="st">'n'</span>], df_sweep[<span class="st">'mae'</span>], <span class="st">'o-'</span>, color<span class="op">=</span>COLORS[<span class="st">'primary'</span>],</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>         linewidth<span class="op">=</span><span class="dv">2</span>, markersize<span class="op">=</span><span class="dv">7</span>, label<span class="op">=</span><span class="st">'Simulated MAE'</span>)</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>ax1.plot(df_sweep[<span class="st">'n'</span>], df_sweep[<span class="st">'theoretical_se'</span>], <span class="st">'s--'</span>, color<span class="op">=</span>COLORS[<span class="st">'danger'</span>],</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>         linewidth<span class="op">=</span><span class="dv">2</span>, markersize<span class="op">=</span><span class="dv">6</span>, label<span class="op">=</span><span class="st">'Theoretical SE = σ/√n'</span>)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>ax1.set_xscale(<span class="st">'log'</span>)</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'Sample size (log scale)'</span>)</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'Mean absolute error'</span>)</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'Estimation Error Decreases with n'</span>)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>ax1.legend()</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Right: distribution of estimates at selected n</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>colors_sel <span class="op">=</span> [COLORS[<span class="st">'danger'</span>], COLORS[<span class="st">'accent'</span>], COLORS[<span class="st">'primary'</span>], COLORS[<span class="st">'success'</span>]]</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col, n <span class="kw">in</span> <span class="bu">zip</span>(colors_sel, [<span class="dv">10</span>, <span class="dv">50</span>, <span class="dv">200</span>, <span class="dv">1000</span>]):</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>    rng <span class="op">=</span> np.random.default_rng(<span class="dv">42</span>)</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>    ests <span class="op">=</span> [rng.normal(TRUE_MEAN, TRUE_STD, n).mean() <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_repetitions)]</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>    ax2.hist(ests, bins<span class="op">=</span><span class="dv">35</span>, density<span class="op">=</span><span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span>col, edgecolor<span class="op">=</span><span class="st">'white'</span>, label<span class="op">=</span><span class="ss">f'n=</span><span class="sc">{</span>n<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>ax2.axvline(TRUE_MEAN, color<span class="op">=</span><span class="st">'black'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="ss">f'True mean=</span><span class="sc">{</span>TRUE_MEAN<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>ax2.set_xlabel(<span class="st">'Estimated mean'</span>)</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">'Density'</span>)</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'Sampling Distribution of the Mean'</span>)</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>ax2.legend()</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">Key insight: the spread of estimated means narrows as n grows,'</span>)</span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'and the simulated SD closely tracks the theoretical SE = σ/√n.'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="python-stats-01-simulation-basics_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Key insight: the spread of estimated means narrows as n grows,
+and the simulated SD closely tracks the theoretical SE = σ/√n.</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Key takeaway</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Random seed</td>
+<td><code>np.random.default_rng(42)</code> guarantees reproducibility</td>
+</tr>
+<tr class="even">
+<td>Distribution choice</td>
+<td>Match your data-generating process to the phenomenon</td>
+</tr>
+<tr class="odd">
+<td>Three-step validation</td>
+<td>Summary stats → histogram → Q-Q plot</td>
+</tr>
+<tr class="even">
+<td>Simulation toolkit</td>
+<td>Five reusable functions used throughout this series</td>
+</tr>
+<tr class="odd">
+<td>Law of Large Numbers</td>
+<td>Estimation error ≈ σ/√n — verified by simulation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Next post →</strong> Descriptive Statistics in Practice: verifying the Law of Large Numbers with normal data, and when to prefer median over mean.</p>
+<hr>
+<p><em>Python Statistical Analysis in Practice — Post 01 of the series</em><br>
+<em>Author: Jason JJ Li · PKU Institute of Population Research</em></p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
