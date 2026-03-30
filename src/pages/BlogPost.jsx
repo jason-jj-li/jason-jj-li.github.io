@@ -88,7 +88,7 @@ export default function BlogPost({ lang }) {
           </Link>
         </div>
 
-        <article className="rounded-2xl shadow-sm p-6 md:p-8 border border-slate-200 bg-white text-slate-900">
+        <article className="article-light rounded-2xl shadow-sm p-6 md:p-8 border border-slate-200 bg-white text-slate-900">
           <div className="flex flex-wrap items-center gap-3 text-sm text-slate-500 mb-4">
             {dateLabel && (
               <span className="inline-flex items-center gap-1">

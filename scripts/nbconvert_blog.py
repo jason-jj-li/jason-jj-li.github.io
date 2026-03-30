@@ -28,6 +28,8 @@ def main():
           "nbconvert",
           "--to",
           "html",
+          "--execute",
+          "--ExecutePreprocessor.timeout=120",
           "--output-dir",
           str(nb_path.parent),
           "--template",
