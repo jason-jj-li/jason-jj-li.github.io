@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Tag, Notebook as NotebookIcon, FileText, Download } from 'lucide-react';
 import { getPostBySlug } from '../utils/posts';
@@ -16,6 +16,12 @@ const formatDateLabel = (value, lang) => {
 export default function BlogPost({ lang }) {
   const { slug } = useParams();
   const post = getPostBySlug(slug, lang);
+
+  useEffect(() => {
+    if (window.MathJax?.typesetPromise) {
+      window.MathJax.typesetPromise();
+    }
+  }, [post]);
   const htmlScopedStyles = `
     .post-html { overflow-x: auto; color: #0f172a; }
     .post-html pre {
