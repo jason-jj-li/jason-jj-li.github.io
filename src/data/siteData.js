@@ -217,7 +217,7 @@ export const SITE_DATA = {
 
   highlights: [
     {
-      date: "2025-01-16",
+      date: "2026-01-16",
       title: {
         zh: "QualInsight v4.1 发布",
         en: "QualInsight v4.1 Released"
@@ -230,7 +230,7 @@ export const SITE_DATA = {
       link: "https://github.com/jason-jj-li/AI_quali"
     },
     {
-      date: "2025-11-15",
+      date: "2026-01-01",
       title: {
         zh: "疼痛发生率与多部位轨迹研究发表",
         en: "Pain Incidence and Trajectories Study Published"
@@ -240,7 +240,7 @@ export const SITE_DATA = {
         en: "Our study on adverse childhood experiences and pain trajectories published in PAIN Reports."
       },
       tag: { zh: "论文", en: "Publication" },
-      link: "#"
+      link: "https://doi.org/10.1097/PR9.0000000000001389"
     },
     {
       date: "2025-11-10",
@@ -283,6 +283,14 @@ export const SITE_DATA = {
         }
       },
       {
+        role: { zh: "编委", en: "Editorial Board Member" },
+        journal: "Discover Public Health",
+        description: {
+          zh: "负责公共卫生研究领域的稿件评审",
+          en: "Managing peer review in public health research"
+        }
+      },
+      {
         role: { zh: "主题编辑", en: "Topic Editor" },
         journal: "Frontiers in Epidemiology",
         description: {
@@ -319,11 +327,21 @@ export const SITE_DATA = {
 
   teaching: [
     {
+      code: "STA101",
+      year: "2026 Spring",
+      name: { zh: "应用统计分析", en: "Applied Statistical Analysis" },
+      role: { zh: "讲师", en: "Instructor" },
+      description: {
+        zh: "基于 Python 的统计分析课程，涵盖描述性统计、假设检验、回归分析、数据可视化等内容，结合公共卫生与人口健康实际案例。",
+        en: "Python-based statistical analysis course covering descriptive statistics, hypothesis testing, regression analysis, and data visualization with public health and population health case studies."
+      }
+    },
+    {
       code: "PH401",
       year: "2025 Fall",
       name: { zh: "人口健康流行病学", en: "Population Health Epidemiology" },
       role: { zh: "讲师", en: "Instructor" },
-      description: { 
+      description: {
         zh: "从生命历程视角讲授人口健康测量、疾病负担评估与社会决定因素分析方法，结合纵向数据案例。",
         en: "Life-course approach to measuring population health, disease burden, and social determinants, with longitudinal data case studies."
       }
@@ -364,11 +382,11 @@ export const SITE_DATA = {
 
   publications: [
     {
-      year: 2025,
+      year: 2026,
       title: "Adverse Childhood Experiences and Pain Incidence and Multisite Trajectories among Middle-Aged and Older Chinese Adults",
       authors: "Jiajia Li; Heming Pei; Guilan Xie; Gong Chen; Lijun Pei",
-      venue: "PAIN Reports (SCI/Q2)",
-      links: { paper: "#" },
+      venue: "PAIN Reports 11(1):e1389 (SCI/Q2)",
+      links: { paper: "https://doi.org/10.1097/PR9.0000000000001389" },
       highlight: true
     },
     {

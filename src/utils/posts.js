@@ -168,6 +168,18 @@ function normalizePost(path, raw) {
     htmlUrl,
     htmlContent,
     htmlStyles,
+    // 系列相关字段
+    series: data.series || null,
+    seriesName: {
+      zh: data.series_name_zh || data.series || '',
+      en: data.series_name_en || data.series || '',
+    },
+    seriesOrder: parseInt(data.series_order, 10) || 0,
+    seriesDesc: {
+      zh: data.series_desc_zh || '',
+      en: data.series_desc_en || '',
+    },
+    // 标题和摘要
     title: { zh: data.title_zh || data.title, en: data.title_en || data.title },
     summary: {
       zh: data.summary_zh || shortSummary,
@@ -181,6 +193,74 @@ function normalizePost(path, raw) {
 const basePosts = Object.entries(mdFiles)
   .map(([path, raw]) => normalizePost(path, raw))
   .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+// 按系列分组
+export function getSeries(lang = 'zh') {
+  const seriesMap = new Map();
+
+  basePosts.forEach((post) => {
+    if (!post.series) {
+      // 没有系列的文章归类到 "其他"
+      const key = 'uncategorized';
+      if (!seriesMap.has(key)) {
+        seriesMap.set(key, {
+          id: key,
+          name: { zh: '其他文章', en: 'Other Articles' },
+          description: { zh: '', en: '' },
+          posts: [],
+        });
+      }
+      seriesMap.get(key).posts.push(post);
+      return;
+    }
+
+    const key = post.series;
+    if (!seriesMap.has(key)) {
+      seriesMap.set(key, {
+        id: key,
+        name: {
+          zh: post.seriesName?.zh || key,
+          en: post.seriesName?.en || key,
+        },
+        description: {
+          zh: post.seriesDesc?.zh || '',
+          en: post.seriesDesc?.en || '',
+        },
+        posts: [],
+      });
+    }
+    seriesMap.get(key).posts.push(post);
+  });
+
+  // 对每个系列内的文章按 seriesOrder 排序
+  seriesMap.forEach((series) => {
+    series.posts.sort((a, b) => a.seriesOrder - b.seriesOrder);
+  });
+
+  // 转换为数组并过滤掉没有文章的系列
+  return Array.from(seriesMap.values())
+    .filter((s) => s.posts.length > 0)
+    .map((series) => ({
+      ...series,
+      name: series.name[lang] || series.name.en || series.name.zh || series.id,
+      description: series.description[lang] || series.description.en || series.description.zh || '',
+      postCount: series.posts.length,
+    }));
+}
+
+export function getSeriesById(seriesId, lang = 'zh') {
+  const series = getSeries(lang).find((s) => s.id === seriesId);
+  if (!series) return null;
+
+  return {
+    ...series,
+    posts: series.posts.map((post) => ({
+      ...post,
+      title: pickLang(post.title, lang),
+      summary: pickLang(post.summary, lang),
+    })),
+  };
+}
 
 function pickLang(obj, lang) {
   if (!obj) return '';

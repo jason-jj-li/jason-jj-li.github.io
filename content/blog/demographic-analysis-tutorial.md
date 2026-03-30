@@ -1,7 +1,13 @@
 ---
 slug: demographic-analysis-tutorial
-title_zh: Easy Demographic Analysis Tutorial with Python:101
-title_en: Easy Demographic Analysis Tutorial with Python:101
+series: demographic
+series_name_zh: "人口统计分析系列"
+series_name_en: "Demographic Analysis Series"
+series_order: 1
+series_desc_zh: "使用 Python 进行人口统计分析的完整教程，从基础概念到高级技术"
+series_desc_en: "Complete tutorials on demographic analysis using Python, from basics to advanced techniques"
+title_zh: "Easy Demographic Analysis Tutorial with Python:101"
+title_en: "Easy Demographic Analysis Tutorial with Python:101"
 date: 2025-12-07
 tags: [demographics, python, data-analysis, population-pyramids, statistics]
 source: jupyter

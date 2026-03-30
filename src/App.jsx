@@ -6,6 +6,7 @@ import Research from './pages/Research';
 import Tools from './pages/Tools';
 import Teaching from './pages/Teaching';
 import Blog from './pages/Blog';
+import SeriesDetail from './pages/SeriesDetail';
 import BlogPost from './pages/BlogPost';
 
 export default function App() {
@@ -63,6 +64,7 @@ export default function App() {
           <Route path="/tools" element={<Tools lang={lang} />} />
           <Route path="/teaching" element={<Teaching lang={lang} />} />
           <Route path="/blog" element={<Blog lang={lang} />} />
+          <Route path="/blog/series/:seriesId" element={<SeriesDetail lang={lang} />} />
           <Route path="/blog/:slug" element={<BlogPost lang={lang} />} />
         </Routes>
       </div>

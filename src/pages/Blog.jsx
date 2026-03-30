@@ -1,19 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, ExternalLink, Notebook as NotebookIcon, FileText } from 'lucide-react';
-import { getPosts } from '../utils/posts';
-
-const formatDate = (value, lang) => {
-  const date = new Date(value);
-  if (Number.isNaN(date)) return { day: '--', label: '' };
-  return {
-    day: String(date.getDate()).padStart(2, '0'),
-    label: date.toLocaleString(lang === 'zh' ? 'zh-CN' : 'en-US', { month: 'short', year: 'numeric' })
-  };
-};
+import { BookOpen, FolderOpen, ChevronRight, FileText } from 'lucide-react';
+import { getSeries } from '../utils/posts';
 
 export default function Blog({ lang }) {
-  const posts = getPosts(lang);
+  const seriesList = getSeries(lang);
+
+  // 筛选出有系列的和没系列的
+  const categorizedSeries = seriesList.filter((s) => s.id !== 'uncategorized');
+  const uncategorized = seriesList.find((s) => s.id === 'uncategorized');
 
   return (
     <div className="min-h-screen pt-24 pb-16">
@@ -24,72 +19,89 @@ export default function Blog({ lang }) {
           </div>
           <div>
             <h1 className="text-4xl font-serif font-bold text-slate-50 tracking-tight">
-              {lang === 'zh' ? '博客文章' : 'Blog Posts'}
+              {lang === 'zh' ? '博客系列' : 'Blog Series'}
             </h1>
             <p className="text-slate-300 mt-1">
               {lang === 'zh'
-                ? '每篇文章都是单独文件，支持 Markdown 与 Jupyter Notebook'
-                : 'Each post is its own file—Markdown or Jupyter Notebook backed.'}
+                ? '按主题组织的文章集合，点击系列查看全部内容'
+                : 'Collections organized by topic. Click a series to explore.'}
             </p>
           </div>
         </div>
 
-        {posts.length === 0 && (
-          <div className="card border-dashed text-center rounded-xl p-8 text-slate-300">
-            {lang === 'zh' ? '暂无文章，添加 .md 或 .ipynb 即可出现这里。' : 'No posts yet. Add a .md or .ipynb and it will show up here.'}
+        {/* 系列卡片网格 */}
+        {categorizedSeries.length > 0 && (
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
+            {categorizedSeries.map((series) => (
+              <Link
+                key={series.id}
+                to={`/blog/series/${series.id}`}
+                className="group card card-hover rounded-xl p-6 flex flex-col"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="p-3 bg-[rgba(255,255,255,0.06)] rounded-lg text-cyan-200 group-hover:text-cyan-300 transition-colors">
+                    <FolderOpen size={28} />
+                  </div>
+                  <span className="text-xs font-semibold text-slate-400 bg-[rgba(255,255,255,0.04)] px-2 py-1 rounded-full">
+                    {series.postCount} {lang === 'zh' ? '篇' : 'posts'}
+                  </span>
+                </div>
+
+                <h3 className="font-bold text-slate-50 text-xl mb-2 group-hover:text-cyan-200 transition-colors">
+                  {series.name}
+                </h3>
+
+                {series.description && (
+                  <p className="text-slate-300 text-sm leading-relaxed mb-4 flex-1">
+                    {series.description}
+                  </p>
+                )}
+
+                <div className="flex items-center gap-1 text-sm text-cyan-200 font-medium mt-auto">
+                  {lang === 'zh' ? '查看系列' : 'View series'}
+                  <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+            ))}
           </div>
         )}
 
-        <div className="grid gap-6">
-          {posts.map((post) => {
-            const date = formatDate(post.date, lang);
-            const isNotebook = post.source === 'notebook';
-            const sourceLabel = isNotebook
-              ? lang === 'zh' ? 'Jupyter 笔记' : 'Jupyter Notebook'
-              : lang === 'zh' ? 'Markdown 文章' : 'Markdown Post';
-
-            return (
-              <Link
-                key={post.slug}
-                to={`/blog/${post.slug}`}
-                className="flex flex-col md:flex-row gap-6 p-6 md:p-8 card hover:shadow-xl hover:-translate-y-1 transition-all group"
-              >
-                <div className="shrink-0 flex md:flex-col items-center md:items-start gap-2 text-slate-400 md:w-24">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-slate-400 group-hover:text-cyan-200 transition-colors">
-                      {date.day}
-                    </div>
-                    <div className="text-xs uppercase tracking-wider font-bold mt-1">
-                      {date.label}
-                    </div>
+        {/* 无系列文章 */}
+        {uncategorized && uncategorized.posts.length > 0 && (
+          <div className="mt-12">
+            <h2 className="text-2xl font-serif font-bold text-slate-50 mb-6">
+              {lang === 'zh' ? '其他文章' : 'Other Articles'}
+            </h2>
+            <div className="grid gap-4">
+              {uncategorized.posts.map((post) => (
+                <Link
+                  key={post.slug}
+                  to={`/blog/${post.slug}`}
+                  className="flex items-center gap-4 p-4 card card-hover rounded-lg group"
+                >
+                  <div className="p-2 bg-[rgba(255,255,255,0.06)] rounded text-cyan-200">
+                    <FileText size={20} />
                   </div>
-                </div>
-
-                <div className="flex-1 border-l-0 md:border-l-2 border-[rgba(148,163,184,0.25)] md:pl-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-xs font-bold text-slate-900 bg-gradient-to-r from-cyan-300 to-indigo-300 px-3 py-1 rounded-full">
-                      {post.tag || (lang === 'zh' ? '文章' : 'Article')}
-                    </span>
-                    <span className="text-xs font-semibold text-slate-100 bg-[rgba(255,255,255,0.06)] px-3 py-1 rounded-full flex items-center gap-1 border border-[rgba(148,163,184,0.35)]">
-                      {isNotebook ? <NotebookIcon size={14} /> : <FileText size={14} />}
-                      {sourceLabel}
-                    </span>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-slate-100 group-hover:text-cyan-200 transition-colors">
+                      {post.title}
+                    </h4>
+                    <p className="text-sm text-slate-400">{post.date}</p>
                   </div>
-                  <h3 className="font-bold text-slate-50 text-2xl mb-3 group-hover:text-cyan-200 transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-slate-300 leading-relaxed">
-                    {post.summary}
-                  </p>
-                </div>
+                  <ChevronRight size={18} className="text-slate-500 group-hover:text-cyan-200 group-hover:translate-x-1 transition-all" />
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
-                <div className="self-center opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-cyan-200">
-                  <ExternalLink size={24} />
-                </div>
-              </Link>
-            );
-          })}
-        </div>
+        {seriesList.length === 0 && (
+          <div className="card border-dashed text-center rounded-xl p-8 text-slate-300">
+            {lang === 'zh'
+              ? '暂无文章，添加 .md 或 .ipynb 即可出现这里。'
+              : 'No posts yet. Add a .md or .ipynb and it will show up here.'}
+          </div>
+        )}
       </div>
     </div>
   );
