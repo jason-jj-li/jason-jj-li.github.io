@@ -125,52 +125,31 @@ export default function Research({ lang }) {
 
           {/* 三分支卡片 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
-            {[
-              {
-                title: lang === 'zh' ? '童年逆境与健康轨迹' : 'Childhood Adversity & Health Trajectories',
-                desc: lang === 'zh'
-                  ? '分析ACEs如何在生命历程中导致多种健康结局的风险，并识别可介入节点。'
-                  : 'Examine how ACEs generate risks for multiple health outcomes across the life course and identify critical intervention points.',
-                gradient: 'from-[rgba(124,58,237,0.12)] to-[rgba(56,189,248,0.12)]',
-                borderColor: 'border-[rgba(148,163,184,0.35)]',
-                iconColor: 'text-cyan-200',
-                dotColor: 'bg-cyan-300'
-              },
-              {
-                title: lang === 'zh' ? '跨国比较与制度调节' : 'Cross-national Comparisons & Institutional Contexts',
-                desc: lang === 'zh'
-                  ? '基于跨国数据，比较同一早期风险在不同制度与文化情境下如何转化为不同程度的健康不平等。'
-                  : 'Leverage cross-national data to compare how the same early-life risks translate into varying degrees of health inequality across diverse institutional and cultural contexts.',
-                gradient: 'from-[rgba(59,130,246,0.12)] to-[rgba(168,85,247,0.12)]',
-                borderColor: 'border-[rgba(148,163,184,0.35)]',
-                iconColor: 'text-indigo-200',
-                dotColor: 'bg-indigo-300'
-              },
-              {
-                title: lang === 'zh' ? '环境与社会风险叠加' : 'Environmental & Social Risk Interactions',
-                desc: lang === 'zh'
-                  ? '在资源约束与全球南方情境中，评估环境与社会因素的交互作用，如何在生命历程中形成健康不平等。'
-                  : 'In resource-constrained and Global South settings, evaluate how interactions between environmental and social factors compound to generate health inequalities across the life course.',
-                gradient: 'from-[rgba(79,70,229,0.12)] to-[rgba(236,72,153,0.12)]',
-                borderColor: 'border-[rgba(148,163,184,0.35)]',
-                iconColor: 'text-purple-200',
-                dotColor: 'bg-purple-300'
-              },
-            ].map((node, idx) => (
-              <div 
-                key={idx} 
-                className={`group bg-gradient-to-br ${node.gradient} border-2 ${node.borderColor} rounded-2xl p-6 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative cursor-pointer`}
-              >
-                <div>
+            {SITE_DATA.researchDirections.map((dir) => {
+              const Icon = dir.icon;
+              return (
+                <div
+                  key={dir.key}
+                  className="group card card-hover rounded-2xl p-6"
+                >
                   <div className="flex items-start gap-3 mb-3">
-                    <div className={`mt-1.5 w-2.5 h-2.5 rounded-full ${node.dotColor} flex-shrink-0`}></div>
-                    <h4 className="font-bold text-slate-50 text-base leading-tight">{node.title}</h4>
+                    <div className="p-2 bg-[rgba(255,255,255,0.06)] rounded-lg text-cyan-200">
+                      <Icon size={20} />
+                    </div>
+                    <h4 className="font-bold text-slate-50 text-base leading-tight">{t(dir.title)}</h4>
                   </div>
-                  <p className="text-sm text-slate-200 leading-relaxed">{node.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+                  <p className="text-sm text-slate-200 leading-relaxed mb-3">{t(dir.desc)}</p>
+                  {dir.datasets?.length > 0 && (
+                    <div className="flex flex-wrap gap-2">
+                      {dir.datasets.map((ds) => (
+                        <span key={ds} className="tag-ghost text-[10px]">{ds}</span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
 
         {/* 研究逻辑流程 */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-3 mt-8 px-2">

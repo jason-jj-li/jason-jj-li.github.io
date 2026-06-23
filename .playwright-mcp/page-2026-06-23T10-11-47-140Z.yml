@@ -1,0 +1,260 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - link "JL 李佳佳" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: JL
+        - generic [ref=e8]: 李佳佳
+      - generic [ref=e9]:
+        - link "主页" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "研究" [ref=e11] [cursor=pointer]:
+          - /url: /research
+        - link "工具" [ref=e12] [cursor=pointer]:
+          - /url: /tools
+        - link "教学" [ref=e13] [cursor=pointer]:
+          - /url: /teaching
+        - link "博客" [ref=e14] [cursor=pointer]:
+          - /url: /blog
+      - button "Switch to English" [ref=e15] [cursor=pointer]:
+        - img [ref=e16]
+  - generic [ref=e21]:
+    - link "返回" [ref=e23] [cursor=pointer]:
+      - /url: /blog
+      - img [ref=e24]
+      - text: 返回
+    - article [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - img [ref=e29]
+          - text: 2026年3月30日
+        - generic [ref=e31]:
+          - img [ref=e32]
+          - text: Article
+        - generic [ref=e35]:
+          - img [ref=e36]
+          - text: 来自 Jupyter Notebook（本地已编译 HTML）
+        - link "下载 notebook" [ref=e38] [cursor=pointer]:
+          - /url: /assets/python-stats-00-environment-setup-DWuPkZJl.ipynb
+          - img [ref=e39]
+          - text: 下载 notebook
+      - 'heading "Environment Setup: Installing Python and Required Packages" [level=1] [ref=e42]'
+      - main [ref=e45]:
+        - generic [ref=e50]:
+          - 'heading "Python Statistical Analysis in Practice — 00: Environment Setup" [level=1] [ref=e51]'
+          - paragraph [ref=e52]:
+            - emphasis [ref=e53]: "Author: Jason JJ Li · Peking University Institute of Population Research"
+          - paragraph [ref=e54]: "Before we do any statistics, every computer in the room needs to run the same code and produce the same results. This session covers:"
+          - list [ref=e55]:
+            - listitem [ref=e56]: Installing Python via Miniconda
+            - listitem [ref=e57]: Creating an isolated course environment
+            - listitem [ref=e58]: Installing all required packages
+            - listitem [ref=e59]: Verifying the installation with a quick sanity-check script
+            - listitem [ref=e60]: JupyterLab orientation
+          - blockquote [ref=e61]:
+            - paragraph [ref=e62]:
+              - strong [ref=e63]: "Goal:"
+              - text: by the end of this session, running every cell in this notebook should produce no errors.
+        - generic [ref=e68]:
+          - separator [ref=e69]
+          - 'heading "Part 1: Installation Guide" [level=2] [ref=e70]'
+          - heading "1.1 Install Python" [level=3] [ref=e71]
+          - paragraph [ref=e72]:
+            - text: Download Python
+            - strong [ref=e73]: 3.11 or later
+            - text: "from:"
+            - link "https://www.python.org/downloads/" [ref=e74] [cursor=pointer]:
+              - /url: https://www.python.org/downloads/
+          - paragraph [ref=e75]:
+            - text: During installation on Windows, check
+            - strong [ref=e76]: "\"Add Python to PATH\""
+            - text: before clicking Install.
+          - paragraph [ref=e77]: "Verify the installation by opening a terminal and running:"
+          - generic [ref=e79]: "python --version # or python3 --version on macOS/Linux"
+          - heading "1.2 Install all required packages" [level=3] [ref=e80]
+          - paragraph [ref=e81]: "Open a terminal (Command Prompt / PowerShell on Windows, Terminal on macOS/Linux) and run:"
+          - generic [ref=e83]: pip install pandas numpy scipy matplotlib seaborn statsmodels pingouin jupyter jupyterlab watermark
+          - blockquote [ref=e84]:
+            - paragraph [ref=e85]:
+              - strong [ref=e86]: "macOS/Linux:"
+              - text: if
+              - code [ref=e87]: pip
+              - text: is not found, try
+              - code [ref=e88]: pip3
+              - text: instead.
+          - heading "1.3 Launch JupyterLab" [level=3] [ref=e89]
+          - generic [ref=e91]: jupyter lab
+          - paragraph [ref=e92]: A browser window should open automatically. If not, copy the URL shown in the terminal.
+        - generic [ref=e97]:
+          - separator [ref=e98]
+          - 'heading "Part 2: Package Version Check" [level=2] [ref=e99]'
+          - paragraph [ref=e100]: Run this cell. If it prints version numbers without errors, your environment is correctly set up.
+        - generic [ref=e101]:
+          - generic [ref=e103]:
+            - generic [ref=e104]: "In [1]:"
+            - generic [ref=e108]: "import sys import importlib required = { 'pandas': '2.0', 'numpy': '1.24', 'scipy': '1.10', 'matplotlib': '3.7', 'seaborn': '0.12', 'statsmodels': '0.14', } print(f'Python : {sys.version.split()[0]}') print() all_ok = True for pkg, min_ver in required.items(): try: mod = importlib.import_module(pkg) ver = getattr(mod, '__version__', 'unknown') status = 'OK' if ver >= min_ver else f'WARN (need >={min_ver})' print(f' {pkg:<14} {ver:<12} [{status}]') if 'WARN' in status: all_ok = False except ImportError: print(f' {pkg:<14} NOT INSTALLED [ERROR]') all_ok = False print() if all_ok: print('All packages installed and up to date. You are ready.') else: print('Some packages are missing or outdated.') print('Run: pip install --upgrade ' + ' '.join(required.keys()))"
+          - generic [ref=e110]:
+            - generic [ref=e114]: "Python : 3.11.9 pandas 2.3.3 [OK] numpy 2.4.2 [OK] scipy 1.16.2 [OK]"
+            - generic [ref=e118]: matplotlib 3.10.7 [WARN (need >=3.7)]
+            - generic [ref=e122]: "seaborn 0.13.2 [OK] statsmodels 0.14.6 [OK] Some packages are missing or outdated. Run: pip install --upgrade pandas numpy scipy matplotlib seaborn statsmodels"
+        - generic [ref=e127]:
+          - separator [ref=e128]
+          - 'heading "Part 3: JupyterLab Orientation" [level=2] [ref=e129]'
+          - heading "Essential keyboard shortcuts" [level=3] [ref=e130]
+          - table [ref=e131]:
+            - rowgroup [ref=e132]:
+              - row "Action Shortcut" [ref=e133]:
+                - columnheader "Action" [ref=e134]
+                - columnheader "Shortcut" [ref=e135]
+            - rowgroup [ref=e136]:
+              - row "Run current cell Shift + Enter" [ref=e137]:
+                - cell "Run current cell" [ref=e138]
+                - cell "Shift + Enter" [ref=e139]:
+                  - code [ref=e140]: Shift + Enter
+              - row "Run cell, stay Ctrl + Enter" [ref=e141]:
+                - cell "Run cell, stay" [ref=e142]
+                - cell "Ctrl + Enter" [ref=e143]:
+                  - code [ref=e144]: Ctrl + Enter
+              - row "Insert cell below B (command mode)" [ref=e145]:
+                - cell "Insert cell below" [ref=e146]
+                - cell "B (command mode)" [ref=e147]:
+                  - code [ref=e148]: B
+                  - text: (command mode)
+              - row "Insert cell above A (command mode)" [ref=e149]:
+                - cell "Insert cell above" [ref=e150]
+                - cell "A (command mode)" [ref=e151]:
+                  - code [ref=e152]: A
+                  - text: (command mode)
+              - row "Delete cell D, D (command mode)" [ref=e153]:
+                - cell "Delete cell" [ref=e154]
+                - cell "D, D (command mode)" [ref=e155]:
+                  - code [ref=e156]: D, D
+                  - text: (command mode)
+              - row "Switch to Markdown M (command mode)" [ref=e157]:
+                - cell "Switch to Markdown" [ref=e158]
+                - cell "M (command mode)" [ref=e159]:
+                  - code [ref=e160]: M
+                  - text: (command mode)
+              - row "Switch to Code Y (command mode)" [ref=e161]:
+                - cell "Switch to Code" [ref=e162]
+                - cell "Y (command mode)" [ref=e163]:
+                  - code [ref=e164]: "Y"
+                  - text: (command mode)
+              - row "Enter command mode Esc" [ref=e165]:
+                - cell "Enter command mode" [ref=e166]
+                - cell "Esc" [ref=e167]:
+                  - code [ref=e168]: Esc
+              - row "Enter edit mode Enter" [ref=e169]:
+                - cell "Enter edit mode" [ref=e170]
+                - cell "Enter" [ref=e171]:
+                  - code [ref=e172]: Enter
+          - heading "Two modes" [level=3] [ref=e173]
+          - list [ref=e174]:
+            - listitem [ref=e175]:
+              - strong [ref=e176]: Edit mode
+              - text: "(blue border): you are typing inside a cell"
+            - listitem [ref=e177]:
+              - strong [ref=e178]: Command mode
+              - text: "(no cursor): keyboard shortcuts act on cells themselves"
+          - heading "Cell types" [level=3] [ref=e179]
+          - list [ref=e180]:
+            - listitem [ref=e181]:
+              - strong [ref=e182]: Code
+              - text: ": runs Python, shows output below"
+            - listitem [ref=e183]:
+              - strong [ref=e184]: Markdown
+              - text: ": renders formatted text, equations ("
+              - generic [ref=e185]:
+                - generic [ref=e186]:
+                  - generic [ref=e188]: L
+                  - generic [ref=e196]: A
+                  - generic [ref=e198]: T
+                  - generic [ref=e204]: E
+                  - generic [ref=e206]: X
+                - math [ref=e208]:
+                  - generic [ref=e209]: L
+                  - generic [ref=e214]: A
+                  - generic [ref=e215]: T
+                  - generic [ref=e218]: E
+                  - generic [ref=e219]: X
+              - text: ), and tables
+        - generic [ref=e224]:
+          - separator [ref=e225]
+          - 'heading "Part 4: Hello Simulation — Your First Run" [level=2] [ref=e226]'
+          - paragraph [ref=e227]:
+            - text: This is the exact pattern every post in this series will follow.
+            - text: Run these three cells and confirm you see output.
+        - generic [ref=e228]:
+          - generic [ref=e230]:
+            - generic [ref=e231]: "In [2]:"
+            - generic [ref=e235]: "import numpy as np import matplotlib.pyplot as plt plt.style.use('seaborn-v0_8-whitegrid') # Step 1: Set parameters we know are true TRUE_MEAN = 170 # e.g. height in cm TRUE_STD = 8 N = 300 # Step 2: Simulate data rng = np.random.default_rng(42) data = rng.normal(loc=TRUE_MEAN, scale=TRUE_STD, size=N) # Step 3: Estimate from data est_mean = data.mean() est_std = data.std(ddof=1) # Step 4: Verify print('=== Hello Simulation ===') print(f'True mean : {TRUE_MEAN} | Estimated: {est_mean:.2f} | Error: {abs(est_mean-TRUE_MEAN):.2f}') print(f'True std : {TRUE_STD} | Estimated: {est_std:.2f} | Error: {abs(est_std-TRUE_STD):.2f}') print() print('If you see numbers above — Python is working correctly.')"
+          - generic [ref=e241]: "=== Hello Simulation === True mean : 170 | Estimated: 169.67 | Error: 0.33 True std : 8 | Estimated: 7.44 | Error: 0.56 If you see numbers above — Python is working correctly."
+        - generic [ref=e242]:
+          - generic [ref=e244]:
+            - generic [ref=e245]: "In [3]:"
+            - generic [ref=e249]: "# A simple plot — if this displays, matplotlib is working x = np.linspace(data.min(), data.max(), 200) from scipy import stats fig, ax = plt.subplots(figsize=(8, 4)) ax.hist(data, bins=30, density=True, color='#2E86AB', edgecolor='white', alpha=0.8, label='Simulated data') ax.plot(x, stats.norm.pdf(x, TRUE_MEAN, TRUE_STD), color='#E74C3C', linewidth=2.5, label=f'True distribution (mean={TRUE_MEAN}, sd={TRUE_STD})') ax.axvline(est_mean, color='#F18F01', linestyle='--', linewidth=2, label=f'Estimated mean = {est_mean:.1f}') ax.set_xlabel('Value') ax.set_ylabel('Density') ax.set_title('Hello Simulation: estimated distribution vs. true distribution') ax.legend() plt.tight_layout() plt.show() print('If you see a histogram with a red curve — matplotlib is working correctly.')"
+          - generic [ref=e251]:
+            - img "No description has been provided for this image" [ref=e255]
+            - generic [ref=e259]: If you see a histogram with a red curve — matplotlib is working correctly.
+        - generic [ref=e260]:
+          - generic [ref=e262]:
+            - generic [ref=e263]: "In [4]:"
+            - generic [ref=e267]: "# Test pandas and statsmodels import pandas as pd import statsmodels.api as sm df = pd.DataFrame({'height': data}) print('pandas DataFrame shape:', df.shape) print(df.describe().round(2)) print() print('If you see a summary table above — pandas is working correctly.')"
+          - generic [ref=e273]: "pandas DataFrame shape: (300, 1) height count 300.00 mean 169.67 std 7.44 min 149.47 25% 164.65 50% 169.30 75% 173.79 max 193.31 If you see a summary table above — pandas is working correctly."
+        - generic [ref=e278]:
+          - separator [ref=e279]
+          - 'heading "Part 5: Record Your Environment" [level=2] [ref=e280]'
+          - paragraph [ref=e281]: Run this cell and paste the output into your course notes. This makes it easy to reproduce results later and to debug version issues.
+        - generic [ref=e282]:
+          - generic [ref=e284]:
+            - generic [ref=e285]: "In [5]:"
+            - generic [ref=e289]: "import datetime pkgs = ['pandas', 'numpy', 'scipy', 'matplotlib', 'seaborn', 'statsmodels'] print('=== Environment Snapshot ===') print(f'Date : {datetime.date.today()}') print(f'Python : {sys.version.split()[0]}') print() for pkg in pkgs: mod = importlib.import_module(pkg) print(f' {pkg:<14} {mod.__version__}')"
+          - generic [ref=e295]: "=== Environment Snapshot === Date : 2026-03-30 Python : 3.11.9 pandas 2.3.3 numpy 2.4.2 scipy 1.16.2 matplotlib 3.10.7 seaborn 0.13.2 statsmodels 0.14.6"
+        - generic [ref=e300]:
+          - separator [ref=e301]
+          - heading "Common Installation Issues" [level=2] [ref=e302]
+          - table [ref=e303]:
+            - rowgroup [ref=e304]:
+              - row "Problem Solution" [ref=e305]:
+                - columnheader "Problem" [ref=e306]
+                - columnheader "Solution" [ref=e307]
+            - rowgroup [ref=e308]:
+              - row "python command not found Restart terminal; on macOS/Linux use python3" [ref=e309]:
+                - cell "python command not found" [ref=e310]:
+                  - code [ref=e311]: python
+                  - text: command not found
+                - cell "Restart terminal; on macOS/Linux use python3" [ref=e312]:
+                  - text: Restart terminal; on macOS/Linux use
+                  - code [ref=e313]: python3
+              - row "pip command not found Try pip3; or run python -m pip install ..." [ref=e314]:
+                - cell "pip command not found" [ref=e315]:
+                  - code [ref=e316]: pip
+                  - text: command not found
+                - cell "Try pip3; or run python -m pip install ..." [ref=e317]:
+                  - text: Try
+                  - code [ref=e318]: pip3
+                  - text: ; or run
+                  - code [ref=e319]: python -m pip install ...
+              - row "ModuleNotFoundError Re-run the pip install command and confirm no errors were printed" [ref=e320]:
+                - cell "ModuleNotFoundError" [ref=e321]:
+                  - code [ref=e322]: ModuleNotFoundError
+                - cell "Re-run the pip install command and confirm no errors were printed" [ref=e323]
+              - row "Jupyter opens wrong Python Run python -m jupyter lab to ensure the correct Python's Jupyter is launched" [ref=e324]:
+                - cell "Jupyter opens wrong Python" [ref=e325]
+                - cell "Run python -m jupyter lab to ensure the correct Python's Jupyter is launched" [ref=e326]:
+                  - text: Run
+                  - code [ref=e327]: python -m jupyter lab
+                  - text: to ensure the correct Python's Jupyter is launched
+              - 'row "seaborn-v0_8-whitegrid not found Upgrade seaborn: pip install --upgrade seaborn" [ref=e328]':
+                - cell "seaborn-v0_8-whitegrid not found" [ref=e329]:
+                  - code [ref=e330]: seaborn-v0_8-whitegrid
+                  - text: not found
+                - 'cell "Upgrade seaborn: pip install --upgrade seaborn" [ref=e331]':
+                  - text: "Upgrade seaborn:"
+                  - code [ref=e332]: pip install --upgrade seaborn
+              - row "Plot doesn't display Add %matplotlib inline at the top of your notebook" [ref=e333]:
+                - cell "Plot doesn't display" [ref=e334]
+                - cell "Add %matplotlib inline at the top of your notebook" [ref=e335]:
+                  - text: Add
+                  - code [ref=e336]: "%matplotlib inline"
+                  - text: at the top of your notebook

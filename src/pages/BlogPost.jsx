@@ -139,8 +139,8 @@ export default function BlogPost({ lang }) {
               <iframe
                 src={post.htmlUrl}
                 title={post.title}
-                className="w-full min-h-[1200px] border-0"
-                style={{ height: '100vh' }}
+                className="w-full min-h-[600px] md:min-h-[800px] border-0"
+                style={{ height: '70vh' }}
               />
             </div>
           ) : (

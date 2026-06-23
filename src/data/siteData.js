@@ -1,22 +1,22 @@
-import { Activity, Scale, Globe2 } from 'lucide-react';
+import { Activity, Brain, Database, Globe2 } from 'lucide-react';
 
 export const SITE_DATA = {
   profile: {
     name: { zh: "李佳佳", en: "Jiajia Li" },
-    title: { zh: "博雅博士后，北大人口研究所", en: "Boya Postdoctoral Fellow, PKU Institute of Population Research" },
-    university: { zh: "北京大学人口研究所", en: "Peking University Institute of Population Research" },
+    title: { zh: "北京师范大学社会学院讲师", en: "Lecturer, School of Sociology, Beijing Normal University" },
+    university: { zh: "北京师范大学社会学院", en: "School of Sociology, Beijing Normal University" },
     email: "lijiajia95@hotmail.com",
-    location: { zh: "北京市海淀区颐和园路5号，北京大学", en: "Peking University, 5 Yiheyuan Road, Haidian, Beijing" },
+    location: { zh: "北京市海淀区新街口外大街19号，北京师范大学", en: "Beijing Normal University, 19 Xinjiekouwai Street, Haidian, Beijing" },
     avatar: "/avatar.png",
     github: "https://github.com/jason-jj-li",
-    linkedin: "https://linkedin.com",
+    linkedin: null,
     scholar: "https://scholar.google.com/citations?user=W4ZFySoAAAAJ&hl=zh-CN&authuser=1",
     researchgate: "https://www.researchgate.net/profile/Jiajia-Li-35",
     orcid: "https://orcid.org/0000-0003-3302-5063",
-    cvLink: "#",
+    cvLink: null,
     bio: {
-      zh: "主要关注人口健康、健康不平等/健康社会决定因素,从生命历程视角研究早期经历如何影响老年期健康,识别可干预路径以促进健康公平。",
-      en: "Focus on population health, health inequalities, and social determinants from a life-course perspective, examining how early experiences shape late-life health to identify intervention pathways for health equity."
+      zh: "我目前在北京师范大学社会学院担任讲师，主要从事人口健康、社会流行病学与老龄健康研究。我的研究兴趣源于一个朴素的问题：一个人早年经历的健康不平等，是如何在几十年后仍然影响其老年生活质量的？从兰州大学社会学本科，到北京大学人口学博士与博士后，再到牛津大学老龄研究所的访问学者，我始终关注生命历程视角下的健康公平问题，希望为理解童年不良经历的健康代价、识别可干预窗口提供证据。",
+      en: "I am a Lecturer at the School of Sociology, Beijing Normal University, working on population health, social epidemiology, and aging. My interest grew from a simple question: how do health inequalities rooted in early life still shape the quality of later life decades afterward? From a B.A. in Sociology at Lanzhou University, to a Ph.D. and postdoc in Demography at Peking University, and a visiting fellowship at the Oxford Institute of Population Ageing, I have consistently focused on life-course health equity, aiming to illuminate the health costs of childhood adversity and identify intervention windows."
     }
   },
 
@@ -27,92 +27,84 @@ export const SITE_DATA = {
     cnFirstAuthor: 3
   },
 
-  researchInterests: [
+  researchDirections: [
     {
-      key: "lifecourse",
-      zh: "生命历程健康不平等",
-      en: "Life-course Health Inequalities",
-      icon: Scale,
+      key: "ace-health",
+      title: { zh: "童年不良经历与中老年多维健康", en: "Childhood Adversity & Multidimensional Later-Life Health" },
+      icon: Brain,
       desc: {
-        zh: "聚焦生命历程视角下的健康不平等，研究早期经历、社会环境与暴露对老年期健康的影响。",
-        en: "Focus on life-course health inequalities, studying how early experiences, social environments, and exposures shape later-life health."
-      }
+        zh: "探讨童年早期不良经历对心血管代谢性疾病、衰弱、功能受限和心理健康等中老年多维健康结局的长期影响，识别关键风险窗口与可干预路径。",
+        en: "Examining the long-term effects of childhood adversity on cardiometabolic diseases, frailty, functional limitations, and mental health in middle-aged and older adults, identifying critical risk windows and intervention pathways."
+      },
+      datasets: ["CHARLS"]
+    },
+    {
+      key: "trajectory-comparison",
+      title: { zh: "中老年健康轨迹与跨国比较", en: "Health Trajectories & Cross-National Comparisons" },
+      icon: Globe2,
+      desc: {
+        zh: "基于 CHARLS、HRS、ELSA、SHARE、NCDS 和 BCS70 等队列数据，刻画中老年健康动态变化，比较不同制度与文化情境下的健康不平等。",
+        en: "Analyzing health trajectories and cross-national differences in aging using cohort data such as CHARLS, HRS, ELSA, SHARE, NCDS, and BCS70."
+      },
+      datasets: ["CHARLS", "HRS", "ELSA", "SHARE", "NCDS", "BCS70"]
+    },
+    {
+      key: "methods-platforms",
+      title: { zh: "调查研究方法与数据平台", en: "Survey Methods & Data Platforms" },
+      icon: Database,
+      desc: {
+        zh: "开发调查研究与多源异构数据分析相关的方法工具与研究平台，支持定性研究、仿真调查与可重复分析。",
+        en: "Developing methodological tools and research platforms for survey research and multi-source heterogeneous data analysis, supporting qualitative research, simulated surveys, and reproducible analysis."
+      },
+      datasets: []
     }
   ],
 
-  activeProjects: [
+  workExperience: [
     {
-      title: { zh: "童年不良经历与老年健康轨迹", en: "Childhood Adversity and Late-life Health Trajectories" },
-      summary: {
-        zh: "基于 CHARLS 纵向数据，刻画童年不良经历对衰弱状态转移、ADL 障碍与抑郁症状的长期影响，识别关键干预窗口。",
-        en: "Using CHARLS longitudinal data to quantify how childhood adverse experiences shape frailty transitions, ADL limitations, and depressive symptoms, identifying critical intervention windows."
-      },
-      duration: "2024-2026",
-      sponsor: "PKU IPR",
-      areas: ["health", "lifecourse"],
-      links: { paper: "#", website: "#" }
+      title: { zh: "博雅博士后", en: "Boya Postdoctoral Fellow" },
+      institution: { zh: "北京大学人口研究所", en: "Institute of Population Research, Peking University" },
+      period: { zh: "2024.07—2026.06", en: "2024.07–2026.06" },
+      startYear: 2024,
+      location: { zh: "北京", en: "Beijing, China" }
     },
     {
-      title: { zh: "健康不平等的社会决定因素", en: "Social Determinants of Health Inequality" },
-      summary: {
-        zh: "结合教育、收入、社会参与等健康社会决定因素，分析健康不平等的生成机制，评估政策干预的可转移性。",
-        en: "Examining how education, income, and social participation interact to shape health inequalities and testing the transferability of policy interventions."
-      },
-      duration: "2023-2025",
-      sponsor: "PKU IPR",
-      areas: ["inequality", "health"],
-      links: { paper: "#", dataset: "#" }
-    },
-    {
-      title: { zh: "跨国老龄纵向数据比较研究", en: "Cross-country Comparative Studies on Aging" },
-      summary: {
-        zh: "依托 CHARLS、HRS、ELSA、SHARE 等多国数据，比较制度与文化差异下的健康结局与社会决定因素。",
-        en: "Leveraging CHARLS, HRS, ELSA, and SHARE to compare how institutional and cultural contexts shape health outcomes and social determinants."
-      },
-      duration: "2024-2027",
-      sponsor: "Joint projects",
-      areas: ["lifecourse", "inequality"],
-      links: { paper: "#", dataset: "#", benchmark: "#" }
+      title: { zh: "访问学者", en: "Visiting Scholar" },
+      institution: { zh: "牛津大学老龄研究所", en: "Institute of Population Ageing, University of Oxford" },
+      period: { zh: "2024.09—2025.03", en: "2024.09–2025.03" },
+      startYear: 2024,
+      location: { zh: "牛津", en: "Oxford, UK" }
     }
   ],
 
-  labTeam: [
-    { name: "Liang Xu", group: { zh: "博士后", en: "Postdoc" }, role: { zh: "博士后", en: "Postdoc" }, focus: { zh: "视觉可解释性", en: "Vision interpretability" } },
-    { name: "Yue Wang", group: { zh: "博士生", en: "PhD" }, role: { zh: "博士三年级", en: "PhD (3rd year)" }, focus: { zh: "多模态学习", en: "Multimodal learning" } },
-    { name: "Jiaqi Zhao", group: { zh: "博士生", en: "PhD" }, role: { zh: "博士一年级", en: "PhD (1st year)" }, focus: { zh: "机器人感知", en: "Robot perception" } },
-    { name: "Siyu Lin", group: { zh: "研究助理", en: "Research Assistant" }, role: { zh: "研究助理", en: "Research Assistant" }, focus: { zh: "数据集与基准", en: "Datasets & benchmarks" } }
-  ],
+  currentPosition: {
+    title: { zh: "讲师", en: "Lecturer" },
+    institution: { zh: "北京师范大学社会学院", en: "School of Sociology, Beijing Normal University" },
+    period: { zh: "2026年6月至今", en: "June 2026–present" },
+    startYear: 2026
+  },
 
-  openings: [
+  education: [
     {
-      title: { zh: "博士/直博", en: "PhD positions" },
-      type: "Full-time",
-      start: "Fall 2025",
-      description: {
-        zh: "聚焦多模态学习与模型安全，欢迎有扎实机器学习与编程基础的同学。",
-        en: "Focus on multimodal learning and model safety; looking for solid ML fundamentals and strong coding skills."
-      },
-      contact: "alex.chen@example.edu"
+      degree: { zh: "人口学博士", en: "Ph.D. in Demography" },
+      institution: { zh: "北京大学人口研究所", en: "Institute of Population Research, Peking University" },
+      period: { zh: "2020.09—2024.07", en: "2020.09–2024.07" },
+      startYear: 2020,
+      location: { zh: "北京", en: "Beijing, China" }
     },
     {
-      title: { zh: "全职/兼职 RA", en: "Research Assistant (onsite/remote)" },
-      type: "Part-time",
-      start: "Rolling",
-      description: {
-        zh: "可远程，负责数据标注管线、基准实现与可视化仪表盘开发。",
-        en: "Remote-friendly; work on data pipelines, benchmark implementations, and visualization dashboards."
-      },
-      contact: "alex.chen@example.edu"
+      degree: { zh: "人口学硕士", en: "M.A. in Demography" },
+      institution: { zh: "北京大学人口研究所", en: "Institute of Population Research, Peking University" },
+      period: { zh: "2017.09—2020.07", en: "2017.09–2020.07" },
+      startYear: 2017,
+      location: { zh: "北京", en: "Beijing, China" }
     },
     {
-      title: { zh: "访问学生/联合培养", en: "Visiting Student" },
-      type: "Visiting",
-      start: "Summer 2025",
-      description: {
-        zh: "3-6 个月，参与安全对齐红队项目，需有论文或开源经验。",
-        en: "3–6 months to contribute to safety red-teaming projects; prior publications or OSS experience preferred."
-      },
-      contact: "alex.chen@example.edu"
+      degree: { zh: "社会学本科", en: "B.A. in Sociology" },
+      institution: { zh: "兰州大学哲学社会学院", en: "School of Philosophy and Sociology, Lanzhou University" },
+      period: { zh: "2013.09—2017.07", en: "2013.09–2017.07" },
+      startYear: 2013,
+      location: { zh: "兰州", en: "Lanzhou, China" }
     }
   ],
 
@@ -269,8 +261,6 @@ export const SITE_DATA = {
       link: "https://github.com/jason-jj-li/auto_sim_ai"
     }
   ],
-
-  stats: [],
 
   academicServices: {
     editorialBoards: [

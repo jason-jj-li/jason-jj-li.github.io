@@ -1,0 +1,169 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - link "JL 李佳佳" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: JL
+        - generic [ref=e8]: 李佳佳
+      - generic [ref=e9]:
+        - link "主页" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "研究" [ref=e11] [cursor=pointer]:
+          - /url: /research
+        - link "工具" [ref=e12] [cursor=pointer]:
+          - /url: /tools
+        - link "教学" [ref=e13] [cursor=pointer]:
+          - /url: /teaching
+        - link "博客" [ref=e14] [cursor=pointer]:
+          - /url: /blog
+      - button "Switch to English" [ref=e15] [cursor=pointer]:
+        - img [ref=e16]
+  - main [ref=e21]:
+    - generic [ref=e23]:
+      - generic [ref=e25]:
+        - heading "李佳佳" [level=1] [ref=e26]
+        - paragraph [ref=e27]: 北京师范大学社会学院讲师
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - img [ref=e30]
+            - text: 北京师范大学社会学院
+          - generic [ref=e35]:
+            - img [ref=e36]
+            - text: 北京市海淀区新街口外大街19号，北京师范大学
+      - generic [ref=e39]:
+        - img "Profile" [ref=e41]
+        - generic [ref=e43]:
+          - link "Email" [ref=e44] [cursor=pointer]:
+            - /url: mailto:lijiajia95@hotmail.com
+            - img [ref=e45]
+          - link "GitHub" [ref=e48] [cursor=pointer]:
+            - /url: https://github.com/jason-jj-li
+            - img [ref=e49]
+          - link "Google Scholar" [ref=e52] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=W4ZFySoAAAAJ&hl=zh-CN&authuser=1
+            - img [ref=e53]
+          - link "ResearchGate" [ref=e55] [cursor=pointer]:
+            - /url: https://www.researchgate.net/profile/Jiajia-Li-35
+            - generic [ref=e56]: R
+          - link "ORCID" [ref=e57] [cursor=pointer]:
+            - /url: https://orcid.org/0000-0003-3302-5063
+            - img [ref=e58]
+    - generic [ref=e67]:
+      - generic [ref=e68]:
+        - img [ref=e70]
+        - generic [ref=e72]:
+          - heading "学术履历" [level=2] [ref=e73]
+          - paragraph [ref=e74]: 教育背景与工作经历
+      - generic [ref=e77]:
+        - generic [ref=e82]:
+          - img [ref=e84]
+          - generic [ref=e87]:
+            - generic [ref=e88]:
+              - heading "社会学本科" [level=3] [ref=e89]
+              - generic [ref=e90]: 2013.09—2017.07
+            - paragraph [ref=e91]: 兰州大学哲学社会学院
+        - generic [ref=e96]:
+          - img [ref=e98]
+          - generic [ref=e101]:
+            - generic [ref=e102]:
+              - heading "人口学硕士" [level=3] [ref=e103]
+              - generic [ref=e104]: 2017.09—2020.07
+            - paragraph [ref=e105]: 北京大学人口研究所
+        - generic [ref=e110]:
+          - img [ref=e112]
+          - generic [ref=e115]:
+            - generic [ref=e116]:
+              - heading "人口学博士" [level=3] [ref=e117]
+              - generic [ref=e118]: 2020.09—2024.07
+            - paragraph [ref=e119]: 北京大学人口研究所
+        - generic [ref=e124]:
+          - img [ref=e126]
+          - generic [ref=e129]:
+            - generic [ref=e130]:
+              - heading "博雅博士后" [level=3] [ref=e131]
+              - generic [ref=e132]: 2024.07—2026.06
+            - paragraph [ref=e133]: 北京大学人口研究所
+        - generic [ref=e138]:
+          - img [ref=e140]
+          - generic [ref=e143]:
+            - generic [ref=e144]:
+              - heading "访问学者" [level=3] [ref=e145]
+              - generic [ref=e146]: 2024.09—2025.03
+            - paragraph [ref=e147]: 牛津大学老龄研究所
+        - generic [ref=e152]:
+          - img [ref=e154]
+          - generic [ref=e159]:
+            - generic [ref=e160]:
+              - heading "讲师" [level=3] [ref=e161]
+              - generic [ref=e162]: 2024年至今
+            - paragraph [ref=e163]: 北京师范大学社会学院
+    - generic [ref=e164]:
+      - generic [ref=e165]:
+        - img [ref=e167]
+        - generic [ref=e169]:
+          - heading "最新动态" [level=2] [ref=e170]
+          - paragraph [ref=e171]: 新闻、发布与演示
+      - generic [ref=e172]:
+        - link "2026/1/16 工具 QualInsight v4.1 发布 AI 辅助定性研究平台发布，支持编码分析、主题识别、情感/话语/叙事分析、可视化与报告生成。 查看" [ref=e173] [cursor=pointer]:
+          - /url: https://github.com/jason-jj-li/AI_quali
+          - generic [ref=e174]:
+            - generic [ref=e175]: 2026/1/16
+            - generic [ref=e176]: 工具
+          - heading "QualInsight v4.1 发布" [level=3] [ref=e177]
+          - paragraph [ref=e178]: AI 辅助定性研究平台发布，支持编码分析、主题识别、情感/话语/叙事分析、可视化与报告生成。
+          - generic [ref=e179]:
+            - text: 查看
+            - img [ref=e180]
+        - link "2026/1/1 论文 疼痛发生率与多部位轨迹研究发表 PAIN Reports 发表我们关于童年逆境与中老年疼痛轨迹的研究成果。 查看" [ref=e184] [cursor=pointer]:
+          - /url: https://doi.org/10.1097/PR9.0000000000001389
+          - generic [ref=e185]:
+            - generic [ref=e186]: 2026/1/1
+            - generic [ref=e187]: 论文
+          - heading "疼痛发生率与多部位轨迹研究发表" [level=3] [ref=e188]
+          - paragraph [ref=e189]: PAIN Reports 发表我们关于童年逆境与中老年疼痛轨迹的研究成果。
+          - generic [ref=e190]:
+            - text: 查看
+            - img [ref=e191]
+        - link "2025/11/10 论文 心血管疾病跨国比较研究发表 Journal of Global Health 发表基于 HRS/ELSA/SHARE/CHARLS 的年龄-时期-队列分析。 查看" [ref=e195] [cursor=pointer]:
+          - /url: https://doi.org/10.7189/jogh.15.04260
+          - generic [ref=e196]:
+            - generic [ref=e197]: 2025/11/10
+            - generic [ref=e198]: 论文
+          - heading "心血管疾病跨国比较研究发表" [level=3] [ref=e199]
+          - paragraph [ref=e200]: Journal of Global Health 发表基于 HRS/ELSA/SHARE/CHARLS 的年龄-时期-队列分析。
+          - generic [ref=e201]:
+            - text: 查看
+            - img [ref=e202]
+    - generic [ref=e206]:
+      - generic [ref=e207]:
+        - img [ref=e209]
+        - generic [ref=e212]:
+          - heading "学术服务与活动" [level=2] [ref=e213]
+          - paragraph [ref=e214]: 期刊编辑、学会会员与学术贡献
+      - generic [ref=e215]:
+        - generic [ref=e216]:
+          - heading "编辑与审稿" [level=3] [ref=e217]:
+            - img [ref=e218]
+            - text: 编辑与审稿
+          - generic [ref=e221]:
+            - generic [ref=e222]:
+              - generic [ref=e223]: 编委 · BMC Public Health
+              - generic [ref=e224]: 负责公共卫生领域的稿件评审与筛选
+            - generic [ref=e225]:
+              - generic [ref=e226]: 编委 · Discover Public Health
+              - generic [ref=e227]: 负责公共卫生研究领域的稿件评审
+            - generic [ref=e228]:
+              - generic [ref=e229]: 主题编辑 · Frontiers in Epidemiology
+              - generic [ref=e230]: 衰老与生命历程流行病学专栏
+              - generic [ref=e231]: 全球视角下的生命历程策略应对健康不平等
+            - generic [ref=e232]: 受邀为多本SCI期刊匿名审稿
+        - generic [ref=e233]:
+          - heading "学会会员" [level=3] [ref=e234]:
+            - img [ref=e235]
+            - text: 学会会员
+          - generic [ref=e240]:
+            - generic [ref=e241]: SLLS · 纵向与生命历程研究学会
+            - generic [ref=e242]: IUSSP · 国际人口科学研究联盟
+    - paragraph [ref=e244]:
+      - text: © 2026 李佳佳.
+      - text: Designed with React & Tailwind.

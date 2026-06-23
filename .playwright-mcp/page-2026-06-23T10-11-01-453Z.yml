@@ -1,0 +1,133 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - link "JL 李佳佳" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: JL
+        - generic [ref=e8]: 李佳佳
+      - generic [ref=e9]:
+        - link "主页" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "研究" [ref=e11] [cursor=pointer]:
+          - /url: /research
+        - link "工具" [ref=e12] [cursor=pointer]:
+          - /url: /tools
+        - link "教学" [ref=e13] [cursor=pointer]:
+          - /url: /teaching
+        - link "博客" [ref=e14] [cursor=pointer]:
+          - /url: /blog
+      - button "Switch to English" [ref=e15] [cursor=pointer]:
+        - img [ref=e16]
+  - main [ref=e21]:
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - heading "李佳佳" [level=1] [ref=e26]
+          - paragraph [ref=e27]: 北京师范大学社会学院讲师
+          - generic [ref=e28]:
+            - generic [ref=e29]:
+              - img [ref=e30]
+              - text: 北京师范大学社会学院
+            - generic [ref=e35]:
+              - img [ref=e36]
+              - text: 北京市海淀区新街口外大街19号，北京师范大学
+        - paragraph [ref=e39]: 主要关注人口健康、健康不平等/健康社会决定因素,从生命历程视角研究早期经历如何影响老年期健康,识别可干预路径以促进健康公平。
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - img "Profile" [ref=e42]
+          - generic [ref=e43]:
+            - generic [ref=e44]:
+              - generic [ref=e45]: "28"
+              - generic [ref=e46]: SCI 论文
+            - generic [ref=e47]:
+              - generic [ref=e48]: "10"
+              - generic [ref=e49]: 一作 SCI
+            - generic [ref=e50]:
+              - generic [ref=e51]: "15"
+              - generic [ref=e52]: 中文核心
+        - generic [ref=e54]:
+          - link "Email" [ref=e55] [cursor=pointer]:
+            - /url: mailto:lijiajia95@hotmail.com
+            - img [ref=e56]
+          - link "GitHub" [ref=e59] [cursor=pointer]:
+            - /url: https://github.com/jason-jj-li
+            - img [ref=e60]
+          - link "Google Scholar" [ref=e63] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=W4ZFySoAAAAJ&hl=zh-CN&authuser=1
+            - img [ref=e64]
+          - link "ResearchGate" [ref=e66] [cursor=pointer]:
+            - /url: https://www.researchgate.net/profile/Jiajia-Li-35
+            - generic [ref=e67]: R
+          - link "ORCID" [ref=e68] [cursor=pointer]:
+            - /url: https://orcid.org/0000-0003-3302-5063
+            - img [ref=e69]
+    - generic [ref=e78]:
+      - generic [ref=e79]:
+        - img [ref=e81]
+        - generic [ref=e83]:
+          - heading "最新动态" [level=2] [ref=e84]
+          - paragraph [ref=e85]: 新闻、发布与演示
+      - generic [ref=e86]:
+        - link "2026/1/16 工具 QualInsight v4.1 发布 AI 辅助定性研究平台发布，支持编码分析、主题识别、情感/话语/叙事分析、可视化与报告生成。 查看" [ref=e87] [cursor=pointer]:
+          - /url: https://github.com/jason-jj-li/AI_quali
+          - generic [ref=e88]:
+            - generic [ref=e89]: 2026/1/16
+            - generic [ref=e90]: 工具
+          - heading "QualInsight v4.1 发布" [level=3] [ref=e91]
+          - paragraph [ref=e92]: AI 辅助定性研究平台发布，支持编码分析、主题识别、情感/话语/叙事分析、可视化与报告生成。
+          - generic [ref=e93]:
+            - text: 查看
+            - img [ref=e94]
+        - link "2026/1/1 论文 疼痛发生率与多部位轨迹研究发表 PAIN Reports 发表我们关于童年逆境与中老年疼痛轨迹的研究成果。 查看" [ref=e98] [cursor=pointer]:
+          - /url: https://doi.org/10.1097/PR9.0000000000001389
+          - generic [ref=e99]:
+            - generic [ref=e100]: 2026/1/1
+            - generic [ref=e101]: 论文
+          - heading "疼痛发生率与多部位轨迹研究发表" [level=3] [ref=e102]
+          - paragraph [ref=e103]: PAIN Reports 发表我们关于童年逆境与中老年疼痛轨迹的研究成果。
+          - generic [ref=e104]:
+            - text: 查看
+            - img [ref=e105]
+        - link "2025/11/10 论文 心血管疾病跨国比较研究发表 Journal of Global Health 发表基于 HRS/ELSA/SHARE/CHARLS 的年龄-时期-队列分析。 查看" [ref=e109] [cursor=pointer]:
+          - /url: https://doi.org/10.7189/jogh.15.04260
+          - generic [ref=e110]:
+            - generic [ref=e111]: 2025/11/10
+            - generic [ref=e112]: 论文
+          - heading "心血管疾病跨国比较研究发表" [level=3] [ref=e113]
+          - paragraph [ref=e114]: Journal of Global Health 发表基于 HRS/ELSA/SHARE/CHARLS 的年龄-时期-队列分析。
+          - generic [ref=e115]:
+            - text: 查看
+            - img [ref=e116]
+    - generic [ref=e120]:
+      - generic [ref=e121]:
+        - img [ref=e123]
+        - generic [ref=e126]:
+          - heading "学术服务与活动" [level=2] [ref=e127]
+          - paragraph [ref=e128]: 期刊编辑、学会会员与学术贡献
+      - generic [ref=e129]:
+        - generic [ref=e130]:
+          - heading "编辑与审稿" [level=3] [ref=e131]:
+            - img [ref=e132]
+            - text: 编辑与审稿
+          - generic [ref=e135]:
+            - generic [ref=e136]:
+              - generic [ref=e137]: 编委 · BMC Public Health
+              - generic [ref=e138]: 负责公共卫生领域的稿件评审与筛选
+            - generic [ref=e139]:
+              - generic [ref=e140]: 编委 · Discover Public Health
+              - generic [ref=e141]: 负责公共卫生研究领域的稿件评审
+            - generic [ref=e142]:
+              - generic [ref=e143]: 主题编辑 · Frontiers in Epidemiology
+              - generic [ref=e144]: 衰老与生命历程流行病学专栏
+              - generic [ref=e145]: 全球视角下的生命历程策略应对健康不平等
+            - generic [ref=e146]: 受邀为多本SCI期刊匿名审稿
+        - generic [ref=e147]:
+          - heading "学会会员" [level=3] [ref=e148]:
+            - img [ref=e149]
+            - text: 学会会员
+          - generic [ref=e154]:
+            - generic [ref=e155]: SLLS · 纵向与生命历程研究学会
+            - generic [ref=e156]: IUSSP · 国际人口科学研究联盟
+    - paragraph [ref=e158]:
+      - text: © 2026 李佳佳.
+      - text: Designed with React & Tailwind.

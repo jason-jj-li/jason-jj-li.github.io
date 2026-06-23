@@ -1,0 +1,114 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - link "JL 李佳佳" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: JL
+        - generic [ref=e8]: 李佳佳
+      - generic [ref=e9]:
+        - link "主页" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "关于" [ref=e11] [cursor=pointer]:
+          - /url: /about
+        - link "研究" [ref=e12] [cursor=pointer]:
+          - /url: /research
+        - link "工具" [ref=e13] [cursor=pointer]:
+          - /url: /tools
+        - link "教学" [ref=e14] [cursor=pointer]:
+          - /url: /teaching
+        - link "博客" [ref=e15] [cursor=pointer]:
+          - /url: /blog
+      - button "Switch to English" [ref=e16] [cursor=pointer]:
+        - img [ref=e17]
+  - generic [ref=e22]:
+    - banner [ref=e23]:
+      - img [ref=e25]
+      - generic [ref=e28]:
+        - heading "关于我" [level=1] [ref=e29]
+        - paragraph [ref=e30]: 研究兴趣、教育与职业经历
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - img [ref=e34]
+        - heading "研究领域与方向" [level=2] [ref=e36]
+      - paragraph [ref=e37]: 人口健康、社会流行病学与老龄健康研究，聚焦生命历程视角下早期不良经历对中老年健康的长期影响。围绕这一主线，形成三个相互关联的研究方向：第一，探讨童年早期不良经历对心血管代谢性疾病、衰弱、功能受限和心理健康等中老年多维健康结局的长期影响；第二，基于 CHARLS、HRS、ELSA、SHARE、NCDS 和 BCS70 等队列数据，开展中老年健康轨迹分析与跨国比较；第三，开发调查研究与多源异构数据分析相关的方法工具与研究平台。相关成果发表于 Journal of Global Health、The Journal of Nutrition, Health & Aging 等期刊。
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - img [ref=e41]
+        - heading "工作经历" [level=2] [ref=e44]
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - heading "博雅博士后" [level=3] [ref=e49]
+              - paragraph [ref=e50]: 北京大学人口研究所
+            - generic [ref=e51]:
+              - img [ref=e52]
+              - text: 2024年7月—2026年6月
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - img [ref=e56]
+              - text: 北京
+            - generic [ref=e59]: 合作导师：陈功教授
+          - paragraph [ref=e60]: 围绕生命历程与健康老龄化开展独立研究，重点关注童年不良经历与中老年健康轨迹；主持中国博士后科学基金面上项目，推进基于全国老年队列的纵向分析。
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - generic [ref=e63]:
+              - heading "访问学者" [level=3] [ref=e64]
+              - paragraph [ref=e65]: 牛津大学老龄研究所
+            - generic [ref=e66]:
+              - img [ref=e67]
+              - text: 2024年9月—2025年3月
+          - generic [ref=e70]:
+            - img [ref=e71]
+            - text: 牛津
+          - paragraph [ref=e74]: 开展跨国老龄纵向数据比较研究，关注工作—家庭生命历程轨迹、心理健康与健康老龄化，并推进多国协调化数据库的国际合作研究。
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - img [ref=e78]
+        - heading "教育经历" [level=2] [ref=e81]
+      - generic [ref=e82]:
+        - generic [ref=e83]:
+          - generic [ref=e84]:
+            - generic [ref=e85]:
+              - heading "人口学博士" [level=3] [ref=e86]
+              - paragraph [ref=e87]: 北京大学人口研究所
+            - generic [ref=e88]:
+              - img [ref=e89]
+              - text: 2020年9月—2024年7月
+          - generic [ref=e91]:
+            - generic [ref=e92]:
+              - img [ref=e93]
+              - text: 北京
+            - generic [ref=e96]: 导师：裴丽君教授
+          - paragraph [ref=e97]: 博士论文：《童年期不良经历与中老年心血管代谢性疾病的关联及作用机制研究》
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - generic [ref=e100]:
+              - heading "人口学硕士" [level=3] [ref=e101]
+              - paragraph [ref=e102]: 北京大学人口研究所
+            - generic [ref=e103]:
+              - img [ref=e104]
+              - text: 2017年9月—2020年7月
+          - generic [ref=e107]:
+            - img [ref=e108]
+            - text: 北京
+          - paragraph
+        - generic [ref=e111]:
+          - generic [ref=e112]:
+            - generic [ref=e113]:
+              - heading "社会学本科" [level=3] [ref=e114]
+              - paragraph [ref=e115]: 兰州大学哲学社会学院
+            - generic [ref=e116]:
+              - img [ref=e117]
+              - text: 2013年9月—2017年7月
+          - generic [ref=e120]:
+            - img [ref=e121]
+            - text: 兰州
+          - paragraph
+    - generic [ref=e124]:
+      - heading "合作与联系" [level=2] [ref=e125]
+      - paragraph [ref=e126]: 欢迎就研究合作、招生咨询或学术讨论与我联系。
+      - link "lijiajia95@hotmail.com" [ref=e127] [cursor=pointer]:
+        - /url: mailto:lijiajia95@hotmail.com
+        - img [ref=e128]
+        - text: lijiajia95@hotmail.com

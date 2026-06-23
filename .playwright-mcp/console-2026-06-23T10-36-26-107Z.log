@@ -1,0 +1,7 @@
+[   45347ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:4173/assets/About-Dghxxnpx.js:0
+[   45347ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:4173/assets/book-open-B5TrdTCV.js:0
+[   45347ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:4173/assets/calendar-BEQ1ZCHt.js:0
+[   45347ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:4173/assets/map-pin-QnB4jbVp.js:0
+[   45350ms] [ERROR] TypeError: Failed to fetch dynamically imported module: http://localhost:4173/assets/About-Dghxxnpx.js @ http://localhost:4173/assets/index-BSGWwZD3.js:40
+[   45350ms] [ERROR] ErrorBoundary caught an error: TypeError: Failed to fetch dynamically imported module: http://localhost:4173/assets/About-Dghxxnpx.js {componentStack: 
+    at yh (http://localhost:4173/assets/index-BSG…localhost:4173/assets/index-BSGWwZD3.js:92:29411)} @ http://localhost:4173/assets/index-BSGWwZD3.js:91

@@ -1,0 +1,104 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - link "JL 李佳佳" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: JL
+        - generic [ref=e8]: 李佳佳
+      - generic [ref=e9]:
+        - link "主页" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "关于" [ref=e11] [cursor=pointer]:
+          - /url: /about
+        - link "研究" [ref=e12] [cursor=pointer]:
+          - /url: /research
+        - link "工具" [ref=e13] [cursor=pointer]:
+          - /url: /tools
+        - link "教学" [ref=e14] [cursor=pointer]:
+          - /url: /teaching
+        - link "博客" [ref=e15] [cursor=pointer]:
+          - /url: /blog
+      - button "Switch to English" [ref=e16] [cursor=pointer]:
+        - img [ref=e17]
+  - generic [ref=e22]:
+    - generic [ref=e23]:
+      - img [ref=e25]
+      - heading "研究方向：生命历程健康不平等" [level=2] [ref=e36]
+    - generic [ref=e37]:
+      - generic:
+        - img
+      - generic [ref=e38]:
+        - img [ref=e40]
+        - generic [ref=e44]:
+          - heading "生命历程健康不平等" [level=3] [ref=e45]
+          - paragraph [ref=e46]: 以童年逆境为切入，跨国比较制度与文化如何放大或缓冲风险，再衔接环境与社会风险的叠加效应，构建机制—情境—应用的研究闭环。从以下三个方面开展研究：
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - img [ref=e51]
+            - heading "童年不良经历与中老年多维健康" [level=4] [ref=e61]
+          - paragraph [ref=e62]: 探讨童年早期不良经历对心血管代谢性疾病、衰弱、功能受限和心理健康等中老年多维健康结局的长期影响，识别关键风险窗口与可干预路径。
+          - generic [ref=e64]: CHARLS
+        - generic [ref=e65]:
+          - generic [ref=e66]:
+            - img [ref=e68]
+            - heading "中老年健康轨迹与跨国比较" [level=4] [ref=e73]
+          - paragraph [ref=e74]: 基于 CHARLS、HRS、ELSA、SHARE、NCDS 和 BCS70 等队列数据，刻画中老年健康动态变化，比较不同制度与文化情境下的健康不平等。
+          - generic [ref=e75]:
+            - generic [ref=e76]: CHARLS
+            - generic [ref=e77]: HRS
+            - generic [ref=e78]: ELSA
+            - generic [ref=e79]: SHARE
+            - generic [ref=e80]: NCDS
+            - generic [ref=e81]: BCS70
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - img [ref=e85]
+            - heading "调查研究方法与数据平台" [level=4] [ref=e89]
+          - paragraph [ref=e90]: 开发调查研究与多源异构数据分析相关的方法工具与研究平台，支持定性研究、仿真调查与可重复分析。
+      - generic [ref=e91]:
+        - paragraph [ref=e93]: 追踪早期暴露的生命历程效应
+        - img [ref=e94]
+        - paragraph [ref=e97]: 比较情境下的调节机制
+        - img [ref=e98]
+        - paragraph [ref=e101]: 评估风险叠加与干预优先级
+    - generic [ref=e103]:
+      - img [ref=e105]
+      - generic [ref=e108]:
+        - heading "发表论文" [level=2] [ref=e109]
+        - paragraph [ref=e110]: 按年份浏览论文与链接。
+    - generic [ref=e111]:
+      - generic [ref=e112]:
+        - generic [ref=e113]: 展示（发表年份）
+        - generic [ref=e114]:
+          - button "2026" [ref=e115] [cursor=pointer]
+          - button "2025" [ref=e116] [cursor=pointer]
+          - button "2024" [ref=e117] [cursor=pointer]
+          - button "2023" [ref=e118] [cursor=pointer]
+          - button "2022" [ref=e119] [cursor=pointer]
+          - button "更多年份" [ref=e120] [cursor=pointer]
+      - generic [ref=e121]:
+        - link "Scholar" [ref=e122] [cursor=pointer]:
+          - /url: https://scholar.google.com/citations?user=W4ZFySoAAAAJ&hl=zh-CN&authuser=1
+          - text: Scholar
+          - img [ref=e123]
+        - link "ORCID" [ref=e127] [cursor=pointer]:
+          - /url: https://orcid.org/0000-0003-3302-5063
+          - text: ORCID
+          - img [ref=e128]
+    - generic [ref=e133]:
+      - generic [ref=e134]:
+        - heading "Adverse Childhood Experiences and Pain Incidence and Multisite Trajectories among Middle-Aged and Older Chinese Adults" [level=4] [ref=e135]:
+          - img [ref=e136]
+          - text: Adverse Childhood Experiences and Pain Incidence and Multisite Trajectories among Middle-Aged and Older Chinese Adults
+        - generic [ref=e139]: "2026"
+      - paragraph [ref=e140]: Jiajia Li; Heming Pei; Guilan Xie; Gong Chen; Lijun Pei
+      - generic [ref=e141]:
+        - generic [ref=e142]:
+          - img [ref=e143]
+          - text: PAIN Reports 11(1):e1389 (SCI/Q2)
+        - generic [ref=e146]: 一作
+      - link "DOI/链接" [ref=e148] [cursor=pointer]:
+        - /url: https://doi.org/10.1097/PR9.0000000000001389
+        - img [ref=e149]
+        - generic [ref=e153]: DOI/链接

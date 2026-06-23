@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Research from './pages/Research';
-import Tools from './pages/Tools';
-import Teaching from './pages/Teaching';
-import Blog from './pages/Blog';
-import SeriesDetail from './pages/SeriesDetail';
-import BlogPost from './pages/BlogPost';
+import ErrorBoundary from './components/ErrorBoundary';
+import PageLoader from './components/PageLoader';
+
+const Home = lazy(() => import('./pages/Home'));
+const Research = lazy(() => import('./pages/Research'));
+const Tools = lazy(() => import('./pages/Tools'));
+const Teaching = lazy(() => import('./pages/Teaching'));
+const Blog = lazy(() => import('./pages/Blog'));
+const SeriesDetail = lazy(() => import('./pages/SeriesDetail'));
+const BlogPost = lazy(() => import('./pages/BlogPost'));
 
 export default function App() {
   const [lang, setLang] = useState('zh');
@@ -58,15 +61,19 @@ export default function App() {
           <div className="absolute inset-0 grid-overlay"></div>
         </div>
         <Navbar lang={lang} setLang={setLang} />
-        <Routes>
-          <Route path="/" element={<Home lang={lang} />} />
-          <Route path="/research" element={<Research lang={lang} />} />
-          <Route path="/tools" element={<Tools lang={lang} />} />
-          <Route path="/teaching" element={<Teaching lang={lang} />} />
-          <Route path="/blog" element={<Blog lang={lang} />} />
-          <Route path="/blog/series/:seriesId" element={<SeriesDetail lang={lang} />} />
-          <Route path="/blog/:slug" element={<BlogPost lang={lang} />} />
-        </Routes>
+        <ErrorBoundary lang={lang}>
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Home lang={lang} />} />
+              <Route path="/research" element={<Research lang={lang} />} />
+              <Route path="/tools" element={<Tools lang={lang} />} />
+              <Route path="/teaching" element={<Teaching lang={lang} />} />
+              <Route path="/blog" element={<Blog lang={lang} />} />
+              <Route path="/blog/series/:seriesId" element={<SeriesDetail lang={lang} />} />
+              <Route path="/blog/:slug" element={<BlogPost lang={lang} />} />
+            </Routes>
+          </Suspense>
+        </ErrorBoundary>
       </div>
     </Router>
   );

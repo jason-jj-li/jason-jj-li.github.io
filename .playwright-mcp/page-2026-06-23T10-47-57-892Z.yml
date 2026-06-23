@@ -1,0 +1,108 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - link "JL 李佳佳" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: JL
+        - generic [ref=e8]: 李佳佳
+      - generic [ref=e9]:
+        - link "主页" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "关于" [ref=e11] [cursor=pointer]:
+          - /url: /about
+        - link "研究" [ref=e12] [cursor=pointer]:
+          - /url: /research
+        - link "工具" [ref=e13] [cursor=pointer]:
+          - /url: /tools
+        - link "教学" [ref=e14] [cursor=pointer]:
+          - /url: /teaching
+        - link "博客" [ref=e15] [cursor=pointer]:
+          - /url: /blog
+      - button "Switch to English" [ref=e16] [cursor=pointer]:
+        - img [ref=e17]
+  - generic [ref=e22]:
+    - banner [ref=e23]:
+      - heading "关于我" [level=1] [ref=e24]
+      - paragraph [ref=e25]: 研究旅程与学术信念
+    - generic [ref=e27]:
+      - img "李佳佳" [ref=e30]
+      - generic [ref=e31]:
+        - paragraph [ref=e32]: 李佳佳 · 北京师范大学社会学院讲师
+        - paragraph [ref=e33]: 我目前在北京师范大学社会学院担任讲师，主要从事人口健康、社会流行病学与老龄健康研究。我的研究兴趣源于一个朴素的问题：一个人早年经历的健康不平等，是如何在几十年后仍然影响其老年生活质量的？从兰州大学社会学本科，到北京大学人口学博士与博士后，再到牛津大学老龄研究所的访问学者，我始终关注生命历程视角下的健康公平问题。我希望通过严谨的纵向数据分析与跨国比较，为理解童年不良经历的健康代价、识别可干预窗口提供证据，并推动开放、可重复的调查研究方法。
+    - generic [ref=e34]:
+      - heading "研究理念" [level=2] [ref=e35]:
+        - img [ref=e36]
+        - text: 研究理念
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - img [ref=e42]
+          - generic [ref=e45]:
+            - heading "生命历程视角" [level=3] [ref=e46]
+            - paragraph [ref=e47]: 关注早期经历如何在数十年间持续塑造健康，强调时间维度与因果链条。
+        - generic [ref=e48]:
+          - img [ref=e50]
+          - generic [ref=e55]:
+            - heading "跨国比较" [level=3] [ref=e56]
+            - paragraph [ref=e57]: 利用多国队列数据，理解制度与文化情境如何调节健康不平等的形成。
+        - generic [ref=e58]:
+          - img [ref=e60]
+          - generic [ref=e62]:
+            - heading "方法严谨" [level=3] [ref=e63]
+            - paragraph [ref=e64]: 重视纵向分析、因果推断与敏感性检验，力求结论稳健可靠。
+        - generic [ref=e65]:
+          - img [ref=e67]
+          - generic [ref=e69]:
+            - heading "开放科学" [level=3] [ref=e70]
+            - paragraph [ref=e71]: 倡导可重复的分析流程、开源工具与数据共享，推动研究透明化。
+    - generic [ref=e72]:
+      - heading "履历简览" [level=2] [ref=e73]:
+        - img [ref=e74]
+        - text: 履历简览
+      - generic [ref=e76]:
+        - generic [ref=e79]:
+          - generic [ref=e80]:
+            - heading "人口学博士" [level=3] [ref=e81]
+            - generic [ref=e82]: 2020年9月—2024年7月
+          - paragraph [ref=e83]: 北京大学人口研究所
+          - paragraph [ref=e84]:
+            - img [ref=e85]
+            - text: 北京
+        - generic [ref=e90]:
+          - generic [ref=e91]:
+            - heading "人口学硕士" [level=3] [ref=e92]
+            - generic [ref=e93]: 2017年9月—2020年7月
+          - paragraph [ref=e94]: 北京大学人口研究所
+          - paragraph [ref=e95]:
+            - img [ref=e96]
+            - text: 北京
+        - generic [ref=e101]:
+          - generic [ref=e102]:
+            - heading "社会学本科" [level=3] [ref=e103]
+            - generic [ref=e104]: 2013年9月—2017年7月
+          - paragraph [ref=e105]: 兰州大学哲学社会学院
+          - paragraph [ref=e106]:
+            - img [ref=e107]
+            - text: 兰州
+        - generic [ref=e112]:
+          - generic [ref=e113]:
+            - heading "博雅博士后" [level=3] [ref=e114]
+            - generic [ref=e115]: 2024年7月—2026年6月
+          - paragraph [ref=e116]: 北京大学人口研究所
+          - paragraph [ref=e117]:
+            - img [ref=e118]
+            - text: 北京
+        - generic [ref=e123]:
+          - generic [ref=e124]:
+            - heading "访问学者" [level=3] [ref=e125]
+            - generic [ref=e126]: 2024年9月—2025年3月
+          - paragraph [ref=e127]: 牛津大学老龄研究所
+          - paragraph [ref=e128]:
+            - img [ref=e129]
+            - text: 牛津
+    - generic [ref=e132]:
+      - heading "合作与联系" [level=2] [ref=e133]
+      - paragraph [ref=e134]: 欢迎就研究合作、招生咨询或学术讨论与我联系。
+      - link "lijiajia95@hotmail.com" [ref=e135] [cursor=pointer]:
+        - /url: mailto:lijiajia95@hotmail.com
+        - img [ref=e136]
+        - text: lijiajia95@hotmail.com

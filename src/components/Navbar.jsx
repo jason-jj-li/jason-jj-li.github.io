@@ -53,6 +53,7 @@ export default function Navbar({ lang, setLang }) {
           onClick={() => setLang(l => l === 'zh' ? 'en' : 'zh')}
           className="ml-2 w-9 h-9 flex items-center justify-center rounded-full bg-[rgba(255,255,255,0.06)] border border-[rgba(148,163,184,0.35)] hover:border-cyan-300 transition-colors text-cyan-200 shadow-[0_10px_30px_-20px_rgba(124,58,237,0.6)]"
           title="Switch Language"
+          aria-label={lang === 'zh' ? 'Switch to English' : '切换到中文'}
         >
           <Languages size={18} />
         </button>

@@ -1,0 +1,162 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - link "JL Jiajia Li" [ref=e213] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: JL
+        - generic [ref=e8]: Jiajia Li
+      - generic [ref=e9]:
+        - link "Home" [ref=e214] [cursor=pointer]:
+          - /url: /
+        - link "Research" [ref=e215] [cursor=pointer]:
+          - /url: /research
+        - link "Tools" [ref=e216] [cursor=pointer]:
+          - /url: /tools
+        - link "Teaching" [ref=e217] [cursor=pointer]:
+          - /url: /teaching
+        - link "Blog" [ref=e218] [cursor=pointer]:
+          - /url: /blog
+      - button "切换到中文" [active] [ref=e219] [cursor=pointer]:
+        - img [ref=e16]
+  - main [ref=e25]:
+    - generic [ref=e27]:
+      - generic [ref=e29]:
+        - heading "Jiajia Li" [level=1] [ref=e220]
+        - paragraph [ref=e31]: Lecturer, School of Sociology, Beijing Normal University
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - img [ref=e34]
+            - text: School of Sociology, Beijing Normal University
+          - generic [ref=e39]:
+            - img [ref=e40]
+            - text: Beijing Normal University, 19 Xinjiekouwai Street, Haidian, Beijing
+        - generic [ref=e43]:
+          - generic [ref=e44]:
+            - img [ref=e45]
+            - generic [ref=e48]: B.A. in Sociology
+            - generic [ref=e49]: ·
+            - generic [ref=e50]: School of Philosophy and Sociology, Lanzhou University
+            - generic [ref=e51]: 2013.09–2017.07
+          - img [ref=e52]
+          - generic [ref=e54]:
+            - img [ref=e55]
+            - generic [ref=e58]: M.A. in Demography
+            - generic [ref=e59]: ·
+            - generic [ref=e60]: Institute of Population Research, Peking University
+            - generic [ref=e61]: 2017.09–2020.07
+          - img [ref=e62]
+          - generic [ref=e64]:
+            - img [ref=e65]
+            - generic [ref=e68]: Ph.D. in Demography
+            - generic [ref=e69]: ·
+            - generic [ref=e70]: Institute of Population Research, Peking University
+            - generic [ref=e71]: 2020.09–2024.07
+          - img [ref=e72]
+          - generic [ref=e74]:
+            - img [ref=e75]
+            - generic [ref=e78]: Boya Postdoctoral Fellow
+            - generic [ref=e79]: ·
+            - generic [ref=e80]: Institute of Population Research, Peking University
+            - generic [ref=e81]: 2024.07–2026.06
+          - img [ref=e82]
+          - generic [ref=e84]:
+            - img [ref=e85]
+            - generic [ref=e88]: Visiting Scholar
+            - generic [ref=e89]: ·
+            - generic [ref=e90]: Institute of Population Ageing, University of Oxford
+            - generic [ref=e91]: 2024.09–2025.03
+          - img [ref=e92]
+          - generic [ref=e94]:
+            - img [ref=e95]
+            - generic [ref=e100]: Lecturer
+            - generic [ref=e101]: ·
+            - generic [ref=e102]: School of Sociology, Beijing Normal University
+            - generic [ref=e103]: June 2026–present
+      - generic [ref=e104]:
+        - img "Profile" [ref=e106]
+        - generic [ref=e108]:
+          - link "Email" [ref=e109] [cursor=pointer]:
+            - /url: mailto:lijiajia95@hotmail.com
+            - img [ref=e110]
+          - link "GitHub" [ref=e113] [cursor=pointer]:
+            - /url: https://github.com/jason-jj-li
+            - img [ref=e114]
+          - link "Google Scholar" [ref=e117] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=W4ZFySoAAAAJ&hl=zh-CN&authuser=1
+            - img [ref=e118]
+          - link "ResearchGate" [ref=e120] [cursor=pointer]:
+            - /url: https://www.researchgate.net/profile/Jiajia-Li-35
+            - generic [ref=e121]: R
+          - link "ORCID" [ref=e122] [cursor=pointer]:
+            - /url: https://orcid.org/0000-0003-3302-5063
+            - img [ref=e123]
+    - generic [ref=e132]:
+      - generic [ref=e133]:
+        - img [ref=e135]
+        - generic [ref=e137]:
+          - heading "Recent Highlights" [level=2] [ref=e221]
+          - paragraph [ref=e139]: News, releases, and demos
+      - generic [ref=e140]:
+        - link "1/16/2026 Tool QualInsight v4.1 Released AI-assisted qualitative research platform released with coding, theme analysis, sentiment/discourse/narrative analysis, visualization, and report generation. View" [ref=e222] [cursor=pointer]:
+          - /url: https://github.com/jason-jj-li/AI_quali
+          - generic [ref=e142]:
+            - generic [ref=e143]: 1/16/2026
+            - generic [ref=e144]: Tool
+          - heading "QualInsight v4.1 Released" [level=3] [ref=e223]
+          - paragraph [ref=e146]: AI-assisted qualitative research platform released with coding, theme analysis, sentiment/discourse/narrative analysis, visualization, and report generation.
+          - generic [ref=e147]:
+            - text: View
+            - img [ref=e148]
+        - link "1/1/2026 Publication Pain Incidence and Trajectories Study Published Our study on adverse childhood experiences and pain trajectories published in PAIN Reports. View" [ref=e224] [cursor=pointer]:
+          - /url: https://doi.org/10.1097/PR9.0000000000001389
+          - generic [ref=e153]:
+            - generic [ref=e154]: 1/1/2026
+            - generic [ref=e155]: Publication
+          - heading "Pain Incidence and Trajectories Study Published" [level=3] [ref=e225]
+          - paragraph [ref=e157]: Our study on adverse childhood experiences and pain trajectories published in PAIN Reports.
+          - generic [ref=e158]:
+            - text: View
+            - img [ref=e159]
+        - link "11/10/2025 Publication Cross-Country CVD Study Published Age-period-cohort analysis across HRS, ELSA, SHARE, and CHARLS published in Journal of Global Health. View" [ref=e226] [cursor=pointer]:
+          - /url: https://doi.org/10.7189/jogh.15.04260
+          - generic [ref=e164]:
+            - generic [ref=e165]: 11/10/2025
+            - generic [ref=e166]: Publication
+          - heading "Cross-Country CVD Study Published" [level=3] [ref=e227]
+          - paragraph [ref=e168]: Age-period-cohort analysis across HRS, ELSA, SHARE, and CHARLS published in Journal of Global Health.
+          - generic [ref=e169]:
+            - text: View
+            - img [ref=e170]
+    - generic [ref=e174]:
+      - generic [ref=e175]:
+        - img [ref=e177]
+        - generic [ref=e180]:
+          - heading "Academic Services & Activities" [level=2] [ref=e228]
+          - paragraph [ref=e182]: Journal Editing, Professional Membership & Academic Contributions
+      - generic [ref=e183]:
+        - generic [ref=e184]:
+          - heading "Editorial & Review" [level=3] [ref=e229]:
+            - img [ref=e186]
+            - text: Editorial & Review
+          - generic [ref=e189]:
+            - generic [ref=e190]:
+              - generic [ref=e191]: Editorial Board Member · BMC Public Health
+              - generic [ref=e192]: Managing peer review and manuscript selection in public health
+            - generic [ref=e193]:
+              - generic [ref=e194]: Editorial Board Member · Discover Public Health
+              - generic [ref=e195]: Managing peer review in public health research
+            - generic [ref=e196]:
+              - generic [ref=e197]: Topic Editor · Frontiers in Epidemiology
+              - generic [ref=e198]: Aging and Life-course Epidemiology Section
+              - generic [ref=e199]: Global Perspectives on Implementing Life-course Strategies to Address Health Disparities
+            - generic [ref=e200]: Invited to provide anonymous peer review for multiple SCI journals
+        - generic [ref=e201]:
+          - heading "Memberships" [level=3] [ref=e230]:
+            - img [ref=e203]
+            - text: Memberships
+          - generic [ref=e208]:
+            - generic [ref=e209]: SLLS · Society for Longitudinal and Lifecourse Studies
+            - generic [ref=e210]: IUSSP · International Union for Scientific Study of Population
+    - paragraph [ref=e212]:
+      - text: © 2026 Jiajia Li.
+      - text: Designed with React & Tailwind.
