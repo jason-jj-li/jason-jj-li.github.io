@@ -1,0 +1,900 @@
+- generic [ref=f1e1]:
+  - dialog "Cookie 同意横幅" [ref=f1e2]:
+    - generic [ref=f1e3]:
+      - generic [ref=f1e4]: 为了改善您的体验，在您同意我们所有网站和应用的情况下，我们（和我们的合作伙伴）在您连接的终端上存储和/或访问您终端上的信息（cookie或对应信息）。
+      - paragraph [ref=f1e5]:
+        - text: 我们的网站可能会将这些cookie用于：
+        - list [ref=f1e6]:
+          - listitem [ref=f1e7]: 不通过资料收集而判定我们网站上广告的受众
+          - listitem [ref=f1e8]: 根据您的导航和个人资料展示个性化广告
+          - listitem [ref=f1e9]: 根据您的导航个性化我们的编辑内容
+          - listitem [ref=f1e10]: 允许您在我们网站上的社交网络或平台上分享内容
+          - listitem [ref=f1e11]: 根据您的位置向您发送广告
+      - link "隐私政策" [active] [ref=f1e12] [cursor=pointer]:
+        - /url: https://theacademicdesigner.com/privacy-policy/
+    - generic [ref=f1e13]:
+      - button "设定偏好" [ref=f1e14] [cursor=pointer]
+      - button "全部接受" [ref=f1e15] [cursor=pointer]
+      - button "全部拒绝" [ref=f1e16] [cursor=pointer]
+  - link "Skip to content" [ref=f1e17] [cursor=pointer]:
+    - /url: "#wp--skip-link--target"
+  - generic [ref=f1e18]:
+    - banner [ref=f1e19]:
+      - generic [ref=f1e20]:
+        - generic [ref=f1e22]:
+          - img "Square box outline with a large succulent growing from the corner" [ref=f1e24]
+          - heading [level=1] [ref=f1e25]:
+            - link "The Academic Designer" [ref=f1e26] [cursor=pointer]:
+              - /url: https://theacademicdesigner.com
+        - generic [ref=f1e27]:
+          - navigation "Main Menu" [ref=f1e28]:
+            - list [ref=f1e29]:
+              - listitem [ref=f1e30]:
+                - link "About Jennifer" [ref=f1e31] [cursor=pointer]:
+                  - /url: https://theacademicdesigner.com/about/about-jennifer/
+              - listitem [ref=f1e32]:
+                - link "Services" [ref=f1e33] [cursor=pointer]:
+                  - /url: https://theacademicdesigner.com/services/
+              - listitem [ref=f1e34]:
+                - link "Testimonials" [ref=f1e35] [cursor=pointer]:
+                  - /url: https://theacademicdesigner.com/testimonials/
+              - listitem [ref=f1e36]:
+                - link "Website Awards" [ref=f1e37] [cursor=pointer]:
+                  - /url: https://theacademicdesigner.com/2026/best-personal-academic-websites-contest-2026/
+                - button "Website Awards submenu" [ref=f1e38] [cursor=pointer]
+              - listitem [ref=f1e41]:
+                - link "Podcast" [ref=f1e42] [cursor=pointer]:
+                  - /url: https://theacademicdesigner.com/podcast/
+              - listitem [ref=f1e43]:
+                - link "Blog" [ref=f1e44] [cursor=pointer]:
+                  - /url: https://theacademicdesigner.com/blog/
+              - listitem [ref=f1e45]:
+                - link "Book Your Call" [ref=f1e46] [cursor=pointer]:
+                  - /url: https://higheredpr.as.me/meet-with-jennifer
+          - list [ref=f1e47]:
+            - listitem [ref=f1e48]:
+              - link "LinkedIn" [ref=f1e49] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/jennifervanalstyne/
+            - listitem [ref=f1e53]:
+              - link "YouTube" [ref=f1e54] [cursor=pointer]:
+                - /url: http://youtube.com/@higheredpr
+            - listitem [ref=f1e58]:
+              - link "Instagram" [ref=f1e59] [cursor=pointer]:
+                - /url: http://instagram.com/higheredpr
+            - listitem [ref=f1e63]:
+              - link "Threads" [ref=f1e64] [cursor=pointer]:
+                - /url: https://www.threads.net/@higheredpr
+            - listitem [ref=f1e68]:
+              - link "Bluesky" [ref=f1e69] [cursor=pointer]:
+                - /url: https://bsky.app/profile/jenvanalstyne.bsky.social
+            - listitem [ref=f1e73]:
+              - link "Facebook" [ref=f1e74] [cursor=pointer]:
+                - /url: https://facebook.com/higheredpr
+            - listitem [ref=f1e78]:
+              - link "Spotify" [ref=f1e79] [cursor=pointer]:
+                - /url: https://open.spotify.com/show/0BCuleBpXeRcpko3t3AYC4
+    - main [ref=f1e83]:
+      - generic [ref=f1e84]:
+        - heading "Winners of the Best Personal Academic Websites Contest 2025" [level=1] [ref=f1e85]
+        - generic [ref=f1e86]:
+          - paragraph [ref=f1e87]:
+            - strong [ref=f1e88]: Hosted by Jennifer van Alstyne, Brittany Trinh, and Ian Li
+          - time [ref=f1e90]: November 6, 2025
+      - generic [ref=f1e91]:
+        - generic [ref=f1e92]:
+          - paragraph [ref=f1e93]: Congratulations to the winners of the 2025 Best Personal Academic Websites Contest hosted by Jennifer van Alstyne, Brittany Trinh, and Ian Li. This contest celebrates great examples of academic websites from people in Higher Education.
+          - paragraph [ref=f1e94]:
+            - strong [ref=f1e95]:
+              - link "The 2026 Contest is open for entries. Thank you!" [ref=f1e96] [cursor=pointer]:
+                - /url: https://theacademicdesigner.com/2026/best-personal-academic-websites-contest-2026/
+        - generic [ref=f1e97]:
+          - figure [ref=f1e99]:
+            - img "2025 Best Personal Academic Websites Award Winners logo" [ref=f1e100]
+          - generic [ref=f1e101]:
+            - heading "About the Awards" [level=2] [ref=f1e102]
+            - paragraph [ref=f1e103]: Congratulations to this year’s award winning academic websites!
+          - paragraph [ref=f1e104]: Hi there, I’m Jennifer van Alstyne. This is our 3rd Best Personal Academic Websites Contest. This page celebrates the 2025 award winners. We hope their websites help inspire people around the world to create space for themselves online. Please share these award winning websites with a friend you think should have a website too.
+          - paragraph [ref=f1e105]: There are 12 award winners in this year’s contest. In a year we’ve had more entries than ever before, these academic website stood out. Each of the award winners in this year’s contest received a perfect score from the judges.
+          - paragraph [ref=f1e106]: While their websites may grow and change with them over time, these award winning academic websites deserve to be celebrated for the work they’re already doing to share their story. Thank you.
+          - paragraph [ref=f1e107]:
+            - strong [ref=f1e108]: Best wishes,Your Contest Co-Hosts
+          - generic [ref=f1e109]:
+            - figure [ref=f1e111]:
+              - strong [ref=f1e113]: Jennifer van Alstyne of The Social Academic
+            - figure [ref=f1e115]:
+              - strong [ref=f1e117]: Brittany Trinh of the Beyond Your Science Podcast
+            - figure [ref=f1e119]:
+              - strong [ref=f1e121]: Ian Li, PhD of Owlstown
+        - generic [ref=f1e123]:
+          - heading "What you’ll find on this page" [level=3] [ref=f1e124]
+          - paragraph [ref=f1e125]: Check out the award winning websitesRead what inspired people to create their websiteFind what the judges thoughtResources to help you create a website of your own
+        - generic [ref=f1e128]:
+          - generic [ref=f1e129]:
+            - heading "Awards" [level=2] [ref=f1e130]
+            - paragraph [ref=f1e131]:
+              - strong [ref=f1e132]: "2025"
+          - paragraph [ref=f1e133]:
+            - strong [ref=f1e134]: Overall Best Personal Academic Website
+            - link "Madeline Eppley" [ref=f1e135] [cursor=pointer]:
+              - /url: "#madeline-eppley"
+            - link "Dr. Roberta Rosa Valtorta" [ref=f1e136] [cursor=pointer]:
+              - /url: "#roberta-rosa-valtorta"
+          - paragraph [ref=f1e137]:
+            - strong [ref=f1e138]: Owlstown Website
+            - link "Dr. Akshata Naik" [ref=f1e139] [cursor=pointer]:
+              - /url: "#akshata-naik"
+          - paragraph [ref=f1e140]:
+            - strong [ref=f1e141]: Best Educational Resource Website
+            - link "Dr. Fawad Ahmed Najam" [ref=f1e142] [cursor=pointer]:
+              - /url: "#fawad-ahmed-najam"
+          - paragraph [ref=f1e143]:
+            - strong [ref=f1e144]: Best Academic Portfolio Website
+            - link "Dr. Patrick Manser" [ref=f1e145] [cursor=pointer]:
+              - /url: "#patrick-manser"
+          - paragraph [ref=f1e146]:
+            - strong [ref=f1e147]: Best Research Lab or Group Website
+            - link "Dr. Allie Sinclair" [ref=f1e148] [cursor=pointer]:
+              - /url: "#allie-sinclair"
+            - link "Dr. Tetine Sentell" [ref=f1e149] [cursor=pointer]:
+              - /url: "#tetine-sentell"
+          - paragraph [ref=f1e150]:
+            - strong [ref=f1e151]: Best Storytelling
+            - link "Dr. Erika Iveth Cedillo-González" [ref=f1e152] [cursor=pointer]:
+              - /url: "#erika-iveth-cedillo-gonzalez"
+          - paragraph [ref=f1e153]:
+            - strong [ref=f1e154]: Best Interactive Website
+            - link "Dr. Cecilia Baldoni" [ref=f1e155] [cursor=pointer]:
+              - /url: "#cecilia-baldoni"
+          - paragraph [ref=f1e156]:
+            - strong [ref=f1e157]: Best Use of Art / Visuals
+            - link "Meg Mindlin" [ref=f1e158] [cursor=pointer]:
+              - /url: "#meg-mindlin"
+          - paragraph [ref=f1e159]:
+            - strong [ref=f1e160]: Most Aesthetic Website
+            - link "Hira Javed" [ref=f1e161] [cursor=pointer]:
+              - /url: "#hira-javed"
+          - paragraph [ref=f1e162]:
+            - strong [ref=f1e163]: Accessible SciComm Award
+            - link "Dr. Ana Rebeka Kamšek" [ref=f1e164] [cursor=pointer]:
+              - /url: "#ana-rebeka-kamsek"
+          - list [ref=f1e166]:
+            - listitem [ref=f1e167]:
+              - link "Share using Native tools" [ref=f1e168]:
+                - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/
+                - generic [ref=f1e172]: Share
+            - listitem [ref=f1e173]:
+              - link "Share on Mail (Opens in new window)" [ref=f1e174]:
+                - /url: mailto:?subject=%5BShared%20Post%5D%20Winners%20of%20the%20Best%20Personal%20Academic%20Websites%20Contest%202025&body=https%3A%2F%2Ftheacademicdesigner.com%2F2025%2Fwinners-of-the-best-personal-academic-websites-contest-2025%2F&share=email
+                - generic [ref=f1e178]: Mail
+            - listitem [ref=f1e179]:
+              - link "Share on Print (Opens in new window)" [ref=f1e180]:
+                - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/?share=print&nb=1
+                - generic [ref=f1e184]: Print
+            - listitem [ref=f1e185]:
+              - link "Share on LinkedIn (Opens in new window)" [ref=f1e186]:
+                - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/?share=linkedin&nb=1
+                - generic [ref=f1e190]: LinkedIn
+            - listitem [ref=f1e191]:
+              - link "Share on Bluesky (Opens in new window)" [ref=f1e192]:
+                - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/?share=bluesky&nb=1
+                - generic [ref=f1e195]: Bluesky
+            - listitem [ref=f1e196]:
+              - link "Share on Threads (Opens in new window)" [ref=f1e197]:
+                - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/?share=threads&nb=1
+                - generic [ref=f1e201]: Threads
+            - listitem [ref=f1e202]:
+              - link "Share on Facebook (Opens in new window)" [ref=f1e203]:
+                - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/?share=facebook&nb=1
+                - generic [ref=f1e207]: Facebook
+            - listitem [ref=f1e208]:
+              - link "Share on X (Opens in new window)" [ref=f1e209]:
+                - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/?share=x&nb=1
+                - generic [ref=f1e213]: X
+            - listitem [ref=f1e214]:
+              - link "Share on Pinterest (Opens in new window)" [ref=f1e215]:
+                - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/?share=pinterest&nb=1
+                - generic [ref=f1e219]: Pinterest
+            - listitem [ref=f1e220]:
+              - link "Share on Reddit (Opens in new window)" [ref=f1e221]:
+                - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/?share=reddit&nb=1
+                - generic [ref=f1e225]: Reddit
+            - listitem [ref=f1e226]:
+              - link "Share on Mastodon (Opens in new window)" [ref=f1e227]:
+                - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/?share=mastodon&nb=1
+                - generic [ref=f1e231]: Mastodon
+          - generic [ref=f1e232]:
+            - link "LinkedIn Announcement" [ref=f1e234] [cursor=pointer]:
+              - /url: https://www.linkedin.com/posts/jennifervanalstyne_highereducation-academics-research-activity-7392366966273073154-sJJQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAdVHBMBG6t697ekvn8fgQ4Kdp6vmdr7FaE
+            - link "YouTube Short" [ref=f1e236] [cursor=pointer]:
+              - /url: https://youtube.com/shorts/9Ux-EhsTj8E?feature=share
+            - link "Instagram Reel" [ref=f1e238] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DQvFOGAEgMP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
+            - link "Instagram Carousel" [ref=f1e240] [cursor=pointer]:
+              - /url: https://www.instagram.com/p/DQtpbWDEWQw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
+          - paragraph [ref=f1e241]:
+            - link "View graphics to celebrate the awards" [ref=f1e242] [cursor=pointer]:
+              - /url: "#share"
+        - generic [ref=f1e243]:
+          - heading "Thank you for participating in this year’s contest" [level=3] [ref=f1e244]
+          - paragraph [ref=f1e245]:
+            - strong [ref=f1e246]: To each person who entered their website into the Contest, thank you.
+            - text: Thank you for creating that space for yourself online. Thank you for being open to sharing it with people. I’m so glad your website is in the world.
+          - paragraph [ref=f1e247]:
+            - strong [ref=f1e248]: Would you like feedback from the judges on your website?
+            - text: Each person who entered the 2025 contest can request feedback from the judges. If you’d like suggestions or critique toward improvement, we’re happy to share our thoughts with you if you’d find it helpful. Even award winners are reaching out. Email Jennifer van Alstyne at Jennifer@TheAcademicDesigner.com
+          - paragraph [ref=f1e249]:
+            - text: The Best Personal Academic Websites Contest was open for entries from April 22, 2025 and closed on August 15, 2025.
+            - link "The 2026 contest is now open, we’d love for your website to be in the mix!" [ref=f1e250] [cursor=pointer]:
+              - /url: https://theacademicdesigner.com/2026/best-personal-academic-websites-contest-2026/
+          - paragraph [ref=f1e251]:
+            - strong [ref=f1e252]: Want to hear about next year’s contest?
+            - text: Subscribe to The Social Academic.
+          - generic [ref=f1e256]:
+            - paragraph [ref=f1e257]:
+              - generic [ref=f1e258]: Type your email…
+              - textbox "Type your email…" [ref=f1e259] [cursor=pointer]
+            - paragraph [ref=f1e260]:
+              - button "Subscribe" [ref=f1e261] [cursor=pointer]
+        - generic [ref=f1e262]:
+          - figure [ref=f1e263]:
+            - img "2025 award winners of the personal academic websites contest hosted by Jennifer van Alstyne of The Social Academic. On this graphic are 12 award winning websites from this year's entries." [ref=f1e264]
+          - generic [ref=f1e265]:
+            - heading "Overall Best Personal Academic Website Award" [level=2] [ref=f1e266]
+            - paragraph [ref=f1e267]:
+              - strong [ref=f1e268]: Madeline Eppley and Dr. Roberta Rosa Valtorta
+              - text: (tied)
+            - generic [ref=f1e269]:
+              - figure [ref=f1e270]:
+                - img "Madeline Eppley Website on Desktop (homepage), Tablet (Research page), and Mobile (Outreach page) screens" [ref=f1e271]
+                - link "https://www.madeline-eppley.com/" [ref=f1e273] [cursor=pointer]:
+                  - /url: https://www.madeline-eppley.com/cv--about.html
+              - heading "Madeline Eppley" [level=3] [ref=f1e274]
+              - paragraph [ref=f1e275]: “I made my website because I feel there is a substantial gap in science communication training for graduate students and the broader field of biology. I graduated undergrad in 2020 when a lot of networking and resources went virtual. During this really pivotal stage in my career development, I needed to develop better digital presence and science communication skills to keep pace with the rising importance of networking in virtual academic spaces (e.g. virtual conferences and social media). Through this process, I ended up finding my current PhD position on social media, and also built a digital network that made me feel more connected to the science community online.”
+              - paragraph [ref=f1e276]:
+                - strong [ref=f1e277]: —Madeline Eppley
+              - link "View the website" [ref=f1e280] [cursor=pointer]:
+                - /url: https://www.madeline-eppley.com
+              - generic [ref=f1e281]:
+                - heading "Notes from the judges" [level=4] [ref=f1e282]
+                - paragraph [ref=f1e283]:
+                  - strong [ref=f1e284]: "Jennifer van Alstyne:"
+                  - text: A visually engaging story-rich website. I hope Madeline’s website inspires people to take more photos because it makes such a difference. For instance, there’s a lot of content on this website, but it doesn’t feel overwhelming. While the top menu is initially hard to read, when I start scrolling there’s contrast. I like how Madeline’s research page shares ongoing research and completed research.
+                - paragraph [ref=f1e285]:
+                  - strong [ref=f1e286]: "Brittany Trinh:"
+                  - text: I love Eppley’s website, from the bio to all the photos of the field research. On the homepage, Eppley makes her passion for research and science communication clear, as well as her future goals. The research page explains the importance and impact for each research project and specifies which projects are ongoing or completed. Looking at her website, I am now inspired to go update my own website and incorporate more science in it!
+                - paragraph [ref=f1e287]:
+                  - strong [ref=f1e288]: "Ian Li:"
+                  - text: Eppley’s website is well-organized and provides a lot of details on what inspires her work and the results of her research. She also describes her outreach to college and high school students. Her blog has lots of stories about her research and experience on the field.
+            - generic [ref=f1e290]:
+              - figure [ref=f1e291]:
+                - img "Dr. Roberta Rosa Valtorta Website on Desktop (homepage), Tablet (Publications page), and Mobile (Projects page) screens" [ref=f1e292]
+                - link "https://robertavaltorta.research.st/" [ref=f1e294] [cursor=pointer]:
+                  - /url: https://robertavaltorta.research.st/
+              - heading "Dr. Roberta Rosa Valtorta" [level=3] [ref=f1e295]
+              - paragraph [ref=f1e296]: "“I created my personal academic website for several reasons. First, to have one central place where all my work, publications, and projects are collected, making it easier for potential collaborators and anyone interested in my research to find accurate, up-to-date information. Second, to maintain control over my online presence, so that people searching for me don’t just find scattered pieces of information in different places. And finally, for a more personal reason: research can sometimes test self-esteem due to its competitiveness and constant pressure. Having a space where everything I have done is brought together helps me remember who I am, my roots, and the progress I have made.”"
+              - paragraph [ref=f1e297]:
+                - strong [ref=f1e298]: —Dr. Roberta Rosa Valtorta
+              - link "View the website" [ref=f1e301] [cursor=pointer]:
+                - /url: https://robertavaltorta.research.st/
+              - generic [ref=f1e302]:
+                - heading "Notes from the judges" [level=4] [ref=f1e303]
+                - paragraph [ref=f1e304]:
+                  - strong [ref=f1e305]: "Jennifer van Alstyne:"
+                  - text: A thoughtful use of space on an Owlstown website. Dr. Valtorta has an expansive portfolio of publications, projects, and teaching. This website also shares teaching values, such as ways courses contribute to the United Nations Sustainable Development Goals (SDGs). From downloadable syllabi to accessible data, this is a great academic website example.
+                - paragraph [ref=f1e306]:
+                  - strong [ref=f1e307]: "Brittany Trinh:"
+                  - text: Valtorta’s website is great example of what you can do with an Owlstown website! The project pages include an overview, related awards, and related publications, which makes it easier to understand the impact of the research. The teaching pages provide a summary about the classes taught so we can understand the topics covered and importance of the course.
+                - paragraph [ref=f1e308]:
+                  - strong [ref=f1e309]: "Ian Li:"
+                  - text: This is such a great example of an academic website. It is well-organized. Projects are described with related publications, Publications and courses are summarized well. Her intro describes her passion for her research and points to the development of her work. She also shares a blog that is regularly updated. She also provides information in both English and Italian, which widens the reach of her work.
+              - paragraph [ref=f1e310]:
+                - link "Back to the list of award winners" [ref=f1e311] [cursor=pointer]:
+                  - /url: "#list"
+          - generic [ref=f1e312]:
+            - heading "Owlstown Website Award" [level=2] [ref=f1e313]
+            - paragraph [ref=f1e314]:
+              - strong [ref=f1e315]: Dr. Akshata Naik
+            - generic [ref=f1e316]:
+              - figure [ref=f1e317]:
+                - img "Akshata Naik Website on Desktop (homepage), tablet (publications page) and mobile (speaking page) screens" [ref=f1e318]
+                - link [ref=f1e320] [cursor=pointer]:
+                  - /url: https://www.anaikowl.com/
+                  - mark [ref=f1e321]: https://www.anaikowl.com/
+              - heading "Dr. Akshata Naik" [level=3] [ref=f1e322]
+              - paragraph [ref=f1e323]: “I thrive on creativity! Science communication, teaching and new research ideas keep me going. So I wanted to create an online space to portray my work for networking with folks similar to my interests, and importantly serving the broader community via outreach. And being an academician is a good enough reason for building a digital presence as it strategically aligns with my tenure and promotion goals by amplifying the impact of my work beyond traditional boundaries.”
+              - paragraph [ref=f1e324]:
+                - strong [ref=f1e325]: —Dr. Akshata Naik
+              - link "View the website" [ref=f1e328] [cursor=pointer]:
+                - /url: https://www.anaikowl.com/
+              - generic [ref=f1e329]:
+                - heading "Notes from the judges" [level=4] [ref=f1e330]
+                - paragraph [ref=f1e331]:
+                  - strong [ref=f1e332]: "Jennifer van Alstyne:"
+                  - text: I get such a sense of personality from an Owlstown website. This is great. Publications with abstracts make a difference. The buttons, like ‘Get to know me’ stand out as a lovely way to be approachable. The ‘Generated using Canva AI’ disclosure on an image on the blog feels thoughtful (and like the kind of information people appreciate even if they don’t use AI art themselves). The use of emojis in the middle of sentences isn’t ideal for accessibility, and is something I’d recommend revising.
+                - paragraph [ref=f1e333]:
+                  - strong [ref=f1e334]: "Brittany Trinh:"
+                  - text: Naik does a great job on her Owlstown website sharing what she does and why she does it. My favorite page is her Speaking page because it highlights the different talks she has and shares more of her story.
+                - paragraph [ref=f1e335]:
+                  - strong [ref=f1e336]: "Ian Li:"
+                  - text: Naik’s website is a great example of an Owlstown website. It’s very organized with information about herself, her publications, and her speaking engagements. She also shares a blog.
+              - paragraph [ref=f1e337]:
+                - link "Back to the list of award winners" [ref=f1e338] [cursor=pointer]:
+                  - /url: "#list"
+          - generic [ref=f1e339]:
+            - heading "Best Educational Resource Website" [level=2] [ref=f1e340]
+            - paragraph [ref=f1e341]:
+              - strong [ref=f1e342]: Dr. Fawad Ahmed Najam
+            - generic [ref=f1e343]:
+              - figure [ref=f1e344]:
+                - img "Fawad Ahmed Najam Website on desktop (homepage), tablet (Tutorials page), and mobile (academic courses page) screens" [ref=f1e345]
+                - link "https://fawadnajam.com/" [ref=f1e347] [cursor=pointer]:
+                  - /url: https://fawadnajam.com/
+              - heading "Dr. Fawad Ahmed Najam" [level=3] [ref=f1e348]
+              - paragraph [ref=f1e349]: “I am an educator in the field of structural and earthquake engineering. I originally created my website to make structural and earthquake engineering concepts more accessible to my students, fellow educators, and professionals. My goal was to share open educational resources, interactive tools, and practical examples (I use in classroom) with a wider audience. Knowing that it is making a difference and inspiring others means a lot to me.”
+              - paragraph [ref=f1e350]:
+                - strong [ref=f1e351]: —Dr. Fawad Ahmed Najam
+              - link "View the website" [ref=f1e354] [cursor=pointer]:
+                - /url: https://fawadnajam.com/
+              - generic [ref=f1e355]:
+                - heading "Notes from the judges" [level=4] [ref=f1e356]
+                - paragraph [ref=f1e357]:
+                  - strong [ref=f1e358]: "Jennifer van Alstyne:"
+                  - text: "A wealth of resources made accessible through this online space and good organization. While I don’t love the rotating icons for accessibility, every page of this website has videos, articles, blogs, and data to help people. I hope this website inspires people to consider: what do I already have that can help my students I’m open to sharing online?"
+                - paragraph [ref=f1e359]:
+                  - strong [ref=f1e360]: "Brittany Trinh:"
+                  - text: Najam’s website is jam-packed with resources for his courses. His website is well organized and the content is probably super helpful to his students and others who are interested in structural engineering!
+                - paragraph [ref=f1e361]:
+                  - strong [ref=f1e362]: "Ian Li:"
+                  - text: If you want to learn about structural engineering, Najam’s website is the place to go. It is well-organized and has pages for course materials, YouTube videos, links to publications and resources.
+              - paragraph [ref=f1e363]:
+                - link "Back to the list of award winners" [ref=f1e364] [cursor=pointer]:
+                  - /url: "#list"
+          - generic [ref=f1e365]:
+            - heading "Best Academic Portfolio Website" [level=2] [ref=f1e366]
+            - paragraph [ref=f1e367]:
+              - strong [ref=f1e368]: Dr. Patrick Manser
+            - generic [ref=f1e369]:
+              - figure [ref=f1e370]:
+                - img "Patrick Manser website on Desktop (homepage), tablet (research project page), and mobile (homepage) screens" [ref=f1e371]
+                - link "https://www.patrick-manser.com/" [ref=f1e373] [cursor=pointer]:
+                  - /url: https://www.patrick-manser.com/
+              - heading "Dr. Patrick Manser" [level=3] [ref=f1e374]
+              - paragraph [ref=f1e375]: “I created my personal academic website to make my collaborative research more accessible, with the aim of fostering transparency, promoting interdisciplinary dialogue, and broadening the dissemination of knowledge. By sharing my work openly, I hope to spark new connections and collaborative efforts that not only advance science but also translate research into meaningful improvements in healthcare and community-based health promotion.”
+              - paragraph [ref=f1e376]:
+                - strong [ref=f1e377]: —Dr. Patrick Manser
+              - link "View the website" [ref=f1e380] [cursor=pointer]:
+                - /url: https://www.patrick-manser.com/
+              - generic [ref=f1e381]:
+                - heading "Notes from the judges" [level=4] [ref=f1e382]
+                - paragraph [ref=f1e383]:
+                  - strong [ref=f1e384]: "Jennifer van Alstyne:"
+                  - text: What a great welcome note video! I love it. That stood out because it was simple and invites folks to explore areas of the website. I felt like if I didn’t explore anywhere else, the video shared what, why and invited folks to get in touch. This website has far more on it than expected. While it’s mostly text-based with few visuals, it’s clear, easy to read, and well organized. I hope this website inspires people to consider video. Ooh, and requesting testimonials for their website too.
+                - paragraph [ref=f1e385]:
+                  - strong [ref=f1e386]: "Brittany Trinh:"
+                  - text: Manser’s website is very extensive regarding his research and how it has been highlighted in media. Additionally, he includes many stats regarding his academic contributions in many different areas such as awards, grants, peer review, and more.
+                - paragraph [ref=f1e387]:
+                  - strong [ref=f1e388]: "Ian Li:"
+                  - text: "Manser’s website is full of information on his research work: publications, courses taught, media, grants, etc. He also provides short descriptions for every item, so you have an introduction to the item. It’s a great example of how an academic website can serve as a portfolio."
+              - paragraph [ref=f1e389]:
+                - link "Back to the list of award winners" [ref=f1e390] [cursor=pointer]:
+                  - /url: "#list"
+          - generic [ref=f1e391]:
+            - heading "Best Research Lab or Group Website" [level=2] [ref=f1e392]
+            - paragraph [ref=f1e393]:
+              - strong [ref=f1e394]: Dr. Allie Sinclair and Dr. Tetine Sentell
+              - text: (tied)
+            - generic [ref=f1e395]:
+              - figure [ref=f1e396]:
+                - img "Dr. Allie Sinclair | Learning & Behavior Change Lab website on desktop, tablet, and mobile screens" [ref=f1e397]
+                - link "https://www.sinclairlab-rice.com/" [ref=f1e399] [cursor=pointer]:
+                  - /url: https://www.sinclairlab-rice.com/
+              - heading "Dr. Allie Sinclair | Learning & Behavior Change Lab" [level=3] [ref=f1e400]
+              - paragraph [ref=f1e401]: “I was excited to make this website for my new lab, as I’ll be starting a faculty position at Rice University next year. I’ve spent many years dreaming of starting my own lab, although the exact vision has evolved over time. Now that the official website is ready, it finally feels real! I was motivated to create a fun and informative website this summer because I will be recruiting people to join my lab over the next year. I made the website with Owlstown, which made it easy to build and customize. I especially appreciated the features geared toward academics, like searching PubMed to find your publications and adding Altmetric badges.”
+              - paragraph [ref=f1e402]:
+                - strong [ref=f1e403]: —Dr. Allie Sinclair
+              - generic [ref=f1e404]:
+                - link "View the website" [ref=f1e406] [cursor=pointer]:
+                  - /url: https://www.sinclairlab-rice.com/
+                - link "Podcast episode about creating her website" [ref=f1e408] [cursor=pointer]:
+                  - /url: https://theacademicdesigner.com/2026/creating-her-research-lab-website-allie-sinclair/
+              - generic [ref=f1e409]:
+                - heading "Notes from the judges" [level=4] [ref=f1e410]
+                - paragraph [ref=f1e411]:
+                  - strong [ref=f1e412]: "Jennifer van Alstyne:"
+                  - text: Scroll down the homepage of this website and you have a great sense of what their research is about. Words, graphics, and illustration shares the story, and we’re then invited to explore the research and team. Folks are getting so creative with their Owlstown sites. I like the illustrations. There’s a lot of info for folks who are considering joining the lab which shares it’s recruiting for Fall 2026. Cats, Lara Croft and Moxie the cats have their own space on the team page. Yes. I’m so into this.
+                - paragraph [ref=f1e413]:
+                  - strong [ref=f1e414]: "Brittany Trinh:"
+                  - text: This is one of the best stylized Owlstown websites that I’ve seen. I love the cohesion of the color schemes in the visuals. I liked how they organized the research areas into three separate topics and had a link to the related publications. The publications page has the filter function so we can find papers related to a specific topic more easily.
+                - paragraph [ref=f1e415]:
+                  - strong [ref=f1e416]: "Ian Li:"
+                  - text: This is a great example of a lab website. You get a comprehensive understanding of what the lab does. Research projects are summarized and linked to relevant papers. There’s also links to media appearances and collaborators. Plus, the website is beautifully done with graphics and well-chosen colors.
+            - generic [ref=f1e418]:
+              - figure [ref=f1e419]:
+                - img "Dr. Tetine Sentell Public Health Resonance Project Website on Desktop, Tablet, and mobile screens" [ref=f1e420]
+                - link "https://phresonance.com/" [ref=f1e422] [cursor=pointer]:
+                  - /url: https://phresonance.com/
+              - heading "Dr. Tetine Sentell | Public Health Resonance Project" [level=3] [ref=f1e423]
+              - paragraph [ref=f1e424]: “Our interdisciplinary public health research collaboration is working together to help build the evidence base for regionally and culturally relevant physical activity for public health promotion. This work is designed to help connect and build this evidence base for public health promotion to produce actionable results for individuals, advocates, and communities to improve health outcomes and health equity. We wanted a beautiful and well-organized website to share information to support this goal. We plan to keep building on this website as the project continues and have been grateful to Jennifer van Alstyne for her support to make this possible!”
+              - paragraph [ref=f1e425]:
+                - strong [ref=f1e426]: —Dr. Tetine Sentell
+              - generic [ref=f1e427]:
+                - link "View the website" [ref=f1e429] [cursor=pointer]:
+                  - /url: https://phresonance.com/
+                - link "Podcast episode about art the website" [ref=f1e431] [cursor=pointer]:
+                  - /url: https://theacademicdesigner.com/2025/art-and-design-to-share-your-research-story-with-the-public-health-resonance-project/
+              - generic [ref=f1e432]:
+                - heading "Notes from the judges" [level=4] [ref=f1e433]
+                - paragraph [ref=f1e434]:
+                  - strong [ref=f1e435]: Jennifer van Alstyne
+                  - text: designed this website. She did not judge this entry.
+                - paragraph [ref=f1e436]:
+                  - strong [ref=f1e437]: "Brittany Trinh:"
+                  - text: This website is very well organized on their research page. Additionally, I love the use of real photos of the group in action in the field or at different events. It adds a personal flair to the website that makes it unique!
+                - paragraph [ref=f1e438]:
+                  - strong [ref=f1e439]: "Ian Li:"
+                  - text: This website is a great example of a lab website. It has full descriptions of lab members, research projects, lab activities, and outreach. It shares links to media and conference appearances. You get a detailed picture of what the lab does.
+              - paragraph [ref=f1e440]:
+                - link "Back to the list of award winners" [ref=f1e441] [cursor=pointer]:
+                  - /url: "#list"
+          - generic [ref=f1e442]:
+            - heading "Best Storytelling" [level=2] [ref=f1e443]
+            - paragraph [ref=f1e444]:
+              - strong [ref=f1e445]: Dr. Erika Iveth Cedillo-González
+            - generic [ref=f1e446]:
+              - figure [ref=f1e447]:
+                - link "https://erikacedillo.com/" [ref=f1e449] [cursor=pointer]:
+                  - /url: https://erikacedillo.com/
+              - heading "Dr. Erika Iveth Cedillo-González" [level=3] [ref=f1e450]
+              - paragraph [ref=f1e451]: "“I built my academic website to share what university profiles never did: my passion for research, my path as a mentor, and my dedication to protecting our planet. I believe each person in Academia carries a unique and inspiring journey that led them to science. A personal academic website offers the perfect space to share such story and remind others that research is also deeply human.”"
+              - paragraph [ref=f1e452]:
+                - strong [ref=f1e453]: —Dr. Erika Iveth Cedillo-González
+              - generic [ref=f1e454]:
+                - link "View the website" [ref=f1e456] [cursor=pointer]:
+                  - /url: https://erikacedillo.com/
+                - generic [ref=f1e457]: Podcast episode about creating her website
+              - generic [ref=f1e459]:
+                - heading "Notes from the judges" [level=4] [ref=f1e460]
+                - paragraph [ref=f1e461]:
+                  - strong [ref=f1e462]: "Jennifer van Alstyne:"
+                  - text: Personal and professional with pops of color. This website shares Dr. Erika Iveth Cedillo-González’ passion for science. It has science communication that invites the general public to learn and engage. There’s clarity not only on what the research is about, but how it impacts people. Accessible communication without sacrificing the science, in this website you get both.
+                - paragraph [ref=f1e463]:
+                  - strong [ref=f1e464]: "Brittany Trinh:"
+                  - text: I love how Cedillo tells her story of how she became a scientist and how it informs her research right from the start on her homepage. I also love that she has a blog for the Spanish-speaking ECR community, which serves as a resource and ties into her purpose and mission.
+                - paragraph [ref=f1e465]:
+                  - strong [ref=f1e466]: "Ian Li:"
+                  - text: The story of Cedillo’s work really comes together on this website. Her bio shows what inspires Cedillo, then her research shows how inspiration resulted in findings, then her outreach shows how she spreads her research to the broader community.
+              - paragraph [ref=f1e467]:
+                - link "Back to the list of award winners" [ref=f1e468] [cursor=pointer]:
+                  - /url: "#list"
+          - generic [ref=f1e469]:
+            - heading "Best Interactive Website" [level=2] [ref=f1e470]
+            - paragraph [ref=f1e471]:
+              - strong [ref=f1e472]: Dr. Cecilia Baldoni
+            - generic [ref=f1e473]:
+              - figure [ref=f1e474]:
+                - img "Cecilia Baldoni GitHub website on desktop, tablet, and mobile screens" [ref=f1e475]
+                - link "https://cecibaldoni.github.io/" [ref=f1e477] [cursor=pointer]:
+                  - /url: https://cecibaldoni.github.io/
+              - heading "Dr. Cecilia Baldoni" [level=3] [ref=f1e478]
+              - paragraph [ref=f1e479]: “I was looking for a new fun way to express my creativity, and learn new ways to code and use version control!”
+              - paragraph [ref=f1e480]:
+                - strong [ref=f1e481]: —Dr. Cecilia Baldoni
+              - link "View the website" [ref=f1e484] [cursor=pointer]:
+                - /url: https://cecibaldoni.github.io/
+              - generic [ref=f1e485]:
+                - heading "Notes from the judges" [level=4] [ref=f1e486]
+                - paragraph [ref=f1e487]:
+                  - strong [ref=f1e488]: "Jennifer van Alstyne:"
+                  - text: Wow. I love the homepage interactivity. The blog post on Sketchnoting was great and the photos had captions. The Shrews page was visually engaging. I wish the text were a bit bigger (it felt like a lot of negative space on the text side). I’m obsessed with the Projects > Illustrations page. What a cute title page for their dissertation! Go explore this website. I hope it helps you imagine what’s possible for sharing your story too.
+                - paragraph [ref=f1e489]:
+                  - strong [ref=f1e490]: "Brittany Trinh:"
+                  - text: My favorite page is the Shrews webpage. As you scroll down the story and research unfold, and it’s a very unique way to share their research findings.
+                - paragraph [ref=f1e491]:
+                  - strong [ref=f1e492]: "Ian Li:"
+                  - text: The website has a bunch of interesting interactive elements. The Shrew’s page is a great example of how research can be presented in an interactive manner which elevates the understanding of the work. Baldoni also shares her slides which are viewable directly on the browser. Also, the city-like navigation on the front page.
+              - paragraph [ref=f1e493]:
+                - link "Back to the list of award winners" [ref=f1e494] [cursor=pointer]:
+                  - /url: "#list"
+          - generic [ref=f1e495]:
+            - heading "Best Use of Art / Visuals" [level=2] [ref=f1e496]
+            - paragraph [ref=f1e497]:
+              - strong [ref=f1e498]: Meg Mindlin
+            - generic [ref=f1e499]:
+              - figure [ref=f1e500]:
+                - img "Meg Mindlin graduate student website on desktop, tablet, and mobile screens" [ref=f1e501]
+                - link [ref=f1e503] [cursor=pointer]:
+                  - /url: https://www.megmindlin.com/
+                  - mark [ref=f1e504]: https://www.megmindlin.com/
+              - heading "Meg Mindlin" [level=3] [ref=f1e505]
+              - paragraph [ref=f1e506]: “I’ve always had a website for my art portfolio, and as I was about to enter the real world, post graduate school, I saw no reason to not also utilize my website for my scientific endeavors. Especially with a budding career as a science communicator.”
+              - paragraph [ref=f1e507]:
+                - strong [ref=f1e508]: —Meg Mindlin
+              - link "View the website" [ref=f1e511] [cursor=pointer]:
+                - /url: https://www.megmindlin.com/
+              - generic [ref=f1e512]:
+                - heading "Notes from the judges" [level=4] [ref=f1e513]
+                - paragraph [ref=f1e514]:
+                  - strong [ref=f1e515]: Jennifer van Alstyne
+                  - text: did not judge Meg Mindlin’s website for this contest.
+                - paragraph [ref=f1e516]:
+                  - strong [ref=f1e517]: "Brittany Trinh:"
+                  - text: I love this website so much! It is a great example of how to incorporate your science and entrepreneurial ventures, while tying it together with your personal story! It is now my inspiration to update my own website.
+                - paragraph [ref=f1e518]:
+                  - strong [ref=f1e519]: "Ian Li:"
+                  - text: The illustrations and photography on this website are awesome. It’s a great example of visual communication of science.
+              - paragraph [ref=f1e520]:
+                - link "Back to the list of award winners" [ref=f1e521] [cursor=pointer]:
+                  - /url: "#list"
+          - generic [ref=f1e522]:
+            - heading [level=2] [ref=f1e523]:
+              - strong [ref=f1e524]: Most Aesthetic Website
+            - paragraph [ref=f1e525]:
+              - strong [ref=f1e526]: Hira Javed
+            - generic [ref=f1e527]:
+              - figure [ref=f1e528]:
+                - img "Hira Javid phd student website on desktop, tablet, and mobile screens" [ref=f1e529]
+                - link "http://www.hirajaved.com" [ref=f1e531] [cursor=pointer]:
+                  - /url: http://www.hirajaved.com
+              - heading "Hira Javed" [level=3] [ref=f1e532]
+              - paragraph [ref=f1e533]: “I made this website to tell the story of my non-linear, multidisciplinary career trajectory. It was an excellent reflective exercise for me.”
+              - paragraph [ref=f1e534]:
+                - strong [ref=f1e535]: —Hira Javed
+              - link "View the website" [ref=f1e538] [cursor=pointer]:
+                - /url: http://www.hirajaved.com
+              - generic [ref=f1e539]:
+                - heading "Notes from the judges" [level=4] [ref=f1e540]
+                - paragraph [ref=f1e541]:
+                  - strong [ref=f1e542]: "Jennifer van Alstyne:"
+                  - text: This felt like a great portfolio website. A professional, resume-esque website without apology. I love that. The graphics are informative, visually engaging, and are thoughtful uses of color throughout the website. I wish that the My Journey section were built into the website rather than graphics. This section is beautiful, but the graphics make it less accessible. A favorite part of this website is the Presentations page where there’s a photo from each conference or event. That’s the dream.
+                - paragraph [ref=f1e543]:
+                  - strong [ref=f1e544]: "Brittany Trinh:"
+                  - text: I love the color palette and cohesion between the illustrations. I also like how Javed’s resume is color-coded and organized- it’s a creative way to showcase your experience, which you can only do on a website, and not in your resume.
+                - paragraph [ref=f1e545]:
+                  - strong [ref=f1e546]: "Ian Li:"
+                  - text: The coordination of the colors between the background, fonts, and graphical elements is really well done. The design serves the presentation of the Javed’s research projects, teaching, and presentations.
+              - paragraph [ref=f1e547]:
+                - link "Back to the list of award winners" [ref=f1e548] [cursor=pointer]:
+                  - /url: "#list"
+          - generic [ref=f1e549]:
+            - heading [level=2] [ref=f1e550]:
+              - strong [ref=f1e551]: Accessible SciComm Award
+            - generic [ref=f1e552]:
+              - paragraph [ref=f1e553]:
+                - strong [ref=f1e554]: Dr. Ana Rebeka Kamšek
+              - figure [ref=f1e555]:
+                - img "Ana Rebeka Kamšek science communication website on desktop, tablet, and mobile screens" [ref=f1e556]
+                - link "https://kamsekar.github.io/" [ref=f1e558] [cursor=pointer]:
+                  - /url: https://kamsekar.github.io/
+              - heading "Dr. Ana Rebeka Kamšek" [level=3] [ref=f1e559]
+              - paragraph [ref=f1e560]: “As a researcher interested in science outreach, I noticed my work was spread across platforms. People who searched for my scientific papers rarely saw what I wrote for the public, and the mix of English and Slovenian further split my audience. I wanted a home where visitors could find everything I’m proud of, regardless of language or format. A personal website felt right, and the Best Personal Academic Websites Contest nudged me to make it happen.”
+              - paragraph [ref=f1e561]:
+                - strong [ref=f1e562]: —Dr. Ana Rebeka Kamšek
+              - link "View the website" [ref=f1e565] [cursor=pointer]:
+                - /url: https://kamsekar.github.io/
+              - generic [ref=f1e566]:
+                - heading "Notes from the judges" [level=4] [ref=f1e567]
+                - paragraph [ref=f1e568]:
+                  - strong [ref=f1e569]: "Jennifer van Alstyne:"
+                  - text: Dr. Ana Rebeka Kamšek starts her website by sharing her value “I believe in making them accessible and impactful through science communication, data visualization, and engaging digital content.” This website does exactly that. You don’t need a huge website to share your story. A few figures, photos, with thoughtful text that considers what to say and how to share it.
+                - paragraph [ref=f1e570]:
+                  - strong [ref=f1e571]: "Brittany Trinh:"
+                  - text: I like that Kamsek’s publications page includes a short overview and takeaway from the papers, instead of relying just on the abstract. Additionally, the papers, related news highlights, and codes are linked for easy access.
+                - paragraph [ref=f1e572]:
+                  - strong [ref=f1e573]: "Ian Li:"
+                  - text: I really liked that Kamsek grouped her papers and described the relevance of each grouping. She also listed the related papers and linked to them. This made it easier to understand her work in context. She did something similar in the Science Communication page.
+              - paragraph [ref=f1e574]:
+                - link "Back to the list of award winners" [ref=f1e575] [cursor=pointer]:
+                  - /url: "#list"
+        - generic [ref=f1e577]:
+          - heading "Resources to help you create your academic website" [level=2] [ref=f1e578]
+          - paragraph [ref=f1e579]:
+            - text: Articles, guides, and videos for your faculty website project. This resource list is from Jennifer van Alstyne, Brittany Trinh, and Ian Li to help you make your website. Our goal is to help as many people as possible. Please share with your friends
+            - img "💌" [ref=f1e580]
+          - paragraph [ref=f1e581]:
+            - text: Check out
+            - link "Brittany’s appearance on The Social Academic" [ref=f1e582] [cursor=pointer]:
+              - /url: https://theacademicdesigner.com/tag/brittany-trinh/
+            - text: where we chat about
+            - link "research lab websites." [ref=f1e583] [cursor=pointer]:
+              - /url: https://theacademicdesigner.com/2024/research-lab-websites/
+          - generic [ref=f1e585]:
+            - generic [ref=f1e586]:
+              - figure [ref=f1e587]:
+                - img "Jennifer van Alstyne, Brittany Trinh, and Ian Li on Personal Websites for Academics and Scientists" [ref=f1e588]
+              - link "Website FAQ Livestream 2025" [ref=f1e591] [cursor=pointer]:
+                - /url: https://theacademicdesigner.com/2025/personal-websites-for-academics-and-scientists-livestream/
+            - generic [ref=f1e593]:
+              - figure [ref=f1e594]:
+                - img "Setting Up Your Personal Academic Website with Jennifer van Alstyne, Brittany Trinh, and Ian Li from Owlstown" [ref=f1e595]
+              - link "Set Up Your Website Event Replay" [ref=f1e598] [cursor=pointer]:
+                - /url: https://theacademicdesigner.com/2023/set-up-your-personal-academic-website-with-jennifer-van-alstyne-brittany-trinh-and-ian-li/
+          - generic [ref=f1e600]:
+            - generic [ref=f1e602]:
+              - figure [ref=f1e603]:
+                - img "Jennifer van Alstyne and her personal academic website on desktop, laptop, and phone screens." [ref=f1e604]
+              - link "35 Page Ideas for Your Academic Personal Website" [ref=f1e607] [cursor=pointer]:
+                - /url: https://theacademicdesigner.com/2025/35-page-ideas-for-your-academic-personal-website/
+            - generic [ref=f1e609]:
+              - figure [ref=f1e610]:
+                - img "An open laptop that reads \"Website\" with arrows pointing this way. Next to the laptop are books held up by a bookend of a person holding up t he books." [ref=f1e611]
+              - link "How to Make Your Personal Academic Website" [ref=f1e614] [cursor=pointer]:
+                - /url: https://theacademicdesigner.com/2023/how-to-make-an-academic-website/
+          - generic [ref=f1e616]:
+            - generic [ref=f1e618]:
+              - figure [ref=f1e619]:
+                - img "Owlstown mascot, a yellow owl with glasses waving" [ref=f1e620]
+              - link "Make a free website with Owlstown" [ref=f1e623] [cursor=pointer]:
+                - /url: https://www.owlstown.com/
+            - generic [ref=f1e625]:
+              - figure [ref=f1e626]:
+                - img "Screenshots of The Academic Gallery from Owlstown on a desktop monitor and tablet screen" [ref=f1e627]
+              - link "Academic Website Gallery" [ref=f1e630] [cursor=pointer]:
+                - /url: https://academic.gallery/
+          - generic [ref=f1e632]:
+            - generic [ref=f1e634]:
+              - figure [ref=f1e635]:
+                - img "Brittany Trinh" [ref=f1e636]
+              - generic [ref=f1e637]:
+                - link "Brittany’s Website Design Guide" [ref=f1e639] [cursor=pointer]:
+                  - /url: https://brittanytrinh.com/website-design-guide/
+                - link "Getting started in grad school" [ref=f1e641] [cursor=pointer]:
+                  - /url: https://open.spotify.com/episode/1poBiHOaBJs7u5pbQsBpuZ?si=9a0a714981fd4db6
+            - generic [ref=f1e643]:
+              - figure [ref=f1e644]:
+                - 'img "Best Personal Academic Website Hosts Graphic: WordPress .com or Reclaim Hosting, Squarespace, Google Sites, Owlstown" [ref=f1e645]'
+              - link "Best Personal Website Hosts" [ref=f1e648] [cursor=pointer]:
+                - /url: https://theacademicdesigner.com/2021/best-personal-website-hosts/
+          - generic [ref=f1e649]:
+            - paragraph [ref=f1e650]:
+              - strong [ref=f1e651]: RESOURCES ON THE SOCIAL ACADEMIC BY CATEGORY
+            - generic [ref=f1e652]:
+              - link "Personal Websites for Academics" [ref=f1e654] [cursor=pointer]:
+                - /url: https://theacademicdesigner.com/category/websites-for-academics/
+              - link "Research Lab Websites" [ref=f1e656] [cursor=pointer]:
+                - /url: https://theacademicdesigner.com/category/research-lab-websites/
+        - generic [ref=f1e657]:
+          - generic [ref=f1e658]:
+            - paragraph [ref=f1e659]:
+              - strong [ref=f1e660]: PLEASE SHARE
+            - heading "Congratulate our award winners" [level=2] [ref=f1e661]
+          - paragraph [ref=f1e662]: Downloadable graphics for social media and sharing these awards.Thank you for celebrating with us.
+          - generic [ref=f1e665]:
+            - generic [ref=f1e666]:
+              - figure [ref=f1e668]:
+                - img "Contest Winners with 12 Academic Website Examples to inspire you in 2025. Award winners of the 2025 Best Personal Academic Websites Contest with a contest logo and tiny mockup of each website that includes a desktop, tablet, and mobile screen for each." [ref=f1e669]
+              - figure [ref=f1e671]:
+                - img "2025 Best Personal Academic Websites Award Winners logo" [ref=f1e672]
+              - figure [ref=f1e674]:
+                - img "Best Personal Academic Websites Contest 2025" [ref=f1e675]
+            - generic [ref=f1e676]:
+              - figure [ref=f1e678]:
+                - img "Best Personal Academic Websites Contest 2025 Logo" [ref=f1e679]
+              - figure [ref=f1e681]:
+                - img "Award winners of the 2025 Best Personal Academic Websites Contest with a contest logo and tiny mockup of each website that includes a desktop, tablet, and mobile screen for each. Sized for Instagram and other social media platforms. Black background." [ref=f1e682]
+            - generic [ref=f1e683]:
+              - figure [ref=f1e685]:
+                - 'img "Text: ''Award Winners'' and a tiny mockup of each website that won an award in the Best Personal Academic Websites Contest including a desktop, tablet, and mobile screen for each website." [ref=f1e686]'
+              - figure [ref=f1e688]:
+                - img "Award winners of the 2025 Best Personal Academic Websites Contest with a contest logo and tiny mockup of each website that includes a desktop, tablet, and mobile screen for each. Sized for Instagram and other social media platforms. Gray background." [ref=f1e689]
+              - figure [ref=f1e691]:
+                - img "Best Personal Academic Websites Contest 2025" [ref=f1e692]
+        - generic [ref=f1e694]:
+          - heading "Thank you!" [level=2] [ref=f1e695]
+          - paragraph [ref=f1e696]: Congratulations again to the award winners. We appreciate you.
+          - paragraph [ref=f1e697]:
+            - strong [ref=f1e698]: Subscribe to The Social Academic blog.
+          - generic [ref=f1e702]:
+            - paragraph [ref=f1e703]:
+              - generic [ref=f1e704]: Type your email…
+              - textbox "Type your email…" [ref=f1e705] [cursor=pointer]
+            - paragraph [ref=f1e706]:
+              - button "Subscribe" [ref=f1e707] [cursor=pointer]
+          - paragraph [ref=f1e709]:
+            - text: The form above subscribes you to new posts published on The Social Academic blog.Want emails from Jennifer on building your online presence?
+            - link "Subscribe to her email list." [ref=f1e710] [cursor=pointer]:
+              - /url: https://theacademicdesigner.com/about/email-list/
+            - text: Looking for the podcast?
+            - link "Subscribe on Spotify." [ref=f1e711] [cursor=pointer]:
+              - /url: https://open.spotify.com/show/0BCuleBpXeRcpko3t3AYC4?si=a2e570d559354141
+            - text: Prefer to watch videos?
+            - link "Subscribe on YouTube." [ref=f1e712] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCeeao2SHO-3LnT6tIIleyTQ?sub_confirmation=1
+          - generic [ref=f1e714]:
+            - generic [ref=f1e715]:
+              - figure [ref=f1e716]:
+                - img "Jennifer van Alstyne" [ref=f1e717]
+                - generic [ref=f1e718]:
+                  - strong [ref=f1e719]: Jennifer van Alstyne
+                  - text: of The Social Academic blog and The Academic Designer LLC
+                  - link "About Jennifer" [ref=f1e720] [cursor=pointer]:
+                    - /url: https://theacademicdesigner.com/about/about-jennifer/
+              - list [ref=f1e722]:
+                - listitem [ref=f1e723]:
+                  - link "LinkedIn" [ref=f1e724] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/in/jennifervanalstyne/
+                - listitem [ref=f1e728]:
+                  - link "YouTube" [ref=f1e729] [cursor=pointer]:
+                    - /url: http://youtube.com/@higheredpr
+                - listitem [ref=f1e733]:
+                  - link "Bluesky" [ref=f1e734] [cursor=pointer]:
+                    - /url: https://bsky.app/profile/jenvanalstyne.bsky.social
+                - listitem [ref=f1e738]:
+                  - link "Instagram" [ref=f1e739] [cursor=pointer]:
+                    - /url: http://instagram.com/higheredpr
+                - listitem [ref=f1e743]:
+                  - link "Threads" [ref=f1e744] [cursor=pointer]:
+                    - /url: https://www.threads.net/@higheredpr
+                - listitem [ref=f1e748]:
+                  - link "Spotify" [ref=f1e749] [cursor=pointer]:
+                    - /url: https://open.spotify.com/show/0BCuleBpXeRcpko3t3AYC4?si=a2e570d559354141
+                - listitem [ref=f1e753]:
+                  - link "Facebook" [ref=f1e754] [cursor=pointer]:
+                    - /url: https://facebook.com/higheredpr
+                - listitem [ref=f1e758]:
+                  - link "X" [ref=f1e759] [cursor=pointer]:
+                    - /url: http://twitter.com/higheredpr
+            - generic [ref=f1e763]:
+              - figure [ref=f1e764]:
+                - img "Brittany Trinh" [ref=f1e765]
+                - generic [ref=f1e766]:
+                  - strong [ref=f1e767]: Brittany Trinh
+                  - text: of the Beyond Your Science Podcast and Brittany Trinh Creative
+                  - link "About Brittany" [ref=f1e768] [cursor=pointer]:
+                    - /url: https://brittanytrinh.com/about/
+              - list [ref=f1e769]:
+                - listitem [ref=f1e770]:
+                  - link "LinkedIn" [ref=f1e771] [cursor=pointer]:
+                    - /url: https://linkedin.com/in/brittanytrinh
+                - listitem [ref=f1e775]:
+                  - link "Instagram" [ref=f1e776] [cursor=pointer]:
+                    - /url: https://instagram.com/brttnytrnh
+                - listitem [ref=f1e780]:
+                  - link "Spotify" [ref=f1e781] [cursor=pointer]:
+                    - /url: https://open.spotify.com/show/7Fub8X5PScMdHVp1NY79cT
+            - generic [ref=f1e785]:
+              - figure [ref=f1e786]:
+                - img "Ian Li" [ref=f1e787]
+                - generic [ref=f1e788]:
+                  - strong [ref=f1e789]: Ian Li, PhD
+                  - text: of Owlstown
+                  - link "About Ian" [ref=f1e790] [cursor=pointer]:
+                    - /url: https://ianli.owlstown.net/
+              - list [ref=f1e791]:
+                - listitem [ref=f1e792]:
+                  - link "Instagram" [ref=f1e793] [cursor=pointer]:
+                    - /url: https://www.instagram.com/owlstown/
+                - listitem [ref=f1e797]:
+                  - link "Bluesky" [ref=f1e798] [cursor=pointer]:
+                    - /url: https://bsky.app/profile/owlstown.com
+                - listitem [ref=f1e802]:
+                  - link "Threads" [ref=f1e803] [cursor=pointer]:
+                    - /url: https://www.threads.com/@owlstown
+                - listitem [ref=f1e807]:
+                  - link "X" [ref=f1e808] [cursor=pointer]:
+                    - /url: https://x.com/owlstown
+          - generic [ref=f1e812]:
+            - generic [ref=f1e813]:
+              - figure [ref=f1e815]:
+                - link [ref=f1e816] [cursor=pointer]:
+                  - /url: https://theacademicdesigner.com
+                  - img "The Academic Designer LLC Logo Gren" [ref=f1e817]
+              - figure [ref=f1e819]:
+                - link [ref=f1e820] [cursor=pointer]:
+                  - /url: https://brittanytrinh.com/
+                  - img "Brittany Trinh logo. There is a teal square with the letters \"Bt\" kind of like a periodic table of elements symbol. Next to it are letters that spell out Brittany Trinh in all caps." [ref=f1e821]
+              - figure [ref=f1e823]:
+                - link [ref=f1e824] [cursor=pointer]:
+                  - /url: https://www.owlstown.com/
+                  - img "Owlstown logo. Owlstown is written in bold black letters. Beneath is a thick yellow line that runs the length of the full word." [ref=f1e825]
+            - paragraph [ref=f1e826]: The Best Personal Academic Websites Contest is brought to you by Jennifer van Alstyne, Brittany Trinh, and Ian Li.
+        - generic [ref=f1e827]:
+          - link "2023 Award Winning Websites" [ref=f1e829] [cursor=pointer]:
+            - /url: https://theacademicdesigner.com/2023/winners-of-the-2023-best-personal-academic-websites-contest/
+          - link "2022 Award Winning Websites" [ref=f1e831] [cursor=pointer]:
+            - /url: https://theacademicdesigner.com/2022/winners-of-the-2022-best-personal-academic-websites-contest/
+        - generic [ref=f1e832]:
+          - heading "Like this:" [level=3] [ref=f1e833]
+          - generic [ref=f1e834]: Loading…
+    - generic [ref=f1e840]:
+      - paragraph [ref=f1e841]:
+        - strong [ref=f1e842]: SHARE THE AWARD ANNOUNCEMENT
+      - list [ref=f1e843]:
+        - listitem [ref=f1e844]:
+          - link "Share using Native tools" [ref=f1e845]:
+            - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/
+            - generic [ref=f1e849]: Share
+        - listitem [ref=f1e850]:
+          - link "Share on Mail (Opens in new window)" [ref=f1e851]:
+            - /url: mailto:?subject=%5BShared%20Post%5D%20Winners%20of%20the%20Best%20Personal%20Academic%20Websites%20Contest%202025&body=https%3A%2F%2Ftheacademicdesigner.com%2F2025%2Fwinners-of-the-best-personal-academic-websites-contest-2025%2F&share=email
+            - generic [ref=f1e855]: Mail
+        - listitem [ref=f1e856]:
+          - link "Share on Print (Opens in new window)" [ref=f1e857]:
+            - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/?share=print&nb=1
+            - generic [ref=f1e861]: Print
+        - listitem [ref=f1e862]:
+          - link "Share on LinkedIn (Opens in new window)" [ref=f1e863]:
+            - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/?share=linkedin&nb=1
+            - generic [ref=f1e867]: LinkedIn
+        - listitem [ref=f1e868]:
+          - link "Share on Bluesky (Opens in new window)" [ref=f1e869]:
+            - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/?share=bluesky&nb=1
+            - generic [ref=f1e872]: Bluesky
+        - listitem [ref=f1e873]:
+          - link "Share on Threads (Opens in new window)" [ref=f1e874]:
+            - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/?share=threads&nb=1
+            - generic [ref=f1e878]: Threads
+        - listitem [ref=f1e879]:
+          - link "Share on Facebook (Opens in new window)" [ref=f1e880]:
+            - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/?share=facebook&nb=1
+            - generic [ref=f1e884]: Facebook
+        - listitem [ref=f1e885]:
+          - link "Share on X (Opens in new window)" [ref=f1e886]:
+            - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/?share=x&nb=1
+            - generic [ref=f1e890]: X
+        - listitem [ref=f1e891]:
+          - link "Share on Pinterest (Opens in new window)" [ref=f1e892]:
+            - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/?share=pinterest&nb=1
+            - generic [ref=f1e896]: Pinterest
+        - listitem [ref=f1e897]:
+          - link "Share on Mastodon (Opens in new window)" [ref=f1e898]:
+            - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/?share=mastodon&nb=1
+            - generic [ref=f1e902]: Mastodon
+    - generic [ref=f1e904]:
+      - figure [ref=f1e905]:
+        - link [ref=f1e906] [cursor=pointer]:
+          - /url: https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/
+          - img "Winners of the Best Personal Academic Websites Contest 2025" [ref=f1e907]
+      - generic [ref=f1e908]:
+        - paragraph [ref=f1e909]:
+          - strong [ref=f1e910]: TAGS
+        - link "Best Personal Academic Websites Contest Award Winners" [ref=f1e912] [cursor=pointer]:
+          - /url: https://theacademicdesigner.com/tag/contest-award-winners/
+        - paragraph [ref=f1e913]:
+          - strong [ref=f1e914]: CATEGORIES
+        - generic [ref=f1e915]:
+          - link "Contest" [ref=f1e916] [cursor=pointer]:
+            - /url: https://theacademicdesigner.com/category/contest/
+          - text: "|"
+          - link "Personal Academic Websites" [ref=f1e917] [cursor=pointer]:
+            - /url: https://theacademicdesigner.com/category/websites-for-academics/
+          - text: "|"
+          - link "Research Lab Websites" [ref=f1e918] [cursor=pointer]:
+            - /url: https://theacademicdesigner.com/category/research-lab-websites/
+    - contentinfo [ref=f1e919]:
+      - generic [ref=f1e921]:
+        - figure [ref=f1e922]:
+          - link [ref=f1e923] [cursor=pointer]:
+            - /url: https://theacademicdesigner.com
+            - img "The Academic Designer LLC logo white" [ref=f1e924]
+        - list [ref=f1e926]:
+          - listitem [ref=f1e927]:
+            - link "LinkedIn" [ref=f1e928] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/jennifervanalstyne/
+          - listitem [ref=f1e932]:
+            - link "YouTube" [ref=f1e933] [cursor=pointer]:
+              - /url: http://youtube.com/@higheredpr
+          - listitem [ref=f1e937]:
+            - link "Instagram" [ref=f1e938] [cursor=pointer]:
+              - /url: http://instagram.com/higheredpr
+          - listitem [ref=f1e942]:
+            - link "Threads" [ref=f1e943] [cursor=pointer]:
+              - /url: https://www.threads.net/@higheredpr
+          - listitem [ref=f1e947]:
+            - link "Bluesky" [ref=f1e948] [cursor=pointer]:
+              - /url: https://bsky.app/profile/jenvanalstyne.bsky.social
+          - listitem [ref=f1e952]:
+            - link "Facebook" [ref=f1e953] [cursor=pointer]:
+              - /url: https://facebook.com/higheredpr
+          - listitem [ref=f1e957]:
+            - link "Spotify" [ref=f1e958] [cursor=pointer]:
+              - /url: https://open.spotify.com/show/0BCuleBpXeRcpko3t3AYC4?si=a2e570d559354141
+        - generic [ref=f1e962]:
+          - navigation "Footer Menu" [ref=f1e963]:
+            - button "Menu" [ref=f1e964] [cursor=pointer]
+          - navigation "Footer Menu 2" [ref=f1e965]:
+            - button "Open menu" [ref=f1e966] [cursor=pointer]
+        - paragraph [ref=f1e967]: Jennifer@TheAcademicDesigner.com
+        - paragraph [ref=f1e968]:
+          - text: Designed with
+          - link "WordPress" [ref=f1e969] [cursor=pointer]:
+            - /url: https://wordpress.org

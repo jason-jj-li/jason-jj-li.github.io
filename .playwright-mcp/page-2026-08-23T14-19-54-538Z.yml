@@ -1,0 +1,1637 @@
+- generic [ref=f2e3]:
+  - navigation [ref=f2e4]:
+    - generic [ref=f2e5]:
+      - link "JL 李佳佳" [ref=f2e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f2e7]: JL
+        - generic [ref=f2e8]: 李佳佳
+      - generic [ref=f2e9]:
+        - link "主页" [ref=f2e10] [cursor=pointer]:
+          - /url: /
+        - link "研究" [ref=f2e11] [cursor=pointer]:
+          - /url: /research
+        - link "工具" [ref=f2e12] [cursor=pointer]:
+          - /url: /tools
+        - link "教学" [ref=f2e13] [cursor=pointer]:
+          - /url: /teaching
+        - link "博客" [ref=f2e14] [cursor=pointer]:
+          - /url: /blog
+      - button "Switch to English" [ref=f2e15] [cursor=pointer]
+  - generic [ref=f2e21]:
+    - link "返回" [ref=f2e23] [cursor=pointer]:
+      - /url: /blog
+    - article [ref=f2e27]:
+      - generic [ref=f2e29]:
+        - generic [ref=f2e30]:
+          - generic [ref=f2e31]: 2026年3月30日
+          - generic [ref=f2e34]: Article
+          - generic [ref=f2e38]: 来自 Jupyter Notebook（本地已编译 HTML）
+          - link "下载 notebook" [ref=f2e41] [cursor=pointer]:
+            - /url: /content/blog/python-stats/python-stats-03-probability-distributions.ipynb
+        - 'heading "Probability Distributions: PDF, CDF, and Choosing the Right Distribution" [level=1] [ref=f2e45]'
+        - main [ref=f2e48]:
+          - generic [ref=f2e53]:
+            - 'heading "Python Statistical Analysis in Practice — 03: Probability Distributions" [level=1] [ref=f2e54]'
+            - paragraph [ref=f2e55]:
+              - emphasis [ref=f2e56]: "Author: Jason JJ Li · Peking University Institute of Population Research"
+            - paragraph [ref=f2e57]:
+              - text: Statistics is the science of reasoning under uncertainty. Probability distributions are the mathematical language we use to describe that uncertainty — they tell us
+              - strong [ref=f2e58]: which values are likely, how spread the data is, and what shape to expect
+              - text: .
+            - paragraph [ref=f2e59]:
+              - strong [ref=f2e60]: "What you will learn today:"
+            - list [ref=f2e61]:
+              - listitem [ref=f2e62]: "PDF, PMF, CDF: the three faces of a distribution"
+              - listitem [ref=f2e63]: "The Normal distribution in depth: z-scores, the 68-95-99.7 rule, quantile functions"
+              - listitem [ref=f2e64]: "Discrete distributions: Binomial and Poisson"
+              - listitem [ref=f2e65]: "Continuous distributions: Uniform, Exponential, Chi-squared, t, F"
+              - listitem [ref=f2e66]:
+                - text: Fitting a distribution to real (simulated) data with
+                - code [ref=f2e67]: scipy.stats
+              - listitem [ref=f2e68]: "Q-Q plots: the visual normality test"
+              - listitem [ref=f2e69]: Kolmogorov-Smirnov & Shapiro-Wilk goodness-of-fit tests
+              - listitem [ref=f2e70]: "How to choose the right distribution: a decision guide"
+              - listitem [ref=f2e71]: The Central Limit Theorem — first look
+          - generic [ref=f2e76]:
+            - separator [ref=f2e77]
+            - 'heading "Part 1: Setup" [level=2] [ref=f2e78]'
+          - generic [ref=f2e79]:
+            - generic [ref=f2e81]:
+              - generic [ref=f2e82]: "In [1]:"
+              - generic [ref=f2e83]: "import pandas as pd import numpy as np from scipy import stats import scipy import matplotlib.pyplot as plt import matplotlib.gridspec as gridspec import seaborn as sns import warnings warnings.filterwarnings('ignore') plt.style.use('seaborn-v0_8-whitegrid') pd.set_option('display.precision', 4) COLORS = { 'primary': '#2E86AB', 'secondary': '#A23B72', 'accent': '#F18F01', 'success': '#27AE60', 'danger': '#E74C3C', 'neutral': '#95A5A6', 'purple': '#8E44AD', } RNG = np.random.default_rng(42) print('Libraries loaded.') print(f'NumPy {np.__version__} | Pandas {pd.__version__} | SciPy {scipy.__version__}')"
+            - generic [ref=f2e87]: Libraries loaded. NumPy 2.4.2 | Pandas 2.3.3 | SciPy 1.16.2
+          - generic [ref=f2e97]:
+            - separator [ref=f2e98]
+            - 'heading "Part 2: The Three Faces of a Distribution" [level=2] [ref=f2e99]'
+            - paragraph [ref=f2e100]: "Every probability distribution can be described by three equivalent functions:"
+            - table [ref=f2e101]:
+              - rowgroup [ref=f2e102]:
+                - row [ref=f2e103]:
+                  - columnheader "Function" [ref=f2e104]
+                  - columnheader "Symbol" [ref=f2e105]
+                  - columnheader "Answers the question" [ref=f2e106]
+              - rowgroup [ref=f2e107]:
+                - row [ref=f2e108]:
+                  - cell [ref=f2e109]:
+                    - strong [ref=f2e110]: PDF
+                    - text: (Probability Density Function)
+                  - cell [ref=f2e111]:
+                    - generic [ref=f2e112]:
+                      - generic [ref=f2e113]:
+                        - generic [ref=f2e114]: f
+                        - generic [ref=f2e116]: (
+                        - generic [ref=f2e118]: x
+                        - generic [ref=f2e120]: )
+                      - math [ref=f2e123]:
+                        - generic [ref=f2e124]: f
+                        - generic [ref=f2e125]: (
+                        - generic [ref=f2e126]: x
+                        - generic [ref=f2e127]: )
+                  - cell [ref=f2e128]:
+                    - text: How dense is the probability at value
+                    - generic [ref=f2e129]:
+                      - generic [ref=f2e130]: x
+                      - math [ref=f2e134]:
+                        - generic [ref=f2e135]: x
+                    - text: "?"
+                - row [ref=f2e136]:
+                  - cell [ref=f2e137]:
+                    - strong [ref=f2e138]: PMF
+                    - text: (Probability Mass Function)
+                  - cell [ref=f2e139]:
+                    - generic [ref=f2e140]:
+                      - generic [ref=f2e141]:
+                        - generic [ref=f2e142]: P
+                        - generic [ref=f2e144]: (
+                        - generic [ref=f2e146]: X
+                        - generic [ref=f2e148]: =
+                        - generic [ref=f2e150]: x
+                        - generic [ref=f2e152]: )
+                      - math [ref=f2e155]:
+                        - generic [ref=f2e156]: P
+                        - generic [ref=f2e157]: (
+                        - generic [ref=f2e158]: X
+                        - generic [ref=f2e159]: =
+                        - generic [ref=f2e160]: x
+                        - generic [ref=f2e161]: )
+                  - cell [ref=f2e162]:
+                    - text: "Discrete equivalent of PDF: what is the exact probability of"
+                    - generic [ref=f2e163]:
+                      - generic [ref=f2e164]: x
+                      - math [ref=f2e168]:
+                        - generic [ref=f2e169]: x
+                    - text: "?"
+                - row [ref=f2e170]:
+                  - cell [ref=f2e171]:
+                    - strong [ref=f2e172]: CDF
+                    - text: (Cumulative Distribution Function)
+                  - cell [ref=f2e173]:
+                    - generic [ref=f2e174]:
+                      - generic [ref=f2e175]:
+                        - generic [ref=f2e176]: F
+                        - generic [ref=f2e178]: (
+                        - generic [ref=f2e180]: x
+                        - generic [ref=f2e182]: )
+                        - generic [ref=f2e184]: =
+                        - generic [ref=f2e186]: P
+                        - generic [ref=f2e188]: (
+                        - generic [ref=f2e190]: X
+                        - generic [ref=f2e192]: ≤
+                        - generic [ref=f2e194]: x
+                        - generic [ref=f2e196]: )
+                      - math [ref=f2e199]:
+                        - generic [ref=f2e200]: F
+                        - generic [ref=f2e201]: (
+                        - generic [ref=f2e202]: x
+                        - generic [ref=f2e203]: )
+                        - generic [ref=f2e204]: =
+                        - generic [ref=f2e205]: P
+                        - generic [ref=f2e206]: (
+                        - generic [ref=f2e207]: X
+                        - generic [ref=f2e208]: ≤
+                        - generic [ref=f2e209]: x
+                        - generic [ref=f2e210]: )
+                  - cell [ref=f2e211]:
+                    - text: What fraction of data falls at or below
+                    - generic [ref=f2e212]:
+                      - generic [ref=f2e213]: x
+                      - math [ref=f2e217]:
+                        - generic [ref=f2e218]: x
+                    - text: "?"
+            - paragraph [ref=f2e219]:
+              - text: "These three are mathematically linked:"
+              - generic [ref=f2e220]:
+                - generic [ref=f2e221]:
+                  - generic [ref=f2e222]: F
+                  - generic [ref=f2e224]: (
+                  - generic [ref=f2e226]: x
+                  - generic [ref=f2e228]: )
+                  - generic [ref=f2e230]: =
+                  - generic [ref=f2e232]:
+                    - generic [ref=f2e233]: ∫
+                    - generic [ref=f2e235]:
+                      - generic [ref=f2e236]: x
+                      - generic [ref=f2e239]:
+                        - generic [ref=f2e240]: −
+                        - generic [ref=f2e242]: ∞
+                  - generic [ref=f2e244]: f
+                  - generic [ref=f2e246]: (
+                  - generic [ref=f2e248]: t
+                  - generic [ref=f2e250]: )
+                  - generic [ref=f2e253]: d
+                  - generic [ref=f2e255]: t
+                  - generic [ref=f2e258]:
+                    - generic [ref=f2e259]: (
+                    - generic [ref=f2e260]: c
+                    - generic [ref=f2e261]: o
+                    - generic [ref=f2e262]: "n"
+                    - generic [ref=f2e263]: t
+                    - generic [ref=f2e264]: i
+                    - generic [ref=f2e265]: "n"
+                    - generic [ref=f2e266]: u
+                    - generic [ref=f2e267]: o
+                    - generic [ref=f2e268]: u
+                    - generic [ref=f2e269]: s
+                    - generic [ref=f2e270]: )
+                - math [ref=f2e272]:
+                  - generic [ref=f2e273]: F
+                  - generic [ref=f2e274]: (
+                  - generic [ref=f2e275]: x
+                  - generic [ref=f2e276]: )
+                  - generic [ref=f2e277]: =
+                  - generic [ref=f2e278]:
+                    - generic [ref=f2e279]: ∫
+                    - generic [ref=f2e280]:
+                      - generic [ref=f2e281]: −
+                      - generic [ref=f2e282]: ∞
+                    - generic [ref=f2e283]: x
+                  - generic [ref=f2e285]: f
+                  - generic [ref=f2e286]: (
+                  - generic [ref=f2e287]: t
+                  - generic [ref=f2e288]: )
+                  - generic [ref=f2e289]: d
+                  - generic [ref=f2e290]: t
+                  - generic [ref=f2e291]: (continuous)
+              - generic [ref=f2e292]:
+                - generic [ref=f2e293]:
+                  - generic [ref=f2e294]: F
+                  - generic [ref=f2e296]: (
+                  - generic [ref=f2e298]: x
+                  - generic [ref=f2e300]: )
+                  - generic [ref=f2e302]: =
+                  - generic [ref=f2e304]:
+                    - generic [ref=f2e305]: ∑
+                    - generic [ref=f2e311]:
+                      - generic [ref=f2e312]: k
+                      - generic [ref=f2e314]: ≤
+                      - generic [ref=f2e316]: x
+                  - generic [ref=f2e318]: P
+                  - generic [ref=f2e320]: (
+                  - generic [ref=f2e322]: X
+                  - generic [ref=f2e324]: =
+                  - generic [ref=f2e326]: k
+                  - generic [ref=f2e328]: )
+                  - generic [ref=f2e331]:
+                    - generic [ref=f2e332]: (
+                    - generic [ref=f2e333]: d
+                    - generic [ref=f2e334]: i
+                    - generic [ref=f2e335]: s
+                    - generic [ref=f2e336]: c
+                    - generic [ref=f2e337]: r
+                    - generic [ref=f2e338]: e
+                    - generic [ref=f2e339]: t
+                    - generic [ref=f2e340]: e
+                    - generic [ref=f2e341]: )
+                - math [ref=f2e343]:
+                  - generic [ref=f2e344]: F
+                  - generic [ref=f2e345]: (
+                  - generic [ref=f2e346]: x
+                  - generic [ref=f2e347]: )
+                  - generic [ref=f2e348]: =
+                  - generic [ref=f2e349]:
+                    - generic [ref=f2e350]: ∑
+                    - generic [ref=f2e351]:
+                      - generic [ref=f2e352]: k
+                      - generic [ref=f2e353]: ≤
+                      - generic [ref=f2e354]: x
+                  - generic [ref=f2e355]: P
+                  - generic [ref=f2e356]: (
+                  - generic [ref=f2e357]: X
+                  - generic [ref=f2e358]: =
+                  - generic [ref=f2e359]: k
+                  - generic [ref=f2e360]: )
+                  - generic [ref=f2e361]: (discrete)
+            - 'heading "2.1 PDF and CDF: The Normal Example" [level=3] [ref=f2e362]'
+          - generic [ref=f2e363]:
+            - generic [ref=f2e365]:
+              - generic [ref=f2e366]: "In [2]:"
+              - generic [ref=f2e367]: "mu, sigma = 100, 15 # IQ score scale x = np.linspace(40, 160, 500) pdf_vals = stats.norm.pdf(x, loc=mu, scale=sigma) cdf_vals = stats.norm.cdf(x, loc=mu, scale=sigma) fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 4)) fig.suptitle('Normal Distribution: PDF and CDF', fontsize=13, fontweight='bold') # PDF ax1.plot(x, pdf_vals, color=COLORS['primary'], linewidth=2.5, label='PDF') ax1.fill_between(x, pdf_vals, where=(x >= 85) & (x <= 115), color=COLORS['primary'], alpha=0.25, label='P(85 <= X <= 115)') ax1.axvline(mu, color=COLORS['danger'], linestyle='--', lw=1.5, label=f'mean={mu}') ax1.set_xlabel('IQ score') ax1.set_ylabel('Density') ax1.set_title('PDF — probability density at each value') ax1.legend() # CDF ax2.plot(x, cdf_vals, color=COLORS['secondary'], linewidth=2.5, label='CDF') # Annotate specific quantiles for q, color in [(0.16, COLORS['accent']), (0.50, COLORS['danger']), (0.84, COLORS['success'])]: x_q = stats.norm.ppf(q, loc=mu, scale=sigma) ax2.annotate(f'P(X<={x_q:.0f})={q:.2f}', xy=(x_q, q), xytext=(x_q - 20, q + 0.08), arrowprops=dict(arrowstyle='->', color='black', lw=1), fontsize=9) ax2.scatter([x_q], [q], color=color, s=60, zorder=5) ax2.axhline(0.5, color=COLORS['danger'], linestyle=':', lw=1) ax2.set_xlabel('IQ score') ax2.set_ylabel('Cumulative probability') ax2.set_title('CDF — fraction of data below x') ax2.legend() plt.tight_layout() plt.show() print(f'Area under PDF from 85 to 115: {stats.norm.cdf(115, mu, sigma) - stats.norm.cdf(85, mu, sigma):.4f}') print(f'Same, using CDF directly: {stats.norm.cdf(115, mu, sigma) - stats.norm.cdf(85, mu, sigma):.4f}')"
+            - generic [ref=f2e372]:
+              - img "No description has been provided for this image" [ref=f2e376]
+              - generic [ref=f2e377]: "Area under PDF from 85 to 115: 0.6827 Same, using CDF directly: 0.6827"
+          - generic [ref=f2e385]:
+            - heading "2.2 The Quantile (Inverse CDF) Function" [level=3] [ref=f2e386]
+            - paragraph [ref=f2e387]:
+              - text: The quantile function
+              - generic [ref=f2e388]:
+                - generic [ref=f2e389]:
+                  - generic [ref=f2e390]: Q
+                  - generic [ref=f2e392]: (
+                  - generic [ref=f2e394]: p
+                  - generic [ref=f2e396]: )
+                  - generic [ref=f2e398]: =
+                  - generic [ref=f2e400]:
+                    - generic [ref=f2e401]: F
+                    - generic [ref=f2e404]:
+                      - generic [ref=f2e405]: −
+                      - generic [ref=f2e407]: "1"
+                  - generic [ref=f2e409]: (
+                  - generic [ref=f2e411]: p
+                  - generic [ref=f2e413]: )
+                - math [ref=f2e416]:
+                  - generic [ref=f2e417]: Q
+                  - generic [ref=f2e418]: (
+                  - generic [ref=f2e419]: p
+                  - generic [ref=f2e420]: )
+                  - generic [ref=f2e421]: =
+                  - generic [ref=f2e422]:
+                    - generic [ref=f2e423]: F
+                    - generic [ref=f2e424]:
+                      - generic [ref=f2e425]: −
+                      - generic [ref=f2e426]: "1"
+                  - generic [ref=f2e427]: (
+                  - generic [ref=f2e428]: p
+                  - generic [ref=f2e429]: )
+              - text: "answers the reverse question:"
+              - strong [ref=f2e430]:
+                - text: "\"At what value"
+                - generic [ref=f2e431]:
+                  - generic [ref=f2e432]: x
+                  - math [ref=f2e436]:
+                    - generic [ref=f2e437]: x
+                - text: does the CDF reach
+                - generic [ref=f2e438]:
+                  - generic [ref=f2e439]: p
+                  - math [ref=f2e443]:
+                    - generic [ref=f2e444]: p
+                - text: "?\""
+            - paragraph [ref=f2e445]: This is how we compute percentiles, critical values, and confidence interval bounds.
+            - paragraph [ref=f2e446]:
+              - text: In
+              - code [ref=f2e447]: scipy.stats
+              - text: ", the quantile function is called"
+              - code [ref=f2e448]: .ppf()
+              - text: (percent-point function).
+          - generic [ref=f2e449]:
+            - generic [ref=f2e451]:
+              - generic [ref=f2e452]: "In [3]:"
+              - generic [ref=f2e453]: "print('=== Normal(100, 15) quantile examples ===') print() quantiles_of_interest = [0.01, 0.025, 0.05, 0.10, 0.25, 0.50, 0.75, 0.90, 0.95, 0.975, 0.99] print(f' {\"Percentile\":>12} {\"x value\":>10} {\"Interpretation\"}') print(' ' + '-'*65) for p in quantiles_of_interest: x_val = stats.norm.ppf(p, loc=mu, scale=sigma) print(f' {p*100:>11.1f}% {x_val:>10.2f} P(X <= {x_val:.2f}) = {p:.3f}') print() print('Useful special values:') print(f' Bottom 5% cutoff: {stats.norm.ppf(0.05, mu, sigma):.2f}') print(f' Top 5% cutoff: {stats.norm.ppf(0.95, mu, sigma):.2f}') print(f' Middle 95% range: [{stats.norm.ppf(0.025,mu,sigma):.2f}, {stats.norm.ppf(0.975,mu,sigma):.2f}]') print(f' z* for 95% CI: ±{stats.norm.ppf(0.975):.4f} (the famous \"1.96\")')"
+            - generic [ref=f2e457]: "=== Normal(100, 15) quantile examples === Percentile x value Interpretation ----------------------------------------------------------------- 1.0% 65.10 P(X <= 65.10) = 0.010 2.5% 70.60 P(X <= 70.60) = 0.025 5.0% 75.33 P(X <= 75.33) = 0.050 10.0% 80.78 P(X <= 80.78) = 0.100 25.0% 89.88 P(X <= 89.88) = 0.250 50.0% 100.00 P(X <= 100.00) = 0.500 75.0% 110.12 P(X <= 110.12) = 0.750 90.0% 119.22 P(X <= 119.22) = 0.900 95.0% 124.67 P(X <= 124.67) = 0.950 97.5% 129.40 P(X <= 129.40) = 0.975 99.0% 134.90 P(X <= 134.90) = 0.990 Useful special values: Bottom 5% cutoff: 75.33 Top 5% cutoff: 124.67 Middle 95% range: [70.60, 129.40] z* for 95% CI: ±1.9600 (the famous \"1.96\")"
+          - generic [ref=f2e467]:
+            - separator [ref=f2e468]
+            - 'heading "Part 3: The Normal Distribution in Depth" [level=2] [ref=f2e469]'
+            - heading "3.1 The 68-95-99.7 Rule (Empirical Rule)" [level=3] [ref=f2e470]
+            - paragraph [ref=f2e471]:
+              - text: For any normal distribution with mean
+              - generic [ref=f2e472]:
+                - generic [ref=f2e473]: μ
+                - math [ref=f2e477]:
+                  - generic [ref=f2e478]: μ
+              - text: and standard deviation
+              - generic [ref=f2e479]:
+                - generic [ref=f2e480]: σ
+                - math [ref=f2e484]:
+                  - generic [ref=f2e485]: σ
+              - text: ":"
+            - table [ref=f2e486]:
+              - rowgroup [ref=f2e487]:
+                - row [ref=f2e488]:
+                  - columnheader "Interval" [ref=f2e489]
+                  - columnheader "Probability" [ref=f2e490]
+                  - columnheader "Description" [ref=f2e491]
+              - rowgroup [ref=f2e492]:
+                - row [ref=f2e493]:
+                  - cell [ref=f2e494]:
+                    - generic [ref=f2e495]:
+                      - generic [ref=f2e496]:
+                        - generic [ref=f2e497]: "["
+                        - generic [ref=f2e499]: μ
+                        - generic [ref=f2e501]: −
+                        - generic [ref=f2e503]: σ
+                        - generic [ref=f2e505]: ","
+                        - generic [ref=f2e507]: μ
+                        - generic [ref=f2e509]: +
+                        - generic [ref=f2e511]: σ
+                        - generic [ref=f2e513]: "]"
+                      - math [ref=f2e516]:
+                        - generic [ref=f2e517]: "["
+                        - generic [ref=f2e518]: μ
+                        - generic [ref=f2e519]: −
+                        - generic [ref=f2e520]: σ
+                        - generic [ref=f2e521]: ","
+                        - generic [ref=f2e522]: μ
+                        - generic [ref=f2e523]: +
+                        - generic [ref=f2e524]: σ
+                        - generic [ref=f2e525]: "]"
+                  - cell "68.27%" [ref=f2e526]
+                  - cell "\"Within 1 std\"" [ref=f2e527]
+                - row [ref=f2e528]:
+                  - cell [ref=f2e529]:
+                    - generic [ref=f2e530]:
+                      - generic [ref=f2e531]:
+                        - generic [ref=f2e532]: "["
+                        - generic [ref=f2e534]: μ
+                        - generic [ref=f2e536]: −
+                        - generic [ref=f2e538]: "2"
+                        - generic [ref=f2e540]: σ
+                        - generic [ref=f2e542]: ","
+                        - generic [ref=f2e544]: μ
+                        - generic [ref=f2e546]: +
+                        - generic [ref=f2e548]: "2"
+                        - generic [ref=f2e550]: σ
+                        - generic [ref=f2e552]: "]"
+                      - math [ref=f2e555]:
+                        - generic [ref=f2e556]: "["
+                        - generic [ref=f2e557]: μ
+                        - generic [ref=f2e558]: −
+                        - generic [ref=f2e559]: "2"
+                        - generic [ref=f2e560]: σ
+                        - generic [ref=f2e561]: ","
+                        - generic [ref=f2e562]: μ
+                        - generic [ref=f2e563]: +
+                        - generic [ref=f2e564]: "2"
+                        - generic [ref=f2e565]: σ
+                        - generic [ref=f2e566]: "]"
+                  - cell "95.45%" [ref=f2e567]
+                  - cell "\"Within 2 std\"" [ref=f2e568]
+                - row [ref=f2e569]:
+                  - cell [ref=f2e570]:
+                    - generic [ref=f2e571]:
+                      - generic [ref=f2e572]:
+                        - generic [ref=f2e573]: "["
+                        - generic [ref=f2e575]: μ
+                        - generic [ref=f2e577]: −
+                        - generic [ref=f2e579]: "3"
+                        - generic [ref=f2e581]: σ
+                        - generic [ref=f2e583]: ","
+                        - generic [ref=f2e585]: μ
+                        - generic [ref=f2e587]: +
+                        - generic [ref=f2e589]: "3"
+                        - generic [ref=f2e591]: σ
+                        - generic [ref=f2e593]: "]"
+                      - math [ref=f2e596]:
+                        - generic [ref=f2e597]: "["
+                        - generic [ref=f2e598]: μ
+                        - generic [ref=f2e599]: −
+                        - generic [ref=f2e600]: "3"
+                        - generic [ref=f2e601]: σ
+                        - generic [ref=f2e602]: ","
+                        - generic [ref=f2e603]: μ
+                        - generic [ref=f2e604]: +
+                        - generic [ref=f2e605]: "3"
+                        - generic [ref=f2e606]: σ
+                        - generic [ref=f2e607]: "]"
+                  - cell "99.73%" [ref=f2e608]
+                  - cell "\"Within 3 std\"" [ref=f2e609]
+            - paragraph [ref=f2e610]: "We verify this by simulation: generate a large normal sample and count."
+          - generic [ref=f2e611]:
+            - generic [ref=f2e613]:
+              - generic [ref=f2e614]: "In [4]:"
+              - generic [ref=f2e615]: "mu_h, sigma_h = 170, 8 # human heights in cm n_large = 100_000 sample = RNG.normal(mu_h, sigma_h, n_large) print('=== Verification of the 68-95-99.7 rule ===') print(f' Distribution: Normal({mu_h}, {sigma_h}), n={n_large:,}') print() for k, label in [(1, '1 sigma'), (2, '2 sigma'), (3, '3 sigma')]: lo, hi = mu_h - k*sigma_h, mu_h + k*sigma_h observed = np.mean((sample >= lo) & (sample <= hi)) theoretical = stats.norm.cdf(hi, mu_h, sigma_h) - stats.norm.cdf(lo, mu_h, sigma_h) print(f' [{lo:.0f}, {hi:.0f}] Observed={observed:.4f} Theoretical={theoretical:.4f} Match={abs(observed-theoretical)<0.005}') print() print('The simulation matches theory to 4 decimal places.')"
+            - generic [ref=f2e619]: "=== Verification of the 68-95-99.7 rule === Distribution: Normal(170, 8), n=100,000 [162, 178] Observed=0.6817 Theoretical=0.6827 Match=True [154, 186] Observed=0.9536 Theoretical=0.9545 Match=True [146, 194] Observed=0.9970 Theoretical=0.9973 Match=True The simulation matches theory to 4 decimal places."
+          - generic [ref=f2e625]:
+            - generic [ref=f2e627]:
+              - generic [ref=f2e628]: "In [5]:"
+              - generic [ref=f2e629]: "# Visualise the 3 bands x = np.linspace(mu_h - 4*sigma_h, mu_h + 4*sigma_h, 500) y = stats.norm.pdf(x, mu_h, sigma_h) fig, ax = plt.subplots(figsize=(12, 5)) ax.plot(x, y, color=COLORS['primary'], linewidth=2.5, label='PDF', zorder=5) fills = [ (3, '#27AE60', '99.7% (within 3σ)'), (2, '#F18F01', '95.4% (within 2σ)'), (1, '#E74C3C', '68.3% (within 1σ)'), ] for k, color, label in fills: lo, hi = mu_h - k*sigma_h, mu_h + k*sigma_h xf = np.linspace(lo, hi, 300) ax.fill_between(xf, stats.norm.pdf(xf, mu_h, sigma_h), alpha=0.35, color=color, label=label) # Annotate sigma lines for k in [1, 2, 3]: for sign in [-1, 1]: v = mu_h + sign*k*sigma_h ax.axvline(v, color='black', alpha=0.3, lw=0.8, linestyle='--') ax.annotate( f'{\"+\" if sign > 0 else \"-\"}{k}σ={v:.0f}', xy=(v, 0.001), ha='center', fontsize=8, color='black', alpha=0.7 ) ax.axvline(mu_h, color='black', lw=1.5, linestyle='-', label=f'mean={mu_h}') ax.set_xlabel('Height (cm)') ax.set_ylabel('Density') ax.set_title('The 68-95-99.7 Rule — Normal(170, 8)') ax.legend(loc='upper right') plt.tight_layout() plt.show()"
+            - img "No description has been provided for this image" [ref=f2e638]
+          - generic [ref=f2e643]:
+            - heading "3.2 Standardisation and Z-scores" [level=3] [ref=f2e644]
+            - paragraph [ref=f2e645]:
+              - text: Any normal distribution can be
+              - strong [ref=f2e646]: standardised
+              - text: to the Standard Normal
+              - generic [ref=f2e647]:
+                - generic [ref=f2e648]:
+                  - generic [ref=f2e649]: "N"
+                  - generic [ref=f2e651]: (
+                  - generic [ref=f2e653]: "0"
+                  - generic [ref=f2e655]: ","
+                  - generic [ref=f2e657]: "1"
+                  - generic [ref=f2e659]: )
+                - math [ref=f2e662]:
+                  - generic [ref=f2e663]: "N"
+                  - generic [ref=f2e664]: (
+                  - generic [ref=f2e665]: "0"
+                  - generic [ref=f2e666]: ","
+                  - generic [ref=f2e667]: "1"
+                  - generic [ref=f2e668]: )
+              - text: ":"
+            - paragraph [ref=f2e669]:
+              - generic [ref=f2e670]:
+                - generic [ref=f2e671]:
+                  - generic [ref=f2e672]: z
+                  - generic [ref=f2e674]: =
+                  - generic [ref=f2e677]:
+                    - generic [ref=f2e679]:
+                      - generic [ref=f2e680]: x
+                      - generic [ref=f2e682]: −
+                      - generic [ref=f2e684]: μ
+                    - generic [ref=f2e686]: σ
+                - math [ref=f2e694]:
+                  - generic [ref=f2e695]: z
+                  - generic [ref=f2e696]: =
+                  - generic [ref=f2e697]:
+                    - generic [ref=f2e698]:
+                      - generic [ref=f2e699]: x
+                      - generic [ref=f2e700]: −
+                      - generic [ref=f2e701]: μ
+                    - generic [ref=f2e702]: σ
+            - paragraph [ref=f2e703]: This allows us to use a single table (or one set of functions) for all normal distributions.
+          - generic [ref=f2e704]:
+            - generic [ref=f2e706]:
+              - generic [ref=f2e707]: "In [6]:"
+              - generic [ref=f2e708]: "# Demonstrate standardisation: three different normal distributions # all reduce to the same Z after standardisation distributions = [ (100, 15, 115, COLORS['primary'], 'IQ scores'), (170, 8, 178, COLORS['secondary'], 'Heights (cm)'), (5000,800, 5800, COLORS['accent'], 'Monthly income (yuan)'), ] print('Standardisation: x -> z = (x - mu) / sigma') print() print(f' {\"Distribution\":<22} {\"x\":>8} {\"mu\":>6} {\"sigma\":>6} {\"z=(x-mu)/sigma\":>16} {\"P(X<x)\":>8}') print(' ' + '-'*75) for mu_i, sig_i, x_i, color, name in distributions: z = (x_i - mu_i) / sig_i p = stats.norm.cdf(z) print(f' {name:<22} {x_i:>8.0f} {mu_i:>6.0f} {sig_i:>6.0f} {z:>16.4f} {p:>8.4f}') print() print('All three x values correspond to z = 1.0 (one standard deviation above mean).') print('P(X < x) is identical for all three: 0.8413') # Visualise: same z-score, different scales fig, axes = plt.subplots(1, 3, figsize=(17, 4)) fig.suptitle('Standardisation: Different Scales, Same Z-score', fontsize=13, fontweight='bold') for ax, (mu_i, sig_i, x_i, color, name) in zip(axes, distributions): x_range = np.linspace(mu_i - 4*sig_i, mu_i + 4*sig_i, 400) y_vals = stats.norm.pdf(x_range, mu_i, sig_i) ax.plot(x_range, y_vals, color=color, linewidth=2.5) ax.fill_between(x_range, y_vals, where=(x_range <= x_i), color=color, alpha=0.3, label=f'P(X<={x_i:.0f})=0.84') ax.axvline(x_i, color='black', lw=1.5, linestyle='--', label=f'x={x_i:.0f} (z=1.0)') ax.set_title(f'{name}') ax.set_xlabel('Value') ax.set_ylabel('Density') ax.legend(fontsize=8) plt.tight_layout() plt.show()"
+            - generic [ref=f2e713]:
+              - generic [ref=f2e714]: "Standardisation: x -> z = (x - mu) / sigma Distribution x mu sigma z=(x-mu)/sigma P(X<x) --------------------------------------------------------------------------- IQ scores 115 100 15 1.0000 0.8413 Heights (cm) 178 170 8 1.0000 0.8413 Monthly income (yuan) 5800 5000 800 1.0000 0.8413 All three x values correspond to z = 1.0 (one standard deviation above mean). P(X < x) is identical for all three: 0.8413"
+              - img "No description has been provided for this image" [ref=f2e721]
+          - generic [ref=f2e726]:
+            - separator [ref=f2e727]
+            - 'heading "Part 4: Discrete Distributions" [level=2] [ref=f2e728]'
+            - heading "4.1 Binomial Distribution" [level=3] [ref=f2e729]
+            - paragraph [ref=f2e730]:
+              - text: Model for
+              - strong [ref=f2e731]: counting successes
+              - text: in
+              - generic [ref=f2e732]:
+                - generic [ref=f2e733]: "n"
+                - math [ref=f2e737]:
+                  - generic [ref=f2e738]: "n"
+              - text: independent trials, each with success probability
+              - generic [ref=f2e739]:
+                - generic [ref=f2e740]: p
+                - math [ref=f2e744]:
+                  - generic [ref=f2e745]: p
+              - text: .
+            - paragraph [ref=f2e746]:
+              - generic [ref=f2e747]:
+                - generic [ref=f2e748]:
+                  - generic [ref=f2e749]: P
+                  - generic [ref=f2e751]: (
+                  - generic [ref=f2e753]: X
+                  - generic [ref=f2e755]: =
+                  - generic [ref=f2e757]: k
+                  - generic [ref=f2e759]: )
+                  - generic [ref=f2e761]: =
+                  - generic [ref=f2e763]:
+                    - generic [ref=f2e764]: (
+                    - generic [ref=f2e768]:
+                      - generic [ref=f2e769]: "n"
+                      - generic [ref=f2e772]: k
+                    - generic [ref=f2e775]: )
+                  - generic [ref=f2e778]:
+                    - generic [ref=f2e779]: p
+                    - generic [ref=f2e781]: k
+                  - generic [ref=f2e784]: (
+                  - generic [ref=f2e786]: "1"
+                  - generic [ref=f2e788]: −
+                  - generic [ref=f2e790]: p
+                  - generic [ref=f2e792]:
+                    - generic [ref=f2e793]: )
+                    - generic [ref=f2e796]:
+                      - generic [ref=f2e797]: "n"
+                      - generic [ref=f2e799]: −
+                      - generic [ref=f2e801]: k
+                - math [ref=f2e804]:
+                  - generic [ref=f2e805]: P
+                  - generic [ref=f2e806]: (
+                  - generic [ref=f2e807]: X
+                  - generic [ref=f2e808]: =
+                  - generic [ref=f2e809]: k
+                  - generic [ref=f2e810]: )
+                  - generic [ref=f2e811]: =
+                  - generic [ref=f2e812]:
+                    - generic [ref=f2e813]: (
+                    - generic [ref=f2e815]:
+                      - generic [ref=f2e816]: "n"
+                      - generic [ref=f2e817]: k
+                    - generic [ref=f2e818]: )
+                  - generic [ref=f2e820]:
+                    - generic [ref=f2e821]: p
+                    - generic [ref=f2e822]: k
+                  - generic [ref=f2e823]: (
+                  - generic [ref=f2e824]: "1"
+                  - generic [ref=f2e825]: −
+                  - generic [ref=f2e826]: p
+                  - generic [ref=f2e827]:
+                    - generic [ref=f2e828]: )
+                    - generic [ref=f2e829]:
+                      - generic [ref=f2e830]: "n"
+                      - generic [ref=f2e831]: −
+                      - generic [ref=f2e832]: k
+            - paragraph [ref=f2e833]:
+              - strong [ref=f2e834]: "Parameters:"
+              - generic [ref=f2e835]:
+                - generic [ref=f2e836]: "n"
+                - math [ref=f2e840]:
+                  - generic [ref=f2e841]: "n"
+              - text: (trials),
+              - generic [ref=f2e842]:
+                - generic [ref=f2e843]: p
+                - math [ref=f2e847]:
+                  - generic [ref=f2e848]: p
+              - text: (success probability)
+              - strong [ref=f2e849]: "Mean:"
+              - generic [ref=f2e850]:
+                - generic [ref=f2e851]:
+                  - generic [ref=f2e852]: "n"
+                  - generic [ref=f2e854]: p
+                - math [ref=f2e857]:
+                  - generic [ref=f2e858]: "n"
+                  - generic [ref=f2e859]: p
+              - text: ·
+              - strong [ref=f2e860]: "Variance:"
+              - generic [ref=f2e861]:
+                - generic [ref=f2e862]:
+                  - generic [ref=f2e863]: "n"
+                  - generic [ref=f2e865]: p
+                  - generic [ref=f2e867]: (
+                  - generic [ref=f2e869]: "1"
+                  - generic [ref=f2e871]: −
+                  - generic [ref=f2e873]: p
+                  - generic [ref=f2e875]: )
+                - math [ref=f2e878]:
+                  - generic [ref=f2e879]: "n"
+                  - generic [ref=f2e880]: p
+                  - generic [ref=f2e881]: (
+                  - generic [ref=f2e882]: "1"
+                  - generic [ref=f2e883]: −
+                  - generic [ref=f2e884]: p
+                  - generic [ref=f2e885]: )
+            - paragraph [ref=f2e886]:
+              - strong [ref=f2e887]: "Typical uses:"
+              - text: number of defective items in a batch, coin flips, survey "yes/no" responses, number of patients who respond to a treatment.
+          - generic [ref=f2e888]:
+            - generic [ref=f2e890]:
+              - generic [ref=f2e891]: "In [7]:"
+              - generic [ref=f2e892]: "# Compare Binomial for different p values fig, axes = plt.subplots(1, 3, figsize=(17, 4)) fig.suptitle('Binomial Distribution B(n=20, p) — Effect of p', fontsize=13, fontweight='bold') n_trials = 20 p_values = [0.2, 0.5, 0.8] for ax, p in zip(axes, p_values): k_vals = np.arange(0, n_trials + 1) pmf = stats.binom.pmf(k_vals, n=n_trials, p=p) cdf = stats.binom.cdf(k_vals, n=n_trials, p=p) bars = ax.bar(k_vals, pmf, color=COLORS['primary'], alpha=0.7, edgecolor='white') ax2 = ax.twinx() ax2.step(k_vals, cdf, color=COLORS['danger'], linewidth=2.5, where='post', label='CDF') ax2.set_ylim(0, 1.05) ax2.set_ylabel('CDF', color=COLORS['danger']) ax.axvline(n_trials * p, color='black', lw=2, linestyle='--', label=f'mean=np={n_trials*p:.0f}') ax.set_title(f'B(n={n_trials}, p={p}) mean={n_trials*p:.1f}') ax.set_xlabel('k (number of successes)') ax.set_ylabel('P(X=k)') ax.legend(fontsize=8) plt.tight_layout() plt.show() # Verify mean and variance print('Verification: simulated vs theoretical moments') print() for p in p_values: sample = RNG.binomial(n=n_trials, p=p, size=50000) print(f' B(n={n_trials}, p={p}): ' f'E[X] theory={n_trials*p:.2f} sim={sample.mean():.2f} | ' f'Var theory={n_trials*p*(1-p):.2f} sim={sample.var(ddof=1):.2f}')"
+            - generic [ref=f2e897]:
+              - img "No description has been provided for this image" [ref=f2e901]
+              - generic [ref=f2e902]: "Verification: simulated vs theoretical moments B(n=20, p=0.2): E[X] theory=4.00 sim=3.99 | Var theory=3.20 sim=3.17 B(n=20, p=0.5): E[X] theory=10.00 sim=10.00 | Var theory=5.00 sim=5.02 B(n=20, p=0.8): E[X] theory=16.00 sim=15.99 | Var theory=3.20 sim=3.20"
+          - generic [ref=f2e910]:
+            - heading "4.2 Poisson Distribution" [level=3] [ref=f2e911]
+            - paragraph [ref=f2e912]:
+              - text: Model for
+              - strong [ref=f2e913]: counting rare events
+              - text: in a fixed interval of time or space.
+            - paragraph [ref=f2e914]:
+              - generic [ref=f2e915]:
+                - generic [ref=f2e916]:
+                  - generic [ref=f2e917]: P
+                  - generic [ref=f2e919]: (
+                  - generic [ref=f2e921]: X
+                  - generic [ref=f2e923]: =
+                  - generic [ref=f2e925]: k
+                  - generic [ref=f2e927]: )
+                  - generic [ref=f2e929]: =
+                  - generic [ref=f2e932]:
+                    - generic [ref=f2e934]:
+                      - generic [ref=f2e935]:
+                        - generic [ref=f2e936]: λ
+                        - generic [ref=f2e938]: k
+                      - generic [ref=f2e941]:
+                        - generic [ref=f2e942]: e
+                        - generic [ref=f2e945]:
+                          - generic [ref=f2e946]: −
+                          - generic [ref=f2e948]: λ
+                    - generic [ref=f2e955]:
+                      - generic [ref=f2e956]: k
+                      - generic [ref=f2e958]: "!"
+                  - generic [ref=f2e960]: ","
+                  - generic [ref=f2e963]: k
+                  - generic [ref=f2e965]: =
+                  - generic [ref=f2e967]: "0"
+                  - generic [ref=f2e969]: ","
+                  - generic [ref=f2e971]: "1"
+                  - generic [ref=f2e973]: ","
+                  - generic [ref=f2e975]: "2"
+                  - generic [ref=f2e977]: ","
+                  - generic [ref=f2e979]: …
+                - math [ref=f2e982]:
+                  - generic [ref=f2e983]: P
+                  - generic [ref=f2e984]: (
+                  - generic [ref=f2e985]: X
+                  - generic [ref=f2e986]: =
+                  - generic [ref=f2e987]: k
+                  - generic [ref=f2e988]: )
+                  - generic [ref=f2e989]: =
+                  - generic [ref=f2e990]:
+                    - generic [ref=f2e991]:
+                      - generic [ref=f2e992]:
+                        - generic [ref=f2e993]: λ
+                        - generic [ref=f2e994]: k
+                      - generic [ref=f2e995]:
+                        - generic [ref=f2e996]: e
+                        - generic [ref=f2e997]:
+                          - generic [ref=f2e998]: −
+                          - generic [ref=f2e999]: λ
+                    - generic [ref=f2e1000]:
+                      - generic [ref=f2e1001]: k
+                      - generic [ref=f2e1002]: "!"
+                  - generic [ref=f2e1003]: ","
+                  - generic [ref=f2e1004]: k
+                  - generic [ref=f2e1005]: =
+                  - generic [ref=f2e1006]: "0"
+                  - generic [ref=f2e1007]: ","
+                  - generic [ref=f2e1008]: "1"
+                  - generic [ref=f2e1009]: ","
+                  - generic [ref=f2e1010]: "2"
+                  - generic [ref=f2e1011]: ","
+                  - generic [ref=f2e1012]: …
+            - paragraph [ref=f2e1013]:
+              - strong [ref=f2e1014]: "Parameter:"
+              - generic [ref=f2e1015]:
+                - generic [ref=f2e1016]: λ
+                - math [ref=f2e1020]:
+                  - generic [ref=f2e1021]: λ
+              - text: (rate = expected count per interval)
+              - strong [ref=f2e1022]:
+                - text: Mean = Variance =
+                - generic [ref=f2e1023]:
+                  - generic [ref=f2e1024]: λ
+                  - math [ref=f2e1028]:
+                    - generic [ref=f2e1029]: λ
+              - text: "(this equality is a diagnostic: if sample mean ≠ variance, Poisson doesn't fit)"
+            - paragraph [ref=f2e1030]:
+              - strong [ref=f2e1031]: "Typical uses:"
+              - text: hospital admissions per hour, emails per day, mutations per gene, accidents per year.
+            - paragraph [ref=f2e1032]:
+              - strong [ref=f2e1033]: "Important relationship:"
+              - generic [ref=f2e1034]:
+                - generic [ref=f2e1035]:
+                  - generic [ref=f2e1036]:
+                    - generic [ref=f2e1037]: B
+                    - generic [ref=f2e1038]: i
+                    - generic [ref=f2e1039]: "n"
+                    - generic [ref=f2e1040]: o
+                    - generic [ref=f2e1041]: m
+                    - generic [ref=f2e1042]: i
+                    - generic [ref=f2e1043]: a
+                    - generic [ref=f2e1044]: l
+                  - generic [ref=f2e1045]: (
+                  - generic [ref=f2e1047]: "n"
+                  - generic [ref=f2e1049]: ","
+                  - generic [ref=f2e1051]: p
+                  - generic [ref=f2e1053]: )
+                  - generic [ref=f2e1055]: →
+                  - generic [ref=f2e1057]:
+                    - generic [ref=f2e1058]: P
+                    - generic [ref=f2e1059]: o
+                    - generic [ref=f2e1060]: i
+                    - generic [ref=f2e1061]: s
+                    - generic [ref=f2e1062]: s
+                    - generic [ref=f2e1063]: o
+                    - generic [ref=f2e1064]: "n"
+                  - generic [ref=f2e1065]: (
+                  - generic [ref=f2e1067]: λ
+                  - generic [ref=f2e1069]: =
+                  - generic [ref=f2e1071]: "n"
+                  - generic [ref=f2e1073]: p
+                  - generic [ref=f2e1075]: )
+                - math [ref=f2e1078]:
+                  - generic [ref=f2e1079]: Binomial
+                  - generic [ref=f2e1080]: (
+                  - generic [ref=f2e1081]: "n"
+                  - generic [ref=f2e1082]: ","
+                  - generic [ref=f2e1083]: p
+                  - generic [ref=f2e1084]: )
+                  - generic [ref=f2e1085]: →
+                  - generic [ref=f2e1086]: Poisson
+                  - generic [ref=f2e1087]: (
+                  - generic [ref=f2e1088]: λ
+                  - generic [ref=f2e1089]: =
+                  - generic [ref=f2e1090]: "n"
+                  - generic [ref=f2e1091]: p
+                  - generic [ref=f2e1092]: )
+              - text: as
+              - generic [ref=f2e1093]:
+                - generic [ref=f2e1094]:
+                  - generic [ref=f2e1095]: "n"
+                  - generic [ref=f2e1097]: →
+                  - generic [ref=f2e1099]: ∞
+                - math [ref=f2e1102]:
+                  - generic [ref=f2e1103]: "n"
+                  - generic [ref=f2e1104]: →
+                  - generic [ref=f2e1105]: ∞
+              - text: ","
+              - generic [ref=f2e1106]:
+                - generic [ref=f2e1107]:
+                  - generic [ref=f2e1108]: p
+                  - generic [ref=f2e1110]: →
+                  - generic [ref=f2e1112]: "0"
+                - math [ref=f2e1115]:
+                  - generic [ref=f2e1116]: p
+                  - generic [ref=f2e1117]: →
+                  - generic [ref=f2e1118]: "0"
+              - text: .
+          - generic [ref=f2e1119]:
+            - generic [ref=f2e1121]:
+              - generic [ref=f2e1122]: "In [8]:"
+              - generic [ref=f2e1123]: "fig, axes = plt.subplots(1, 3, figsize=(17, 4)) fig.suptitle('Poisson Distribution Pois(lambda): Effect of Rate', fontsize=13, fontweight='bold') lambdas = [1, 5, 15] for ax, lam in zip(axes, lambdas): k_max = max(20, int(lam + 4*np.sqrt(lam) + 2)) k_vals = np.arange(0, k_max + 1) pmf = stats.poisson.pmf(k_vals, mu=lam) cdf = stats.poisson.cdf(k_vals, mu=lam) ax.bar(k_vals, pmf, color=COLORS['secondary'], alpha=0.7, edgecolor='white') ax2 = ax.twinx() ax2.step(k_vals, cdf, color=COLORS['danger'], lw=2.5, where='post', label='CDF') ax2.set_ylim(0, 1.05) ax2.set_ylabel('CDF', color=COLORS['danger']) ax.axvline(lam, color='black', lw=2, linestyle='--', label=f'lambda={lam} (mean=var)') ax.set_title(f'Poisson(lambda={lam})') ax.set_xlabel('k (count)') ax.set_ylabel('P(X=k)') ax.legend(fontsize=8) plt.tight_layout() plt.show() print('Mean = Variance diagnostic:') for lam in lambdas: s = RNG.poisson(lam=lam, size=50000) print(f' Poisson(lambda={lam:2d}): mean={s.mean():.3f} variance={s.var(ddof=1):.3f} ratio={s.mean()/s.var(ddof=1):.3f}')"
+            - generic [ref=f2e1128]:
+              - img "No description has been provided for this image" [ref=f2e1132]
+              - generic [ref=f2e1133]: "Mean = Variance diagnostic: Poisson(lambda= 1): mean=1.001 variance=0.996 ratio=1.005 Poisson(lambda= 5): mean=4.997 variance=4.912 ratio=1.017 Poisson(lambda=15): mean=15.010 variance=14.929 ratio=1.005"
+          - generic [ref=f2e1141]:
+            - heading "4.3 Binomial → Poisson Approximation" [level=3] [ref=f2e1142]
+            - paragraph [ref=f2e1143]:
+              - text: When
+              - generic [ref=f2e1144]:
+                - generic [ref=f2e1145]: "n"
+                - math [ref=f2e1149]:
+                  - generic [ref=f2e1150]: "n"
+              - text: is large and
+              - generic [ref=f2e1151]:
+                - generic [ref=f2e1152]: p
+                - math [ref=f2e1156]:
+                  - generic [ref=f2e1157]: p
+              - text: is small (rare events),
+              - generic [ref=f2e1158]:
+                - generic [ref=f2e1159]:
+                  - generic [ref=f2e1160]: B
+                  - generic [ref=f2e1162]: (
+                  - generic [ref=f2e1164]: "n"
+                  - generic [ref=f2e1166]: ","
+                  - generic [ref=f2e1168]: p
+                  - generic [ref=f2e1170]: )
+                  - generic [ref=f2e1172]: ≈
+                  - generic [ref=f2e1174]:
+                    - generic [ref=f2e1175]: P
+                    - generic [ref=f2e1176]: o
+                    - generic [ref=f2e1177]: i
+                    - generic [ref=f2e1178]: s
+                    - generic [ref=f2e1179]: s
+                    - generic [ref=f2e1180]: o
+                    - generic [ref=f2e1181]: "n"
+                  - generic [ref=f2e1182]: (
+                  - generic [ref=f2e1184]: "n"
+                  - generic [ref=f2e1186]: p
+                  - generic [ref=f2e1188]: )
+                - math [ref=f2e1191]:
+                  - generic [ref=f2e1192]: B
+                  - generic [ref=f2e1193]: (
+                  - generic [ref=f2e1194]: "n"
+                  - generic [ref=f2e1195]: ","
+                  - generic [ref=f2e1196]: p
+                  - generic [ref=f2e1197]: )
+                  - generic [ref=f2e1198]: ≈
+                  - generic [ref=f2e1199]: Poisson
+                  - generic [ref=f2e1200]: (
+                  - generic [ref=f2e1201]: "n"
+                  - generic [ref=f2e1202]: p
+                  - generic [ref=f2e1203]: )
+              - text: . The approximation works well when
+              - generic [ref=f2e1204]:
+                - generic [ref=f2e1205]:
+                  - generic [ref=f2e1206]: "n"
+                  - generic [ref=f2e1208]: ">"
+                  - generic [ref=f2e1210]:
+                    - generic [ref=f2e1211]: "2"
+                    - generic [ref=f2e1212]: "0"
+                - math [ref=f2e1214]:
+                  - generic [ref=f2e1215]: "n"
+                  - generic [ref=f2e1216]: ">"
+                  - generic [ref=f2e1217]: "20"
+              - text: and
+              - generic [ref=f2e1218]:
+                - generic [ref=f2e1219]:
+                  - generic [ref=f2e1220]: p
+                  - generic [ref=f2e1222]: <
+                  - generic [ref=f2e1224]:
+                    - generic [ref=f2e1225]: "0"
+                    - generic [ref=f2e1226]: .
+                    - generic [ref=f2e1227]: "0"
+                    - generic [ref=f2e1228]: "5"
+                - math [ref=f2e1230]:
+                  - generic [ref=f2e1231]: p
+                  - generic [ref=f2e1232]: <
+                  - generic [ref=f2e1233]: "0.05"
+              - text: .
+          - generic [ref=f2e1234]:
+            - generic [ref=f2e1236]:
+              - generic [ref=f2e1237]: "In [9]:"
+              - generic [ref=f2e1238]: "fig, axes = plt.subplots(1, 3, figsize=(17, 4)) fig.suptitle('Binomial to Poisson Approximation (lambda=np=3)', fontsize=13, fontweight='bold') lam_fixed = 3 # keep lambda = np = 3 constant scenarios = [(10, 0.3), (50, 0.06), (300, 0.01)] for ax, (n, p) in zip(axes, scenarios): k_max = 15 k_vals = np.arange(0, k_max + 1) binom_pmf = stats.binom.pmf(k_vals, n=n, p=p) poisson_pmf = stats.poisson.pmf(k_vals, mu=lam_fixed) width = 0.4 ax.bar(k_vals - width/2, binom_pmf, width=width, color=COLORS['primary'], alpha=0.8, edgecolor='white', label=f'Binom(n={n}, p={p})') ax.bar(k_vals + width/2, poisson_pmf, width=width, color=COLORS['accent'], alpha=0.8, edgecolor='white', label='Poisson(3)') ax.set_title(f'n={n}, p={p} (np={lam_fixed})') ax.set_xlabel('k') ax.set_ylabel('P(X=k)') ax.legend(fontsize=8) plt.tight_layout() plt.show() print('As n increases and p decreases (with np constant), the Binomial converges to Poisson.')"
+            - generic [ref=f2e1243]:
+              - img "No description has been provided for this image" [ref=f2e1247]
+              - generic [ref=f2e1248]: As n increases and p decreases (with np constant), the Binomial converges to Poisson.
+          - generic [ref=f2e1256]:
+            - separator [ref=f2e1257]
+            - 'heading "Part 5: Continuous Distributions Beyond the Normal" [level=2] [ref=f2e1258]'
+            - heading "5.1 Uniform Distribution" [level=3] [ref=f2e1259]
+            - paragraph [ref=f2e1260]:
+              - generic [ref=f2e1261]:
+                - generic [ref=f2e1262]:
+                  - generic [ref=f2e1263]: X
+                  - generic [ref=f2e1265]: ∼
+                  - generic [ref=f2e1267]:
+                    - generic [ref=f2e1268]: U
+                    - generic [ref=f2e1269]: "n"
+                    - generic [ref=f2e1270]: i
+                    - generic [ref=f2e1271]: f
+                    - generic [ref=f2e1272]: o
+                    - generic [ref=f2e1273]: r
+                    - generic [ref=f2e1274]: m
+                  - generic [ref=f2e1275]: (
+                  - generic [ref=f2e1277]: a
+                  - generic [ref=f2e1279]: ","
+                  - generic [ref=f2e1281]: b
+                  - generic [ref=f2e1283]: )
+                - math [ref=f2e1286]:
+                  - generic [ref=f2e1287]: X
+                  - generic [ref=f2e1288]: ∼
+                  - generic [ref=f2e1289]: Uniform
+                  - generic [ref=f2e1290]: (
+                  - generic [ref=f2e1291]: a
+                  - generic [ref=f2e1292]: ","
+                  - generic [ref=f2e1293]: b
+                  - generic [ref=f2e1294]: )
+              - text: — every value in
+              - generic [ref=f2e1295]:
+                - generic [ref=f2e1296]:
+                  - generic [ref=f2e1297]: "["
+                  - generic [ref=f2e1299]: a
+                  - generic [ref=f2e1301]: ","
+                  - generic [ref=f2e1303]: b
+                  - generic [ref=f2e1305]: "]"
+                - math [ref=f2e1308]:
+                  - generic [ref=f2e1309]: "["
+                  - generic [ref=f2e1310]: a
+                  - generic [ref=f2e1311]: ","
+                  - generic [ref=f2e1312]: b
+                  - generic [ref=f2e1313]: "]"
+              - text: is equally likely.
+            - paragraph [ref=f2e1314]:
+              - generic [ref=f2e1315]:
+                - generic [ref=f2e1316]:
+                  - generic [ref=f2e1317]: f
+                  - generic [ref=f2e1319]: (
+                  - generic [ref=f2e1321]: x
+                  - generic [ref=f2e1323]: )
+                  - generic [ref=f2e1325]: =
+                  - generic [ref=f2e1328]:
+                    - generic [ref=f2e1329]: "1"
+                    - generic [ref=f2e1337]:
+                      - generic [ref=f2e1338]: b
+                      - generic [ref=f2e1340]: −
+                      - generic [ref=f2e1342]: a
+                  - generic [ref=f2e1344]: ","
+                  - generic [ref=f2e1347]: a
+                  - generic [ref=f2e1349]: ≤
+                  - generic [ref=f2e1351]: x
+                  - generic [ref=f2e1353]: ≤
+                  - generic [ref=f2e1355]: b
+                - math [ref=f2e1358]:
+                  - generic [ref=f2e1359]: f
+                  - generic [ref=f2e1360]: (
+                  - generic [ref=f2e1361]: x
+                  - generic [ref=f2e1362]: )
+                  - generic [ref=f2e1363]: =
+                  - generic [ref=f2e1364]:
+                    - generic [ref=f2e1365]: "1"
+                    - generic [ref=f2e1366]:
+                      - generic [ref=f2e1367]: b
+                      - generic [ref=f2e1368]: −
+                      - generic [ref=f2e1369]: a
+                  - generic [ref=f2e1370]: ","
+                  - generic [ref=f2e1371]: a
+                  - generic [ref=f2e1372]: ≤
+                  - generic [ref=f2e1373]: x
+                  - generic [ref=f2e1374]: ≤
+                  - generic [ref=f2e1375]: b
+            - paragraph [ref=f2e1376]:
+              - strong [ref=f2e1377]: "Mean:"
+              - generic [ref=f2e1378]:
+                - generic [ref=f2e1381]:
+                  - generic [ref=f2e1383]:
+                    - generic [ref=f2e1384]: a
+                    - generic [ref=f2e1386]: +
+                    - generic [ref=f2e1388]: b
+                  - generic [ref=f2e1390]: "2"
+                - math [ref=f2e1398]:
+                  - generic [ref=f2e1399]:
+                    - generic [ref=f2e1400]:
+                      - generic [ref=f2e1401]: a
+                      - generic [ref=f2e1402]: +
+                      - generic [ref=f2e1403]: b
+                    - generic [ref=f2e1404]: "2"
+              - text: ·
+              - strong [ref=f2e1405]: "Variance:"
+              - generic [ref=f2e1406]:
+                - generic [ref=f2e1409]:
+                  - generic [ref=f2e1411]:
+                    - generic [ref=f2e1412]: (
+                    - generic [ref=f2e1414]: b
+                    - generic [ref=f2e1416]: −
+                    - generic [ref=f2e1418]: a
+                    - generic [ref=f2e1420]:
+                      - generic [ref=f2e1421]: )
+                      - generic [ref=f2e1423]: "2"
+                  - generic [ref=f2e1431]:
+                    - generic [ref=f2e1432]: "1"
+                    - generic [ref=f2e1433]: "2"
+                - math [ref=f2e1435]:
+                  - generic [ref=f2e1436]:
+                    - generic [ref=f2e1437]:
+                      - generic [ref=f2e1438]: (
+                      - generic [ref=f2e1439]: b
+                      - generic [ref=f2e1440]: −
+                      - generic [ref=f2e1441]: a
+                      - generic [ref=f2e1442]:
+                        - generic [ref=f2e1443]: )
+                        - generic [ref=f2e1444]: "2"
+                    - generic [ref=f2e1445]: "12"
+            - paragraph [ref=f2e1446]:
+              - strong [ref=f2e1447]: "Uses:"
+              - text: Random number generation, initial values in algorithms, discrete die rolls.
+          - generic [ref=f2e1452]:
+            - heading "5.2 Exponential Distribution" [level=3] [ref=f2e1453]
+            - paragraph [ref=f2e1454]:
+              - generic [ref=f2e1455]:
+                - generic [ref=f2e1456]:
+                  - generic [ref=f2e1457]: X
+                  - generic [ref=f2e1459]: ∼
+                  - generic [ref=f2e1461]:
+                    - generic [ref=f2e1462]: E
+                    - generic [ref=f2e1463]: x
+                    - generic [ref=f2e1464]: p
+                  - generic [ref=f2e1465]: (
+                  - generic [ref=f2e1467]: λ
+                  - generic [ref=f2e1469]: )
+                - math [ref=f2e1472]:
+                  - generic [ref=f2e1473]: X
+                  - generic [ref=f2e1474]: ∼
+                  - generic [ref=f2e1475]: Exp
+                  - generic [ref=f2e1476]: (
+                  - generic [ref=f2e1477]: λ
+                  - generic [ref=f2e1478]: )
+              - text: — time until the
+              - strong [ref=f2e1479]: first
+              - text: occurrence of a Poisson event.
+            - paragraph [ref=f2e1480]:
+              - generic [ref=f2e1481]:
+                - generic [ref=f2e1482]:
+                  - generic [ref=f2e1483]: f
+                  - generic [ref=f2e1485]: (
+                  - generic [ref=f2e1487]: x
+                  - generic [ref=f2e1489]: )
+                  - generic [ref=f2e1491]: =
+                  - generic [ref=f2e1493]: λ
+                  - generic [ref=f2e1495]:
+                    - generic [ref=f2e1496]: e
+                    - generic [ref=f2e1499]:
+                      - generic [ref=f2e1500]: −
+                      - generic [ref=f2e1502]: λ
+                      - generic [ref=f2e1504]: x
+                  - generic [ref=f2e1506]: ","
+                  - generic [ref=f2e1509]: x
+                  - generic [ref=f2e1511]: ≥
+                  - generic [ref=f2e1513]: "0"
+                - math [ref=f2e1516]:
+                  - generic [ref=f2e1517]: f
+                  - generic [ref=f2e1518]: (
+                  - generic [ref=f2e1519]: x
+                  - generic [ref=f2e1520]: )
+                  - generic [ref=f2e1521]: =
+                  - generic [ref=f2e1522]: λ
+                  - generic [ref=f2e1523]:
+                    - generic [ref=f2e1524]: e
+                    - generic [ref=f2e1525]:
+                      - generic [ref=f2e1526]: −
+                      - generic [ref=f2e1527]: λ
+                      - generic [ref=f2e1528]: x
+                  - generic [ref=f2e1529]: ","
+                  - generic [ref=f2e1530]: x
+                  - generic [ref=f2e1531]: ≥
+                  - generic [ref=f2e1532]: "0"
+            - paragraph [ref=f2e1533]:
+              - strong [ref=f2e1534]: "Mean:"
+              - generic [ref=f2e1535]:
+                - generic [ref=f2e1536]:
+                  - generic [ref=f2e1537]: "1"
+                  - generic [ref=f2e1539]: /
+                  - generic [ref=f2e1542]: λ
+                - math [ref=f2e1545]:
+                  - generic [ref=f2e1546]: "1"
+                  - generic [ref=f2e1547]: /
+                  - generic [ref=f2e1549]: λ
+              - text: ·
+              - strong [ref=f2e1550]: "Variance:"
+              - generic [ref=f2e1551]:
+                - generic [ref=f2e1552]:
+                  - generic [ref=f2e1553]: "1"
+                  - generic [ref=f2e1555]: /
+                  - generic [ref=f2e1558]:
+                    - generic [ref=f2e1559]: λ
+                    - generic [ref=f2e1561]: "2"
+                - math [ref=f2e1565]:
+                  - generic [ref=f2e1566]: "1"
+                  - generic [ref=f2e1567]: /
+                  - generic [ref=f2e1569]:
+                    - generic [ref=f2e1570]: λ
+                    - generic [ref=f2e1571]: "2"
+            - paragraph [ref=f2e1572]:
+              - strong [ref=f2e1573]: "Memoryless property:"
+              - generic [ref=f2e1574]:
+                - generic [ref=f2e1575]:
+                  - generic [ref=f2e1576]: P
+                  - generic [ref=f2e1578]: (
+                  - generic [ref=f2e1580]: X
+                  - generic [ref=f2e1582]: ">"
+                  - generic [ref=f2e1584]: s
+                  - generic [ref=f2e1586]: +
+                  - generic [ref=f2e1588]: t
+                  - generic [ref=f2e1590]: ∣
+                  - generic [ref=f2e1592]: X
+                  - generic [ref=f2e1594]: ">"
+                  - generic [ref=f2e1596]: s
+                  - generic [ref=f2e1598]: )
+                  - generic [ref=f2e1600]: =
+                  - generic [ref=f2e1602]: P
+                  - generic [ref=f2e1604]: (
+                  - generic [ref=f2e1606]: X
+                  - generic [ref=f2e1608]: ">"
+                  - generic [ref=f2e1610]: t
+                  - generic [ref=f2e1612]: )
+                - math [ref=f2e1615]:
+                  - generic [ref=f2e1616]: P
+                  - generic [ref=f2e1617]: (
+                  - generic [ref=f2e1618]: X
+                  - generic [ref=f2e1619]: ">"
+                  - generic [ref=f2e1620]: s
+                  - generic [ref=f2e1621]: +
+                  - generic [ref=f2e1622]: t
+                  - generic [ref=f2e1623]: ∣
+                  - generic [ref=f2e1624]: X
+                  - generic [ref=f2e1625]: ">"
+                  - generic [ref=f2e1626]: s
+                  - generic [ref=f2e1627]: )
+                  - generic [ref=f2e1628]: =
+                  - generic [ref=f2e1629]: P
+                  - generic [ref=f2e1630]: (
+                  - generic [ref=f2e1631]: X
+                  - generic [ref=f2e1632]: ">"
+                  - generic [ref=f2e1633]: t
+                  - generic [ref=f2e1634]: )
+              - text: — past history doesn't matter.
+            - paragraph [ref=f2e1635]:
+              - strong [ref=f2e1636]: "Uses:"
+              - text: time between arrivals, machine failure times, survival analysis (simple model).
+          - generic [ref=f2e1637]:
+            - generic [ref=f2e1639]:
+              - generic [ref=f2e1640]: "In [10]:"
+              - generic [ref=f2e1641]: "# Side-by-side: Uniform, Exponential, and their CDF shapes fig = plt.figure(figsize=(16, 8)) fig.suptitle('Continuous Distributions: PDF and CDF Gallery', fontsize=13, fontweight='bold') gs = gridspec.GridSpec(2, 4, figure=fig, hspace=0.5, wspace=0.35) dist_configs = [ ('Uniform(0,1)', stats.uniform(0,1), np.linspace(-0.1,1.1,400), COLORS['primary']), ('Exponential(rate=1)', stats.expon(scale=1), np.linspace(-0.1,5,400), COLORS['secondary']), ('Chi-squared(df=5)', stats.chi2(df=5), np.linspace(0,20,400), COLORS['accent']), ('t(df=5)', stats.t(df=5), np.linspace(-5,5,400), COLORS['success']), ] for col, (name, dist, x_range, color) in enumerate(dist_configs): ax_pdf = fig.add_subplot(gs[0, col]) ax_cdf = fig.add_subplot(gs[1, col]) pdf_v = dist.pdf(x_range) cdf_v = dist.cdf(x_range) ax_pdf.plot(x_range, pdf_v, color=color, lw=2.5) ax_pdf.fill_between(x_range, pdf_v, alpha=0.2, color=color) ax_pdf.set_title(f'{name}') ax_pdf.set_ylabel('Density') ax_pdf.set_xlabel('x') ax_cdf.plot(x_range, cdf_v, color=color, lw=2.5) ax_cdf.set_title('CDF') ax_cdf.set_ylabel('P(X <= x)') ax_cdf.set_xlabel('x') ax_cdf.axhline(0.5, color='black', lw=1, linestyle=':', alpha=0.5) plt.show()"
+            - img "No description has been provided for this image" [ref=f2e1650]
+          - generic [ref=f2e1655]:
+            - heading "5.3 The t-Distribution" [level=3] [ref=f2e1656]
+            - paragraph [ref=f2e1657]:
+              - text: The t-distribution looks like a Normal but has
+              - strong [ref=f2e1658]: heavier tails
+              - text: (controlled by degrees of freedom
+              - generic [ref=f2e1659]:
+                - generic [ref=f2e1660]: ν
+                - math [ref=f2e1664]:
+                  - generic [ref=f2e1665]: ν
+              - text: "):"
+            - paragraph [ref=f2e1666]:
+              - generic [ref=f2e1667]:
+                - generic [ref=f2e1668]:
+                  - generic [ref=f2e1669]: f
+                  - generic [ref=f2e1671]: (
+                  - generic [ref=f2e1673]: t
+                  - generic [ref=f2e1675]: )
+                  - generic [ref=f2e1677]: ∝
+                  - generic [ref=f2e1679]:
+                    - generic [ref=f2e1680]:
+                      - generic [ref=f2e1681]: (
+                      - generic [ref=f2e1683]: "1"
+                      - generic [ref=f2e1685]: +
+                      - generic [ref=f2e1688]:
+                        - generic [ref=f2e1690]:
+                          - generic [ref=f2e1691]: t
+                          - generic [ref=f2e1693]: "2"
+                        - generic [ref=f2e1696]: ν
+                      - generic [ref=f2e1703]: )
+                    - generic [ref=f2e1706]:
+                      - generic [ref=f2e1707]: −
+                      - generic [ref=f2e1709]: (
+                      - generic [ref=f2e1711]: ν
+                      - generic [ref=f2e1713]: +
+                      - generic [ref=f2e1715]: "1"
+                      - generic [ref=f2e1717]: )
+                      - generic [ref=f2e1719]: /
+                      - generic [ref=f2e1722]: "2"
+                - math [ref=f2e1725]:
+                  - generic [ref=f2e1726]: f
+                  - generic [ref=f2e1727]: (
+                  - generic [ref=f2e1728]: t
+                  - generic [ref=f2e1729]: )
+                  - generic [ref=f2e1730]: ∝
+                  - generic [ref=f2e1731]:
+                    - generic [ref=f2e1732]:
+                      - generic [ref=f2e1733]: (
+                      - generic [ref=f2e1734]: "1"
+                      - generic [ref=f2e1735]: +
+                      - generic [ref=f2e1736]:
+                        - generic [ref=f2e1737]:
+                          - generic [ref=f2e1738]: t
+                          - generic [ref=f2e1739]: "2"
+                        - generic [ref=f2e1740]: ν
+                      - generic [ref=f2e1741]: )
+                    - generic [ref=f2e1742]:
+                      - generic [ref=f2e1743]: −
+                      - generic [ref=f2e1744]: (
+                      - generic [ref=f2e1745]: ν
+                      - generic [ref=f2e1746]: +
+                      - generic [ref=f2e1747]: "1"
+                      - generic [ref=f2e1748]: )
+                      - generic [ref=f2e1749]: /
+                      - generic [ref=f2e1751]: "2"
+            - list [ref=f2e1752]:
+              - listitem [ref=f2e1753]:
+                - text: As
+                - generic [ref=f2e1754]:
+                  - generic [ref=f2e1755]:
+                    - generic [ref=f2e1756]: ν
+                    - generic [ref=f2e1758]: →
+                    - generic [ref=f2e1760]: ∞
+                  - math [ref=f2e1763]:
+                    - generic [ref=f2e1764]: ν
+                    - generic [ref=f2e1765]: →
+                    - generic [ref=f2e1766]: ∞
+                - text: ": t-distribution → Standard Normal"
+              - listitem [ref=f2e1767]:
+                - text: For small
+                - generic [ref=f2e1768]:
+                  - generic [ref=f2e1769]: ν
+                  - math [ref=f2e1773]:
+                    - generic [ref=f2e1774]: ν
+                - text: "(e.g. 3-5): much heavier tails, extreme values much more common"
+              - listitem [ref=f2e1775]:
+                - strong [ref=f2e1776]: "When we use it:"
+                - text: confidence intervals and hypothesis tests for the mean when
+                - generic [ref=f2e1777]:
+                  - generic [ref=f2e1778]: σ
+                  - math [ref=f2e1782]:
+                    - generic [ref=f2e1783]: σ
+                - text: is unknown (which is always in practice)
+          - generic [ref=f2e1784]:
+            - generic [ref=f2e1786]:
+              - generic [ref=f2e1787]: "In [11]:"
+              - generic [ref=f2e1788]: "x = np.linspace(-5, 5, 500) fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 4)) fig.suptitle('t-Distribution: Heavier Tails than Normal', fontsize=13, fontweight='bold') dfs = [1, 3, 5, 10, 30] t_colors = [COLORS['danger'], COLORS['accent'], COLORS['primary'], COLORS['success'], COLORS['purple']] for df, color in zip(dfs, t_colors): pdf_t = stats.t.pdf(x, df=df) ax1.plot(x, pdf_t, color=color, lw=2, label=f'df={df}') ax1.plot(x, stats.norm.pdf(x), color='black', lw=2.5, linestyle='--', label='Normal') ax1.set_xlim(-5, 5) ax1.set_xlabel('t') ax1.set_ylabel('Density') ax1.set_title('PDF: t vs Normal') ax1.legend(fontsize=9) # Zoom into tails ax2.plot(x, stats.norm.pdf(x), color='black', lw=2.5, linestyle='--', label='Normal') for df, color in zip([3, 5, 10], [COLORS['danger'], COLORS['accent'], COLORS['primary']]): ax2.plot(x, stats.t.pdf(x, df=df), color=color, lw=2, label=f'df={df}') ax2.set_xlim(2, 5) ax2.set_ylim(0, 0.03) ax2.set_xlabel('|t|') ax2.set_ylabel('Density (zoom into right tail)') ax2.set_title('Right-tail zoom: t has much more probability mass') ax2.legend(fontsize=9) plt.tight_layout() plt.show() print('Probability P(|X| > 2):') print(f' Normal: {2*stats.norm.sf(2):.6f}') for df in [3, 5, 10, 30]: print(f' t(df={df:2d}): {2*stats.t.sf(2, df=df):.6f} ({2*stats.t.sf(2, df=df)/2*stats.norm.sf(2)*100:.0f}x more than Normal)' if df > 0 else '')"
+            - generic [ref=f2e1793]:
+              - img "No description has been provided for this image" [ref=f2e1797]
+              - generic [ref=f2e1798]: "Probability P(|X| > 2): Normal: 0.045500 t(df= 3): 0.139326 (0x more than Normal) t(df= 5): 0.101939 (0x more than Normal) t(df=10): 0.073388 (0x more than Normal) t(df=30): 0.054625 (0x more than Normal)"
+          - generic [ref=f2e1806]:
+            - separator [ref=f2e1807]
+            - 'heading "Part 6: Fitting a Distribution to Data" [level=2] [ref=f2e1808]'
+            - paragraph [ref=f2e1809]:
+              - text: Given a dataset,
+              - code [ref=f2e1810]: scipy.stats
+              - text: can
+              - strong [ref=f2e1811]: estimate the best-fit parameters
+              - text: for any named distribution using Maximum Likelihood Estimation (MLE).
+            - heading "6.1 Fitting the Normal Distribution" [level=3] [ref=f2e1812]
+          - generic [ref=f2e1813]:
+            - generic [ref=f2e1815]:
+              - generic [ref=f2e1816]: "In [12]:"
+              - generic [ref=f2e1817]: "# Simulate data and fit back TRUE_MU, TRUE_SIGMA = 170, 8 sample_heights = RNG.normal(TRUE_MU, TRUE_SIGMA, size=500) # MLE fit fit_mu, fit_sigma = stats.norm.fit(sample_heights) print('=== Fitting Normal to simulated height data (n=500) ===') print(f' True : mu={TRUE_MU}, sigma={TRUE_SIGMA}') print(f' MLE fit: mu={fit_mu:.3f}, sigma={fit_sigma:.3f}') print(f' Bias : mu_bias={fit_mu-TRUE_MU:+.3f}, sigma_bias={fit_sigma-TRUE_SIGMA:+.3f}') # Visualise fit x_range = np.linspace(140, 200, 400) fig, ax = plt.subplots(figsize=(10, 4)) ax.hist(sample_heights, bins=35, density=True, color=COLORS['primary'], edgecolor='white', alpha=0.7, label='Simulated data') ax.plot(x_range, stats.norm.pdf(x_range, TRUE_MU, TRUE_SIGMA), color=COLORS['danger'], lw=2.5, linestyle='-', label=f'True: N({TRUE_MU}, {TRUE_SIGMA})') ax.plot(x_range, stats.norm.pdf(x_range, fit_mu, fit_sigma), color=COLORS['success'], lw=2, linestyle='--', label=f'MLE fit: N({fit_mu:.1f}, {fit_sigma:.1f})') ax.set_xlabel('Height (cm)') ax.set_ylabel('Density') ax.set_title('MLE Fitting: True Distribution vs Fitted Distribution') ax.legend() plt.tight_layout() plt.show()"
+            - generic [ref=f2e1822]:
+              - generic [ref=f2e1823]: "=== Fitting Normal to simulated height data (n=500) === True : mu=170, sigma=8 MLE fit: mu=170.463, sigma=8.086 Bias : mu_bias=+0.463, sigma_bias=+0.086"
+              - img "No description has been provided for this image" [ref=f2e1830]
+          - generic [ref=f2e1835]:
+            - heading "6.2 Fitting Multiple Distributions — Which One Fits?" [level=3] [ref=f2e1836]
+            - paragraph [ref=f2e1837]: When we don't know the true distribution, we can try several candidates and compare. We use Kolmogorov-Smirnov (KS) test to measure goodness of fit.
+          - generic [ref=f2e1838]:
+            - generic [ref=f2e1840]:
+              - generic [ref=f2e1841]: "In [13]:"
+              - generic [ref=f2e1842]: "# Generate log-normal data (mimicking right-skewed income) TRUE_LNMU, TRUE_LNSIG = 10.5, 0.6 income_sample = RNG.lognormal(TRUE_LNMU, TRUE_LNSIG, size=1000) # Candidates to fit candidates = { 'Normal': stats.norm, 'Log-normal': stats.lognorm, 'Exponential': stats.expon, 'Gamma': stats.gamma, } print('=== Fitting multiple distributions to right-skewed income data ===') print() print(f' {\"Distribution\":<14} {\"KS statistic\":>13} {\"p-value\":>10} {\"Likely fit?\"}') print(' ' + '-'*60) fit_results = {} for name, dist in candidates.items(): params = dist.fit(income_sample) ks_stat, ks_p = stats.kstest(income_sample, dist.cdf, args=params) good = 'YES' if ks_p > 0.05 else 'no' print(f' {name:<14} {ks_stat:>13.6f} {ks_p:>10.4f} {good}') fit_results[name] = (params, ks_stat, ks_p) print() print('KS test: H0 = data comes from this distribution') print(' p > 0.05 -> cannot reject H0 -> distribution is plausible') print(' p < 0.05 -> reject H0 -> distribution does not fit well')"
+            - generic [ref=f2e1846]: "=== Fitting multiple distributions to right-skewed income data === Distribution KS statistic p-value Likely fit? ------------------------------------------------------------ Normal 0.104836 0.0000 no Log-normal 0.022723 0.6714 YES Exponential 0.150707 0.0000 no Gamma 0.082173 0.0000 no KS test: H0 = data comes from this distribution p > 0.05 -> cannot reject H0 -> distribution is plausible p < 0.05 -> reject H0 -> distribution does not fit well"
+          - generic [ref=f2e1852]:
+            - generic [ref=f2e1854]:
+              - generic [ref=f2e1855]: "In [14]:"
+              - generic [ref=f2e1856]: "# Visualise all fits x_range = np.linspace(income_sample.min(), np.percentile(income_sample, 99), 400) fig, axes = plt.subplots(1, 2, figsize=(14, 5)) fig.suptitle('Comparing Distribution Fits to Income Data', fontsize=12, fontweight='bold') # Left: PDF comparison axes[0].hist(income_sample, bins=60, density=True, color=COLORS['neutral'], edgecolor='white', alpha=0.7, label='Income data') fit_colors = [COLORS['danger'], COLORS['success'], COLORS['accent'], COLORS['secondary']] for (name, dist), color in zip(candidates.items(), fit_colors): params_fit, ks, pval = fit_results[name] fitted_pdf = dist.pdf(x_range, *params_fit) lw = 3 if pval > 0.05 else 1.5 ls = '-' if pval > 0.05 else '--' axes[0].plot(x_range, fitted_pdf, color=color, lw=lw, linestyle=ls, label=f'{name} (p={pval:.3f})') axes[0].set_xlim(x_range[0], x_range[-1]) axes[0].set_xlabel('Income') axes[0].set_ylabel('Density') axes[0].set_title('PDF fits (solid line = good fit p>0.05)') axes[0].legend(fontsize=8) # Right: log-scale x-axis to see shape better axes[1].hist(np.log(income_sample), bins=50, density=True, color=COLORS['primary'], edgecolor='white', alpha=0.7, label='log(Income)') # After log-transform, log-normal becomes normal ln_mu_fit, ln_sigma_fit = np.mean(np.log(income_sample)), np.std(np.log(income_sample), ddof=1) x_log = np.linspace(np.log(income_sample.min()), np.log(np.percentile(income_sample,99)), 400) axes[1].plot(x_log, stats.norm.pdf(x_log, ln_mu_fit, ln_sigma_fit), color=COLORS['danger'], lw=3, label='Normal fit to log(Income)') axes[1].set_xlabel('log(Income)') axes[1].set_ylabel('Density') axes[1].set_title('Log-transformed data: log-normal -> normal') axes[1].legend(fontsize=8) plt.tight_layout() plt.show() print('After log-transforming, the data looks Normal -> confirms Log-normal is the right model.')"
+            - generic [ref=f2e1861]:
+              - img "No description has been provided for this image" [ref=f2e1865]
+              - generic [ref=f2e1866]: After log-transforming, the data looks Normal -> confirms Log-normal is the right model.
+          - generic [ref=f2e1874]:
+            - separator [ref=f2e1875]
+            - 'heading "Part 7: Q-Q Plots — The Visual Normality Test" [level=2] [ref=f2e1876]'
+            - paragraph [ref=f2e1877]:
+              - text: A Quantile-Quantile (Q-Q) plot compares the
+              - strong [ref=f2e1878]: empirical quantiles
+              - text: of your data against the
+              - strong [ref=f2e1879]: theoretical quantiles
+              - text: of a reference distribution.
+            - heading "How to read a Q-Q plot:" [level=3] [ref=f2e1880]
+            - list [ref=f2e1881]:
+              - listitem [ref=f2e1882]:
+                - strong [ref=f2e1883]: Points on the diagonal line
+                - text: → data matches the reference distribution
+              - listitem [ref=f2e1884]:
+                - strong [ref=f2e1885]: S-curve
+                - text: → heavier tails than reference (kurtosis)
+              - listitem [ref=f2e1886]:
+                - strong [ref=f2e1887]: Curve bending up
+                - text: at the right → right skewness
+              - listitem [ref=f2e1888]:
+                - strong [ref=f2e1889]: Outliers at corners
+                - text: → extreme values beyond what the distribution predicts
+          - generic [ref=f2e1890]:
+            - generic [ref=f2e1892]:
+              - generic [ref=f2e1893]: "In [15]:"
+              - generic [ref=f2e1894]: "# Four datasets with different shapes datasets = { 'Normal (should fit)': RNG.normal(0, 1, 300), 'Right-skewed': RNG.lognormal(0, 0.7, 300), 'Left-skewed': -RNG.lognormal(0, 0.7, 300), 'Heavy-tailed (t, df=3)': RNG.standard_t(df=3, size=300), } fig, axes = plt.subplots(2, 4, figsize=(18, 8)) fig.suptitle('Q-Q Plots: Recognising Departure from Normality', fontsize=13, fontweight='bold') for col, (name, data) in enumerate(datasets.items()): # Top row: histogram ax_hist = axes[0, col] ax_hist.hist(data, bins=40, color=COLORS['primary'], edgecolor='white', alpha=0.8, density=True) x_r = np.linspace(data.min(), data.max(), 200) ax_hist.plot(x_r, stats.norm.pdf(x_r, data.mean(), data.std(ddof=1)), color=COLORS['danger'], lw=2, label='Normal') ax_hist.set_title(f'{name}') ax_hist.set_xlabel('Value') ax_hist.legend(fontsize=7) # Bottom row: Q-Q plot ax_qq = axes[1, col] (osm, osr), (slope, intercept, r) = stats.probplot(data, dist='norm', fit=True) ax_qq.scatter(osm, osr, s=10, alpha=0.5, color=COLORS['primary']) # Reference line x_line = np.array([min(osm), max(osm)]) ax_qq.plot(x_line, slope * x_line + intercept, color=COLORS['danger'], lw=2, label=f'R={r:.3f}') ax_qq.set_xlabel('Theoretical quantiles') ax_qq.set_ylabel('Sample quantiles') ax_qq.set_title('Q-Q plot') ax_qq.legend(fontsize=8) plt.tight_layout() plt.show() print('Reading guide:') print(' Normal : points follow the line closely -> confirms normality') print(' Right-skewed : upper end curves UP above the line -> right heavy tail') print(' Left-skewed : lower end curves DOWN below the line -> left heavy tail') print(' Heavy-tailed : both ends bend away from the line -> fat tails (S-curve)')"
+            - generic [ref=f2e1899]:
+              - img "No description has been provided for this image" [ref=f2e1903]
+              - generic [ref=f2e1904]: "Reading guide: Normal : points follow the line closely -> confirms normality Right-skewed : upper end curves UP above the line -> right heavy tail Left-skewed : lower end curves DOWN below the line -> left heavy tail Heavy-tailed : both ends bend away from the line -> fat tails (S-curve)"
+          - generic [ref=f2e1912]:
+            - separator [ref=f2e1913]
+            - 'heading "Part 8: Formal Goodness-of-Fit Tests" [level=2] [ref=f2e1914]'
+            - paragraph [ref=f2e1915]:
+              - text: Visual inspection (histogram, Q-Q plot) should always come first. But formal tests give you a
+              - strong [ref=f2e1916]: p-value
+              - text: for the "is this distribution plausible?" question.
+            - heading "Two main tests for normality:" [level=3] [ref=f2e1917]
+            - table [ref=f2e1918]:
+              - rowgroup [ref=f2e1919]:
+                - row [ref=f2e1920]:
+                  - columnheader "Test" [ref=f2e1921]
+                  - columnheader "Null hypothesis" [ref=f2e1922]
+                  - columnheader "Best used for" [ref=f2e1923]
+              - rowgroup [ref=f2e1924]:
+                - row [ref=f2e1925]:
+                  - cell [ref=f2e1926]:
+                    - strong [ref=f2e1927]: Shapiro-Wilk
+                  - cell "Data is normal" [ref=f2e1928]
+                  - cell "Small to medium samples (n < 5000) — most powerful" [ref=f2e1929]
+                - row [ref=f2e1930]:
+                  - cell [ref=f2e1931]:
+                    - strong [ref=f2e1932]: Kolmogorov-Smirnov
+                  - cell "Data matches specified distribution" [ref=f2e1933]
+                  - cell "Any distribution; less powerful than S-W" [ref=f2e1934]
+                - row [ref=f2e1935]:
+                  - cell [ref=f2e1936]:
+                    - strong [ref=f2e1937]: Anderson-Darling
+                  - cell "Data matches specified distribution" [ref=f2e1938]
+                  - cell "Better than KS for tails" [ref=f2e1939]
+            - blockquote [ref=f2e1940]:
+              - paragraph [ref=f2e1941]:
+                - strong [ref=f2e1942]: "Important caveat:"
+                - text: with large n, these tests will reject normality for tiny, practically irrelevant deviations. Always look at the Q-Q plot alongside the p-value.
+          - generic [ref=f2e1943]:
+            - generic [ref=f2e1945]:
+              - generic [ref=f2e1946]: "In [16]:"
+              - generic [ref=f2e1947]: "# Demonstrate: Shapiro-Wilk on normal vs non-normal data, various n print('=== Shapiro-Wilk Normality Test ===') print() print(f' {\"Dataset\":<28} {\"n\":>5} {\"W statistic\":>12} {\"p-value\":>10} {\"Reject H0?\"}') print(' ' + '-'*75) test_cases = [ ('Normal(0,1)', lambda n: RNG.normal(0, 1, n)), ('t(df=5) — slightly fat', lambda n: RNG.standard_t(df=5, size=n)), ('Log-normal — skewed', lambda n: RNG.lognormal(0, 0.5, n)), ('Uniform(0,1)', lambda n: RNG.uniform(0, 1, n)), ] for n in [50, 200, 1000]: if n > 50: print() for name, gen in test_cases: data = gen(n) w, p = stats.shapiro(data) reject = 'YES <--' if p < 0.05 else 'no' print(f' {name:<28} {n:>5} {w:>12.6f} {p:>10.4f} {reject}')"
+            - generic [ref=f2e1951]: === Shapiro-Wilk Normality Test === Dataset n W statistic p-value Reject H0? --------------------------------------------------------------------------- Normal(0,1) 50 0.975874 0.3938 no t(df=5) — slightly fat 50 0.892827 0.0003 YES <-- Log-normal — skewed 50 0.768727 0.0000 YES <-- Uniform(0,1) 50 0.931658 0.0064 YES <-- Normal(0,1) 200 0.988896 0.1227 no t(df=5) — slightly fat 200 0.970659 0.0003 YES <-- Log-normal — skewed 200 0.891877 0.0000 YES <-- Uniform(0,1) 200 0.952693 0.0000 YES <-- Normal(0,1) 1000 0.999136 0.9335 no t(df=5) — slightly fat 1000 0.975029 0.0000 YES <-- Log-normal — skewed 1000 0.889791 0.0000 YES <-- Uniform(0,1) 1000 0.954129 0.0000 YES <--
+          - generic [ref=f2e1957]:
+            - generic [ref=f2e1959]:
+              - generic [ref=f2e1960]: "In [17]:"
+              - generic [ref=f2e1961]: "# The large-n caveat: tiny deviation from normality gets flagged print('=== Large-n caveat: practical vs statistical significance ===') print() print(' Generating Normal(0,1) data with a tiny skewness perturbation (0.02)...') print() for n in [100, 1000, 5000, 20000, 100000]: # Add a tiny perturbation: slightly skew the data base = RNG.normal(0, 1, n) perturbed = base + 0.02 * base**2 # tiny non-linearity w, p = stats.shapiro(min(perturbed, key=None) if n > 5000 else perturbed[:5000]) w2, p2 = stats.shapiro(perturbed[:min(n, 5000)]) # SW limited to 5000 _, ks_p = stats.kstest(perturbed, 'norm', args=(perturbed.mean(), perturbed.std(ddof=1))) skew_val = stats.skew(perturbed) print(f' n={n:>7,} skewness={skew_val:.4f} SW: p={p2:.4f} KS: p={ks_p:.6f} ' f'SW_reject={\"YES\" if p2<0.05 else \"no\"}') print() print('Lesson: At n=100,000, even a skewness of 0.04 yields p<0.05.') print('Always ask: \"Is this deviation practically meaningful?\" not just \"Is p<0.05?\"')"
+            - generic [ref=f2e1965]: "=== Large-n caveat: practical vs statistical significance === Generating Normal(0,1) data with a tiny skewness perturbation (0.02)... n= 100 skewness=0.1339 SW: p=0.9124 KS: p=0.988508 SW_reject=no n= 1,000 skewness=0.0780 SW: p=0.5793 KS: p=0.988126 SW_reject=no n= 5,000 skewness=0.0671 SW: p=0.1485 KS: p=0.120334 SW_reject=no n= 20,000 skewness=0.1259 SW: p=0.0000 KS: p=0.016575 SW_reject=YES n=100,000 skewness=0.1123 SW: p=0.0001 KS: p=0.000000 SW_reject=YES Lesson: At n=100,000, even a skewness of 0.04 yields p<0.05. Always ask: \"Is this deviation practically meaningful?\" not just \"Is p<0.05?\""
+          - generic [ref=f2e1975]:
+            - separator [ref=f2e1976]
+            - 'heading "Part 9: Choosing the Right Distribution — A Decision Guide" [level=2] [ref=f2e1977]'
+            - table [ref=f2e1978]:
+              - rowgroup [ref=f2e1979]:
+                - row [ref=f2e1980]:
+                  - columnheader "Your variable" [ref=f2e1981]
+                  - columnheader "Typical distribution(s)" [ref=f2e1982]
+                  - columnheader "Key check" [ref=f2e1983]
+              - rowgroup [ref=f2e1984]:
+                - row [ref=f2e1985]:
+                  - cell "Continuous, symmetric, no bounds" [ref=f2e1986]
+                  - cell [ref=f2e1987]:
+                    - strong [ref=f2e1988]: Normal
+                  - cell "Q-Q plot, Shapiro-Wilk" [ref=f2e1989]
+                - row [ref=f2e1990]:
+                  - cell "Continuous, strictly positive, right-skewed" [ref=f2e1991]
+                  - cell [ref=f2e1992]:
+                    - strong [ref=f2e1993]: Log-normal
+                    - text: or
+                    - strong [ref=f2e1994]: Gamma
+                  - cell "Log-transform -> Normal?" [ref=f2e1995]
+                - row [ref=f2e1996]:
+                  - cell "Continuous, bounded [0,1] (proportions)" [ref=f2e1997]
+                  - cell [ref=f2e1998]:
+                    - strong [ref=f2e1999]: Beta
+                  - cell "values clamped to [0,1]?" [ref=f2e2000]
+                - row [ref=f2e2001]:
+                  - cell "Continuous, time until event" [ref=f2e2002]
+                  - cell [ref=f2e2003]:
+                    - strong [ref=f2e2004]: Exponential
+                    - text: or
+                    - strong [ref=f2e2005]: Weibull
+                  - cell "Memoryless?" [ref=f2e2006]
+                - row [ref=f2e2007]:
+                  - cell "Count of events in interval" [ref=f2e2008]
+                  - cell [ref=f2e2009]:
+                    - strong [ref=f2e2010]: Poisson
+                  - cell "Mean ≈ Variance?" [ref=f2e2011]
+                - row [ref=f2e2012]:
+                  - cell "Count of successes in n trials" [ref=f2e2013]
+                  - cell [ref=f2e2014]:
+                    - strong [ref=f2e2015]: Binomial
+                  - cell "Fixed n, binary outcome?" [ref=f2e2016]
+                - row [ref=f2e2017]:
+                  - cell "Count with overdispersion (var >> mean)" [ref=f2e2018]
+                  - cell [ref=f2e2019]:
+                    - strong [ref=f2e2020]: Negative Binomial
+                  - cell "Variance >> Mean?" [ref=f2e2021]
+                - row [ref=f2e2022]:
+                  - cell "Ordinal or bounded integer" [ref=f2e2023]
+                  - cell [ref=f2e2024]:
+                    - strong [ref=f2e2025]: Ordered Logit
+                    - text: /
+                    - strong [ref=f2e2026]: Multinomial
+                  - cell "Ordinal scale?" [ref=f2e2027]
+          - generic [ref=f2e2028]:
+            - generic [ref=f2e2030]:
+              - generic [ref=f2e2031]: "In [18]:"
+              - generic [ref=f2e2032]: "# Decision tree simulation: generate data from 4 different processes, # then use diagnostics to identify the right distribution fig, axes = plt.subplots(2, 4, figsize=(18, 7)) fig.suptitle('Distribution Identification Toolkit', fontsize=13, fontweight='bold') scenarios = [ ('Hospital stay days', RNG.exponential(scale=4, size=500), stats.expon, 'Exp'), ('Log-normal income', RNG.lognormal(10, 0.5, size=500), stats.lognorm, 'LogN'), ('Count: arrivals/hour', RNG.poisson(lam=8, size=500).astype(float), stats.poisson, 'Pois'), ('Normal height', RNG.normal(170, 8, size=500), stats.norm, 'Normal'), ] for col, (name, data, true_dist, dist_label) in enumerate(scenarios): # Row 0: histogram ax_h = axes[0, col] ax_h.hist(data, bins=35, density=True, color=COLORS['primary'], edgecolor='white', alpha=0.75) ax_h.set_title(f'{name}') ax_h.set_xlabel('Value') ax_h.set_ylabel('Density') # Summary diagnostics skew_v = stats.skew(data) kurt_v = stats.kurtosis(data) ax_h.text(0.97, 0.97, f'skew={skew_v:.2f}', transform=ax_h.transAxes, ha='right', va='top', fontsize=8, bbox=dict(boxstyle='round', fc='white', alpha=0.7)) # Row 1: Q-Q plot against Normal ax_q = axes[1, col] (osm, osr), (slope, intercept, r) = stats.probplot(data, dist='norm', fit=True) ax_q.scatter(osm, osr, s=8, alpha=0.5, color=COLORS['primary']) x_qq = np.array([osm.min(), osm.max()]) ax_q.plot(x_qq, slope*x_qq + intercept, color=COLORS['danger'], lw=2) ax_q.set_title(f'Q-Q vs Normal (R={r:.3f})') ax_q.set_xlabel('Theoretical') ax_q.set_ylabel('Sample') plt.tight_layout() plt.show() print('Diagnostics summary:') for name, data, _, label in scenarios: sw_stat, sw_p = stats.shapiro(data[:min(500, len(data))]) skew_v = stats.skew(data) mv_ratio = data.mean() / data.var(ddof=1) if data.var(ddof=1) > 0 else np.nan print(f' {name:<25} skew={skew_v:+.2f} SW_p={sw_p:.4f} mean/var={mv_ratio:.3f} -> True dist: {label}')"
+            - generic [ref=f2e2037]:
+              - img "No description has been provided for this image" [ref=f2e2041]
+              - generic [ref=f2e2042]: "Diagnostics summary: Hospital stay days skew=+2.76 SW_p=0.0000 mean/var=0.222 -> True dist: Exp Log-normal income skew=+1.47 SW_p=0.0000 mean/var=0.000 -> True dist: LogN Count: arrivals/hour skew=+0.25 SW_p=0.0000 mean/var=0.929 -> True dist: Pois Normal height skew=+0.04 SW_p=0.8142 mean/var=2.508 -> True dist: Normal"
+          - generic [ref=f2e2050]:
+            - separator [ref=f2e2051]
+            - 'heading "Part 10: First Look at the Central Limit Theorem" [level=2] [ref=f2e2052]'
+            - paragraph [ref=f2e2053]: "The Central Limit Theorem (CLT) is perhaps the most powerful result in statistics:"
+            - blockquote [ref=f2e2054]:
+              - paragraph [ref=f2e2055]:
+                - strong [ref=f2e2056]: "CLT:"
+                - text: As
+                - generic [ref=f2e2057]:
+                  - generic [ref=f2e2058]:
+                    - generic [ref=f2e2059]: "n"
+                    - generic [ref=f2e2061]: →
+                    - generic [ref=f2e2063]: ∞
+                  - math [ref=f2e2066]:
+                    - generic [ref=f2e2067]: "n"
+                    - generic [ref=f2e2068]: →
+                    - generic [ref=f2e2069]: ∞
+                - text: ", the sample mean"
+                - generic [ref=f2e2070]:
+                  - generic [ref=f2e2071]:
+                    - generic [ref=f2e2072]:
+                      - generic [ref=f2e2074]:
+                        - generic [ref=f2e2075]: ¯
+                        - generic [ref=f2e2076]: X
+                      - generic [ref=f2e2079]: "n"
+                    - generic [ref=f2e2082]: =
+                    - generic [ref=f2e2085]:
+                      - generic [ref=f2e2086]: "1"
+                      - generic [ref=f2e2089]: "n"
+                    - generic [ref=f2e2096]:
+                      - generic [ref=f2e2097]: ∑
+                      - generic [ref=f2e2099]:
+                        - generic [ref=f2e2100]: "n"
+                        - generic [ref=f2e2102]:
+                          - generic [ref=f2e2103]: i
+                          - generic [ref=f2e2105]: =
+                          - generic [ref=f2e2107]: "1"
+                    - generic [ref=f2e2109]:
+                      - generic [ref=f2e2110]: X
+                      - generic [ref=f2e2112]: i
+                  - math [ref=f2e2116]:
+                    - generic [ref=f2e2117]:
+                      - generic [ref=f2e2119]:
+                        - generic [ref=f2e2120]: X
+                        - generic [ref=f2e2121]: ¯
+                      - generic [ref=f2e2122]: "n"
+                    - generic [ref=f2e2123]: =
+                    - generic [ref=f2e2124]:
+                      - generic [ref=f2e2125]: "1"
+                      - generic [ref=f2e2126]: "n"
+                    - generic [ref=f2e2127]:
+                      - generic [ref=f2e2128]: ∑
+                      - generic [ref=f2e2129]:
+                        - generic [ref=f2e2130]: i
+                        - generic [ref=f2e2131]: =
+                        - generic [ref=f2e2132]: "1"
+                      - generic [ref=f2e2133]: "n"
+                    - generic [ref=f2e2134]:
+                      - generic [ref=f2e2135]: X
+                      - generic [ref=f2e2136]: i
+                - text: converges in distribution to
+                - generic [ref=f2e2137]:
+                  - generic [ref=f2e2138]:
+                    - generic [ref=f2e2139]: "N"
+                    - generic [ref=f2e2141]: (
+                    - generic [ref=f2e2143]: μ
+                    - generic [ref=f2e2145]: ","
+                    - generic [ref=f2e2147]:
+                      - generic [ref=f2e2148]: σ
+                      - generic [ref=f2e2150]: "2"
+                    - generic [ref=f2e2153]: /
+                    - generic [ref=f2e2156]: "n"
+                    - generic [ref=f2e2158]: )
+                  - math [ref=f2e2161]:
+                    - generic [ref=f2e2162]: "N"
+                    - generic [ref=f2e2163]: (
+                    - generic [ref=f2e2164]: μ
+                    - generic [ref=f2e2165]: ","
+                    - generic [ref=f2e2166]:
+                      - generic [ref=f2e2167]: σ
+                      - generic [ref=f2e2168]: "2"
+                    - generic [ref=f2e2169]: /
+                    - generic [ref=f2e2171]: "n"
+                    - generic [ref=f2e2172]: )
+                - text: ","
+                - strong [ref=f2e2173]: regardless of the shape of the population distribution
+                - text: .
+            - paragraph [ref=f2e2174]:
+              - text: This is why normal-based methods (t-tests, confidence intervals) work even when the underlying data is not perfectly normal — as long as
+              - generic [ref=f2e2175]:
+                - generic [ref=f2e2176]: "n"
+                - math [ref=f2e2180]:
+                  - generic [ref=f2e2181]: "n"
+              - text: is large enough.
+            - heading [level=3] [ref=f2e2182]:
+              - text: "Rule of thumb:"
+              - generic [ref=f2e2183]:
+                - generic [ref=f2e2184]:
+                  - generic [ref=f2e2185]: "n"
+                  - generic [ref=f2e2187]: ≥
+                  - generic [ref=f2e2189]:
+                    - generic [ref=f2e2190]: "3"
+                    - generic [ref=f2e2191]: "0"
+                - math [ref=f2e2193]:
+                  - generic [ref=f2e2194]: "n"
+                  - generic [ref=f2e2195]: ≥
+                  - generic [ref=f2e2196]: "30"
+              - text: is usually sufficient for CLT to kick in for moderately skewed data.
+            - paragraph [ref=f2e2197]: We will explore CLT in depth in Lecture 04. Here we preview the key simulation.
+          - generic [ref=f2e2198]:
+            - generic [ref=f2e2200]:
+              - generic [ref=f2e2201]: "In [19]:"
+              - generic [ref=f2e2202]: "# Demonstrate CLT: sample means from highly non-normal populations fig, axes = plt.subplots(2, 4, figsize=(18, 7)) fig.suptitle('Central Limit Theorem Preview: Sample Means Always Become Normal', fontsize=12, fontweight='bold') populations = [ ('Uniform(0,1)', lambda n: RNG.uniform(0, 1, n)), ('Exponential(1)', lambda n: RNG.exponential(1, n)), ('Bernoulli(p=0.2)', lambda n: RNG.binomial(1, 0.2, n).astype(float)), ('Bimodal', lambda n: np.where(RNG.uniform(0,1,n)<0.5, RNG.normal(-2,0.5,n), RNG.normal(2,0.5,n))), ] N_REPS = 3000 N_SAMPLE = 50 for col, (name, gen) in enumerate(populations): # Row 0: population distribution pop = gen(5000) axes[0, col].hist(pop, bins=50, density=True, color=COLORS['secondary'], edgecolor='white', alpha=0.75) axes[0, col].set_title(f'Population: {name}') axes[0, col].set_xlabel('Value') axes[0, col].set_ylabel('Density') skew_v = stats.skew(pop) axes[0, col].text(0.97, 0.97, f'skew={skew_v:.2f}', transform=axes[0, col].transAxes, ha='right', va='top', fontsize=8, bbox=dict(boxstyle='round', fc='white', alpha=0.7)) # Row 1: sampling distribution of the mean (n=50) sample_means = [gen(N_SAMPLE).mean() for _ in range(N_REPS)] sm = np.array(sample_means) axes[1, col].hist(sm, bins=50, density=True, color=COLORS['primary'], edgecolor='white', alpha=0.75) # Overlay expected normal distribution expected_mu = pop.mean() expected_sigma = pop.std(ddof=1) / np.sqrt(N_SAMPLE) x_range = np.linspace(sm.min(), sm.max(), 200) axes[1, col].plot(x_range, stats.norm.pdf(x_range, expected_mu, expected_sigma), color=COLORS['danger'], lw=2.5, label=f'N({expected_mu:.2f}, {expected_sigma:.3f})') axes[1, col].set_title(f'Sample means (n={N_SAMPLE}, reps={N_REPS:,})') axes[1, col].set_xlabel('Sample mean') axes[1, col].set_ylabel('Density') axes[1, col].legend(fontsize=7) sw_stat, sw_p = stats.shapiro(sm[:500]) axes[1, col].text(0.97, 0.05, f'SW p={sw_p:.3f}', transform=axes[1, col].transAxes, ha='right', va='bottom', fontsize=8, bbox=dict(boxstyle='round', fc='white', alpha=0.7)) plt.tight_layout() plt.show() print('Even when the population is highly non-normal, sample means (n=50) are well-approximated') print('by a Normal distribution — this is the Central Limit Theorem in action.')"
+            - generic [ref=f2e2207]:
+              - img "No description has been provided for this image" [ref=f2e2211]
+              - generic [ref=f2e2212]: Even when the population is highly non-normal, sample means (n=50) are well-approximated by a Normal distribution — this is the Central Limit Theorem in action.
+          - generic [ref=f2e2220]:
+            - separator [ref=f2e2221]
+            - heading "Summary" [level=2] [ref=f2e2222]
+            - table [ref=f2e2223]:
+              - rowgroup [ref=f2e2224]:
+                - row [ref=f2e2225]:
+                  - columnheader "Concept" [ref=f2e2226]
+                  - columnheader "Key takeaway" [ref=f2e2227]
+              - rowgroup [ref=f2e2228]:
+                - row [ref=f2e2229]:
+                  - cell "PDF, CDF, quantile" [ref=f2e2230]
+                  - cell "Three equivalent views of any distribution" [ref=f2e2231]
+                - row [ref=f2e2232]:
+                  - cell "68-95-99.7 rule" [ref=f2e2233]
+                  - cell [ref=f2e2234]:
+                    - text: Verified by simulation; true for all Normal
+                    - generic [ref=f2e2235]:
+                      - generic [ref=f2e2236]:
+                        - generic [ref=f2e2237]: (
+                        - generic [ref=f2e2239]: μ
+                        - generic [ref=f2e2241]: ","
+                        - generic [ref=f2e2243]: σ
+                        - generic [ref=f2e2245]: )
+                      - math [ref=f2e2248]:
+                        - generic [ref=f2e2249]: (
+                        - generic [ref=f2e2250]: μ
+                        - generic [ref=f2e2251]: ","
+                        - generic [ref=f2e2252]: σ
+                        - generic [ref=f2e2253]: )
+                - row [ref=f2e2254]:
+                  - cell "z-score" [ref=f2e2255]
+                  - cell [ref=f2e2256]:
+                    - text: Standardises any normal to
+                    - generic [ref=f2e2257]:
+                      - generic [ref=f2e2258]:
+                        - generic [ref=f2e2259]: "N"
+                        - generic [ref=f2e2261]: (
+                        - generic [ref=f2e2263]: "0"
+                        - generic [ref=f2e2265]: ","
+                        - generic [ref=f2e2267]: "1"
+                        - generic [ref=f2e2269]: )
+                      - math [ref=f2e2272]:
+                        - generic [ref=f2e2273]: "N"
+                        - generic [ref=f2e2274]: (
+                        - generic [ref=f2e2275]: "0"
+                        - generic [ref=f2e2276]: ","
+                        - generic [ref=f2e2277]: "1"
+                        - generic [ref=f2e2278]: )
+                    - text: ; unlocks shared tables
+                - row [ref=f2e2279]:
+                  - cell "Binomial" [ref=f2e2280]
+                  - cell [ref=f2e2281]:
+                    - text: Count of successes;
+                    - generic [ref=f2e2282]:
+                      - generic [ref=f2e2283]: →
+                      - math [ref=f2e2287]:
+                        - generic [ref=f2e2288]: →
+                    - text: Poisson when
+                    - generic [ref=f2e2289]:
+                      - generic [ref=f2e2290]: "n"
+                      - math [ref=f2e2294]:
+                        - generic [ref=f2e2295]: "n"
+                    - text: large,
+                    - generic [ref=f2e2296]:
+                      - generic [ref=f2e2297]: p
+                      - math [ref=f2e2301]:
+                        - generic [ref=f2e2302]: p
+                    - text: small
+                - row [ref=f2e2303]:
+                  - cell "Poisson" [ref=f2e2304]
+                  - cell "Count of rare events; mean = variance is a diagnostic" [ref=f2e2305]
+                - row [ref=f2e2306]:
+                  - cell "t-distribution" [ref=f2e2307]
+                  - cell [ref=f2e2308]:
+                    - text: Heavier tails than Normal;
+                    - generic [ref=f2e2309]:
+                      - generic [ref=f2e2310]: →
+                      - math [ref=f2e2314]:
+                        - generic [ref=f2e2315]: →
+                    - text: Normal as df
+                    - generic [ref=f2e2316]:
+                      - generic [ref=f2e2317]:
+                        - generic [ref=f2e2318]: →
+                        - generic [ref=f2e2320]: ∞
+                      - math [ref=f2e2323]:
+                        - generic [ref=f2e2324]: →
+                        - generic [ref=f2e2325]: ∞
+                - row [ref=f2e2326]:
+                  - cell "Distribution fitting" [ref=f2e2327]
+                  - cell [ref=f2e2328]:
+                    - code [ref=f2e2329]: scipy.stats.dist.fit()
+                    - text: + KS test for goodness of fit
+                - row [ref=f2e2330]:
+                  - cell "Q-Q plot" [ref=f2e2331]
+                  - cell "Visual normality test; S-curve = fat tails; bend = skew" [ref=f2e2332]
+                - row [ref=f2e2333]:
+                  - cell "Shapiro-Wilk" [ref=f2e2334]
+                  - cell [ref=f2e2335]:
+                    - text: Most powerful normality test; inflated at large
+                    - generic [ref=f2e2336]:
+                      - generic [ref=f2e2337]: "n"
+                      - math [ref=f2e2341]:
+                        - generic [ref=f2e2342]: "n"
+                - row [ref=f2e2343]:
+                  - cell "CLT preview" [ref=f2e2344]
+                  - cell [ref=f2e2345]:
+                    - text: Sample means always become Normal as
+                    - generic [ref=f2e2346]:
+                      - generic [ref=f2e2347]: "n"
+                      - math [ref=f2e2351]:
+                        - generic [ref=f2e2352]: "n"
+                    - text: grows
+            - heading "Distribution Identification Checklist" [level=3] [ref=f2e2353]
+            - code [ref=f2e2355]: "1. Is the variable discrete (counts) or continuous? 2. Continuous: a. Is it bounded below at 0? → Log-normal, Gamma, Exponential, Weibull b. Is it bounded in [0,1]? → Beta c. Symmetric, unbounded? → Normal (check Q-Q plot) 3. Discrete: a. Count of events per interval? → Poisson (check mean ≈ variance) b. Count of successes in n trials? → Binomial c. Count with overdispersion? → Negative Binomial"
+            - paragraph [ref=f2e2356]:
+              - strong [ref=f2e2357]: Next lecture →
+              - text: "Lecture 04: The Central Limit Theorem in Action — why it works, when it fails, and how it justifies many statistical tests."
+            - separator [ref=f2e2358]
+            - paragraph [ref=f2e2359]:
+              - emphasis [ref=f2e2360]: Python Statistical Analysis in Practice — Lecture 03
+              - emphasis [ref=f2e2361]: "Author: Jason JJ Li · PKU Institute of Population Research"

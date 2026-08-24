@@ -16,7 +16,10 @@ export default function App() {
   const [lang, setLang] = useState('zh');
 
   // Light parallax for particle layer: follows mouse when present, drifts when idle.
+  // Amplitude deliberately subtle; disabled entirely under prefers-reduced-motion.
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     const root = document.documentElement;
     let lastMove = Date.now();
 
@@ -26,8 +29,8 @@ export default function App() {
     };
 
     const handleMove = (e) => {
-      const x = ((e.clientX / window.innerWidth) - 0.5) * 18;
-      const y = ((e.clientY / window.innerHeight) - 0.5) * 18;
+      const x = ((e.clientX / window.innerWidth) - 0.5) * 8;
+      const y = ((e.clientY / window.innerHeight) - 0.5) * 8;
       updateOffset(x, y);
       lastMove = Date.now();
     };
@@ -35,9 +38,9 @@ export default function App() {
     const drift = () => {
       const now = Date.now();
       if (now - lastMove > 1400) {
-        const t = now * 0.00035;
-        const x = Math.sin(t) * 10;
-        const y = Math.cos(t * 1.1) * 10;
+        const t = now * 0.00025;
+        const x = Math.sin(t) * 5;
+        const y = Math.cos(t * 1.1) * 5;
         updateOffset(x, y);
       }
       frame = requestAnimationFrame(drift);

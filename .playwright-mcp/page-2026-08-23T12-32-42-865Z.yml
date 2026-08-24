@@ -1,0 +1,95 @@
+- generic [active] [ref=f6e1]:
+  - banner [ref=f6e2]:
+    - generic [ref=f6e4]:
+      - link "Jennifer Doleac" [ref=f6e6] [cursor=pointer]:
+        - /url: https://jenniferdoleac.com/
+      - navigation [ref=f6e7]:
+        - list [ref=f6e9]:
+          - listitem [ref=f6e10]:
+            - link "Home" [ref=f6e11] [cursor=pointer]:
+              - /url: https://jenniferdoleac.com/
+          - listitem [ref=f6e12]:
+            - link "Bio" [ref=f6e13] [cursor=pointer]:
+              - /url: https://jenniferdoleac.com/bio/
+          - listitem [ref=f6e14]:
+            - link "CV" [ref=f6e15] [cursor=pointer]:
+              - /url: https://jenniferdoleac.com/cv/
+          - listitem [ref=f6e16]:
+            - link "Scholarly Research" [ref=f6e17] [cursor=pointer]:
+              - /url: https://jenniferdoleac.com/research/
+          - listitem [ref=f6e18]:
+            - link "Other Writing" [ref=f6e19] [cursor=pointer]:
+              - /url: https://jenniferdoleac.com/other-writing/
+          - listitem [ref=f6e20]:
+            - link "Media Coverage" [ref=f6e21] [cursor=pointer]:
+              - /url: https://jenniferdoleac.com/media-coverage/
+          - listitem [ref=f6e22]:
+            - link "Resources" [ref=f6e23] [cursor=pointer]:
+              - /url: https://jenniferdoleac.com/resources/
+          - listitem [ref=f6e24]:
+            - link "Online Seminars" [ref=f6e25] [cursor=pointer]:
+              - /url: https://jenniferdoleac.com/online-seminars/
+  - main [ref=f6e27]:
+    - article [ref=f6e29]:
+      - heading "Home" [level=1] [ref=f6e30]
+      - figure [ref=f6e31]:
+        - link [ref=f6e32] [cursor=pointer]:
+          - /url: https://jenniferdoleac.com/wp-content/uploads/2025/06/Jennifer-6-1.jpg
+      - generic [ref=f6e33]:
+        - paragraph [ref=f6e34]:
+          - text: Jennifer Doleac is the Executive Vice President of Criminal Justice at
+          - link "Arnold Ventures" [ref=f6e35] [cursor=pointer]:
+            - /url: https://www.arnoldventures.org/
+          - text: . She studies the economics of crime and discrimination.
+        - paragraph [ref=f6e36]:
+          - text: Her book,
+          - emphasis [ref=f6e37]:
+            - 'link "The Science of Second Chances: A Revolution in Criminal Justice" [ref=f6e38] [cursor=pointer]':
+              - /url: https://us.macmillan.com/books/9781250886286/thescienceofsecondchances/
+          - text: is available in book stores now. Check out some
+          - link "reviews and interviews here" [ref=f6e39] [cursor=pointer]:
+            - /url: https://jenniferdoleac.com/media-coverage/
+          - text: .
+        - figure [ref=f6e40]:
+          - link [ref=f6e41] [cursor=pointer]:
+            - /url: https://us.macmillan.com/books/9781250886286/thescienceofsecondchances/
+      - heading "Activities:" [level=2] [ref=f6e42]
+      - paragraph [ref=f6e43]:
+        - link "Virtual Crime Economics (ViCE) seminar" [ref=f6e44] [cursor=pointer]:
+          - /url: https://jenniferdoleac.com/vice-seminar/
+      - paragraph [ref=f6e45]:
+        - link "Probable Causation" [ref=f6e46] [cursor=pointer]:
+          - /url: https://www.probablecausation.com/
+        - text: podcast
+      - paragraph [ref=f6e47]:
+        - link "Substack newsletter" [ref=f6e48] [cursor=pointer]:
+          - /url: https://probablecausation.substack.com
+      - paragraph [ref=f6e49]:
+        - link "Criminal Justice Expert Panel" [ref=f6e50] [cursor=pointer]:
+          - /url: https://cjexpertpanel.org/
+      - heading "Contact information" [level=3] [ref=f6e52]
+      - paragraph [ref=f6e53]:
+        - strong [ref=f6e54]: "Email:"
+        - text: jdoleac@probablecausation.com
+      - paragraph [ref=f6e55]:
+        - strong [ref=f6e56]: "Twitter:"
+        - link "@jenniferdoleac" [ref=f6e57] [cursor=pointer]:
+          - /url: https://twitter.com/jenniferdoleac
+      - paragraph [ref=f6e58]:
+        - strong [ref=f6e59]: "Linkedin:"
+        - link "www.linkedin.com/in/jdoleac" [ref=f6e60] [cursor=pointer]:
+          - /url: http://www.linkedin.com/in/jdoleac
+      - paragraph
+      - paragraph
+      - paragraph
+      - paragraph
+  - contentinfo [ref=f6e62]:
+    - generic [ref=f6e64]:
+      - paragraph [ref=f6e65]:
+        - text: © 2026
+        - link "Jennifer Doleac" [ref=f6e66] [cursor=pointer]:
+          - /url: https://jenniferdoleac.com/
+        - text: •
+        - link "Crawford Theme" [ref=f6e67] [cursor=pointer]:
+          - /url: http://www.wpmultiverse.com/themes/crawford/
+      - navigation

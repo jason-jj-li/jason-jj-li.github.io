@@ -1,0 +1,207 @@
+- generic [active] [ref=e1]:
+  - banner:
+    - navigation [ref=e2]:
+      - list [ref=e5]:
+        - listitem [ref=e6]:
+          - link "about (current)" [ref=e7] [cursor=pointer]:
+            - /url: /al-folio/
+            - text: about
+            - generic [ref=e8]: (current)
+        - listitem [ref=e9]:
+          - link "blog" [ref=e10] [cursor=pointer]:
+            - /url: /al-folio/blog/
+        - listitem [ref=e11]:
+          - link "publications" [ref=e12] [cursor=pointer]:
+            - /url: /al-folio/publications/
+        - listitem [ref=e13]:
+          - link "projects" [ref=e14] [cursor=pointer]:
+            - /url: /al-folio/projects/
+        - listitem [ref=e15]:
+          - link "repositories" [ref=e16] [cursor=pointer]:
+            - /url: /al-folio/repositories/
+        - listitem [ref=e17]:
+          - link "CV" [ref=e18] [cursor=pointer]:
+            - /url: /al-folio/cv/
+        - listitem [ref=e19]:
+          - link "teaching" [ref=e20] [cursor=pointer]:
+            - /url: /al-folio/teaching/
+        - listitem [ref=e21]:
+          - link "people" [ref=e22] [cursor=pointer]:
+            - /url: /al-folio/people/
+        - listitem [ref=e23]:
+          - button "submenus" [ref=e24] [cursor=pointer]
+        - listitem [ref=e25]:
+          - button "Open search" [ref=e26] [cursor=pointer]:
+            - generic [ref=e27]: ⌘ k
+        - listitem [ref=e29]:
+          - button "Change color theme" [ref=e30] [cursor=pointer]:
+            - generic [ref=e31]:  
+    - progressbar [ref=e32]
+  - main [ref=e33]:
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - heading "You R. Name" [level=1] [ref=e36]
+        - paragraph [ref=e37]:
+          - link "Affiliations" [ref=e38] [cursor=pointer]:
+            - /url: "#"
+          - text: . Address. Contacts. Motto. Etc.
+      - article [ref=e39]:
+        - generic [ref=e40]:
+          - figure [ref=e41]:
+            - img "prof_pic.jpg" [ref=e43]
+          - generic [ref=e44]:
+            - paragraph [ref=e45]: 555 your office number
+            - paragraph [ref=e46]: 123 your address street
+            - paragraph [ref=e47]: Your City, State 12345
+        - generic [ref=e48]:
+          - paragraph [ref=e49]:
+            - text: Write your biography here. Tell the world about yourself. Link to your favorite
+            - link "subreddit" [ref=e50] [cursor=pointer]:
+              - /url: https://www.reddit.com
+            - text: . You can put a picture in, too. The code is already in, just name your picture
+            - code [ref=e51]: prof_pic.jpg
+            - text: and put it in the
+            - code [ref=e52]: img/
+            - text: folder.
+          - paragraph [ref=e53]:
+            - text: Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing
+            - code [ref=e54]: profile
+            - text: property of the YAML header of your
+            - code [ref=e55]: _pages/about.md
+            - text: . Edit
+            - code [ref=e56]: _bibliography/papers.bib
+            - text: and Jekyll will render your
+            - link "publications page" [ref=e57] [cursor=pointer]:
+              - /url: /al-folio/publications/
+            - text: automatically.
+          - paragraph [ref=e58]:
+            - text: Link to your social media connections, too. This theme is set up to use
+            - link "Font Awesome icons" [ref=e59] [cursor=pointer]:
+              - /url: https://fontawesome.com/
+            - text: and
+            - link "Academicons" [ref=e60] [cursor=pointer]:
+              - /url: https://jpswalsh.github.io/academicons/
+            - text: ", like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them."
+        - heading [level=2] [ref=e61]:
+          - link "news" [ref=e62] [cursor=pointer]:
+            - /url: /al-folio/news/
+        - table [ref=e65]:
+          - rowgroup [ref=e66]:
+            - row [ref=e67]:
+              - rowheader "Jan 15, 2016" [ref=e68]
+              - cell [ref=e69]:
+                - text: A simple inline announcement with Markdown emoji!
+                - img ":sparkles:" [ref=e70]
+                - img ":smile:" [ref=e71]
+            - row [ref=e72]:
+              - rowheader "Nov 07, 2015" [ref=e73]
+              - cell [ref=e74]:
+                - link "A long announcement with details" [ref=e75] [cursor=pointer]:
+                  - /url: /al-folio/news/announcement_2/
+            - row [ref=e76]:
+              - rowheader "Oct 22, 2015" [ref=e77]
+              - cell "A simple inline announcement." [ref=e78]
+        - heading [level=2] [ref=e79]:
+          - link "latest posts" [ref=e80] [cursor=pointer]:
+            - /url: /al-folio/blog/
+        - table [ref=e83]:
+          - rowgroup [ref=e84]:
+            - row [ref=e85]:
+              - rowheader "Apr 28, 2025" [ref=e86]
+              - cell [ref=e87]:
+                - link "a post with marimo snippets" [ref=e88] [cursor=pointer]:
+                  - /url: /al-folio/blog/2025/marimo/
+            - row [ref=e89]:
+              - rowheader "Mar 26, 2025" [ref=e90]
+              - cell [ref=e91]:
+                - link "a post with plotly.js" [ref=e92] [cursor=pointer]:
+                  - /url: /al-folio/blog/2025/plotly/
+            - row [ref=e93]:
+              - rowheader "Dec 04, 2024" [ref=e94]
+              - cell [ref=e95]:
+                - link "a post with image galleries" [ref=e96] [cursor=pointer]:
+                  - /url: /al-folio/blog/2024/photo-gallery/
+        - heading [level=2] [ref=e97]:
+          - link "selected publications" [ref=e98] [cursor=pointer]:
+            - /url: /al-folio/publications/
+        - list [ref=e100]:
+          - listitem [ref=e101]:
+            - generic [ref=e102]:
+              - link "PhysRev" [ref=e105] [cursor=pointer]:
+                - /url: https://journals.aps.org/
+              - generic [ref=e106]:
+                - generic [ref=e107]: Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?
+                - generic [ref=e108]:
+                  - emphasis [ref=e109]:
+                    - text: A. Einstein
+                    - superscript [ref=e110]: "*†"
+                  - text: ","
+                  - link [ref=e111] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Boris_Podolsky
+                    - text: B. Podolsky
+                    - superscript [ref=e112]: "*"
+                  - text: ", and"
+                  - link [ref=e113] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Nathan_Rosen
+                    - text: N. Rosen
+                    - superscript [ref=e114]: "*"
+                - generic [ref=e116]:
+                  - emphasis [ref=e117]: Phys. Rev.
+                  - text: ", New Jersey."
+                  - emphasis [ref=e118]: More Information
+                  - text: can be
+                  - link "found here" [ref=e119] [cursor=pointer]:
+                    - /url: https://github.com/alshedivat/al-folio/
+                  - text: ", May 1935"
+                - generic [ref=e120]:
+                  - button "Abs" [ref=e121]
+                  - button "DOI" [ref=e122] [cursor=pointer]
+                  - button "HTML" [ref=e123] [cursor=pointer]
+                  - button "PDF" [ref=e124] [cursor=pointer]
+                  - button "Video" [ref=e125] [cursor=pointer]
+                - generic [ref=e126]:
+                  - link [ref=e128] [cursor=pointer]:
+                    - /url: https://www.altmetric.com/details.php?domain=alshedivat.github.io&citation_id=248277
+                    - img "Article has an altmetric score of 901" [ref=e129]
+                  - link "14k total citations on Dimensions." [ref=e131] [cursor=pointer]:
+                    - /url: https://badge.dimensions.ai/details/doi/10.1103/PhysRev.47.777?domain=https://alshedivat.github.io
+                    - generic [ref=e133]:
+                      - generic [ref=e154]: 14k
+                      - img "14k total citations on Dimensions." [ref=e155]
+                  - button "Google Scholar link" [ref=e156] [cursor=pointer]:
+                    - img "28395 Google Scholar citations" [ref=e157]
+                  - button "Inspirehep link" [ref=e158] [cursor=pointer]:
+                    - img "8.8K InspireHEP citations" [ref=e159]
+                - paragraph [ref=e161]: In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.
+        - generic [ref=e162]:
+          - generic [ref=e163]:
+            - link "" [ref=e164] [cursor=pointer]:
+              - /url: /al-folio/assets/pdf/example_pdf.pdf
+            - link "Email" [ref=e166] [cursor=pointer]:
+              - /url: mailto:you@example.com
+            - link "" [ref=e168] [cursor=pointer]:
+              - /url: https://inspirehep.net/authors/1010907
+            - link "Rss icon" [ref=e170] [cursor=pointer]:
+              - /url: /al-folio/feed.xml
+            - link "" [ref=e172] [cursor=pointer]:
+              - /url: https://scholar.google.com/citations?user=qc6CJjYAAAAJ
+            - link [ref=e174] [cursor=pointer]:
+              - /url: https://www.alberteinstein.com/
+              - img "Custom Social" [ref=e175]
+          - generic [ref=e176]: You can even add a little note about which of these is the best way to reach you.
+  - contentinfo [ref=e177]:
+    - generic [ref=e178]:
+      - text: © Copyright 2026 You R. Name. Powered by
+      - link "Jekyll" [ref=e179] [cursor=pointer]:
+        - /url: https://jekyllrb.com/
+      - text: with
+      - link "al-folio" [ref=e180] [cursor=pointer]:
+        - /url: https://github.com/alshedivat/al-folio
+      - text: theme. Hosted by
+      - link "GitHub Pages" [ref=e181] [cursor=pointer]:
+        - /url: https://pages.github.com/
+      - text: . Photos from
+      - link "Unsplash" [ref=e182] [cursor=pointer]:
+        - /url: https://unsplash.com
+      - text: .
+  - generic [ref=e183] [cursor=pointer]

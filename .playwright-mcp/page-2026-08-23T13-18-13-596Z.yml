@@ -1,0 +1,18 @@
+- generic [ref=f10e3]:
+  - navigation [ref=f10e4]:
+    - generic [ref=f10e5]:
+      - link "JL" [ref=f10e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f10e8]:
+        - link "主页" [ref=f10e9] [cursor=pointer]:
+          - /url: /
+        - link "研究" [ref=f10e10] [cursor=pointer]:
+          - /url: /research
+        - link "工具" [ref=f10e11] [cursor=pointer]:
+          - /url: /tools
+        - link "教学" [ref=f10e12] [cursor=pointer]:
+          - /url: /teaching
+        - link "博客" [ref=f10e13] [cursor=pointer]:
+          - /url: /blog
+      - button "Switch to English" [ref=f10e14] [cursor=pointer]
+  - paragraph [ref=f10e22]: Loading...

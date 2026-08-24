@@ -36,7 +36,7 @@ export default function Home({ lang }) {
   return (
     <div className="min-h-screen relative overflow-hidden">
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute inset-0 bg-aurora opacity-75 mix-blend-screen"></div>
+        <div className="absolute inset-0 bg-aurora opacity-50 mix-blend-screen"></div>
         <div className="absolute inset-0 grid-overlay"></div>
         <div className="absolute -top-10 -left-10 w-[320px] h-[320px] bg-cyan-200/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-[-120px] right-[-80px] w-[380px] h-[380px] bg-indigo-500/20 rounded-full blur-3xl"></div>

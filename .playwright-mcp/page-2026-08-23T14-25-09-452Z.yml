@@ -1,0 +1,236 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e2]:
+    - link "Skip to content" [ref=f3e3] [cursor=pointer]:
+      - /url: "#primary"
+    - banner [ref=f3e4]:
+      - generic [ref=f3e5]:
+        - generic [ref=f3e6]:
+          - link [ref=f3e7] [cursor=pointer]:
+            - /url: https://www.demog.berkeley.edu/
+            - img "Department of Demography" [ref=f3e8]
+          - paragraph [ref=f3e9]:
+            - link "Department of Demography" [ref=f3e10] [cursor=pointer]:
+              - /url: https://www.demog.berkeley.edu/
+          - paragraph [ref=f3e11]: University of California Berkeley
+        - navigation [ref=f3e12]:
+          - list [ref=f3e14]:
+            - listitem [ref=f3e15]:
+              - link "About" [ref=f3e16] [cursor=pointer]:
+                - /url: https://www.demog.berkeley.edu/about/
+              - list [ref=f3e17]:
+                - listitem [ref=f3e18]:
+                  - link "About Berkeley Demography" [ref=f3e19] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/about/
+                - listitem [ref=f3e20]:
+                  - link "Donate" [ref=f3e21] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/giving-to-berkeley-demography/
+                - listitem [ref=f3e22]:
+                  - link "Bashir Ahmed Graduate Fellowship" [ref=f3e23] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/about/ahmed-fellowship/
+                - listitem [ref=f3e24]:
+                  - link "Contact Us" [ref=f3e25] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/contact/
+            - listitem [ref=f3e26]:
+              - link "People" [ref=f3e27] [cursor=pointer]:
+                - /url: https://www.demog.berkeley.edu/faculty/
+              - list [ref=f3e28]:
+                - listitem [ref=f3e29]:
+                  - link "Faculty" [ref=f3e30] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/faculty/
+                - listitem [ref=f3e31]:
+                  - link "Staff" [ref=f3e32] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/staff/
+                - listitem [ref=f3e33]:
+                  - link "Affiliated Researchers and Lecturers" [ref=f3e34] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/affiliated-researchers-and-lecturers/
+                - listitem [ref=f3e35]:
+                  - link "Graduate Students" [ref=f3e36] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/grad-students/
+                - listitem [ref=f3e37]:
+                  - link "Post Doctoral Scholars" [ref=f3e38] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/post-doctoral-scholars/
+                - listitem [ref=f3e39]:
+                  - link "Students & Alumni" [ref=f3e40] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/alumni/
+            - listitem [ref=f3e41]:
+              - link "Program" [ref=f3e42] [cursor=pointer]:
+                - /url: https://www.demog.berkeley.edu/program/
+              - list [ref=f3e43]:
+                - listitem [ref=f3e44]:
+                  - link "Overview" [ref=f3e45] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/program/
+                - listitem [ref=f3e46]:
+                  - link "Graduate Program" [ref=f3e47] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/graduate-program/
+                - listitem [ref=f3e48]:
+                  - link "Graduate Admission Information" [ref=f3e49] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/graduate-admission-information/
+                - listitem [ref=f3e50]:
+                  - link "Undergraduate Minor" [ref=f3e51] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/undergraduate-minor/
+                - listitem [ref=f3e52]:
+                  - link "Courses" [ref=f3e53] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/courses/
+                - listitem [ref=f3e54]:
+                  - link "Faculty Office Hours" [ref=f3e55] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/fall-2024-office-hours/
+                - listitem [ref=f3e56]:
+                  - link "The Demography Computing Lab" [ref=f3e57] [cursor=pointer]:
+                    - /url: https://pages.github.berkeley.edu/demography/computing-lab/
+                    - text: The Demography Computing Lab
+                    - generic [ref=f3e58]: 
+            - listitem [ref=f3e59]:
+              - link "Research" [ref=f3e60] [cursor=pointer]:
+                - /url: https://www.demog.berkeley.edu/research-projects/
+              - list [ref=f3e61]:
+                - listitem [ref=f3e62]:
+                  - link "Research Projects" [ref=f3e63] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/research-projects/
+                - listitem [ref=f3e64]:
+                  - link "Research Centers" [ref=f3e65] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/research-centers/
+                  - list [ref=f3e66]:
+                    - listitem [ref=f3e67]:
+                      - link "Population Sciences" [ref=f3e68] [cursor=pointer]:
+                        - /url: https://populationsciences.berkeley.edu/
+                        - text: Population Sciences
+                        - generic [ref=f3e69]: 
+                    - listitem [ref=f3e70]:
+                      - link "Berkeley Interdisciplinary Migration Initiative" [ref=f3e71] [cursor=pointer]:
+                        - /url: https://bimi.berkeley.edu/
+                        - text: Berkeley Interdisciplinary Migration Initiative
+                        - generic [ref=f3e72]: 
+                    - listitem [ref=f3e73]:
+                      - link "Berkeley Opportunity Lab" [ref=f3e74] [cursor=pointer]:
+                        - /url: http://www.olab.berkeley.edu/
+                        - text: Berkeley Opportunity Lab
+                        - generic [ref=f3e75]: 
+                    - listitem [ref=f3e76]:
+                      - link "Berkeley Population Center" [ref=f3e77] [cursor=pointer]:
+                        - /url: https://populationsciences.berkeley.edu/population-center/
+                        - text: Berkeley Population Center
+                        - generic [ref=f3e78]: 
+                    - listitem [ref=f3e79]:
+                      - link "Bixby Center" [ref=f3e80] [cursor=pointer]:
+                        - /url: http://bixby.berkeley.edu/
+                        - text: Bixby Center
+                        - generic [ref=f3e81]: 
+                    - listitem [ref=f3e82]:
+                      - link "California Policy Lab" [ref=f3e83] [cursor=pointer]:
+                        - /url: https://www.capolicylab.org/
+                        - text: California Policy Lab
+                        - generic [ref=f3e84]: 
+                    - listitem [ref=f3e85]:
+                      - link "CEDA" [ref=f3e86] [cursor=pointer]:
+                        - /url: http://www.populationsciences.berkeley.edu/ceda
+                        - text: CEDA
+                        - generic [ref=f3e87]: 
+                    - listitem [ref=f3e88]:
+                      - link "Human Mortality Database" [ref=f3e89] [cursor=pointer]:
+                        - /url: http://www.mortality.org/
+                        - text: Human Mortality Database
+                        - generic [ref=f3e90]: 
+                - listitem [ref=f3e91]:
+                  - link "Research Classics" [ref=f3e92] [cursor=pointer]:
+                    - /url: https://www.demog.berkeley.edu/research-classics/
+            - listitem [ref=f3e93]:
+              - link "Events Calendar" [ref=f3e94] [cursor=pointer]:
+                - /url: https://events.berkeley.edu/index.php/calendar/sn/popsci.html
+                - text: Events Calendar
+                - generic [ref=f3e95]: 
+    - main [ref=f3e96]:
+      - article [ref=f3e97]:
+        - generic [ref=f3e98]:
+          - heading "Courses" [level=1] [ref=f3e101]
+          - generic [ref=f3e102]:
+            - link "Current Courses" [ref=f3e104] [cursor=pointer]:
+              - /url: https://classes.berkeley.edu/search/class/?f%5B0%5D=im_field_subject_area%3A141
+              - text: 
+            - link "Demography Curriculum" [ref=f3e107] [cursor=pointer]:
+              - /url: https://guide.berkeley.edu/courses/demog/
+              - text: 
+          - heading "Sample Courses" [level=1] [ref=f3e109]
+          - generic [ref=f3e110]:
+            - list [ref=f3e113]:
+              - listitem [ref=f3e114]:
+                - link "5 Fundamentals of Population Science" [ref=f3e115] [cursor=pointer]:
+                  - /url: "#5"
+                  - generic [ref=f3e116]: "5"
+                  - text: Fundamentals of Population Science
+              - listitem [ref=f3e117]:
+                - link "24 Freshman Seminars (Various Topics)" [ref=f3e118] [cursor=pointer]:
+                  - /url: "#24"
+                  - generic [ref=f3e119]: "24"
+                  - text: Freshman Seminars (Various Topics)
+              - listitem [ref=f3e120]:
+                - link "110 Introduction to Population Analysis" [ref=f3e121] [cursor=pointer]:
+                  - /url: "#110"
+                  - generic [ref=f3e122]: "110"
+                  - text: Introduction to Population Analysis
+              - listitem [ref=f3e123]:
+                - link "C126 Sex, Death, and Data" [ref=f3e124] [cursor=pointer]:
+                  - /url: "#C126"
+                  - generic [ref=f3e125]: C126
+                  - text: Sex, Death, and Data
+              - listitem [ref=f3e126]:
+                - link "C175 Economic Demography" [ref=f3e127] [cursor=pointer]:
+                  - /url: "#C175"
+                  - generic [ref=f3e128]: C175
+                  - text: Economic Demography
+              - listitem [ref=f3e129]:
+                - link "180 Social Networks" [ref=f3e130] [cursor=pointer]:
+                  - /url: "#180"
+                  - generic [ref=f3e131]: "180"
+                  - text: Social Networks
+              - listitem [ref=f3e132]:
+                - 'link "210 Demographic Methods: Rates and Structures" [ref=f3e133] [cursor=pointer]':
+                  - /url: "#210"
+                  - generic [ref=f3e134]: "210"
+                  - text: "Demographic Methods: Rates and Structures"
+              - listitem [ref=f3e135]:
+                - link "C280 Social Networks (graduate)" [ref=f3e136] [cursor=pointer]:
+                  - /url: "#C280"
+                  - generic [ref=f3e137]: C280
+                  - text: Social Networks (graduate)
+            - generic [ref=f3e140]:
+              - heading "DEMOG 5 Fundamentals of Population Science" [level=4] [ref=f3e141]:
+                - generic [ref=f3e142]: DEMOG 5
+                - text: Fundamentals of Population Science
+              - paragraph [ref=f3e143]: "This course provides an accessible introduction to the social science of demography. The course is organized around cases in which population issues raise policy or ethical dilemmas (example: China’s one child policy). Through these cases, students will learn how demographers use models and data to acquire knowledge about population. Throughout the course, students will also learn to read, interpret, evaluate, and produce tabular and graphical representations of population data."
+              - link "Sample Syllabus" [ref=f3e144] [cursor=pointer]:
+                - /url: https://www.demog.berkeley.edu/wp-content/uploads/2022/06/5_syllabus_2018.pdf
+    - contentinfo [ref=f3e145]:
+      - generic [ref=f3e146]:
+        - figure [ref=f3e152]:
+          - link [ref=f3e153] [cursor=pointer]:
+            - /url: https://www.demog.berkeley.edu/
+            - img "UNIVERSITY OF CALIFORNIA, BERKELEY" [ref=f3e154]
+        - generic [ref=f3e158]:
+          - paragraph [ref=f3e161]:
+            - text: Copyright 2026 UC Regents.
+            - link "University of California, Berkeley" [ref=f3e162] [cursor=pointer]:
+              - /url: https://www.berkeley.edu/
+              - text: University of California, Berkeley
+              - generic [ref=f3e163]: 
+            - text: "|"
+            - link "College of Letters and Sciences" [ref=f3e164] [cursor=pointer]:
+              - /url: https://ls.berkeley.edu/
+              - text: College of Letters and Sciences
+              - generic [ref=f3e165]: 
+          - generic [ref=f3e167]:
+            - paragraph [ref=f3e168]:
+              - text: "Department of Demography | University of California 310 Social Sciences BuildingBerkeley CA 94720-2120 Email:"
+              - link "dmurphy@berkeley.edu" [ref=f3e169] [cursor=pointer]:
+                - /url: mailto:dmurphy@berkeley.edu
+            - paragraph [ref=f3e170]:
+              - link "UCB Privacy Statement" [ref=f3e171] [cursor=pointer]:
+                - /url: https://www.berkeley.edu/privacy-policy/
+                - text: UCB Privacy Statement
+                - generic [ref=f3e172]: 
+              - text: "|"
+              - link "Web Accessibility Policy" [ref=f3e173] [cursor=pointer]:
+                - /url: https://dac.berkeley.edu/web-accessibility/
+                - text: Web Accessibility Policy
+                - generic [ref=f3e174]: 
+              - text: "| Disclaimer"
+  - text:           

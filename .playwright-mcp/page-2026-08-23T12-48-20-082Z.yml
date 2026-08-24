@@ -1,0 +1,20 @@
+- generic [ref=f4e3]:
+  - navigation [ref=f4e4]:
+    - generic [ref=f4e5]:
+      - link "JL 李佳佳" [ref=f4e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f4e7]: JL
+        - generic [ref=f4e8]: 李佳佳
+      - generic [ref=f4e9]:
+        - link "主页" [ref=f4e10] [cursor=pointer]:
+          - /url: /
+        - link "研究" [ref=f4e11] [cursor=pointer]:
+          - /url: /research
+        - link "工具" [ref=f4e12] [cursor=pointer]:
+          - /url: /tools
+        - link "教学" [ref=f4e13] [cursor=pointer]:
+          - /url: /teaching
+        - link "博客" [ref=f4e14] [cursor=pointer]:
+          - /url: /blog
+      - button "Switch to English" [ref=f4e15] [cursor=pointer]
+  - paragraph [ref=f4e23]: Loading...

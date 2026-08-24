@@ -1,0 +1,4 @@
+[    1752ms] [LOG] JQMIGRATE: Migrate is installed, version 3.4.1 @ https://jenniferdoleac.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1:1
+[    1754ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://fonts.gstatic.com/s/oswald/v57/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiZSSUhiCXAA.woff2 @ https://jenniferdoleac.com/:0
+[    1754ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://fonts.gstatic.com/s/domine/v25/L0x8DFMnlVwD4h3hu_qnZypEiw.woff2 @ https://jenniferdoleac.com/:0
+[    2827ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://jenniferdoleac.com/favicon.ico:0

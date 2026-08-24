@@ -1,0 +1,31 @@
+- main [ref=f5e2]:
+  - generic [ref=f5e4]:
+    - img "profile image" [ref=f5e5]
+    - heading "Pascal Michaillat" [level=1] [ref=f5e6]
+    - generic [ref=f5e7]: I am a professor of economics at the University of California, Santa Cruz. I work primarily on economic slack—which includes unemployed workers, unsold goods and services, and idle capacity. I research why slack prevails in almost all markets, why it fluctuates over the business cycle, and how macroeconomic policies should respond to such fluctuations.
+    - generic [ref=f5e8]:
+      - link "CV" [ref=f5e9] [cursor=pointer]:
+        - /url: /cv.pdf
+      - link "Email" [ref=f5e13] [cursor=pointer]:
+        - /url: mailto:pascal.michaillat@gmail.com
+      - link "Location" [ref=f5e17] [cursor=pointer]:
+        - /url: /location/
+      - link "Office Hours" [ref=f5e20] [cursor=pointer]:
+        - /url: /officehours/
+      - link "Google Scholar" [ref=f5e26] [cursor=pointer]:
+        - /url: https://scholar.google.com/citations?user=cL23w-4AAAAJ
+      - link "YouTube" [ref=f5e29] [cursor=pointer]:
+        - /url: https://www.youtube.com/@pmichaillat
+      - link "GitHub" [ref=f5e33] [cursor=pointer]:
+        - /url: https://github.com/pmichaillat
+    - generic [ref=f5e36]:
+      - link "Book" [ref=f5e37] [cursor=pointer]:
+        - /url: /18/
+      - link "Dashboard" [ref=f5e38] [cursor=pointer]:
+        - /url: /dashboard/
+      - link "Papers" [ref=f5e39] [cursor=pointer]:
+        - /url: /papers/
+      - link "Courses" [ref=f5e40] [cursor=pointer]:
+        - /url: /courses/
+      - link "Design" [ref=f5e41] [cursor=pointer]:
+        - /url: /design/

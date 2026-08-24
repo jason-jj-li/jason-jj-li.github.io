@@ -1,0 +1,75 @@
+- generic [ref=f6e3]:
+  - navigation [ref=f6e4]:
+    - generic [ref=f6e5]:
+      - link "JL 李佳佳" [ref=f6e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f6e7]: JL
+        - generic [ref=f6e8]: 李佳佳
+      - generic [ref=f6e9]:
+        - link "主页" [ref=f6e10] [cursor=pointer]:
+          - /url: /
+        - link "研究" [ref=f6e11] [cursor=pointer]:
+          - /url: /research
+        - link "工具" [ref=f6e12] [cursor=pointer]:
+          - /url: /tools
+        - link "教学" [ref=f6e13] [cursor=pointer]:
+          - /url: /teaching
+        - link "博客" [ref=f6e14] [cursor=pointer]:
+          - /url: /blog
+      - button "Switch to English" [ref=f6e15] [cursor=pointer]
+  - generic [ref=f6e25]:
+    - link "返回所有系列" [ref=f6e27] [cursor=pointer]:
+      - /url: /blog
+    - generic [ref=f6e34]:
+      - heading "Python Statistical Analysis in Practice" [level=1] [ref=f6e35]
+      - paragraph [ref=f6e36]: 4 篇文章
+    - paragraph [ref=f6e38]: Hands-on statistical analysis with Python using simulated data — from data generation to method validation, with full code, visualizations, and sensitivity analysis.
+    - generic [ref=f6e39]:
+      - 'link "1 30 2026年3月 Article Jupyter 笔记 Environment Setup: Installing Python and Required Packages Environment Setup: Installing Python and Required Packages Before the first lecture, every computer in the room needs to run the same code and produce the same results. This session gets you ready. What You''ll Do Install..." [ref=f6e40] [cursor=pointer]':
+        - /url: /blog/python-stats-00-environment-setup
+        - generic [ref=f6e41]: "1"
+        - generic [ref=f6e44]:
+          - generic [ref=f6e45]: "30"
+          - generic [ref=f6e46]: 2026年3月
+        - generic [ref=f6e47]:
+          - generic [ref=f6e48]:
+            - generic [ref=f6e49]: Article
+            - generic [ref=f6e50]: Jupyter 笔记
+          - 'heading "Environment Setup: Installing Python and Required Packages" [level=3] [ref=f6e53]'
+          - paragraph [ref=f6e54]: "Environment Setup: Installing Python and Required Packages Before the first lecture, every computer in the room needs to run the same code and produce the same results. This session gets you ready. What You'll Do Install..."
+      - 'link "2 30 2026年3月 Article Jupyter 笔记 Simulation Basics: The Foundation for Learning Statistics with Code Simulation Basics: The Foundation for Learning Statistics with Code This tutorial introduces the core idea behind this series: learning statistics by generating your own data, so you always know the \"true answer\" and can..." [ref=f6e60] [cursor=pointer]':
+        - /url: /blog/python-stats-01-simulation-basics
+        - generic [ref=f6e61]: "2"
+        - generic [ref=f6e64]:
+          - generic [ref=f6e65]: "30"
+          - generic [ref=f6e66]: 2026年3月
+        - generic [ref=f6e67]:
+          - generic [ref=f6e68]:
+            - generic [ref=f6e69]: Article
+            - generic [ref=f6e70]: Jupyter 笔记
+          - 'heading "Simulation Basics: The Foundation for Learning Statistics with Code" [level=3] [ref=f6e73]'
+          - paragraph [ref=f6e74]: "Simulation Basics: The Foundation for Learning Statistics with Code This tutorial introduces the core idea behind this series: learning statistics by generating your own data, so you always know the \"true answer\" and can..."
+      - 'link "3 30 2026年3月 Article Jupyter 笔记 Descriptive Statistics & EDA: Know Your Data Before Modelling Descriptive Statistics & EDA: Know Your Data Before Modelling Before fitting any model, you must look at your data. This lecture builds a systematic toolkit for Exploratory Data Analysis (EDA). What You''ll Learn Central ..." [ref=f6e80] [cursor=pointer]':
+        - /url: /blog/python-stats-02-descriptive-statistics
+        - generic [ref=f6e81]: "3"
+        - generic [ref=f6e84]:
+          - generic [ref=f6e85]: "30"
+          - generic [ref=f6e86]: 2026年3月
+        - generic [ref=f6e87]:
+          - generic [ref=f6e88]:
+            - generic [ref=f6e89]: Article
+            - generic [ref=f6e90]: Jupyter 笔记
+          - 'heading "Descriptive Statistics & EDA: Know Your Data Before Modelling" [level=3] [ref=f6e93]'
+          - paragraph [ref=f6e94]: "Descriptive Statistics & EDA: Know Your Data Before Modelling Before fitting any model, you must look at your data. This lecture builds a systematic toolkit for Exploratory Data Analysis (EDA). What You'll Learn Central ..."
+      - 'link "4 30 2026年3月 Article Jupyter 笔记 Probability Distributions: PDF, CDF, and Choosing the Right Distribution" [ref=f6e100] [cursor=pointer]':
+        - /url: /blog/python-stats-03-probability-distributions
+        - generic [ref=f6e101]: "4"
+        - generic [ref=f6e104]:
+          - generic [ref=f6e105]: "30"
+          - generic [ref=f6e106]: 2026年3月
+        - generic [ref=f6e107]:
+          - generic [ref=f6e108]:
+            - generic [ref=f6e109]: Article
+            - generic [ref=f6e110]: Jupyter 笔记
+          - 'heading "Probability Distributions: PDF, CDF, and Choosing the Right Distribution" [level=3] [ref=f6e113]'
+          - paragraph
