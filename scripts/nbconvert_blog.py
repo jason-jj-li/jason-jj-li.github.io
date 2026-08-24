@@ -26,6 +26,7 @@ def main():
           "-m",
           "jupyter",
           "nbconvert",
+          "--ExtractOutputPreprocessor.enabled=False",
           "--to",
           "html",
           "--execute",
