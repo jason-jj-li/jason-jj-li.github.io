@@ -8,7 +8,7 @@ series_desc_zh: "使用 Python 进行人口统计分析的完整教程，从基�
 series_desc_en: "Complete tutorials on demographic analysis using Python, from basics to advanced techniques"
 title_zh: "Why the Crude Death Rate Lies: Age Composition and Simpson's Paradox"
 title_en: "Why the Crude Death Rate Lies: Age Composition and Simpson's Paradox"
-date: 2026-08-24
+date: 2026-08-30
 tags: [demographics, python, mortality, simpsons-paradox, standardization]
 source: jupyter
 notebook: demographic-m1l1b-crude-death-rate.ipynb
