@@ -8,7 +8,7 @@ series_desc_zh: "使用 Python 进行人口统计分析的完整教程，从基�
 series_desc_en: "Complete tutorials on demographic analysis using Python, from basics to advanced techniques"
 title_zh: "Age-Specific Death Rates and the Mortality Indicator Zoo"
 title_en: "Age-Specific Death Rates and the Mortality Indicator Zoo"
-date: 2026-08-30
+date: 2026-09-05
 tags: [demographics, python, mortality, asdr, infant-mortality]
 source: jupyter
 notebook: demographic-m1l1c-mortality-indicators.ipynb
