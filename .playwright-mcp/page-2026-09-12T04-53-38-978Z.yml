@@ -1,0 +1,226 @@
+- generic [active] [ref=f1e1]:
+  - navigation [ref=f1e5]:
+    - button [ref=f1e6] [cursor=pointer]
+    - list [ref=f1e8]:
+      - listitem [ref=f1e9]:
+        - link "Your Name / Site Title":
+          - /url: https://academicpages.github.io/
+      - listitem [ref=f1e10]:
+        - link "Publications" [ref=f1e11] [cursor=pointer]:
+          - /url: https://academicpages.github.io/publications/
+      - listitem [ref=f1e12]:
+        - link "Talks" [ref=f1e13] [cursor=pointer]:
+          - /url: https://academicpages.github.io/talks/
+      - listitem [ref=f1e14]:
+        - link "Teaching" [ref=f1e15] [cursor=pointer]:
+          - /url: https://academicpages.github.io/teaching/
+      - listitem [ref=f1e16]:
+        - link "Portfolio" [ref=f1e17] [cursor=pointer]:
+          - /url: https://academicpages.github.io/portfolio/
+      - listitem [ref=f1e18]:
+        - link "Blog Posts" [ref=f1e19] [cursor=pointer]:
+          - /url: https://academicpages.github.io/year-archive/
+      - listitem [ref=f1e20]:
+        - button "" [ref=f1e21] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f1e22]: 
+  - main [ref=f1e23]:
+    - generic [ref=f1e25]:
+      - img "Your Sidebar Name" [ref=f1e27]
+      - generic [ref=f1e28]:
+        - heading "Your Sidebar Name" [level=3] [ref=f1e29]
+        - paragraph [ref=f1e30]: Short biography for the left-hand sidebar
+      - list [ref=f1e32]:
+        - listitem [ref=f1e33]:
+          - generic [aria-hidden] [ref=f1e34]: 
+          - text: Earth
+        - listitem [ref=f1e35]:
+          - generic [aria-hidden] [ref=f1e36]: 
+          - text: Red Brick University
+        - listitem [ref=f1e37]:
+          - link "Email" [ref=f1e38] [cursor=pointer]:
+            - /url: mailto:none@example.org
+            - generic [aria-hidden] [ref=f1e39]: 
+            - text: Email
+        - listitem [ref=f1e40]:
+          - link " Google Scholar" [ref=f1e41] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=PS_CX0AAAAAJ
+            - generic [ref=f1e42]: 
+            - text: Google Scholar
+        - listitem [ref=f1e43]:
+          - link " ORCID" [ref=f1e44] [cursor=pointer]:
+            - /url: https://orcid.org/yourorcidurl
+            - generic [ref=f1e45]: 
+            - text: ORCID
+        - listitem [ref=f1e46]:
+          - link " PubMed" [ref=f1e47] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow
+            - generic [ref=f1e48]: 
+            - text: PubMed
+        - listitem [ref=f1e49]:
+          - link "GitHub" [ref=f1e50] [cursor=pointer]:
+            - /url: https://github.com/academicpages
+            - generic [aria-hidden] [ref=f1e51]: 
+            - text: GitHub
+        - listitem [ref=f1e52]:
+          - link "Bluesky" [ref=f1e53] [cursor=pointer]:
+            - /url: https://bsky.app/profile/bsky.app
+            - generic [aria-hidden] [ref=f1e54]: 
+            - text: Bluesky
+    - article [ref=f1e55]:
+      - generic [ref=f1e56]:
+        - heading "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites" [level=1] [ref=f1e58]
+        - generic [ref=f1e59]:
+          - paragraph [ref=f1e60]:
+            - text: This is the front page of a website that is powered by the
+            - link "Academic Pages template" [ref=f1e61] [cursor=pointer]:
+              - /url: https://github.com/academicpages/academicpages.github.io
+            - text: and hosted on GitHub pages.
+            - link "GitHub pages" [ref=f1e62] [cursor=pointer]:
+              - /url: https://pages.github.com
+            - text: is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the
+            - link "Minimal Mistakes Jekyll Theme" [ref=f1e63] [cursor=pointer]:
+              - /url: https://mmistakes.github.io/minimal-mistakes/
+            - text: "created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!"
+          - paragraph [ref=f1e64]:
+            - text: You can fork
+            - link "this template" [ref=f1e65] [cursor=pointer]:
+              - /url: https://github.com/academicpages/academicpages.github.io
+            - text: right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+          - heading "A data-driven personal website" [level=1] [ref=f1e66]
+          - paragraph [ref=f1e67]:
+            - text: Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website’s content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the
+            - link "GitHub pages" [ref=f1e68] [cursor=pointer]:
+              - /url: https://pages.github.com/
+            - text: service creates static HTML pages based on these files, which are hosted on GitHub’s servers free of charge.
+          - paragraph [ref=f1e69]:
+            - text: Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart’s content without touching the content of your site. If you get to a point where you’ve broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as
+            - link "this one" [ref=f1e70] [cursor=pointer]:
+              - /url: https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb
+            - text: that analyzes metadata in pages about talks to display
+            - link "a map of every location you’ve given a talk" [ref=f1e71] [cursor=pointer]:
+              - /url: https://academicpages.github.io/talkmap.html
+            - text: .
+          - paragraph [ref=f1e72]: "For those users that need more advanced functionality, the template also supports the following popular tools:"
+          - list [ref=f1e73]:
+            - listitem [ref=f1e74]:
+              - link "MathJax" [ref=f1e75] [cursor=pointer]:
+                - /url: https://www.mathjax.org/
+              - text: for mathematical equations
+            - listitem [ref=f1e76]:
+              - link "Mermaid" [ref=f1e77] [cursor=pointer]:
+                - /url: https://mermaid.js.org/
+              - text: for diagraming
+            - listitem [ref=f1e78]:
+              - link "Plotly" [ref=f1e79] [cursor=pointer]:
+                - /url: https://plotly.com/javascript/
+              - text: for plotting
+          - heading "Getting started" [level=1] [ref=f1e80]
+          - list [ref=f1e81]:
+            - listitem [ref=f1e82]: Register a GitHub account if you don’t have one and confirm your e-mail (required!)
+            - listitem [ref=f1e83]:
+              - text: Fork
+              - link "this template" [ref=f1e84] [cursor=pointer]:
+                - /url: https://github.com/academicpages/academicpages.github.io
+              - text: by clicking the “Use this template” button in the top right.
+            - listitem [ref=f1e85]: Go to the repository’s settings (rightmost item in the tabs that start with “Code”, should be below “Unwatch”). Rename the repository “[your GitHub username].github.io”, which will also be your website’s URL.
+            - listitem [ref=f1e86]:
+              - text: Set site-wide configuration and create content & metadata (see below – also see
+              - link "this set of diffs" [ref=f1e87] [cursor=pointer]:
+                - /url: https://archive.is/3TPas
+              - text: showing what files were changed to set up
+              - link "an example site" [ref=f1e88] [cursor=pointer]:
+                - /url: https://getorg-testacct.github.io
+              - text: for a user with the username “getorg-testacct”)
+            - listitem [ref=f1e89]: Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
+            - listitem [ref=f1e90]: Check status by going to the repository settings, in the “GitHub pages” section
+          - heading "Site-wide configuration" [level=2] [ref=f1e91]
+          - paragraph [ref=f1e92]:
+            - text: The main configuration file for the site is in the base directory in
+            - link "_config.yml" [ref=f1e93] [cursor=pointer]:
+              - /url: https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml
+            - text: ", which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site’s github repository. The configuration file for the top menu is in"
+            - link "_data/navigation.yml" [ref=f1e94] [cursor=pointer]:
+              - /url: https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml
+            - text: . For example, if you don’t have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header.
+          - heading "Create content & metadata" [level=2] [ref=f1e95]
+          - paragraph [ref=f1e96]:
+            - text: For site content, there is one Markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a Markdown file in the
+            - link "_talks directory" [ref=f1e97] [cursor=pointer]:
+              - /url: https://github.com/academicpages/academicpages.github.io/tree/master/_talks
+            - text: . At the top of each Markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the
+            - link "Talks page" [ref=f1e98] [cursor=pointer]:
+              - /url: https://academicpages.github.io/talks
+            - text: ", each"
+            - link "individual page" [ref=f1e99] [cursor=pointer]:
+              - /url: https://academicpages.github.io/talks/2012-03-01-talk-1
+            - text: for specific talks, the talks section for the
+            - link "CV page" [ref=f1e100] [cursor=pointer]:
+              - /url: https://academicpages.github.io/cv
+            - text: ", and the"
+            - link "map of places you’ve given a talk" [ref=f1e101] [cursor=pointer]:
+              - /url: https://academicpages.github.io/talkmap.html
+            - text: (if you run this
+            - link "python file" [ref=f1e102] [cursor=pointer]:
+              - /url: https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py
+            - text: or
+            - link "Jupyter notebook" [ref=f1e103] [cursor=pointer]:
+              - /url: https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb
+            - text: ", which creates the HTML for the map based on the contents of the _talks directory)."
+          - paragraph [ref=f1e104]:
+            - strong [ref=f1e105]: Markdown generator
+          - paragraph [ref=f1e106]:
+            - text: The repository includes
+            - link "a set of Jupyter notebooks" [ref=f1e107] [cursor=pointer]:
+              - /url: https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
+            - text: that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
+          - heading "How to edit your site’s GitHub repository" [level=2] [ref=f1e108]
+          - paragraph [ref=f1e109]:
+            - text: Many people use a git client to create files on their local computer and then push them to GitHub’s servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like
+            - link "this one" [ref=f1e110] [cursor=pointer]:
+              - /url: https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md
+            - text: and click the pencil icon in the top right of the content preview (to the right of the “Raw | Blame | History” buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the “Create new file” or “Upload files” buttons.
+          - paragraph [ref=f1e111]:
+            - text: "Example: editing a Markdown file for a talk"
+            - img "Editing a Markdown file for a talk" [ref=f1e112]
+          - heading "For more info" [level=2] [ref=f1e113]
+          - paragraph [ref=f1e114]:
+            - text: More info about configuring Academic Pages can be found in
+            - link "the guide" [ref=f1e115] [cursor=pointer]:
+              - /url: https://academicpages.github.io/markdown/
+            - text: ", the"
+            - link "growing wiki" [ref=f1e116] [cursor=pointer]:
+              - /url: https://github.com/academicpages/academicpages.github.io/wiki
+            - text: ", and you can always"
+            - link "ask a question on GitHub" [ref=f1e117] [cursor=pointer]:
+              - /url: https://github.com/academicpages/academicpages.github.io/discussions
+            - text: . The
+            - link "guides for the Minimal Mistakes theme" [ref=f1e118] [cursor=pointer]:
+              - /url: https://mmistakes.github.io/minimal-mistakes/docs/configuration/
+            - text: (which this theme was forked from) might also be helpful.
+  - contentinfo [ref=f1e120]:
+    - list [ref=f1e122]:
+      - listitem [ref=f1e123]:
+        - strong [ref=f1e124]: "Follow:"
+      - listitem [ref=f1e125]:
+        - link "GitHub" [ref=f1e126] [cursor=pointer]:
+          - /url: https://github.com/academicpages
+          - generic [aria-hidden] [ref=f1e127]: 
+          - text: GitHub
+      - listitem [ref=f1e128]:
+        - link "Feed" [ref=f1e129] [cursor=pointer]:
+          - /url: https://academicpages.github.io/feed.xml
+          - generic [aria-hidden] [ref=f1e130]: 
+          - text: Feed
+    - generic [ref=f1e131]:
+      - text: © 2026 Your Name, Powered by
+      - link "Jekyll" [ref=f1e132] [cursor=pointer]:
+        - /url: https://jekyllrb.com
+      - text: "&"
+      - link "AcademicPages" [ref=f1e133] [cursor=pointer]:
+        - /url: https://github.com/academicpages/academicpages.github.io
+      - text: ", a fork of"
+      - link "Minimal Mistakes" [ref=f1e134] [cursor=pointer]:
+        - /url: https://mademistakes.com/work/minimal-mistakes-jekyll-theme/
+      - text: . Site last updated 2026-09-11,
+      - link "Sitemap" [ref=f1e135] [cursor=pointer]:
+        - /url: /sitemap/

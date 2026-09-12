@@ -1,0 +1,172 @@
+- generic [active] [ref=e1]:
+  - banner:
+    - navigation [ref=e2]:
+      - list [ref=e5]:
+        - listitem [ref=e6]:
+          - link "about (current)" [ref=e7] [cursor=pointer]:
+            - /url: /
+            - text: about
+            - generic [ref=e8]: (current)
+        - listitem [ref=e9]:
+          - link "blog" [ref=e10] [cursor=pointer]:
+            - /url: /blog/
+        - listitem [ref=e11]:
+          - link "publications" [ref=e12] [cursor=pointer]:
+            - /url: /publications/
+        - listitem [ref=e13]:
+          - link "projects" [ref=e14] [cursor=pointer]:
+            - /url: /projects/
+        - listitem [ref=e15]:
+          - link "repositories" [ref=e16] [cursor=pointer]:
+            - /url: /repositories/
+        - listitem [ref=e17]:
+          - link "cv" [ref=e18] [cursor=pointer]:
+            - /url: /cv/
+        - listitem [ref=e19]:
+          - link "teaching" [ref=e20] [cursor=pointer]:
+            - /url: /teaching/
+        - listitem [ref=e21]:
+          - button "submenus" [ref=e22] [cursor=pointer]
+        - listitem [ref=e23]:
+          - button "" [ref=e24] [cursor=pointer]: 
+    - progressbar [ref=e26]
+  - generic [ref=e28]:
+    - banner [ref=e29]:
+      - heading "You R. Name" [level=1] [ref=e30]
+      - paragraph [ref=e31]:
+        - link "Affiliations" [ref=e32] [cursor=pointer]:
+          - /url: "#"
+        - text: . Address. Contacts. Moto. Etc.
+    - article [ref=e33]:
+      - generic [ref=e34]:
+        - figure [ref=e35]:
+          - img "prof_pic.jpg" [ref=e37]
+        - generic [ref=e38]:
+          - paragraph [ref=e39]: 555 your office number
+          - paragraph [ref=e40]: 123 your address street
+          - paragraph [ref=e41]: Your City, State 12345
+      - generic [ref=e42]:
+        - paragraph [ref=e43]:
+          - text: Write your biography here. Tell the world about yourself. Link to your favorite
+          - link "subreddit" [ref=e44] [cursor=pointer]:
+            - /url: http://reddit.com
+          - text: . You can put a picture in, too. The code is already in, just name your picture
+          - code [ref=e45]: prof_pic.jpg
+          - text: and put it in the
+          - code [ref=e46]: img/
+          - text: folder.
+        - paragraph [ref=e47]:
+          - text: Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing
+          - code [ref=e48]: profile
+          - text: property of the YAML header of your
+          - code [ref=e49]: _pages/about.md
+          - text: . Edit
+          - code [ref=e50]: _bibliography/papers.bib
+          - text: and Jekyll will render your
+          - link "publications page" [ref=e51] [cursor=pointer]:
+            - /url: /al-folio/publications/
+          - text: automatically.
+        - paragraph [ref=e52]:
+          - text: Link to your social media connections, too. This theme is set up to use
+          - link "Font Awesome icons" [ref=e53] [cursor=pointer]:
+            - /url: http://fortawesome.github.io/Font-Awesome/
+          - text: and
+          - link "Academicons" [ref=e54] [cursor=pointer]:
+            - /url: https://jpswalsh.github.io/academicons/
+          - text: ", like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them."
+      - heading [level=2] [ref=e55]:
+        - link "news" [ref=e56] [cursor=pointer]:
+          - /url: /news/
+      - table [ref=e59]:
+        - rowgroup [ref=e60]:
+          - row [ref=e61]:
+            - rowheader "Jan 15, 2016" [ref=e62]
+            - cell [ref=e63]:
+              - text: A simple inline announcement with Markdown emoji!
+              - img ":sparkles:" [ref=e64]
+              - img ":smile:" [ref=e65]
+          - row [ref=e66]:
+            - rowheader "Nov 7, 2015" [ref=e67]
+            - cell [ref=e68]:
+              - link "A long announcement with details" [ref=e69] [cursor=pointer]:
+                - /url: /news/announcement_2/
+          - row [ref=e70]:
+            - rowheader "Oct 22, 2015" [ref=e71]
+            - cell "A simple inline announcement." [ref=e72]
+      - heading [level=2] [ref=e73]:
+        - link "latest posts" [ref=e74] [cursor=pointer]:
+          - /url: /blog/
+      - table [ref=e77]:
+        - rowgroup [ref=e78]:
+          - row [ref=e79]:
+            - rowheader "Dec 10, 2022" [ref=e80]
+            - cell [ref=e81]:
+              - link "a post with giscus comments" [ref=e82] [cursor=pointer]:
+                - /url: /blog/2022/giscus-comments/
+          - row [ref=e83]:
+            - rowheader "Apr 23, 2022" [ref=e84]
+            - cell [ref=e85]:
+              - link "Displaying External Posts on Your al-folio Blog" [ref=e86] [cursor=pointer]:
+                - /url: /blog/2022/displaying-external-posts-on-your-al-folio-blog/
+          - row [ref=e87]:
+            - rowheader "Feb 1, 2022" [ref=e88]
+            - cell [ref=e89]:
+              - link "a post with redirect" [ref=e90] [cursor=pointer]:
+                - /url: /blog/2022/redirect/
+      - heading [level=2] [ref=e91]:
+        - link "selected publications" [ref=e92] [cursor=pointer]:
+          - /url: /publications/
+      - list [ref=e94]:
+        - listitem [ref=e95]:
+          - generic [ref=e96]:
+            - link "PhysRev" [ref=e99] [cursor=pointer]:
+              - /url: https://journals.aps.org/
+            - generic [ref=e100]:
+              - generic [ref=e101]: Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?
+              - generic [ref=e102]:
+                - emphasis [ref=e103]: A. Einstein
+                - text: ","
+                - link "B. Podolsky" [ref=e104] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Boris_Podolsky
+                - text: ", and"
+                - link "N. Rosen" [ref=e105] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Nathan_Rosen
+              - generic [ref=e106]:
+                - emphasis [ref=e107]: Phys. Rev.
+                - text: ", May 1935"
+              - generic [ref=e108]:
+                - button "Abs" [ref=e109] [cursor=pointer]
+                - button "HTML" [ref=e110] [cursor=pointer]
+                - button "PDF" [ref=e111] [cursor=pointer]
+              - generic [ref=e112]:
+                - link [ref=e114] [cursor=pointer]:
+                  - /url: https://www.altmetric.com/details.php?domain=al-folio.github.io&citation_id=248277
+                  - img "Article has an altmetric score of 905" [ref=e115]
+                - link "14k total citations on Dimensions." [ref=e117] [cursor=pointer]:
+                  - /url: https://badge.dimensions.ai/details/doi/10.1103/PhysRev.47.777?domain=https://al-folio.github.io
+                  - generic [ref=e119]:
+                    - generic [ref=e140]: 14k
+                    - img "14k total citations on Dimensions." [ref=e141]
+              - paragraph [ref=e143]: In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.
+      - generic [ref=e144]:
+        - generic [ref=e145]:
+          - link "" [ref=e146] [cursor=pointer]:
+            - /url: mailto:%79%6F%75@%65%78%61%6D%70%6C%65.%63%6F%6D
+          - link "" [ref=e148] [cursor=pointer]:
+            - /url: /feed.xml
+        - generic [ref=e150]: You can even add a little note about which of these is the best way to reach you.
+  - contentinfo [ref=e151]:
+    - generic [ref=e152]:
+      - text: © Copyright 2023 You R. Name. Powered by
+      - link "Jekyll" [ref=e153] [cursor=pointer]:
+        - /url: https://jekyllrb.com/
+      - text: with
+      - link "al-folio" [ref=e154] [cursor=pointer]:
+        - /url: https://github.com/alshedivat/al-folio
+      - text: theme. Hosted by
+      - link "GitHub Pages" [ref=e155] [cursor=pointer]:
+        - /url: https://pages.github.com/
+      - text: . Photos from
+      - link "Unsplash" [ref=e156] [cursor=pointer]:
+        - /url: https://unsplash.com
+      - text: .

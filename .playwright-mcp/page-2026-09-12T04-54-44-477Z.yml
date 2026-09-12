@@ -1,0 +1,122 @@
+- generic [ref=f4e2]:
+  - generic [ref=f4e3]:
+    - generic [ref=f4e4]:
+      - link "FAQ" [ref=f4e5] [cursor=pointer]:
+        - /url: /#faq
+      - text: "|"
+    - generic [ref=f4e6]:
+      - link "About" [ref=f4e7] [cursor=pointer]:
+        - /url: /#about
+      - text: "|"
+    - generic [ref=f4e8]:
+      - link "Speaking" [ref=f4e9] [cursor=pointer]:
+        - /url: /speaking/
+      - text: "|"
+    - generic [ref=f4e10]:
+      - link "Blog" [ref=f4e11] [cursor=pointer]:
+        - /url: /articles/
+      - text: "|"
+    - link "Publications" [ref=f4e13] [cursor=pointer]:
+      - /url: /#publications
+  - generic [ref=f4e14]:
+    - heading "Matt Might" [level=1] [ref=f4e15]
+    - text: Professor, Internal Medicine and Computer Science Director, Hugh Kaul Precision Medicine Institute Co-Director, Center for Precision Animal Modeling Heersink School of Medicine University of Alabama at Birmingham Senior Lecturer Department of Biomedical Informatics Harvard Medical School
+  - generic [ref=f4e16]:
+    - heading "Frequently needed/requested info" [level=2] [ref=f4e17]
+    - list [ref=f4e18]:
+      - listitem [ref=f4e19]:
+        - text: You can email me at
+        - link "assist@might.net" [ref=f4e20] [cursor=pointer]:
+          - /url: mailto:assist@might.net
+        - text: . (Short emails preferred.)
+      - listitem [ref=f4e21]:
+        - link "Information on having me speak at or travel to your event" [ref=f4e22] [cursor=pointer]:
+          - /url: ./speaking/
+        - text: .
+      - listitem [ref=f4e23]:
+        - link "An interactive bio generator for me" [ref=f4e24] [cursor=pointer]:
+          - /url: ./bio/
+        - text: .
+      - listitem [ref=f4e25]:
+        - link "Headshot photos" [ref=f4e26] [cursor=pointer]:
+          - /url: ./speaking/#headshots
+        - text: .
+      - listitem [ref=f4e27]:
+        - text: If you are a patient or caregiver seeking diagnosis or treatment, please see
+        - link "The Algorithm for Precision Medicine" [ref=f4e28] [cursor=pointer]:
+          - /url: http://bertrand.might.net/articles/algorithm-for-precision-medicine/
+        - text: and feel free to reach out to me.
+      - listitem [ref=f4e29]:
+        - text: "Twitter:"
+        - link "@mattmight" [ref=f4e30] [cursor=pointer]:
+          - /url: https://x.com/mattmight
+      - listitem [ref=f4e31]:
+        - text: "Instagram:"
+        - link "@mattmight" [ref=f4e32] [cursor=pointer]:
+          - /url: https://instagram.com/mattmight
+      - listitem [ref=f4e33]:
+        - text: "LinkedIn:"
+        - link "matthewmight" [ref=f4e34] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/matthewmight/
+      - listitem [ref=f4e35]:
+        - text: "Bluesky:"
+        - link "@matt.might.net" [ref=f4e36] [cursor=pointer]:
+          - /url: https://bsky.app/profile/matt.might.net
+    - heading "About me" [level=2] [ref=f4e37]
+    - paragraph [ref=f4e38]:
+      - text: "[If you need a formal bio for me, please see my"
+      - link "bio generator" [ref=f4e39] [cursor=pointer]:
+        - /url: ./bio/
+      - text: .]
+    - paragraph [ref=f4e40]:
+      - text: I'm a computer scientist that became passionate about precision medicine in a quest to diagnose
+      - link "my son Bertrand" [ref=f4e41] [cursor=pointer]:
+        - /url: http://bertrand.might.net/
+      - text: .
+    - paragraph [ref=f4e42]: Finding he was the first case of a novel genetic disorder, I pivoted to finding treatments.
+    - paragraph [ref=f4e43]: I've ended up applying and generalizing much of what I learned from him to help others, and helping patients facing complex medical challenges has become my life's mission.
+    - paragraph [ref=f4e44]: I've spent most of my career in academia, but I have had major parallel stints in government (The White House, 2016-2018) and industry (co-founder at Pairnomix, LLC and [by acquisition] Q State Biosciences, Inc).
+    - paragraph [ref=f4e45]: Most of my personal research brings together data science, artificial intelligence, machine learning and formal reasoning to accelerate biomedical science in the service of patients.
+    - paragraph [ref=f4e46]: As Director of the Precision Medicine Institute, I oversee a faculty and research staff with a comprehensive research portfolio that includes significant bench science targeted at tailoring therapeutics to individual patients.
+    - paragraph [ref=f4e47]: My broader interests include oligonucleotide therapeutics, model organisms, drug screening and medicinal chemistry.
+    - paragraph [ref=f4e48]: "Here are some short external summaries of my work:"
+    - list [ref=f4e49]:
+      - listitem [ref=f4e50]:
+        - link "A 7-minute video on my journey into precision medicine" [ref=f4e51] [cursor=pointer]:
+          - /url: https://www.facebook.com/watch/?v=1530650690395570
+        - text: .
+      - listitem [ref=f4e52]:
+        - link "NY Times article on my approach to rare disease" [ref=f4e53] [cursor=pointer]:
+          - /url: https://www.nytimes.com/2018/09/10/health/matthew-might-rare-diseases.html
+        - text: .
+    - heading "Publications" [level=2] [ref=f4e54]
+    - heading "Proceedings papers" [level=3] [ref=f4e55]
+    - text: "["
+    - link "show all conference papers" [ref=f4e56] [cursor=pointer]:
+      - /url: "javascript:(function(){ConfPapersElement.style.display='block';})()"
+    - text: "]"
+    - heading "Journal papers" [level=3] [ref=f4e57]
+    - text: "["
+    - link "show all journal papers" [ref=f4e58] [cursor=pointer]:
+      - /url: "javascript:(function(){JournalPapersElement.style.display='block';})()"
+    - text: "]"
+    - heading "Government policy whitepapers" [level=3] [ref=f4e59]
+    - list [ref=f4e60]:
+      - listitem [ref=f4e61]:
+        - text: Dixie Baker, Matthew Might, Pearl O'Rourke, Laura Lyman Rodriguez, Tania Simoncelli, John Wilbanks. "Participant Engagement, Data Privacy, and Novel Ways of Returning Information to Participants." NIH Precision Medicine Working Group, NIH Large Cohort Precision Medicine Workshop. 11 Feb 2015. Bethesda, Maryland. [
+        - link "pdf" [ref=f4e62] [cursor=pointer]:
+          - /url: ./papers/baker2015participant.pdf
+        - text: "]"
+    - heading "Dissertation" [level=3] [ref=f4e63]
+    - list [ref=f4e64]:
+      - listitem [ref=f4e65]:
+        - text: "Matthew Might. \"Environment Analysis of Higher-Order Languages.\" Ph.D. Dissertation. Georgia Institute of Technology. 2007. Paper: ["
+        - link "pdf" [ref=f4e66] [cursor=pointer]:
+          - /url: papers/might2007diss.pdf
+        - text: "] ["
+        - link "bib" [ref=f4e67] [cursor=pointer]:
+          - /url: javascript:toggleDisplay('might2007diss-bibtex')
+        - text: "] Slides: ["
+        - link "pdf" [ref=f4e68] [cursor=pointer]:
+          - /url: papers/might2007diss-slides.pdf
+        - text: "]"

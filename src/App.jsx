@@ -1,5 +1,5 @@
 import React, { useEffect, useState, Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ErrorBoundary from './components/ErrorBoundary';
 import PageLoader from './components/PageLoader';
@@ -13,57 +13,20 @@ const SeriesDetail = lazy(() => import('./pages/SeriesDetail'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 
 export default function App() {
-  const [lang, setLang] = useState('zh');
+  const [lang, setLang] = useState(() => { try { return localStorage.getItem('academic-site-language') === 'en' ? 'en' : 'zh'; } catch { return 'zh'; } });
 
-  // Light parallax for particle layer: follows mouse when present, drifts when idle.
-  // Amplitude deliberately subtle; disabled entirely under prefers-reduced-motion.
   useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    const root = document.documentElement;
-    let lastMove = Date.now();
-
-    const updateOffset = (x, y) => {
-      root.style.setProperty('--particle-translate-x', `${x}px`);
-      root.style.setProperty('--particle-translate-y', `${y}px`);
-    };
-
-    const handleMove = (e) => {
-      const x = ((e.clientX / window.innerWidth) - 0.5) * 8;
-      const y = ((e.clientY / window.innerHeight) - 0.5) * 8;
-      updateOffset(x, y);
-      lastMove = Date.now();
-    };
-
-    const drift = () => {
-      const now = Date.now();
-      if (now - lastMove > 1400) {
-        const t = now * 0.00025;
-        const x = Math.sin(t) * 5;
-        const y = Math.cos(t * 1.1) * 5;
-        updateOffset(x, y);
-      }
-      frame = requestAnimationFrame(drift);
-    };
-
-    window.addEventListener('mousemove', handleMove);
-    let frame = requestAnimationFrame(drift);
-
-    return () => {
-      window.removeEventListener('mousemove', handleMove);
-      cancelAnimationFrame(frame);
-    };
-  }, []);
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    try { localStorage.setItem('academic-site-language', lang); } catch {}
+  }, [lang]);
 
   return (
     <Router basename={import.meta.env.BASE_URL}>
       <div className="min-h-screen relative overflow-hidden bg-[var(--surface)]">
-        <div className="pointer-events-none fixed inset-0 -z-10">
-          <div className="absolute inset-0 particle-wave opacity-70"></div>
-          <div className="absolute inset-0 bg-aurora opacity-65 mix-blend-screen"></div>
-          <div className="absolute inset-0 grid-overlay"></div>
-        </div>
+        <a className="skip-link" href="#main-content">{lang === 'zh' ? '跳转到正文' : 'Skip to content'}</a>
+        <RouteEffects />
         <Navbar lang={lang} setLang={setLang} />
+        <div className="route-content" id="page-content">
         <ErrorBoundary lang={lang}>
           <Suspense fallback={<PageLoader />}>
             <Routes>
@@ -74,10 +37,21 @@ export default function App() {
               <Route path="/blog" element={<Blog lang={lang} />} />
               <Route path="/blog/series/:seriesId" element={<SeriesDetail lang={lang} />} />
               <Route path="/blog/:slug" element={<BlogPost lang={lang} />} />
+              <Route path="*" element={<main id="main-content" className="min-h-screen pt-40 px-6 text-center"><p className="eyebrow justify-center">404</p><h1 className="text-4xl my-6">{lang === 'zh' ? '这一页尚未写下。' : 'This page has yet to be written.'}</h1><Link to="/" className="btn-primary">{lang === 'zh' ? '返回首页' : 'Back to home'}</Link></main>} />
             </Routes>
           </Suspense>
         </ErrorBoundary>
+        </div>
+        <footer className="site-footer"><Link className="footer-signature" to="/">Jiajia Li.</Link><span>{lang === 'zh' ? '健康社会学 · 疾病与健康的社会生产' : 'Sociology of Health · Illness & Health'}</span><span>© {new Date().getFullYear()} {lang === 'zh' ? '李佳佳' : 'Jiajia Li'}</span></footer>
       </div>
     </Router>
   );
+}
+
+function RouteEffects() {
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    if (!hash) window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [pathname, hash]);
+  return null;
 }

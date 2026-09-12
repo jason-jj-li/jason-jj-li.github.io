@@ -60,44 +60,44 @@ export default function BlogPost({ lang }) {
 
   if (!post) {
     return (
-      <div className="min-h-screen pt-24 pb-16">
+      <main id="main-content" className="min-h-screen pt-24 pb-16">
         <div className="max-w-3xl mx-auto px-6">
           <div className="card rounded-2xl p-8">
             <p className="text-slate-200 mb-4">
               {lang === 'zh' ? '未找到文章。' : 'Post not found.'}
             </p>
-            <Link to="/blog" className="inline-flex items-center gap-2 text-cyan-200 font-medium hover:text-cyan-100">
+            <Link to="/blog" className="inline-flex items-center gap-2 text-cyan-200 font-medium hover:text-[var(--ink)]">
               <ArrowLeft size={16} />
               {lang === 'zh' ? '返回博客列表' : 'Back to blog'}
             </Link>
           </div>
         </div>
-      </div>
+      </main>
     );
   }
 
   const dateLabel = formatDateLabel(post.date, lang);
   const sourceLabel = post.source === 'notebook'
-    ? lang === 'zh' ? '来自 Jupyter Notebook（本地已编译 HTML）' : 'From Jupyter Notebook (precompiled HTML)'
+    ? lang === 'zh' ? 'Jupyter Notebook' : 'Jupyter Notebook'
     : lang === 'zh' ? 'Markdown 文章' : 'Markdown Post';
 
   return (
-    <div className="min-h-screen pt-24 pb-20">
+    <main id="main-content" className="min-h-screen pt-24 pb-20">
       <div className="max-w-5xl mx-auto px-4 md:px-8">
         <div className="flex items-center gap-3 mb-5">
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 text-slate-300 hover:text-cyan-200 font-medium transition-colors"
+            className="inline-flex items-center gap-2 text-slate-300 hover:text-[var(--ink)] font-medium transition-colors"
           >
             <ArrowLeft size={16} />
             {lang === 'zh' ? '返回' : 'Back'}
           </Link>
         </div>
 
-        {/* Reading mode: dark site shell frames a centered "paper" card */}
+        {/* A light paper surface keeps long-form articles readable. */}
         <div className="article-shell rounded-3xl p-2 md:p-3">
           <article className="article-light rounded-2xl shadow-sm overflow-hidden border border-slate-200 bg-white text-slate-900">
-            <div className="h-1 bg-gradient-to-r from-indigo-500 via-cyan-400 to-purple-500"></div>
+            <div className="h-1 bg-[var(--steel)]"></div>
             <div className="p-6 md:p-8">
           <div className="flex flex-wrap items-center gap-3 text-sm text-slate-500 mb-4">
             {dateLabel && (
@@ -157,6 +157,6 @@ export default function BlogPost({ lang }) {
           </article>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

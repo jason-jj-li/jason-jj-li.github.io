@@ -1,71 +1,47 @@
-import React, { useMemo, useState } from 'react';
-import { Brain, ExternalLink, FileText, Award, Code, GitBranch, ArrowDownRight, ArrowDownLeft, ArrowRight } from 'lucide-react';
+import React, { useEffect, useMemo, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import { ExternalLink, Award, ArrowDown } from 'lucide-react';
 import { SITE_DATA } from '../data/siteData';
 
 export default function Research({ lang }) {
   const t = (obj) => (typeof obj === 'string' ? obj : obj?.[lang] || obj?.['en']);
+  const location = useLocation();
   const initialPubYear = (SITE_DATA.publications || []).reduce((max, p) => Math.max(max, p.year || 0), 0) || new Date().getFullYear();
   const [selectedPubYear, setSelectedPubYear] = useState(initialPubYear);
   const [showOlderPubYears, setShowOlderPubYears] = useState(false);
 
-  const linkLabels = {
-    code: lang === 'zh' ? '代码' : 'Code',
-    paper: lang === 'zh' ? '论文' : 'Paper',
-    dataset: lang === 'zh' ? '数据集' : 'Dataset',
-    website: lang === 'zh' ? '网站' : 'Website',
-    video: lang === 'zh' ? '视频' : 'Video',
-    benchmark: lang === 'zh' ? '基准' : 'Benchmark',
-  };
+  useEffect(() => {
+    if (location.hash) {
+      document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: 'instant', block: 'start' });
+    }
+  }, [location.hash]);
 
-  const renderLinks = (links = {}) => {
-    const keys = Object.keys(links || {}).filter((k) => links[k]);
-    if (!keys.length) return null;
-    return (
-      <div className="flex flex-wrap gap-2">
-        {keys.map((key) => (
-          <a
-            key={key}
-            href={links[key]}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[rgba(255,255,255,0.06)] text-slate-100 text-xs font-semibold border border-[rgba(148,163,184,0.35)] hover:border-cyan-300 hover:text-cyan-100 transition-colors"
-          >
-            <ExternalLink size={12} />
-            <span>{linkLabels[key] || key}</span>
-          </a>
-        ))}
-      </div>
-    );
+  const pubLinkLabel = {
+    paper: lang === 'zh' ? 'DOI/链接' : 'DOI/Link',
+    pdf: 'PDF',
+    code: 'Code',
+    project: lang === 'zh' ? '项目' : 'Project',
   };
-
   const renderPubLinks = (links = {}) => {
-    const keys = Object.keys(links || {}).filter((k) => links[k]);
+    const keys = Object.keys(links || {}).filter((k) => links[k] && links[k] !== '#');
     if (!keys.length) return null;
-    const labelMap = {
-      paper: lang === 'zh' ? 'DOI/链接' : 'DOI/Link',
-      pdf: 'PDF',
-      code: 'Code',
-      project: lang === 'zh' ? '项目' : 'Project',
-    };
-    return (
-      <div className="flex flex-wrap gap-2 mt-2">
-        {keys.map((key) => (
-          <a
-            key={key}
-            href={links[key]}
-            className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold border border-[rgba(148,163,184,0.35)] bg-[rgba(255,255,255,0.06)] text-slate-100 hover:border-cyan-300 hover:text-cyan-100 transition-colors"
-          >
-            <ExternalLink size={12} />
-            <span>{labelMap[key] || key}</span>
-          </a>
-        ))}
-      </div>
-    );
+    return keys.map((key) => (
+      <a
+        key={key}
+        href={links[key]}
+        className="inline-flex items-center gap-1 text-xs font-semibold text-[var(--steel)] hover:text-[var(--steel-strong)] transition-colors"
+        target="_blank"
+        rel="noreferrer"
+      >
+        {pubLinkLabel[key] || key} <ExternalLink size={11} />
+      </a>
+    ));
   };
 
   const sortedPublications = useMemo(
     () => [...(SITE_DATA.publications || [])].sort((a, b) => b.year - a.year),
     []
   );
-  const orcidLink = SITE_DATA.profile?.orcid || SITE_DATA.profile?.scholar || '#';
   const publicationYears = useMemo(
     () => Array.from(new Set(sortedPublications.map((p) => p.year))).sort((a, b) => b - a),
     [sortedPublications]
@@ -73,210 +49,155 @@ export default function Research({ lang }) {
   const visibleYears = showOlderPubYears ? publicationYears : publicationYears.slice(0, 5);
   const displayedPublications = sortedPublications.filter((pub) => pub.year === selectedPubYear);
 
+  const zh = lang === 'zh';
+
   return (
-    <div className="min-h-screen pt-24 pb-16">
-      <div className="max-w-5xl mx-auto px-6 space-y-8">
-        <SectionHeader
-          icon={<Brain size={20} />}
-          title={lang === 'zh' ? '研究方向：生命历程健康不平等' : 'Research Interests: Life-Course Health Inequalities'}
-        />
+    <main id="main-content" className="min-h-screen pt-24 pb-16">
+      <div className="max-w-5xl mx-auto px-6 research-page">
 
-        <div className="card rounded-2xl p-6 md:p-10 relative overflow-hidden">
-          {/* 动态连接线 */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute left-1/2 top-16 -translate-x-1/2 w-px h-[calc(50%-4rem)] bg-gradient-to-b from-cyan-300 via-indigo-200 to-transparent animate-pulse"></div>
-            <svg className="absolute left-1/2 top-[50%] -translate-x-1/2 -translate-y-1/2 w-[80%] h-[60%]" style={{opacity: 0.3}}>
-              <line x1="50%" y1="0" x2="16%" y2="100%" stroke="url(#gradient1)" strokeWidth="2" strokeDasharray="5,5" className="animate-dash" />
-              <line x1="50%" y1="0" x2="50%" y2="100%" stroke="url(#gradient2)" strokeWidth="2" strokeDasharray="5,5" className="animate-dash" style={{animationDelay: '0.2s'}} />
-              <line x1="50%" y1="0" x2="84%" y2="100%" stroke="url(#gradient3)" strokeWidth="2" strokeDasharray="5,5" className="animate-dash" style={{animationDelay: '0.4s'}} />
-              <defs>
-                <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="#818CF8" />
-                  <stop offset="100%" stopColor="#C084FC" />
-                </linearGradient>
-                <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="#818CF8" />
-                  <stop offset="100%" stopColor="#A78BFA" />
-                </linearGradient>
-                <linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="#818CF8" />
-                  <stop offset="100%" stopColor="#F9A8D4" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-
-          {/* 核心节点 */}
-          <div className="flex flex-col items-center text-center gap-4 relative z-10 mb-12">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white flex items-center justify-center shadow-xl animate-pulse-slow">
-              <GitBranch size={26} />
-            </div>
+        <section className="research-overview" aria-labelledby="research-title">
+          <header className="research-opening">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-slate-50 mb-2">
-                {lang === 'zh' ? '生命历程健康不平等' : 'Life-Course Health Inequalities'}
-              </h3>
-              <p className="text-slate-300 text-sm md:text-base max-w-2xl leading-relaxed">
-                {lang === 'zh'
-                  ? '以童年逆境为切入，跨国比较制度与文化如何放大或缓冲风险，再衔接环境与社会风险的叠加效应，构建机制—情境—应用的研究闭环。从以下三个方面开展研究：'
-                  : 'Using childhood adversity as the entry point, this research compares how institutions and cultures amplify or buffer risks across countries, then examines the interactive effects of environmental and social risks to construct a mechanism—context—application loop. Three research foci:'}
+              <p className="eyebrow">{zh ? '研究 / 健康社会学' : 'RESEARCH / SOCIOLOGY OF HEALTH'}</p>
+              <h1 id="research-title">
+                {zh ? <>社会经历如何<br /><span>塑造疾病与健康？</span></> : <>How do social experiences<br /><span>shape illness & health?</span></>}
+              </h1>
+              <p className="research-perspective">
+                {zh ? '生命历程视角' : 'A life-course perspective'}
               </p>
             </div>
-          </div>
+            <div className="research-opening-note">
+              <p>
+                {zh
+                  ? '我关注疾病与健康在生命历程中的社会生产过程：社会结构与制度环境如何塑造个体的生活经历，早期条件与成年轨迹又如何累积、传递或补偿，形成疾病风险、健康及其社会差异。'
+                  : 'I study how illness and health are socially produced across the life course: how social structures and institutions shape lived experiences, and how early conditions and adult trajectories accumulate, transmit, or offset disadvantage to shape disease risk, health, and social differences.'}
+              </p>
+              <a href="#pubs" className="text-link">
+                {zh ? '直接浏览发表论文' : 'Go to publications'} <ArrowDown size={15} />
+              </a>
+            </div>
+          </header>
 
-          {/* 三分支卡片 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
-            {SITE_DATA.researchDirections.map((dir) => {
-              const Icon = dir.icon;
-              return (
-                <div
-                  key={dir.key}
-                  className="group card card-hover rounded-2xl p-6"
-                >
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="p-2 bg-[rgba(255,255,255,0.06)] rounded-lg text-cyan-200">
-                      <Icon size={20} />
-                    </div>
-                    <h4 className="font-bold text-slate-50 text-base leading-tight">{t(dir.title)}</h4>
-                  </div>
-                  <p className="text-sm text-slate-200 leading-relaxed mb-3">{t(dir.desc)}</p>
-                  {dir.datasets?.length > 0 && (
-                    <div className="flex flex-wrap gap-2">
-                      {dir.datasets.map((ds) => (
-                        <span key={ds} className="tag-ghost text-[10px]">{ds}</span>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-
-        {/* 研究逻辑流程 */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-3 mt-8 px-2">
-          <div className="flex-1 px-5 py-3 rounded-xl bg-gradient-to-br from-[rgba(59,130,246,0.15)] to-[rgba(56,189,248,0.12)] border border-[rgba(148,163,184,0.35)] shadow-sm">
-            <p className="text-sm font-semibold text-slate-100 text-center">
-              {lang === 'zh' ? '追踪早期暴露的生命历程效应' : 'Track life-course effects of early exposures'}
-            </p>
-          </div>
-          <ArrowRight size={20} className="text-cyan-300 hidden md:block" />
-          <div className="flex-1 px-5 py-3 rounded-xl bg-gradient-to-br from-[rgba(147,51,234,0.15)] to-[rgba(59,130,246,0.12)] border border-[rgba(148,163,184,0.35)] shadow-sm">
-            <p className="text-sm font-semibold text-slate-100 text-center">
-              {lang === 'zh' ? '比较情境下的调节机制' : 'Compare contextual moderation'}
-            </p>
-          </div>
-          <ArrowRight size={20} className="text-purple-300 hidden md:block" />
-          <div className="flex-1 px-5 py-3 rounded-xl bg-gradient-to-br from-[rgba(236,72,153,0.16)] to-[rgba(124,58,237,0.12)] border border-[rgba(148,163,184,0.35)] shadow-sm">
-            <p className="text-sm font-semibold text-slate-100 text-center">
-              {lang === 'zh' ? '评估风险叠加与干预优先级' : 'Assess risk interactions & intervention priorities'}
-            </p>
-          </div>
-        </div>
-        </div>
-        <div className="h-px w-full bg-gradient-to-r from-transparent via-[rgba(148,163,184,0.35)] to-transparent my-4"></div>
-
-        <SectionHeader
-          icon={<FileText size={20} />}
-          title={lang === 'zh' ? '发表论文' : 'Publications'}
-          subtitle={lang === 'zh' ? '按年份浏览论文与链接。' : 'Browse papers by year with links.'}
-        />
-        <div id="pubs"></div>
-
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-xs font-semibold text-slate-500">
-              {lang === 'zh' ? '展示（发表年份）' : 'Show (Publication Year)'}
-            </span>
-            <div className="flex gap-2 flex-wrap">
-              {visibleYears.map((year) => (
-                <button
-                  key={year}
-                  onClick={() => setSelectedPubYear(year)}
-                  className={`px-3 py-1 rounded-full text-xs font-semibold border transition-all ${
-                    selectedPubYear === year
-                      ? 'bg-gradient-to-r from-indigo-600 to-cyan-500 text-white border-indigo-500'
-                      : 'border-[rgba(148,163,184,0.35)] text-slate-200 hover:border-cyan-300'
-                  }`}
-                >
-                  {year}
-                </button>
+          <div className="research-programmes" aria-labelledby="programmes-title">
+            <div className="research-programmes-heading">
+              <h2 id="programmes-title">{zh ? '贯穿生命历程的研究' : 'Research across the life course'}</h2>
+              <span>{zh ? '三个相互关联的研究切入点' : 'Three connected lines of inquiry'}</span>
+            </div>
+            <div className="research-programmes-grid">
+              {SITE_DATA.researchDirections.map((dir) => (
+                <article key={dir.key} id={dir.key} className="research-programme">
+                  <p className="research-programme-stage">
+                    <span>{dir.number}</span> {t(dir.stage)}
+                  </p>
+                  <h3>{t(dir.title)}</h3>
+                  <p className="research-programme-description">{t(dir.desc)}</p>
+                </article>
               ))}
-              {publicationYears.length > 5 && (
-                <button
-                  onClick={() => setShowOlderPubYears((v) => !v)}
-                  className="px-3 py-1 rounded-full text-xs font-semibold border border-[rgba(148,163,184,0.35)] text-slate-200 hover:border-cyan-300 transition-all"
+            </div>
+          </div>
+
+          <aside className="research-methods" aria-labelledby="methods-title">
+            <h2 id="methods-title">{zh ? '数据与方法' : 'Data & methods'}</h2>
+            <p>
+              {zh
+                ? '依托中国及国际纵向调查与出生队列，结合生命史与序列分析、跨队列数据协调和跨国比较，追踪社会经历与疾病、健康之间的长期联系。'
+                : 'Drawing on longitudinal surveys and birth cohorts in China and internationally, I combine life-history and sequence analysis, cross-cohort harmonization, and cross-national comparisons to trace the long-term links between social experiences, illness, and health.'}
+            </p>
+          </aside>
+        </section>
+
+        {/* ============ 04 PUBLICATIONS ============ */}
+        <section id="pubs" className="scroll-mt-24">
+          <SectionHeader
+            title={lang === 'zh' ? '发表论文' : 'Publications'}
+            subtitle={lang === 'zh' ? '按年份浏览论文与链接。' : 'Browse papers by year with links.'}
+          />
+
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-6">
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-xs font-semibold text-slate-500">
+                {lang === 'zh' ? '展示（发表年份）' : 'Show (Publication Year)'}
+              </span>
+              <div className="flex gap-2 flex-wrap">
+                {visibleYears.map((year) => (
+                  <button
+                    key={year}
+                    aria-pressed={selectedPubYear === year}
+                    onClick={() => setSelectedPubYear(year)}
+                    className={`px-3 py-1 rounded-full text-xs font-semibold border transition-all ${
+                      selectedPubYear === year
+                        ? 'bg-[var(--steel-bg)] text-[var(--steel)] border-[var(--steel-border)]'
+                        : 'border-[var(--border)] text-slate-200 hover:border-[var(--steel-border)]'
+                    }`}
+                  >
+                    {year}
+                  </button>
+                ))}
+                {publicationYears.length > 5 && (
+                  <button
+                    onClick={() => setShowOlderPubYears((v) => !v)}
+                    className="px-3 py-1 rounded-full text-xs font-semibold border border-[var(--border)] text-slate-200 hover:border-[var(--steel-border)] transition-all"
+                  >
+                    {showOlderPubYears ? (lang === 'zh' ? '收起' : 'Less') : (lang === 'zh' ? '更多年份' : 'More years')}
+                  </button>
+                )}
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              {SITE_DATA.profile?.scholar && (
+                <a
+                  href={SITE_DATA.profile.scholar}
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border border-[var(--border)] text-slate-100 hover:border-[var(--steel-border)] hover:text-[var(--steel)] transition-colors bg-[var(--panel)]"
                 >
-                  {showOlderPubYears ? (lang === 'zh' ? '收起' : 'Less') : (lang === 'zh' ? '更多年份' : 'More years')}
-                </button>
+                  Scholar <ExternalLink size={12} />
+                </a>
+              )}
+              {SITE_DATA.profile?.orcid && (
+                <a
+                  href={SITE_DATA.profile.orcid}
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border border-[var(--border)] text-slate-100 bg-[var(--panel)] hover:border-[var(--steel-border)] hover:text-[var(--steel)] transition-colors"
+                >
+                  ORCID <ExternalLink size={12} />
+                </a>
               )}
             </div>
           </div>
-          <div className="flex items-center gap-2">
-            {SITE_DATA.profile?.scholar && (
-              <a
-                href={SITE_DATA.profile.scholar}
-                className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border border-[rgba(148,163,184,0.35)] text-slate-100 hover:border-cyan-300 hover:text-cyan-100 transition-colors bg-[rgba(255,255,255,0.04)]"
-              >
-                Scholar <ExternalLink size={12} />
-              </a>
-            )}
-            {SITE_DATA.profile?.orcid && (
-              <a
-                href={SITE_DATA.profile.orcid}
-                className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border border-[rgba(148,163,184,0.35)] text-slate-100 bg-[rgba(255,255,255,0.04)] hover:border-cyan-300 hover:text-cyan-100 transition-colors"
-              >
-                ORCID <ExternalLink size={12} />
-              </a>
-            )}
-          </div>
-        </div>
 
-        <div className="grid gap-2">
-          {displayedPublications.map((pub, idx) => {
-            const isFirstAuthor = (pub.authors || '').trim().startsWith('Jiajia Li') || (pub.authors || '').trim().startsWith('李佳佳');
-            return (
-              <div
-                key={idx}
-                className={`card card-hover rounded-2xl p-5 md:p-6 border-l-4 ${isFirstAuthor ? 'border-l-purple-400 bg-gradient-to-r from-[rgba(124,58,237,0.16)] via-[rgba(56,189,248,0.08)] to-[rgba(15,23,42,0.8)]' : 'border-l-[rgba(148,163,184,0.35)]'}`}
-              >
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-2">
-                  <h4 className="text-lg font-bold text-slate-50 leading-snug flex items-center gap-2">
-                    {isFirstAuthor && <Award size={16} className="text-purple-300" />}
+          <div className="border-t border-[var(--border)]">
+            {displayedPublications.map((pub, idx) => {
+              const isFirstAuthor = (pub.authors || '').trim().startsWith('Jiajia Li') || (pub.authors || '').trim().startsWith('李佳佳');
+              return (
+                <article key={idx} className="py-5 border-b border-[var(--border)]">
+                  <h4 className="font-semibold text-slate-50 leading-snug text-[15px] md:text-base">
+                    {isFirstAuthor && <Award size={14} className="inline mr-1.5 -mt-0.5 text-[var(--steel)]" />}
                     {pub.title}
                   </h4>
-                  <span className="tag-ghost">{pub.year}</span>
-                </div>
-                <p className="text-slate-300 text-sm mb-2 leading-relaxed">{pub.authors}</p>
-                <div className="flex flex-wrap items-center gap-2 mb-3">
-                  <span className="tag-ghost flex items-center gap-1">
-                    <Code size={12} className="text-cyan-200" />
-                    {pub.venue}
-                  </span>
-                  {isFirstAuthor && (
-                    <span className="tag-ghost bg-[rgba(124,58,237,0.25)] text-purple-100 border-[rgba(148,163,184,0.35)]">
-                      {lang === 'zh' ? '一作' : 'First author'}
-                    </span>
-                  )}
-                </div>
-                {renderPubLinks(pub.links)}
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Other sections removed per request; focusing on interests, projects, and publications */}
+                  <p className="text-sm text-slate-400 mt-1.5 leading-relaxed">{pub.authors}</p>
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 mt-2">
+                    <span className="italic text-sm text-slate-300">{pub.venue}</span>
+                    {isFirstAuthor && (
+                      <span className="px-2 py-0.5 rounded-full bg-[var(--steel-bg)] text-[var(--steel)] text-[11px] font-semibold border border-[var(--steel-border)]">
+                        {lang === 'zh' ? '一作' : 'First author'}
+                      </span>
+                    )}
+                    {renderPubLinks(pub.links)}
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </section>
       </div>
-    </div>
+    </main>
   );
 }
 
-const SectionHeader = ({ icon, title, subtitle }) => (
-  <div className="flex items-start gap-3">
-    <div className="p-2 bg-[rgba(255,255,255,0.06)] rounded-lg shadow-sm border border-[rgba(148,163,184,0.35)] text-cyan-200">
-      {icon}
+const SectionHeader = ({ title, subtitle }) => (
+  <header className="mb-8 md:mb-10">
+    <div className="flex items-baseline gap-4 flex-wrap">
+      <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-50 tracking-tight">{title}</h2>
+      {subtitle && <span className="text-xs md:text-sm text-slate-500">{subtitle}</span>}
     </div>
-    <div>
-      <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-50 tracking-tight">{title}</h2>
-      {subtitle && <p className="text-slate-300 mt-1">{subtitle}</p>}
-    </div>
-  </div>
+    <div className="mt-4 h-px bg-[rgba(148,163,184,0.2)]"></div>
+  </header>
 );

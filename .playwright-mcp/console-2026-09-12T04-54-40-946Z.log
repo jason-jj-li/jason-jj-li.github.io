@@ -1,0 +1,141 @@
+[    3433ms] [LOG] Got CV @ https://matt.might.net/:1269
+[    3433ms] [LOG] [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object] @ https://matt.might.net/:1270
+[    3434ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3434ms] [LOG] {author: Matthew Might and Olin Shivers, title: Analyzing the environment structure of higher-order languages using frame strings, journal: Theoretical {C}omputer {S}cience, year: 2007, volume: 375} @ https://matt.might.net/:1293
+[    3434ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3434ms] [LOG] {author: Matthew Might and Olin Shivers, title: Exploiting reachability and cardinality in higher-order flow analysis, journal: Journal of Functional Programming, day: 12, month: August} @ https://matt.might.net/:1293
+[    3434ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3434ms] [LOG] {author: Van Horn, David and Might, Matthew, title: Abstracting Abstract Machines: A Systematic Approach to Higher-Order Program Analysis, year: 2011, issue_date: September 2011, publisher: Association for Computing Machinery} @ https://matt.might.net/:1293
+[    3434ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3434ms] [LOG] {title: Systematic abstraction of abstract machines, author: Van Horn, David and Might, Matthew, volume: 22, doi: 10.1017/S0956796812000238, number: 4-5} @ https://matt.might.net/:1293
+[    3434ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3434ms] [LOG] {author: Kimball Germane and Matthew Might, title: Deletion: The curse of the red-black tree, journal: Journal of Functional Programming, volume: 24, issue: 4} @ https://matt.might.net/:1293
+[    3434ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3434ms] [LOG] {title: Pushdown flow analysis with abstract garbage collection, author: Johnson, J. Ian and Sergey, Ilya and Earl, Christopher and Might, Matthew and Van Horn, David, volume: 24, doi: 10.1017/S0956796814000100, number: 2-3} @ https://matt.might.net/:1293
+[    3434ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3434ms] [LOG] {title: The shifting model in clinical diagnostics: how ne…are diseases are discovered, studied, and treated, author: Might, Matthew and Wilsey, Matt, pages: 736-737, url: http://dx.doi.org/10.1038/gim.2014.23, year: 2014} @ https://matt.might.net/:1293
+[    3434ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3435ms] [LOG] {author: Lambertson, Katherine F. and Damiani, Stephen A. a… Matthew and Shelton, Robert and Terry, Sharon F., title: Participant-Driven Matchmaking in the Genomic Era, journal: Human Mutation, volume: 36, number: 10} @ https://matt.might.net/:1293
+[    3435ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3435ms] [LOG] {title: De Novo Truncating Variants in {ASXL2} Are Associa…with a Unique and Recognizable Clinical Phenotype, author: Shashi, Vandana and Pena, Loren D M and Kim, Kathe…, Anna C and Goldstein, David B and Kortüm, Fanny, pages: 991-999, url: http://dx.doi.org/10.1016/j.ajhg.2016.08.017, year: 2016} @ https://matt.might.net/:1293
+[    3435ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3435ms] [LOG] {title: {miniAdapton}: A Minimal Implementation of Incremental Computation in Scheme, author: Fisher, Dakota and Hammer, Matthew A. and Byrd, William and Might, Matthew, url: https://arxiv.org/abs/1609.05337, year: 2016, month: September} @ https://matt.might.net/:1293
+[    3435ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3435ms] [LOG] {title: A recurrent de novo variant in {NACC1} causes a sy…epsy, cataracts, and profound developmental delay, author: Schoch, Kelly and Meng, Linyan and Szelinger, Szab…ames R and Wangler, Michael F and Shashi, Vandana, pages: 343-351, url: http://dx.doi.org/10.1016/j.ajhg.2016.12.013, year: 2017} @ https://matt.might.net/:1293
+[    3435ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3435ms] [LOG] {title: {MARRVEL}: integration of human and model organism…ilitate functional annotation of the human genome, author: Wang, Julia and Al-Ouran, Rami and Hu, Yanhui and …mon, Norbert and Liu, Zhandong and Bellen, Hugo J, pages: 843-853, url: http://dx.doi.org/10.1016/j.ajhg.2017.04.010, year: 2017} @ https://matt.might.net/:1293
+[    3435ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3435ms] [LOG] {title: The Undiagnosed Diseases Network: Accelerating Discovery about Health and Disease, author: Ramoni, Rachel B and Mulvihill, John J and Adams, …ndiagnosed Diseases Network and Wise, Anastasia L, pages: 185-192, url: http://dx.doi.org/10.1016/j.ajhg.2017.01.006, year: 2017} @ https://matt.might.net/:1293
+[    3435ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3435ms] [LOG] {title: A syndromic neurodevelopmental disorder caused by de novo variants in {EBF3}, author: Chao, Hsiao-Tuan and Davids, Mariska and Burke, El… Wangler, Michael F and Malicdan, May Christine V, pages: 128-137, url: http://dx.doi.org/10.1016/j.ajhg.2016.11.018, year: 2017} @ https://matt.might.net/:1293
+[    3435ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3435ms] [LOG] {title: Repurposing of Proton Pump Inhibitors as first ide…ent of {NGLY1} deficiency, a rare genetic disease, author: Bi, Yiling and Might, Matthew and Vankayalapati, Hariprasad and Kuberan, Balagurunathan, pages: 2962-2966, url: http://dx.doi.org/10.1016/j.bmcl.2017.05.010, url-doc-pdf: https://matt.might.net/papers/might2017engase.pdf} @ https://matt.might.net/:1293
+[    3435ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3435ms] [LOG] {abstract: This paper presents Nebo, a declarative domain-spe…ver 140x faster than its single-thread execution., affiliation: Lawrence Livermore National Laboratory, United Sta…d States; University of Pittsburgh, United States, author: Christopher Earl and Matthew Might and Abhishek Bagusetty and James C. Sutherland, title: Nebo: An efficient, parallel, and portable domain-…umerically solving partial differential equations, doi: 10.1016/j.jss.2016.01.023} @ https://matt.might.net/:1293
+[    3435ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3435ms] [LOG] {title: Looking beyond the exome: a phenotype-first approa…ostic resolution in rare and undiagnosed diseases, author: Pena, Loren D M and Jiang, Yong-Hui and Schoch, Ke…embers and Goldstein, David B and Shashi, Vandana, pages: 464-469, url: http://dx.doi.org/10.1038/gim.2017.128, year: 2018} @ https://matt.might.net/:1293
+[    3435ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3435ms] [LOG] {title: Transcriptome and functional analysis in a Drosoph…ency provides insight into therapeutic approaches, author: Owings, Katie G and Lowry, Joshua B and Bi, Yiling and Might, Matthew and Chow, Clement Y, pages: 1055-1066, url: http://dx.doi.org/10.1093/hmg/ddy026, url-pub-pdf: https://academic.oup.com/hmg/article/27/6/1055/481…estAccessKey=57e52ab9-72c9-4488-ba03-4ba844e351c5} @ https://matt.might.net/:1293
+[    3435ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3435ms] [LOG] {title: {anexVis}: visual analytics framework for analysis of {RNA} expression, author: Tran, Diem-Trang and Zhang, Tian and Stutsman, Rya…ew and Desai, Umesh R and Kuberan, Balagurunathan, pages: 2510-2512, url: https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/bty122/4916064, year: 2018} @ https://matt.might.net/:1293
+[    3435ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3435ms] [LOG] {title: A comprehensive approach to identifying repurposed drugs to treat {SCN8A} epilepsy, author: Atkin, Talia A and Maher, Chani M and Gerlach, Aar…Matthew and Petrou, Steven and Goldstein, David B, pages: 802-813, url: http://dx.doi.org/10.1111/epi.14037, day: 25} @ https://matt.might.net/:1293
+[    3435ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3435ms] [LOG] {title: {IRF2BPL} Is Associated with Neurological Phenotypes, author: Marcogliese, Paul C and Shashi, Vandana and Spillm…n, David B and Bellen, Hugo J and Pena, Loren D M, pages: 245-260, url: http://dx.doi.org/10.1016/j.ajhg.2018.07.006, year: 2018} @ https://matt.might.net/:1293
+[    3435ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3435ms] [LOG] {title: Biallelic Mutations in {ATP5F1D}, which Encodes a …nit of {ATP} Synthase, Cause a Metabolic Disorder, author: Oláhová, Monika and Yoon, Wan Hee and Thompson, Ky… and Bernstein, Jonathan A and Wheeler, Matthew T, pages: 494-504, url: http://dx.doi.org/10.1016/j.ajhg.2018.01.020, year: 2018} @ https://matt.might.net/:1293
+[    3435ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3435ms] [LOG] {title: Further evidence for the involvement of {EFL1} in …syndrome and expansion of the phenotypic features, author: Tan, Queenie K-G and Cope, Heidi and Spillmann, Re…s Network and Shashi, Vandana and Pena, Loren D M, url: http://dx.doi.org/10.1101/mcs.a003046, year: 2018, month: October} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: Abstract allocation as a unified approach to polyvariance in control-flow analyses, author: Gilray, Thomas and Adams, Michael D. and Might, Matthew, url: https://www.cambridge.org/core/product/identifier/S0956796818000138/type/journal\_article, year: 2018, month: August} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: Neural Guided Constraint Logic Programming for Program Synthesis, author: Zhang, Lisa and Rosenblatt, Gregory and Fetaya, Et…t, Matthew and Urtasun, Raquel and Zemel, Richard, url: https://arxiv.org/abs/1809.02840, year: 2018, month: September} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: Plain-language medical vocabulary for precision diagnosis, author: Vasilevsky, Nicole A and Foster, Erin D and Engels…er N and Köhler, Sebastian and Haendel, Melissa A, pages: 474-476, url: http://dx.doi.org/10.1038/s41588-018-0096-x, url-doc-pdf: https://matt.might.net/papers/vasilevsky2018phenotyping.pdf} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: Expanding the Spectrum of {BAF}-Related Disorders:…h Intellectual Disability and Developmental Delay, author: Machol, Keren and Rousseau, Justine and Ehresmann,…iagnosed Diseases Network and Campeau, Philippe M, pages: 164-178, url: http://dx.doi.org/10.1016/j.ajhg.2018.11.007, year: 2019} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: Spectrum of neurodevelopmental disease associated …the {GNAO1} guanosine triphosphate-binding region, author: Kelly, {McKenna} and Park, Meredith and Mihalek, I…l, Dennis and Bodamer, Olaf and Poduri, Annapurna, pages: 406-418, url: http://dx.doi.org/10.1111/epi.14653, year: 2019} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: Induced pluripotent stem cells for neural drug discovery, author: Farkhondeh, Atena and Li, Rong and Gorshkov, Kiril…nd Rodems, Steven and Lo, Donald C and Zheng, Wei, pages: 992-999, url: http://dx.doi.org/10.1016/j.drudis.2019.01.007, year: 2019} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: Lysosomal storage and albinism due to effects of a…e novo {CLCN7} variant on lysosomal acidification, author: Nicoli, Elena-Raluca and Weston, Mary R and Hackba…d Mindell, Joseph A and Malicdan, May Christine V, pages: 1127-1138, url: http://dx.doi.org/10.1016/j.ajhg.2019.04.008, year: 2019} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: De Novo Variants in {WDR37} Are Associated with Ep…ntellectual Disability, and Cerebellar Hypoplasia, author: Kanca, Oguz and Andrews, Jonathan C and Lee, Pei-T… and Bellen, Hugo J and Malicdan, May Christine V, pages: 413-424, url: http://dx.doi.org/10.1016/j.ajhg.2019.06.014, year: 2019} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: A toolkit for genetics providers in follow-up of patients with non-diagnostic exome sequencing, author: Zastrow, Diane B and Kohler, Jennefer N and Bonner… and Bernstein, Jonathan A and Wheeler, Matthew T, pages: 213-228, url: http://dx.doi.org/10.1002/jgc4.1119, year: 2019} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: De Novo Pathogenic Variants in N-cadherin Cause a …losum, Axon, Cardiac, Ocular, and Genital Defects, author: Accogli, Andrea and Calabretta, Sara and St-Onge, …atricia T and Charron, Frédéric and Srour, Myriam, pages: 854-868, url: https://linkinghub.elsevier.com/retrieve/pii/S0002929719303441, year: 2019} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: N-of-1 Precision Medicine and Research Oversight, author: Crouse, Andrew and Nakano-Okuno, Mariko and Might, Matthew and May, Thomas, pages: 36-37, url: http://dx.doi.org/10.1080/15265161.2019.1619871, year: 2019} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: Bi-allelic Variants in {TONSL} Cause {SPONASTRIME}…a and a Spectrum of Skeletal Dysplasia Phenotypes, author: Burrage, Lindsay C and Reynolds, John J and Barata…Carlos A and Campeau, Philippe M and Lee, Brendan, pages: 422-438, url: http://dx.doi.org/10.1016/j.ajhg.2019.01.007, year: 2019} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: Whole genome sequencing reveals novel {IGHMBP2} va…t-Marie-Tooth phenotype with early onset symptoms, author: Cassini, Thomas A and Duncan, Laura and Rives, Lyn…n and Cogan, Joy and Undiagnosed Diseases Network, pages: e00676, url: http://dx.doi.org/10.1002/mgg3.676, year: 2019} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: The genome empowerment scale: An assessment of par… empowerment in families with undiagnosed disease, author: {McConkie}-Rosell, Allyn and Schoch, Kelly and Sul…Network and Hooper, Stephen R and Shashi, Vandana, pages: 521-531, url: http://dx.doi.org/10.1111/cge.13635, year: 2019} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: Magnetic Resonance Imaging characteristics in case of {TOR1AIP1} muscular dystrophy, author: Bhatia, Aashim and Mobley, Bret C and Cogan, Joy a…n and Members of the Undiagnosed Diseases Network, pages: 108-113, url: http://dx.doi.org/10.1016/j.clinimag.2019.06.010, year: 2019} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: Heterozygous variants in {MYBPC1} are associated w…ded neuromuscular phenotype beyond arthrogryposis, author: Shashi, Vandana and Geist, Janelle and Lee, Youngh…urim and Kontrogianni-Konstantopoulos, Aikaterini, pages: 1115-1126, url: http://dx.doi.org/10.1002/humu.23760, year: 2019} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: {IgG4}-related disease: Association with a rare gene variant expressed in cytotoxic T cells, author: Newman, John H and Shaver, Aaron and Sheehan, Jona… Phillips, John A and Undiagnosed Disease Network, pages: e686, url: http://dx.doi.org/10.1002/mgg3.686, year: 2019} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: Developing a genomics rotation: Practical training…nt interpretation for genetic counseling students, author: Grove, Megan E and White, Shana and Fisk, Dianna G…n A and Ormond, Kelly E and Hanson-Kahn, Andrea K, pages: 466-476, url: http://dx.doi.org/10.1002/jgc4.1094, year: 2019} @ https://matt.might.net/:1293
+[    3436ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3436ms] [LOG] {title: Generation of an induced pluripotent stem cell lin…208X} and p.{G310G} mutations in the {NGLY1} gene, author: Li, Rong and Pradhan, Manisha and Xu, Miao and Bas… Might, Matthew and Rodems, Steven and Zheng, Wei, pages: 101362, url: https://linkinghub.elsevier.com/retrieve/pii/S1873506118302927, year: 2019} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: Partial loss of {USP9X} function leads to a male n…g on transforming growth factor $\beta$ signaling, author: Johnson, Brett V and Kumar, Raman and Oishi, Sabri…per, Michael and Gécz, Jozef and Jolly, Lachlan A, pages: 100-112, url: http://dx.doi.org/10.1016/j.biopsych.2019.05.028, year: 2020} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: A graph-based algorithm for {RNA}-seq data normalization, author: Tran, Diem-Trang and Bhaskara, Aditya and Kuberan, Balagurunathan and Might, Matthew, pages: e0227760, url: https://dx.plos.org/10.1371/journal.pone.0227760, year: 2020} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: De novo {EIF2AK1} and {EIF2AK2} Variants Are Assoc…eukoencephalopathy, and Neurologic Decompensation, author: Mao, Dongxue and Reuter, Chloe M and Ruzhnikov, Ma…onathan A and Bellen, Hugo J and Chao, Hsiao-Tuan, pages: 570-583, url: http://dx.doi.org/10.1016/j.ajhg.2020.02.016, year: 2020} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: Structured reviews for data and knowledge-driven research, author: Queralt-Rosinach, Núria and Stupp, Gregory S and L…ht, Matthew and Good, Benjamin M and Su, Andrew I, url: http://dx.doi.org/10.1093/database/baaa015, year: 2020, month: January} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: Biallelic {MADD} variants cause a phenotypic spect…rom developmental delay to a multisystem disorder, author: Schneeberger, Pauline E and Kortüm, Fanny and Kore…Kurth, Ingo and Hempel, Maja and Kutsche, Kerstin, pages: 2437-2453, url: http://dx.doi.org/10.1093/brain/awaa204, year: 2020} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: Metformin Use Is Associated With Reduced Mortality…a Diverse Population With {COVID}-19 and Diabetes, author: Crouse, Andrew B and Grimes, Tiffany and Li, Peng …t, Matthew and Ovalle, Fernando and Shalev, Anath, pages: 600439, url: https://www.frontiersin.org/articles/10.3389/fendo.2020.600439/full, month: January} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: The case for open science: rare diseases, author: Rubinstein, Yaffa R and Robinson, Peter N and Gahl… and van Enckevort, Esther and Haendel, Melissa A, pages: 472-486, url: http://dx.doi.org/10.1093/jamiaopen/ooaa030, year: 2020} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: Cardioinformatics: the nexus of bioinformatics and precision cardiology, author: Khomtchouk, Bohdan B and Tran, Diem-Trang and Vand…atthew and Gozani, Or and Assimes, Themistocles L, pages: 2031-2051, url: http://dx.doi.org/10.1093/bib/bbz119, year: 2020} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: {DYRK1A} pathogenic variants in two patients with …lectual disability and a review of the literature, author: Meissner, Laura E and Macnamara, Ellen F and D'Sou…, Wadih M and Tifft, Cynthia J and Adams, David R, pages: e1544, url: http://dx.doi.org/10.1002/mgg3.1544, year: 2020} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: A state-based approach to genomics for rare disease and population screening, author: East, Kelly M and Kelley, Whitley V and Cannon, As…t, Matthew and Barsh, Gregory S and Korf, Bruce R, pages: 777-781, url: http://www.nature.com/articles/s41436-020-01034-4, year: 2021} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: {PPP3CA} truncating variants clustered in the regu…tory domain cause early-onset refractory epilepsy, author: Panneerselvam, Sugi and Wang, Julia and Zhu, Wenmi…d Diseases Network and {DDD} Study and Bi, Weimin, pages: 227-233, url: http://dx.doi.org/10.1111/cge.13979, year: 2021} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: Water-soluble tocopherol derivatives inhibit {SARS}-{CoV}-2 {RNA}-dependent {RNA} polymerase, author: Pacl, Hayden T and Tipper, Jennifer L and Sevalkar… Adrie J C and Might, Matthew and Harrod, Kevin S, url: http://biorxiv.org/lookup/doi/10.1101/2021.07.13.449251, year: 2021, month: July} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: Megakaryocytes are a Novel {SARS}-{CoV}-2 Infectio…Risk Factor for Mortality and Multi-Organ Failure, author: Patton, Michael J. and Fortmann, Seth D. and Frey,…ggar, Amit and Grant, Maria B. and Might, Matthew, url: http://medrxiv.org/lookup/doi/10.1101/2021.08.05.21261552, year: 2021, month: August} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: Genotype-phenotype correlations and novel molecula…e {DHX30}-associated neurodevelopmental disorders, author: Mannucci, Ilaria and Dang, Nghi D P and Huber, Han…her and Kreienkamp, Hans-Jürgen and Lessel, Davor, pages: 90, url: http://dx.doi.org/10.1186/s13073-021-00900-3, year: 2021} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: Identification of {FDA} Approved Antiviral Drugs f…ID}-19 Treatment using Unbiased Virtual Screening, author: Greer, Rory and Song, Yuwei and Patton, Michael J.… Harrod, Kevin and Petit, Chad M. and Song, Yuhua, pages: 204a, url: https://linkinghub.elsevier.com/retrieve/pii/S0006349520323018, year: 2021} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: Hormonal intervention for the treatment of veteran… study protocol for a randomized controlled trial, author: Nickols, Nicholas G and Goetz, Matthew B and Grabe…ffrey R and Biswas, Kousick and Rettig, Matthew B, pages: 431, url: http://dx.doi.org/10.1186/s13063-021-05389-0, year: 2021} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: Rare disease patient matchmaking: development and …ding strategy in the Undiagnosed Diseases Network, author: {LeBlanc}, Kimberly and Kelley, Emily G and Nagy, …d Undiagnosed Diseases Network and Might, Matthew, pages: 210, url: http://dx.doi.org/10.1186/s13023-021-01825-1, year: 2021} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: A description of novel variants and review of phen… in {UBA5}-related early epileptic encephalopathy, author: Briere, Lauren C and Walker, Melissa A and High, F…John A and Komatsu, Masaaki and Sweetser, David A, url: http://dx.doi.org/10.1101/mcs.a005827, year: 2021, month: June} @ https://matt.might.net/:1293
+[    3437ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3437ms] [LOG] {title: Detection of a mosaic {CDKL5} deletion and inversi…ome mapping ends an exhaustive diagnostic odyssey, author: Cope, Heidi and Barseghyan, Hayk and Bhattacharya,…ases Network and Vilain, Eric and Shashi, Vandana, pages: e1665, url: http://dx.doi.org/10.1002/mgg3.1665, year: 2021} @ https://matt.might.net/:1293
+[    3438ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3438ms] [LOG] {title: Progressive cerebellar atrophy in a patient with c…terious variant in {SDHA}: A Counseling Conundrum, author: Sturrock, Beattie R H and Macnamara, Ellen F and {…twork and Tifft, Cyndi J and Gordon-Lipkin, Eliza, pages: e1692, url: http://dx.doi.org/10.1002/mgg3.1692, year: 2021} @ https://matt.might.net/:1293
+[    3438ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3438ms] [LOG] {title: High-throughput protein modification quantitation … its application on {hENGase} inhibitor screening, author: Tao, Dingyin and Xu, Miao and Farkhondeh, Atena an…tthew and Zheng, Wei and {LeClair}, Christopher A, pages: 122384, url: http://dx.doi.org/10.1016/j.talanta.2021.122384, year: 2021} @ https://matt.might.net/:1293
+[    3438ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3438ms] [LOG] {title: Family genetic result communication in rare and un…d disease communities: Understanding the practice, author: Studwell, Courtney M and Kelley, Emily G and Undia…and Palmer, Christina G S and {LeBlanc}, Kimberly, pages: 439-447, url: http://dx.doi.org/10.1002/jgc4.1329, year: 2021} @ https://matt.might.net/:1293
+[    3438ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3438ms] [LOG] {title: An induced pluripotent stem cell line ({NCATS}-{CL…ons, p.{R390P} and p.{L318P}, in the {NGLY1} gene, author: Pradhan, Manisha and Farkhondeh, Atena and Cheng, …ms, Steven and Baumgärtel, Karsten and Zheng, Wei, pages: 102400, url: http://dx.doi.org/10.1016/j.scr.2021.102400, year: 2021} @ https://matt.might.net/:1293
+[    3438ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3438ms] [LOG] {title: Clinical application of a scale to assess genomic … ({GEmS}): Process and illustrative case examples, author: {McConkie}-Rosell, Allyn and Schoch, Kelly and Sul…Network and Hooper, Stephen R and Shashi, Vandana, url: http://dx.doi.org/10.1002/jgc4.1451, year: 2021, month: June} @ https://matt.might.net/:1293
+[    3438ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3438ms] [LOG] {title: Genetic counselor roles in the undiagnosed disease…study: Clinical care, collaboration, and curation, author: Kohler, Jennefer N and Kelley, Emily G and Boyd, B…diagnosed Diseases Network and Wheeler, Matthew T, url: http://dx.doi.org/10.1002/jgc4.1493, year: 2021, month: August} @ https://matt.might.net/:1293
+[    3438ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3438ms] [LOG] {title: cdev: a ground-truth based measure to evaluate {RNA}-seq normalization performance, author: Tran, Diem-Trang and Might, Matthew, pages: e12233, url: https://peerj.com/articles/12233, year: 2021} @ https://matt.might.net/:1293
+[    3438ms] [LOG] rendering:  @ https://matt.might.net/:1292
+[    3438ms] [LOG] {title: Generation of two gene corrected human isogenic {i… mutation in the {NGLY1} gene using {CRISPR}/Cas9, author: Pavlinov, Ivan and Farkhondeh, Atena and Yang, Shu…ms, Steven and Baumgärtel, Karsten and Zheng, Wei, pages: 102554, url: http://dx.doi.org/10.1016/j.scr.2021.102554, year: 2021} @ https://matt.might.net/:1293
+[    3761ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ https://matt.might.net/favicon.ico:0

@@ -1,0 +1,141 @@
+- generic [ref=f6e3]:
+  - navigation [ref=f6e4]:
+    - generic [ref=f6e5]:
+      - link "JL 李佳佳" [ref=f6e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f6e7]: JL
+        - generic [ref=f6e8]: 李佳佳
+      - generic [ref=f6e9]:
+        - link "主页" [ref=f6e10] [cursor=pointer]:
+          - /url: /
+        - link "研究" [ref=f6e11] [cursor=pointer]:
+          - /url: /research
+        - link "工具" [ref=f6e12] [cursor=pointer]:
+          - /url: /tools
+        - link "教学" [ref=f6e13] [cursor=pointer]:
+          - /url: /teaching
+        - link "博客" [ref=f6e14] [cursor=pointer]:
+          - /url: /blog
+      - button "Switch to English" [ref=f6e15] [cursor=pointer]
+  - main [ref=f6e21]:
+    - generic [ref=f6e23]:
+      - generic [ref=f6e24]:
+        - heading "李佳佳" [level=1] [ref=f6e25]
+        - paragraph [ref=f6e26]: Jiajia Li
+        - paragraph [ref=f6e27]: 北京师范大学社会学院讲师
+        - paragraph [ref=f6e28]: 北京
+        - generic [ref=f6e32]: 健康社会学 · 生命历程与健康
+        - paragraph [ref=f6e35]: 社会条件如何通过生命历程持续作用，并形成健康及健康不平等？
+        - generic [ref=f6e36]:
+          - link "研究方向" [ref=f6e37] [cursor=pointer]:
+            - /url: /research
+          - link "发表论文" [ref=f6e40] [cursor=pointer]:
+            - /url: /research#pubs
+          - link "Google Scholar" [ref=f6e41] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=W4ZFySoAAAAJ&hl=zh-CN&authuser=1
+        - generic [ref=f6e46]:
+          - link "Email" [ref=f6e47] [cursor=pointer]:
+            - /url: mailto:lijiajia95@hotmail.com
+          - link "GitHub" [ref=f6e51] [cursor=pointer]:
+            - /url: https://github.com/jason-jj-li
+          - link "ORCID" [ref=f6e55] [cursor=pointer]:
+            - /url: https://orcid.org/0000-0003-3302-5063
+          - link "ResearchGate" [ref=f6e65] [cursor=pointer]:
+            - /url: https://www.researchgate.net/profile/Jiajia-Li-35
+            - generic [ref=f6e66]: R
+      - img "李佳佳" [ref=f6e68]
+    - generic [ref=f6e69]:
+      - generic [ref=f6e71]:
+        - generic [ref=f6e72]: "01"
+        - heading "研究简介" [level=2] [ref=f6e73]
+        - generic [ref=f6e74]: Life-course perspectives on health
+      - paragraph [ref=f6e76]: 我的研究主要关注健康的社会生产及其生命历程过程。具体考察早期社会环境、成年工作—家庭—生育经历如何在不同生命阶段累积、传递或得到补偿，并进一步形成中老年健康及健康不平等。研究主要依托中国及国际大型纵向调查和出生队列，运用生命史分析、纵向分析和跨国比较等方法。
+      - link "进入研究页面" [ref=f6e78] [cursor=pointer]:
+        - /url: /research
+    - generic [ref=f6e81]:
+      - generic [ref=f6e83]:
+        - generic [ref=f6e84]: "02"
+        - heading "最新动态" [level=2] [ref=f6e85]
+        - generic [ref=f6e86]: News and releases
+      - generic [ref=f6e88]:
+        - link "2026-01-01 疼痛发生率与多部位轨迹研究发表论文 PAIN Reports 发表我们关于童年逆境与中老年疼痛轨迹的研究成果。" [ref=f6e89] [cursor=pointer]:
+          - /url: https://doi.org/10.1097/PR9.0000000000001389
+          - generic [ref=f6e90]: 2026-01-01
+          - generic [ref=f6e91]:
+            - text: 疼痛发生率与多部位轨迹研究发表论文
+            - generic [ref=f6e92]: PAIN Reports 发表我们关于童年逆境与中老年疼痛轨迹的研究成果。
+        - link "2025-11-10 心血管疾病跨国比较研究发表论文 Journal of Global Health 发表基于 HRS/ELSA/SHARE/CHARLS 的年龄-时期-队列分析。" [ref=f6e97] [cursor=pointer]:
+          - /url: https://doi.org/10.7189/jogh.15.04260
+          - generic [ref=f6e98]: 2025-11-10
+          - generic [ref=f6e99]:
+            - text: 心血管疾病跨国比较研究发表论文
+            - generic [ref=f6e100]: Journal of Global Health 发表基于 HRS/ELSA/SHARE/CHARLS 的年龄-时期-队列分析。
+        - link "2026-01-16 QualInsight v4.1 发布工具 AI 辅助定性研究平台发布，支持编码分析、主题识别、情感/话语/叙事分析、可视化与报告生成。" [ref=f6e105] [cursor=pointer]:
+          - /url: https://github.com/jason-jj-li/AI_quali
+          - generic [ref=f6e106]: 2026-01-16
+          - generic [ref=f6e107]:
+            - text: QualInsight v4.1 发布工具
+            - generic [ref=f6e108]: AI 辅助定性研究平台发布，支持编码分析、主题识别、情感/话语/叙事分析、可视化与报告生成。
+    - generic [ref=f6e113]:
+      - generic [ref=f6e115]:
+        - generic [ref=f6e116]: "03"
+        - heading "学术经历" [level=2] [ref=f6e117]
+        - generic [ref=f6e118]: Education and appointments
+      - generic [ref=f6e121]:
+        - generic [ref=f6e122]:
+          - generic [ref=f6e127]: 社会学本科
+          - generic [ref=f6e128]: ·
+          - generic [ref=f6e129]: 兰州大学哲学社会学院
+          - generic [ref=f6e130]: 2013.09—2017.07
+        - generic [ref=f6e131]:
+          - generic [ref=f6e136]: 人口学硕士
+          - generic [ref=f6e137]: ·
+          - generic [ref=f6e138]: 北京大学人口研究所
+          - generic [ref=f6e139]: 2017.09—2020.07
+        - generic [ref=f6e140]:
+          - generic [ref=f6e145]: 人口学博士
+          - generic [ref=f6e146]: ·
+          - generic [ref=f6e147]: 北京大学人口研究所
+          - generic [ref=f6e148]: 2020.09—2024.07
+        - generic [ref=f6e149]:
+          - generic [ref=f6e154]: 博雅博士后
+          - generic [ref=f6e155]: ·
+          - generic [ref=f6e156]: 北京大学人口研究所
+          - generic [ref=f6e157]: 2024.07—2026.06
+        - generic [ref=f6e158]:
+          - generic [ref=f6e163]: 访问学者
+          - generic [ref=f6e164]: ·
+          - generic [ref=f6e165]: 牛津大学老龄研究所
+          - generic [ref=f6e166]: 2024.09—2025.03
+        - generic [ref=f6e167]:
+          - generic [ref=f6e174]: 讲师
+          - generic [ref=f6e175]: ·
+          - generic [ref=f6e176]: 北京师范大学社会学院
+          - generic [ref=f6e177]: 2026年6月至今
+    - generic [ref=f6e178]:
+      - generic [ref=f6e180]:
+        - generic [ref=f6e181]: "04"
+        - heading "学术服务" [level=2] [ref=f6e182]
+        - generic [ref=f6e183]: Editorial and membership
+      - paragraph [ref=f6e185]: 期刊编委
+      - generic [ref=f6e186]:
+        - generic [ref=f6e187]:
+          - generic [ref=f6e188]: 编委 · BMC Public Health
+          - generic [ref=f6e189]: 负责公共卫生领域的稿件评审与筛选
+        - generic [ref=f6e190]:
+          - generic [ref=f6e191]: 编委 · Discover Public Health
+          - generic [ref=f6e192]: 负责公共卫生研究领域的稿件评审
+        - generic [ref=f6e193]:
+          - generic [ref=f6e194]: 主题编辑 · Frontiers in Epidemiology
+          - generic [ref=f6e195]: 衰老与生命历程流行病学专栏
+          - generic [ref=f6e196]: 全球视角下的生命历程策略应对健康不平等
+      - generic [ref=f6e197]: 受邀为多本SCI期刊匿名审稿
+      - paragraph [ref=f6e198]: 学会会员
+      - paragraph [ref=f6e199]:
+        - generic [ref=f6e200]:
+          - text: SLLS
+          - generic [ref=f6e201]: 纵向与生命历程研究学会
+        - generic [ref=f6e202]:
+          - text: ·IUSSP
+          - generic [ref=f6e203]: 国际人口科学研究联盟
+    - paragraph [ref=f6e205]: © 2026 李佳佳.Designed with React & Tailwind.

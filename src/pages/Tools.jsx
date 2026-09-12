@@ -5,15 +5,15 @@ import { SITE_DATA } from '../data/siteData';
 export default function Tools({ lang }) {
   const t = (obj) => (typeof obj === 'string' ? obj : obj?.[lang] || obj?.en);
   const areaLabel = (key) => {
-    const found = SITE_DATA.researchInterests.find((item) => item.key === key);
+    const found = (SITE_DATA.researchInterests || []).find((item) => item.key === key);
     return found ? t(found) : key;
   };
 
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <main id="main-content" className="min-h-screen pt-24 pb-16">
       <div className="max-w-5xl mx-auto px-6 space-y-10">
         <header className="flex items-start gap-3">
-          <div className="p-2 bg-[rgba(255,255,255,0.06)] rounded-lg shadow-sm border border-[rgba(148,163,184,0.35)] text-cyan-200">
+          <div className="p-2 bg-[var(--panel)] rounded-lg shadow-sm border border-[var(--border)] text-cyan-200">
             <Database size={20} />
           </div>
           <div>
@@ -36,7 +36,7 @@ export default function Tools({ lang }) {
               className="group card card-hover rounded-2xl p-5"
             >
               <div className="flex items-center justify-between mb-3">
-                <h3 className="text-xl font-semibold text-slate-50 group-hover:text-cyan-200 transition-colors">
+                <h3 className="text-xl font-semibold text-slate-50 group-hover:text-[var(--ink)] transition-colors">
                   {t(item.name)}
                 </h3>
                 <span className="tag-ghost">{t(item.type)}</span>
@@ -105,9 +105,9 @@ export default function Tools({ lang }) {
 
         <div className="flex items-center gap-2 text-xs text-slate-400">
           <Filter size={14} />
-          {lang === 'zh' ? '可按领域标签浏览相关资源。' : 'Browse by area tags to find related resources.'}
+          {lang === 'zh' ? '开放工具、方法与资源，支持可复现的研究实践。' : 'Open tools, methods, and resources for reproducible research.'}
         </div>
       </div>
-    </div>
+    </main>
   );
 }

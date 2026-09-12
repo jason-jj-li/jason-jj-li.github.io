@@ -1,0 +1,1898 @@
+- generic [active] [ref=f5e1]:
+  - navigation [ref=f5e5]:
+    - generic:
+      - link "Yihui Xie":
+        - /url: /
+        - img "Yihui Xie" [ref=f5e6] [cursor=pointer]
+    - generic [ref=f5e7]:
+      - link "Home" [ref=f5e9] [cursor=pointer]:
+        - /url: /
+      - link "About" [ref=f5e11] [cursor=pointer]:
+        - /url: /en/about/
+      - link "Blog" [ref=f5e13] [cursor=pointer]:
+        - /url: /en/
+      - link "Vitae" [ref=f5e15] [cursor=pointer]:
+        - /url: /en/vitae/
+      - link "Q&A" [ref=f5e17] [cursor=pointer]:
+        - /url: https://github.com/yihui/yihui.org/discussions
+      - link "Todo" [ref=f5e19] [cursor=pointer]:
+        - /url: /todo/
+      - link "中文" [ref=f5e21] [cursor=pointer]:
+        - /url: /cn/
+  - heading "➶ Yihui’s Blog" [level=1] [ref=f5e22]
+  - heading "R · statistics · life · random thoughts" [level=2] [ref=f5e23]
+  - generic [ref=f5e24]:
+    - heading "2026" [level=2] [ref=f5e25]
+    - list [ref=f5e26]:
+      - listitem [ref=f5e27]:
+        - text: 2026-09-10
+        - link "Should I Ask for Sponsorship?" [ref=f5e28] [cursor=pointer]:
+          - /url: /en/2026/09/sponsorship/
+      - listitem [ref=f5e29]:
+        - text: 2026-09-09
+        - link [ref=f5e30] [cursor=pointer]:
+          - /url: /en/2026/09/knitr-news/
+          - text: A Review of
+          - strong [ref=f5e31]: knitr
+          - text: Updates from 2024 to 2026
+      - listitem [ref=f5e32]:
+        - text: 2026-09-09
+        - link [ref=f5e33] [cursor=pointer]:
+          - /url: /en/2026/09/rmarkdown-news/
+          - text: A Review of
+          - strong [ref=f5e34]: rmarkdown
+          - text: Updates from 2024 to 2026
+    - list [ref=f5e35]:
+      - listitem [ref=f5e36]:
+        - text: 2026-07-10
+        - 'link "The lt Package: Lightweight HTML Tables for R (and Beyond)" [ref=f5e37] [cursor=pointer]':
+          - /url: /en/2026/07/lt-package/
+    - list [ref=f5e38]:
+      - listitem [ref=f5e39]:
+        - text: 2026-05-15
+        - link "Bye, Stack Overflow" [ref=f5e40] [cursor=pointer]:
+          - /url: /en/2026/05/bye-stack-overflow/
+      - listitem [ref=f5e41]:
+        - text: 2026-05-15
+        - link "Converting testthat Tests to testit" [ref=f5e42] [cursor=pointer]:
+          - /url: /en/2026/05/testthat-to-testit/
+      - listitem [ref=f5e43]:
+        - text: 2026-05-03
+        - link "Reflections on AI-assisted Programming" [ref=f5e44] [cursor=pointer]:
+          - /url: /en/2026/05/ai-reflections/
+    - list [ref=f5e45]:
+      - listitem [ref=f5e46]:
+        - text: 2026-04-27
+        - link "Preliminary Support for Typst in knitr" [ref=f5e47] [cursor=pointer]:
+          - /url: /en/2026/04/knitr-typst/
+      - listitem [ref=f5e48]:
+        - text: 2026-04-14
+        - link "R.I.P., Tomas Kalibera" [ref=f5e49] [cursor=pointer]:
+          - /url: /en/2026/04/tomas-kalibera/
+    - list [ref=f5e50]:
+      - listitem [ref=f5e51]:
+        - text: 2026-03-29
+        - link [ref=f5e52] [cursor=pointer]:
+          - /url: /en/2026/03/slow-textconnection/
+          - text: The Surprising Slowness of
+          - code [ref=f5e53]: textConnection()
+          - text: in R
+      - listitem [ref=f5e54]:
+        - text: 2026-03-29
+        - 'link "tinyimg: An R Package for Compressing Images" [ref=f5e55] [cursor=pointer]':
+          - /url: /en/2026/03/tinyimg/
+      - listitem [ref=f5e56]:
+        - text: 2026-03-28
+        - link [ref=f5e57] [cursor=pointer]:
+          - /url: /en/2026/03/tinytex-ctan-mirror/
+          - text: "A CDN-backed CTAN Mirror:"
+          - code [ref=f5e58]: tlnet.yihui.org
+      - listitem [ref=f5e59]:
+        - text: 2026-03-27
+        - link "Announcing TinyTeX Binaries for arm64 and musl-based Linux" [ref=f5e60] [cursor=pointer]:
+          - /url: /en/2026/03/tinytex-arm64/
+      - listitem [ref=f5e61]:
+        - text: 2026-03-27
+        - link [ref=f5e62] [cursor=pointer]:
+          - /url: /en/2026/03/tinytex-macos-path/
+          - text: "TinyTeX on macOS: No More Messing with"
+          - code [ref=f5e63]: /usr/local/bin
+    - list [ref=f5e64]:
+      - listitem [ref=f5e65]:
+        - text: 2026-02-10
+        - link "R.I.P., Fritz Leisch" [ref=f5e66] [cursor=pointer]:
+          - /url: /en/2026/02/fritz-leisch/
+      - listitem [ref=f5e67]:
+        - text: 2026-02-10
+        - link "R.I.P., John Fox" [ref=f5e68] [cursor=pointer]:
+          - /url: /en/2026/02/john-fox/
+      - listitem [ref=f5e69]:
+        - text: 2026-02-09
+        - link "Bye, Hex Stickers" [ref=f5e70] [cursor=pointer]:
+          - /url: /en/2026/02/bye-stickers/
+      - listitem [ref=f5e71]:
+        - text: 2026-02-09
+        - link "Navigating CRAN’s Reverse Dependency Check Logs" [ref=f5e72] [cursor=pointer]:
+          - /url: /en/2026/02/revdep-tabset/
+      - listitem [ref=f5e73]:
+        - text: 2026-02-08
+        - link [ref=f5e74] [cursor=pointer]:
+          - /url: /en/2026/02/xfun-tabset/
+          - text: Viewing Nested Lists with
+          - code [ref=f5e75]: xfun::tabset()
+    - list [ref=f5e76]:
+      - listitem [ref=f5e77]:
+        - text: 2026-01-23
+        - link "Hello World! I’m Back to Blogging!" [ref=f5e78] [cursor=pointer]:
+          - /url: /en/2026/01/hello-world/
+    - heading "2024" [level=2] [ref=f5e79]
+    - list [ref=f5e80]:
+      - listitem [ref=f5e81]:
+        - text: 2024-01-03
+        - link "Bye, RStudio/Posit!" [ref=f5e82] [cursor=pointer]:
+          - /url: /en/2024/01/bye-rstudio/
+    - heading "2023" [level=2] [ref=f5e83]
+    - list [ref=f5e84]:
+      - listitem [ref=f5e85]:
+        - text: 2023-11-21
+        - 'link "Help Needed: Making SearchBuilder Work in the Server Mode in DT" [ref=f5e86] [cursor=pointer]':
+          - /url: /en/2023/11/dt-searchbuilder/
+      - listitem [ref=f5e87]:
+        - text: 2023-11-17
+        - link "A Change in the TinyTeX Installation Path on Windows" [ref=f5e88] [cursor=pointer]:
+          - /url: /en/2023/11/tinytex-path/
+      - listitem [ref=f5e89]:
+        - text: 2023-11-07
+        - link [ref=f5e90] [cursor=pointer]:
+          - /url: /en/2023/11/dl-fieldset/
+          - text: Convert Definition Lists (
+          - code [ref=f5e91]: <dl>
+          - text: ) to Frames (
+          - code [ref=f5e92]: <fieldset>
+          - text: )
+    - list [ref=f5e93]:
+      - listitem [ref=f5e94]:
+        - text: 2023-10-21
+        - 'link "R Markdown v1: Feature Complete!" [ref=f5e95] [cursor=pointer]':
+          - /url: /en/2023/10/markdown-complete/
+      - listitem [ref=f5e96]:
+        - text: 2023-10-20
+        - link "A Simple HTML Article Format" [ref=f5e97] [cursor=pointer]:
+          - /url: /en/2023/10/html-article/
+      - listitem [ref=f5e98]:
+        - text: 2023-10-12
+        - link "Create Tabsets from HTML Sections or Bullet Lists via JavaScript and CSS" [ref=f5e99] [cursor=pointer]:
+          - /url: /en/2023/10/section-tabsets/
+      - listitem [ref=f5e100]:
+        - text: 2023-10-11
+        - link "An Example of Simplifying a Decade-Old Piece of JavaScript" [ref=f5e101] [cursor=pointer]:
+          - /url: /en/2023/10/simplify-javascript/
+      - listitem [ref=f5e102]:
+        - text: 2023-10-11
+        - link [ref=f5e103] [cursor=pointer]:
+          - /url: /en/2023/10/three-functions/
+          - text: "Three Useful Functions in Base R:"
+          - code [ref=f5e104]: regexec()
+          - text: ","
+          - code [ref=f5e105]: strrep()
+          - text: ", and"
+          - code [ref=f5e106]: append()
+      - listitem [ref=f5e107]:
+        - text: 2023-10-09
+        - link "An Example of Shortening R Code" [ref=f5e108] [cursor=pointer]:
+          - /url: /en/2023/10/shorten-code/
+      - listitem [ref=f5e109]:
+        - text: 2023-10-09
+        - link "Two Hidden Ways to Set Global Chunk Options for knitr" [ref=f5e110] [cursor=pointer]:
+          - /url: /en/2023/10/opts-chunk/
+    - list [ref=f5e111]:
+      - listitem [ref=f5e112]:
+        - text: 2023-09-25
+        - link "Implement Dark Mode with One Line of CSS" [ref=f5e113] [cursor=pointer]:
+          - /url: /en/2023/09/dark-mode/
+      - listitem [ref=f5e114]:
+        - text: 2023-09-21
+        - 'link "Snap Slides: a Lightweight HTML Presentation Framework" [ref=f5e115] [cursor=pointer]':
+          - /url: /en/2023/09/snap-slides/
+      - listitem [ref=f5e116]:
+        - text: 2023-09-20
+        - link "Add a Copy Button to Any Element on a Web Page" [ref=f5e117] [cursor=pointer]:
+          - /url: /en/2023/09/copy-button/
+      - listitem [ref=f5e118]:
+        - text: 2023-09-19
+        - link "Code Folding with 6 Lines of Vanilla JavaScript" [ref=f5e119] [cursor=pointer]:
+          - /url: /en/2023/09/code-folding/
+      - listitem [ref=f5e120]:
+        - text: 2023-09-17
+        - link "Add Client-side Searching via Fuse.js to Static Sites" [ref=f5e121] [cursor=pointer]:
+          - /url: /en/2023/09/fuse-search/
+      - listitem [ref=f5e122]:
+        - text: 2023-09-14
+        - link "Make HTML Elements Full-width Automatically via JavaScript and CSS" [ref=f5e123] [cursor=pointer]:
+          - /url: /en/2023/09/auto-fullwidth/
+      - listitem [ref=f5e124]:
+        - text: 2023-09-14
+        - link "Merge Consecutive Blockquotes in Markdown" [ref=f5e125] [cursor=pointer]:
+          - /url: /en/2023/09/merge-blockquotes/
+      - listitem [ref=f5e126]:
+        - text: 2023-09-12
+        - link "An Interview of Me by JP and Sarah" [ref=f5e127] [cursor=pointer]:
+          - /url: /en/2023/09/jp-sarah-interview/
+      - listitem [ref=f5e128]:
+        - text: 2023-09-07
+        - link [ref=f5e129] [cursor=pointer]:
+          - /url: /en/2023/09/knitr-1-44/
+          - text: "The Upcoming knitr v1.44: More Compatible with Quarto, and Locking"
+          - code [ref=f5e130]: opts_current
+    - list [ref=f5e131]:
+      - listitem [ref=f5e132]:
+        - text: 2023-08-28
+        - link [ref=f5e133] [cursor=pointer]:
+          - /url: /en/2023/08/output-format-dependency/
+          - code [ref=f5e134]: rmarkdown::output_format_dependency()
+          - text: ": An Easier Way to Customize Output Formats for R Markdown"
+      - listitem [ref=f5e135]:
+        - text: 2023-08-28
+        - link "A Simple CSS Trick to Deal with Horizontal Scrollbars in Code Blocks" [ref=f5e136] [cursor=pointer]:
+          - /url: /en/2023/08/css-scrollbar/
+    - list [ref=f5e137]:
+      - listitem [ref=f5e138]:
+        - text: 2023-06-04
+        - link "Going on Vacation for Two Months" [ref=f5e139] [cursor=pointer]:
+          - /url: /en/2023/06/on-vacation/
+    - list [ref=f5e140]:
+      - listitem [ref=f5e141]:
+        - text: 2023-05-26
+        - link "How to Fold Messages and Warnings in knitr" [ref=f5e142] [cursor=pointer]:
+          - /url: /en/2023/05/fold-messages/
+      - listitem [ref=f5e143]:
+        - text: 2023-05-26
+        - link "Please Avoid Using Hugo v0.112.x" [ref=f5e144] [cursor=pointer]:
+          - /url: /en/2023/05/hugo-112/
+      - listitem [ref=f5e145]:
+        - text: 2023-05-17
+        - link "My Webinar on R Markdown v1 at the ASA Philadelphia Chapter" [ref=f5e146] [cursor=pointer]:
+          - /url: /en/2023/05/philly-markdown/
+      - listitem [ref=f5e147]:
+        - text: 2023-05-15
+        - link "The Status of the DT Package" [ref=f5e148] [cursor=pointer]:
+          - /url: /en/2023/05/dt-status/
+    - list [ref=f5e149]:
+      - listitem [ref=f5e150]:
+        - text: 2023-04-28
+        - link "Share Your Goodwill" [ref=f5e151] [cursor=pointer]:
+          - /url: /en/2023/04/share-your-goodwill/
+      - listitem [ref=f5e152]:
+        - text: 2023-04-12
+        - link [ref=f5e153] [cursor=pointer]:
+          - /url: /en/2023/04/get-objects/
+          - text: Do You Have to
+          - code [ref=f5e154]: get()
+          - text: Objects?
+    - list [ref=f5e155]:
+      - listitem [ref=f5e156]:
+        - text: 2023-02-23
+        - link "Convert Inline Footnotes to Regular Footnotes in Markdown" [ref=f5e157] [cursor=pointer]:
+          - /url: /en/2023/02/markdown-footnotes/
+      - listitem [ref=f5e158]:
+        - text: 2023-02-22
+        - link "Style Keyboard Keys and Shortcuts on Web Pages" [ref=f5e159] [cursor=pointer]:
+          - /url: /en/2023/02/key-buttons/
+      - listitem [ref=f5e160]:
+        - text: 2023-02-07
+        - link "Manipulate SVG Plots with JavaScript in R Markdown" [ref=f5e161] [cursor=pointer]:
+          - /url: /en/2023/02/manipulate-svg/
+      - listitem [ref=f5e162]:
+        - text: 2023-02-07
+        - 'link "Shiny App without Shiny: a JavaScript Exercise in R Markdown" [ref=f5e163] [cursor=pointer]':
+          - /url: /en/2023/02/js-shiny/
+      - listitem [ref=f5e164]:
+        - text: 2023-02-07
+        - link [ref=f5e165] [cursor=pointer]:
+          - /url: /en/2023/02/eval-parse/
+          - text: You Should Rarely Need
+          - code [ref=f5e166]: eval(parse())
+      - listitem [ref=f5e167]:
+        - text: 2023-02-06
+        - link [ref=f5e168] [cursor=pointer]:
+          - /url: /en/2023/02/xfun-isfalse/
+          - text: Deprecating
+          - code [ref=f5e169]: xfun::isFALSE()
+    - list [ref=f5e170]:
+      - listitem [ref=f5e171]:
+        - text: 2023-01-10
+        - link "My Webinar on Explaining R Markdown with Minimal Applications" [ref=f5e172] [cursor=pointer]:
+          - /url: /en/2023/01/minimal-r-markdown/
+      - listitem [ref=f5e173]:
+        - text: 2023-01-05
+        - link "An Upcoming Clean Progress Bar in knitr" [ref=f5e174] [cursor=pointer]:
+          - /url: /en/2023/01/knitr-progress-bar/
+      - listitem [ref=f5e175]:
+        - text: 2023-01-05
+        - link "One Fewer Dependency of knitr" [ref=f5e176] [cursor=pointer]:
+          - /url: /en/2023/01/knitr-stringr/
+      - listitem [ref=f5e177]:
+        - text: 2023-01-04
+        - 'link "litr: Write an R Package Entirely with an R Markdown Document" [ref=f5e178] [cursor=pointer]':
+          - /url: /en/2023/01/litr-package/
+      - listitem [ref=f5e179]:
+        - text: 2023-01-01
+        - link "Finding Function Calls in R Code" [ref=f5e180] [cursor=pointer]:
+          - /url: /en/2023/01/func-call/
+    - heading "2022" [level=2] [ref=f5e181]
+    - list [ref=f5e182]:
+      - listitem [ref=f5e183]:
+        - text: 2022-12-21
+        - link "Starting a Personal GitHub Discussion Board" [ref=f5e184] [cursor=pointer]:
+          - /url: /en/2022/12/github-discussion/
+      - listitem [ref=f5e185]:
+        - text: 2022-12-21
+        - link "Using GitHub Actions as Free Virtual Machines to Debug R Problems on Different Platforms" [ref=f5e186] [cursor=pointer]:
+          - /url: /en/2022/12/gha-debug/
+      - listitem [ref=f5e187]:
+        - text: 2022-12-19
+        - link "A Change in the Meaning of the Chunk Option “message = FALSE” / “warning = FALSE”" [ref=f5e188] [cursor=pointer]:
+          - /url: /en/2022/12/message-false/
+      - listitem [ref=f5e189]:
+        - text: 2022-12-19
+        - link "Migrating Comments from Disqus and Utterances to Giscus" [ref=f5e190] [cursor=pointer]:
+          - /url: /en/2022/12/disqus-to-giscus/
+    - list [ref=f5e191]:
+      - listitem [ref=f5e192]:
+        - text: 2022-06-22
+        - link "My Talk at useR! 2022 on blogdown" [ref=f5e193] [cursor=pointer]:
+          - /url: /en/2022/06/user-blogdown/
+    - list [ref=f5e194]:
+      - listitem [ref=f5e195]:
+        - text: 2022-05-19
+        - link "TinyTeX Users can Install the Full TeX Live Now (It’s a few Gigabytes)" [ref=f5e196] [cursor=pointer]:
+          - /url: /en/2022/05/tinytex-full/
+      - listitem [ref=f5e197]:
+        - text: 2022-05-11
+        - link "Two Upcoming Changes in TinyTeX and tinytex" [ref=f5e198] [cursor=pointer]:
+          - /url: /en/2022/05/tinytex-changes/
+    - list [ref=f5e199]:
+      - listitem [ref=f5e200]:
+        - text: 2022-04-29
+        - link "With Quarto Coming, is R Markdown Going Away? No." [ref=f5e201] [cursor=pointer]:
+          - /url: /en/2022/04/quarto-r-markdown/
+      - listitem [ref=f5e202]:
+        - text: 2022-04-28
+        - link [ref=f5e203] [cursor=pointer]:
+          - /url: /en/2022/04/magrittr-native-pipe/
+          - text: Substitute the magrittr Pipe
+          - code [ref=f5e204]: "%>%"
+          - text: with R’s Native Pipe Operator
+          - code [ref=f5e205]: "|>"
+    - list [ref=f5e206]:
+      - listitem [ref=f5e207]:
+        - text: 2022-01-05
+        - 'link "News from knitr v1.35 to v1.37: Alternative Syntax for Chunk Options, and Some New Engines" [ref=f5e208] [cursor=pointer]':
+          - /url: /en/2022/01/knitr-news/
+    - heading "2021" [level=2] [ref=f5e209]
+    - list [ref=f5e210]:
+      - listitem [ref=f5e211]:
+        - text: 2021-11-12
+        - link [ref=f5e212] [cursor=pointer]:
+          - /url: /en/2021/11/blogdown-v1-6/
+          - text: "blogdown v1.6: Support for the"
+          - code [ref=f5e213]: config/
+          - text: Directory, and Improvements in
+          - code [ref=f5e214]: install_hugo()
+          - text: /
+          - code [ref=f5e215]: new_post()
+    - list [ref=f5e216]:
+      - listitem [ref=f5e217]:
+        - text: 2021-10-28
+        - link "Turn an Ordered List on an HTML Page into a Collapsible FAQ List" [ref=f5e218] [cursor=pointer]:
+          - /url: /en/2021/10/faq-list/
+      - listitem [ref=f5e219]:
+        - text: 2021-10-19
+        - link "An Upcoming Breaking Change in knitr on Unbalanced Chunk Delimiters" [ref=f5e220] [cursor=pointer]:
+          - /url: /en/2021/10/unbalanced-delimiters/
+    - list [ref=f5e221]:
+      - listitem [ref=f5e222]:
+        - text: 2021-06-15
+        - link [ref=f5e223] [cursor=pointer]:
+          - /url: /en/2021/06/spin-child/
+          - text: "One Little Thing: Spin a Child Script via"
+          - code [ref=f5e224]: knitr::spin_child()
+      - listitem [ref=f5e225]:
+        - text: 2021-06-09
+        - link "Simulating the OLS Consistency When X and ε are Dependent" [ref=f5e226] [cursor=pointer]:
+          - /url: /en/2021/06/ols-consistency/
+      - listitem [ref=f5e227]:
+        - text: 2021-06-03
+        - 'link "crandalf: Use GitHub Actions to Check Reverse Dependencies of an R Package" [ref=f5e228] [cursor=pointer]':
+          - /url: /en/2021/06/crandalf/
+      - listitem [ref=f5e229]:
+        - text: 2021-06-03
+        - link "Full-width Figures with Two Lines of CSS" [ref=f5e230] [cursor=pointer]:
+          - /url: /en/2021/06/css-full-width/
+      - listitem [ref=f5e231]:
+        - text: 2021-06-03
+        - link "Let Your Markdown Breathe!" [ref=f5e232] [cursor=pointer]:
+          - /url: /en/2021/06/markdown-breath/
+      - listitem [ref=f5e233]:
+        - text: 2021-06-03
+        - link "News from formatR v1.9 to v1.11" [ref=f5e234] [cursor=pointer]:
+          - /url: /en/2021/06/formatr-news/
+      - listitem [ref=f5e235]:
+        - text: 2021-06-03
+        - link [ref=f5e236] [cursor=pointer]:
+          - /url: /en/2021/06/knitr-rocco/
+          - text: "One Little Thing: The Docco Style with"
+          - code [ref=f5e237]: knitr::rocco()
+      - listitem [ref=f5e238]:
+        - text: 2021-06-02
+        - link "Don’t Know Which LaTeX Package(s) to Install When Getting a LaTeX Error?" [ref=f5e239] [cursor=pointer]:
+          - /url: /en/2021/06/latex-pass/
+      - listitem [ref=f5e240]:
+        - text: 2021-06-01
+        - link "Self-contained xaringan Slides" [ref=f5e241] [cursor=pointer]:
+          - /url: /en/2021/06/self-contained-xaringan/
+    - list [ref=f5e242]:
+      - listitem [ref=f5e243]:
+        - text: 2021-05-30
+        - 'link "blogdown: Knit on Save, or Save on Knit?" [ref=f5e244] [cursor=pointer]':
+          - /url: /en/2021/05/blogdown-knit-save/
+      - listitem [ref=f5e245]:
+        - text: 2021-05-28
+        - 'link "One Little Thing: Reusing Code Chunks and Chunk Options with knitr" [ref=f5e246] [cursor=pointer]':
+          - /url: /en/2021/05/knitr-reuse/
+    - list [ref=f5e247]:
+      - listitem [ref=f5e248]:
+        - text: 2021-04-27
+        - link "Best Wishes for Your Retirement, John!" [ref=f5e249] [cursor=pointer]:
+          - /url: /en/2021/04/john-retirement/
+    - list [ref=f5e250]:
+      - listitem [ref=f5e251]:
+        - text: 2021-03-22
+        - link "A List of Mistakes that I Have Made in My Software Engineering Career" [ref=f5e252] [cursor=pointer]:
+          - /url: /en/2021/03/my-mistakes/
+      - listitem [ref=f5e253]:
+        - text: 2021-03-21
+        - link "What Does it Mean When Your GitHub Issue is Closed, and What Can You Do?" [ref=f5e254] [cursor=pointer]:
+          - /url: /en/2021/03/issue-closed/
+    - heading "2020" [level=2] [ref=f5e255]
+    - list [ref=f5e256]:
+      - listitem [ref=f5e257]:
+        - text: 2020-04-15
+        - link "Accidentally Pressing ’m’ on xaringan Slides" [ref=f5e258] [cursor=pointer]:
+          - /url: /en/2020/04/xaringan-mirror/
+    - list [ref=f5e259]:
+      - listitem [ref=f5e260]:
+        - text: 2020-02-25
+        - link "Quick Notes on Some rstudio::conf(2020) Talks after I Watched the Videos" [ref=f5e261] [cursor=pointer]:
+          - /url: /en/2020/02/rstudio-conf-videos/
+      - listitem [ref=f5e262]:
+        - text: 2020-02-24
+        - link "My First Uncoast Unconference in 2019" [ref=f5e263] [cursor=pointer]:
+          - /url: /en/2020/02/uncoast-unconf/
+      - listitem [ref=f5e264]:
+        - text: 2020-02-17
+        - link "Is that a Mickey Mouse Blowing a Trumpet?" [ref=f5e265] [cursor=pointer]:
+          - /url: /en/2020/02/on-emoji/
+      - listitem [ref=f5e266]:
+        - text: 2020-02-12
+        - link "Down? Not My Fault…" [ref=f5e267] [cursor=pointer]:
+          - /url: /en/2020/02/down-not-my-fault/
+      - listitem [ref=f5e268]:
+        - text: 2020-02-11
+        - link "On a Clear Night" [ref=f5e269] [cursor=pointer]:
+          - /url: /en/2020/02/on-a-clear-night/
+      - listitem [ref=f5e270]:
+        - text: 2020-02-06
+        - link "Back from rstudio::conf(2020)" [ref=f5e271] [cursor=pointer]:
+          - /url: /en/2020/02/rstudio-conf-2020/
+    - heading "2019" [level=2] [ref=f5e272]
+    - list [ref=f5e273]:
+      - listitem [ref=f5e274]:
+        - text: 2019-07-16
+        - 'link "Romain Lesur: The Most Wonderful Collaborator I Have Ever Worked With" [ref=f5e275] [cursor=pointer]':
+          - /url: /en/2019/07/romain-lesur/
+    - list [ref=f5e276]:
+      - listitem [ref=f5e277]:
+        - text: 2019-06-28
+        - link "On TIOBE Index" [ref=f5e278] [cursor=pointer]:
+          - /url: /en/2019/06/tiobe-index/
+    - list [ref=f5e279]:
+      - listitem [ref=f5e280]:
+        - text: 2019-05-22
+        - link "From RTFM to ITFM (Improve The Fine Manual)" [ref=f5e281] [cursor=pointer]:
+          - /url: /en/2019/05/rtfm-or-itfm/
+      - listitem [ref=f5e282]:
+        - text: 2019-05-01
+        - link "August 12, 1991 Review of S-PLUS Statistical Software" [ref=f5e283] [cursor=pointer]:
+          - /url: /en/2019/05/review-of-s-plus/
+    - list [ref=f5e284]:
+      - listitem [ref=f5e285]:
+        - text: 2019-04-30
+        - link "Naming Software Packages with Common Words" [ref=f5e286] [cursor=pointer]:
+          - /url: /en/2019/04/naming-common-words/
+    - list [ref=f5e287]:
+      - listitem [ref=f5e288]:
+        - text: 2019-03-06
+        - link [ref=f5e289] [cursor=pointer]:
+          - /url: /en/2019/03/yolo-karl/
+          - text: The Implementation of
+          - code [ref=f5e290]: yolo = TRUE
+          - text: in xaringan via yolofy()
+    - list [ref=f5e291]:
+      - listitem [ref=f5e292]:
+        - text: 2019-02-20
+        - link "The Ultimate Infinite Moon Reader for xaringan Slides" [ref=f5e293] [cursor=pointer]:
+          - /url: /en/2019/02/ultimate-inf-mr/
+    - list [ref=f5e294]:
+      - listitem [ref=f5e295]:
+        - text: 2019-01-25
+        - link "Back from rstudio::conf 2019" [ref=f5e296] [cursor=pointer]:
+          - /url: /en/2019/01/rstudio-conf/
+    - heading "2018" [level=2] [ref=f5e297]
+    - list [ref=f5e298]:
+      - listitem [ref=f5e299]:
+        - text: 2018-12-26
+        - link "On Marketing (on Social Media)" [ref=f5e300] [cursor=pointer]:
+          - /url: /en/2018/12/social-media-marketing/
+      - listitem [ref=f5e301]:
+        - text: 2018-12-24
+        - link "On Disagreement" [ref=f5e302] [cursor=pointer]:
+          - /url: /en/2018/12/on-disagreement/
+    - list [ref=f5e303]:
+      - listitem [ref=f5e304]:
+        - text: 2018-11-29
+        - link "Two Roads Diverged in a Wood; Take One without Blocking the Other" [ref=f5e305] [cursor=pointer]:
+          - /url: /en/2018/11/two-roads/
+      - listitem [ref=f5e306]:
+        - text: 2018-11-21
+        - link "Isn’t Medium an Obviously Terrible Platform for Blogging?" [ref=f5e307] [cursor=pointer]:
+          - /url: /en/2018/11/terrible-medium/
+      - listitem [ref=f5e308]:
+        - text: 2018-11-09
+        - link "My Biggest Regret in the knitr Package" [ref=f5e309] [cursor=pointer]:
+          - /url: /en/2018/11/biggest-regret-knitr/
+      - listitem [ref=f5e310]:
+        - text: 2018-11-09
+        - link "On Cosmetic Changes in Pull Requests" [ref=f5e311] [cursor=pointer]:
+          - /url: /en/2018/11/cosmetic-changes/
+      - listitem [ref=f5e312]:
+        - text: 2018-11-09
+        - link "Some of My JS Tricks to Enhance the HTML Output of Markdown" [ref=f5e313] [cursor=pointer]:
+          - /url: /en/2018/11/md-js-tricks/
+      - listitem [ref=f5e314]:
+        - text: 2018-11-08
+        - link "The Two Surprisingly Hard Things about the Otherwise Simple Markdown" [ref=f5e315] [cursor=pointer]:
+          - /url: /en/2018/11/hard-markdown/
+      - listitem [ref=f5e316]:
+        - text: 2018-11-08
+        - link "Things are Getting Better and Better" [ref=f5e317] [cursor=pointer]:
+          - /url: /en/2018/11/getting-better/
+      - listitem [ref=f5e318]:
+        - text: 2018-11-07
+        - link "Winners Take All in the Dependency World (or Hell)" [ref=f5e319] [cursor=pointer]:
+          - /url: /en/2018/11/dependency-winner/
+      - listitem [ref=f5e320]:
+        - text: 2018-11-02
+        - link "English is Still Hard for Me, and Thoughts on (Computer) Language Wars" [ref=f5e321] [cursor=pointer]:
+          - /url: /en/2018/11/english-is-hard/
+    - list [ref=f5e322]:
+      - listitem [ref=f5e323]:
+        - text: 2018-10-19
+        - link "Rmd Files will No Longer be Rendered as Markdown on GitHub" [ref=f5e324] [cursor=pointer]:
+          - /url: /en/2018/10/rmd-github/
+    - list [ref=f5e325]:
+      - listitem [ref=f5e326]:
+        - text: 2018-09-21
+        - link "A Follow-Up Post on My Early Career Crisis Post (Finally)" [ref=f5e327] [cursor=pointer]:
+          - /url: /en/2018/09/career-crisis-follow-up/
+      - listitem [ref=f5e328]:
+        - text: 2018-09-20
+        - link "My Trick of Deciding if a Link Should Open a New Browser Tab" [ref=f5e329] [cursor=pointer]:
+          - /url: /en/2018/09/target-blank/
+      - listitem [ref=f5e330]:
+        - text: 2018-09-18
+        - link "How to Put All Your Code in the Appendix in R Markdown" [ref=f5e331] [cursor=pointer]:
+          - /url: /en/2018/09/code-appendix/
+      - listitem [ref=f5e332]:
+        - text: 2018-09-18
+        - link "Serving a Website or Shiny App at 0.0.0.0" [ref=f5e333] [cursor=pointer]:
+          - /url: /en/2018/09/localhost-0-0-0-0/
+      - listitem [ref=f5e334]:
+        - text: 2018-09-10
+        - link "The First Notebook War" [ref=f5e335] [cursor=pointer]:
+          - /url: /en/2018/09/notebook-war/
+      - listitem [ref=f5e336]:
+        - text: 2018-09-04
+        - 'link "xfun::pkg_attach(): A Vectorized Version of library()" [ref=f5e337] [cursor=pointer]':
+          - /url: /en/2018/09/xfun-pkg-attach/
+    - list [ref=f5e338]:
+      - listitem [ref=f5e339]:
+        - text: 2018-08-31
+        - link "Using TinyTeX from a Flash Drive" [ref=f5e340] [cursor=pointer]:
+          - /url: /en/2018/08/tinytex-flash-drive/
+      - listitem [ref=f5e341]:
+        - text: 2018-08-29
+        - 'link "Impact: Depth or Breadth?" [ref=f5e342] [cursor=pointer]':
+          - /url: /en/2018/08/influence-depth-or-breadth/
+      - listitem [ref=f5e343]:
+        - text: 2018-08-16
+        - link "Create GIFs with gifski in knitr Documents" [ref=f5e344] [cursor=pointer]:
+          - /url: /en/2018/08/gifski-knitr/
+      - listitem [ref=f5e345]:
+        - text: 2018-08-09
+        - 'link "makeActiveBinding(): The Most Magical Hidden Gem in Base R" [ref=f5e346] [cursor=pointer]':
+          - /url: /en/2018/08/make-active-binding/
+      - listitem [ref=f5e347]:
+        - text: 2018-08-08
+        - link "Double Negatives" [ref=f5e348] [cursor=pointer]:
+          - /url: /en/2018/08/double-negatives/
+      - listitem [ref=f5e349]:
+        - text: 2018-08-07
+        - link "Reflections on 25+ Years of “50 Years of Data Science”" [ref=f5e350] [cursor=pointer]:
+          - /url: /en/2018/08/25-years-of-data-science/
+      - listitem [ref=f5e351]:
+        - text: 2018-08-06
+        - link "Write a Book with bookdown and Publish with Chapman & Hall" [ref=f5e352] [cursor=pointer]:
+          - /url: /en/2018/08/bookdown-crc/
+    - list [ref=f5e353]:
+      - listitem [ref=f5e354]:
+        - text: 2018-07-31
+        - link "Two of My Use Cases of Lazy Evaluation" [ref=f5e355] [cursor=pointer]:
+          - /url: /en/2018/07/lazy-evaluation/
+      - listitem [ref=f5e356]:
+        - text: 2018-07-30
+        - link "In HTML and the Web I Trust" [ref=f5e357] [cursor=pointer]:
+          - /url: /en/2018/07/in-html-i-trust/
+      - listitem [ref=f5e358]:
+        - text: 2018-07-30
+        - link "Solving Statistical Computing Problems with SQL" [ref=f5e359] [cursor=pointer]:
+          - /url: /en/2018/07/sql-stats-computing/
+      - listitem [ref=f5e360]:
+        - text: 2018-07-30
+        - link "The Cool Hacker Emi Tanaka" [ref=f5e361] [cursor=pointer]:
+          - /url: /en/2018/07/emi-tanaka/
+      - listitem [ref=f5e362]:
+        - text: 2018-07-27
+        - 'link "Help Needed: Add More Tests in My R Packages" [ref=f5e363] [cursor=pointer]':
+          - /url: /en/2018/07/add-more-tests/
+      - listitem [ref=f5e364]:
+        - text: 2018-07-27
+        - link [ref=f5e365] [cursor=pointer]:
+          - /url: /en/2018/07/source-bioclite/
+          - text: "On"
+          - code [ref=f5e366]: source("https://bioconductor.org/biocLite.R")
+      - listitem [ref=f5e367]:
+        - text: 2018-07-27
+        - link "Quietly Struggling (with Software)" [ref=f5e368] [cursor=pointer]:
+          - /url: /en/2018/07/quietly-struggling/
+      - listitem [ref=f5e369]:
+        - text: 2018-07-27
+        - link "The First Bookdown Contest" [ref=f5e370] [cursor=pointer]:
+          - /url: /en/2018/07/first-bookdown-contest/
+      - listitem [ref=f5e371]:
+        - text: 2018-07-24
+        - link "Slowly but Steadily, They Started to Help Me Answer Questions" [ref=f5e372] [cursor=pointer]:
+          - /url: /en/2018/07/help-answer-questions/
+      - listitem [ref=f5e373]:
+        - text: 2018-07-22
+        - link "The Best Way to Support LaTeX Math in Markdown with MathJax" [ref=f5e374] [cursor=pointer]:
+          - /url: /en/2018/07/latex-math-markdown/
+      - listitem [ref=f5e375]:
+        - text: 2018-07-17
+        - link "How Will an Animated GIF Work in a Textbook?" [ref=f5e376] [cursor=pointer]:
+          - /url: /en/2018/07/animated-gif-textbook/
+      - listitem [ref=f5e377]:
+        - text: 2018-07-17
+        - link "The “Invisible Baby” Metaphor" [ref=f5e378] [cursor=pointer]:
+          - /url: /en/2018/07/invisible-baby/
+      - listitem [ref=f5e379]:
+        - text: 2018-07-14
+        - link "No Description, Website, or Topics Provided" [ref=f5e380] [cursor=pointer]:
+          - /url: /en/2018/07/bad-marketing/
+      - listitem [ref=f5e381]:
+        - text: 2018-07-13
+        - 'link "R Markdown: The Definitive Guide" [ref=f5e382] [cursor=pointer]':
+          - /url: /en/2018/07/r-markdown-book/
+      - listitem [ref=f5e383]:
+        - text: 2018-07-13
+        - link "The User-Developer Spectrum in the R Ecosystem" [ref=f5e384] [cursor=pointer]:
+          - /url: /en/2018/07/user-developer/
+      - listitem [ref=f5e385]:
+        - text: 2018-07-11
+        - link "Do You Have to Use FontAwesome or Other Libraries for Web Symbols?" [ref=f5e386] [cursor=pointer]:
+          - /url: /en/2018/07/character-entity/
+      - listitem [ref=f5e387]:
+        - text: 2018-07-11
+        - 'link "One Little Thing: Embed a File in the HTML Output of R Markdown" [ref=f5e388] [cursor=pointer]':
+          - /url: /en/2018/07/embed-file/
+      - listitem [ref=f5e389]:
+        - text: 2018-07-11
+        - link "Write / Don’t Write the Whole Book in bookdown" [ref=f5e390] [cursor=pointer]:
+          - /url: /en/2018/07/whole-bookdown/
+      - listitem [ref=f5e391]:
+        - text: 2018-07-11
+        - 'link "Yue Jiang: A Ninja with Sharingan" [ref=f5e392] [cursor=pointer]':
+          - /url: /en/2018/07/yue-jiang/
+      - listitem [ref=f5e393]:
+        - text: 2018-07-10
+        - link "Only One Person Can Help You with That" [ref=f5e394] [cursor=pointer]:
+          - /url: /en/2018/07/single-driver/
+      - listitem [ref=f5e395]:
+        - text: 2018-07-06
+        - link "Once in a Blue Moon, I Reached “Issue Zero” in a GitHub Repo" [ref=f5e396] [cursor=pointer]:
+          - /url: /en/2018/07/issue-zero/
+      - listitem [ref=f5e397]:
+        - text: 2018-07-03
+        - link "On “Quick Questions”" [ref=f5e398] [cursor=pointer]:
+          - /url: /en/2018/07/quick-questions/
+      - listitem [ref=f5e399]:
+        - text: 2018-07-01
+        - link "A CRANextra Repository for Homebrew and R Users on macOS" [ref=f5e400] [cursor=pointer]:
+          - /url: /en/2018/07/cranextra-macos/
+    - list [ref=f5e401]:
+      - listitem [ref=f5e402]:
+        - text: 2018-06-22
+        - link "Ideally, I Hope to Simply Copy and Run Your Example" [ref=f5e403] [cursor=pointer]:
+          - /url: /en/2018/06/copy-and-run/
+      - listitem [ref=f5e404]:
+        - text: 2018-06-22
+        - link "On Cache Invalidation" [ref=f5e405] [cursor=pointer]:
+          - /url: /en/2018/06/cache-invalidation/
+      - listitem [ref=f5e406]:
+        - text: 2018-06-19
+        - link "HTML Widgets for Non-HTML Output Formats" [ref=f5e407] [cursor=pointer]:
+          - /url: /en/2018/06/html-widgets-non-html/
+      - listitem [ref=f5e408]:
+        - text: 2018-06-18
+        - 'link "One Little Thing: xfun::join_words()" [ref=f5e409] [cursor=pointer]':
+          - /url: /en/2018/06/knitr-combine-words/
+      - listitem [ref=f5e410]:
+        - text: 2018-06-16
+        - 'link "One Little Thing: Quote a Poem with blogdown" [ref=f5e411] [cursor=pointer]':
+          - /url: /en/2018/06/quote-poem-blogdown/
+      - listitem [ref=f5e412]:
+        - text: 2018-06-16
+        - 'link "One Little Thing: Touch a Source File in a blogdown Website" [ref=f5e413] [cursor=pointer]':
+          - /url: /en/2018/06/touch-file-blogdown/
+      - listitem [ref=f5e414]:
+        - text: 2018-06-14
+        - link "Build Binary R Packages for the Homebrew Version of R?" [ref=f5e415] [cursor=pointer]:
+          - /url: /en/2018/06/homebrew-binary-r-packages/
+      - listitem [ref=f5e416]:
+        - text: 2018-06-13
+        - link "Okay, it is Time to Try Pandoc 2.x Now" [ref=f5e417] [cursor=pointer]:
+          - /url: /en/2018/06/time-for-pandoc-2-x/
+      - listitem [ref=f5e418]:
+        - text: 2018-06-12
+        - link "The Best Experience in Remote Talks that I Have Given" [ref=f5e419] [cursor=pointer]:
+          - /url: /en/2018/06/best-remote-talk/
+      - listitem [ref=f5e420]:
+        - text: 2018-06-12
+        - link "The xaringan Math Limerick" [ref=f5e421] [cursor=pointer]:
+          - /url: /en/2018/06/xaringan-math-limerick/
+      - listitem [ref=f5e422]:
+        - text: 2018-06-04
+        - link "Pour Positive Energy into GitHub Issues" [ref=f5e423] [cursor=pointer]:
+          - /url: /en/2018/06/positive-energy-github/
+    - list [ref=f5e424]:
+      - listitem [ref=f5e425]:
+        - text: 2018-05-25
+        - link "One (Perhaps Surprising) Reason Why I may Silently Ignore a GitHub Issue" [ref=f5e426] [cursor=pointer]:
+          - /url: /en/2018/05/github-issue-format/
+      - listitem [ref=f5e427]:
+        - text: 2018-05-07
+        - link "No Slap in the Face to Those Who are Smiling" [ref=f5e428] [cursor=pointer]:
+          - /url: /en/2018/05/no-slap-to-smiles/
+      - listitem [ref=f5e429]:
+        - text: 2018-05-02
+        - link "Make the Right / Positive Things Easier to Do than Wrong / Negative Things" [ref=f5e430] [cursor=pointer]:
+          - /url: /en/2018/05/right-easier-than-wrong/
+    - list [ref=f5e431]:
+      - listitem [ref=f5e432]:
+        - text: 2018-04-06
+        - link [ref=f5e433] [cursor=pointer]:
+          - /url: /en/2018/04/rprofile-trailing-newline/
+          - text: The Trouble of
+          - code [ref=f5e434]: .Rprofile
+          - text: if it Doesn’t Have a Trailing Newline
+    - list [ref=f5e435]:
+      - listitem [ref=f5e436]:
+        - text: 2018-03-26
+        - link "Timezones, and Worse, Daylight Saving Time" [ref=f5e437] [cursor=pointer]:
+          - /url: /en/2018/03/timezones-dst/
+      - listitem [ref=f5e438]:
+        - text: 2018-03-23
+        - link "On Adjectives" [ref=f5e439] [cursor=pointer]:
+          - /url: /en/2018/03/on-adjectives/
+      - listitem [ref=f5e440]:
+        - text: 2018-03-20
+        - link "Let MiKTeX Install Missing LaTeX Packages Automatically" [ref=f5e441] [cursor=pointer]:
+          - /url: /en/2018/03/miktex-auto-install/
+      - listitem [ref=f5e442]:
+        - text: 2018-03-20
+        - link "The “Talk-Driven Development” Model" [ref=f5e443] [cursor=pointer]:
+          - /url: /en/2018/03/talk-driven-development/
+      - listitem [ref=f5e444]:
+        - text: 2018-03-15
+        - link "Don’t Use Spaces or Underscores in File Paths; Use Dashes Instead" [ref=f5e445] [cursor=pointer]:
+          - /url: /en/2018/03/space-pain/
+      - listitem [ref=f5e446]:
+        - text: 2018-03-12
+        - link "Miao YU is Looking for a Postdoc Position in the US" [ref=f5e447] [cursor=pointer]:
+          - /url: /en/2018/03/miao-yu-postdoc/
+      - listitem [ref=f5e448]:
+        - text: 2018-03-07
+        - link "The Second Pull Request Could be (Much) Better" [ref=f5e449] [cursor=pointer]:
+          - /url: /en/2018/03/second-pull-request/
+      - listitem [ref=f5e450]:
+        - text: 2018-03-06
+        - link "Hacking the R (HTML) Help Pages" [ref=f5e451] [cursor=pointer]:
+          - /url: /en/2018/03/hacking-rd/
+      - listitem [ref=f5e452]:
+        - text: 2018-03-06
+        - link "The R Markdown Source Documents of My Presentations" [ref=f5e453] [cursor=pointer]:
+          - /url: /en/2018/03/pres-rmd-source/
+      - listitem [ref=f5e454]:
+        - text: 2018-03-05
+        - link "Thanks, Eduardo Junior, for Giving Up your Pull Request" [ref=f5e455] [cursor=pointer]:
+          - /url: /en/2018/03/thanks-eduardo-junior/
+      - listitem [ref=f5e456]:
+        - text: 2018-03-05
+        - link "The Video of My Talk on blogdown at rstudio::conf 2018" [ref=f5e457] [cursor=pointer]:
+          - /url: /en/2018/03/blogdown-video-rstudio-conf/
+    - list [ref=f5e458]:
+      - listitem [ref=f5e459]:
+        - text: 2018-02-27
+        - link "“Bite-sized” Pull Requests" [ref=f5e460] [cursor=pointer]:
+          - /url: /en/2018/02/bite-sized-pull-requests/
+      - listitem [ref=f5e461]:
+        - text: 2018-02-27
+        - link "And They Closed a Valid Question on Stack Overflow Again" [ref=f5e462] [cursor=pointer]:
+          - /url: /en/2018/02/closed-so-question/
+      - listitem [ref=f5e463]:
+        - text: 2018-02-27
+        - link "The TAMU Theme for xaringan" [ref=f5e464] [cursor=pointer]:
+          - /url: /en/2018/02/tamu-theme-xaringan/
+      - listitem [ref=f5e465]:
+        - text: 2018-02-23
+        - link "Netlify is Hiring Its First Data Scientist" [ref=f5e466] [cursor=pointer]:
+          - /url: /en/2018/02/netlify-data-scientist/
+      - listitem [ref=f5e467]:
+        - text: 2018-02-23
+        - link "Thanks, Alicia Schep, for Digging into knitr Engines" [ref=f5e468] [cursor=pointer]:
+          - /url: /en/2018/02/alicia-knitr-engine/
+      - listitem [ref=f5e469]:
+        - text: 2018-02-21
+        - link "And They Started to Share Procrastination Techniques" [ref=f5e470] [cursor=pointer]:
+          - /url: /en/2018/02/procrastination-techniques/
+      - listitem [ref=f5e471]:
+        - text: 2018-02-21
+        - 'link "The #1 Question to Ask Yourself when Designing a Questionnaire" [ref=f5e472] [cursor=pointer]':
+          - /url: /en/2018/02/stackoverflow-questionnaire/
+      - listitem [ref=f5e473]:
+        - text: 2018-02-19
+        - link "A Twist of Hygge in xaringan" [ref=f5e474] [cursor=pointer]:
+          - /url: /en/2018/02/xaringan-hygge/
+      - listitem [ref=f5e475]:
+        - text: 2018-02-16
+        - link "My Early Career Crisis (2014 - 2015)" [ref=f5e476] [cursor=pointer]:
+          - /url: /en/2018/02/career-crisis/
+      - listitem [ref=f5e477]:
+        - text: 2018-02-15
+        - link "Another R-Podcast with Eric Nantz" [ref=f5e478] [cursor=pointer]:
+          - /url: /en/2018/02/r-podcast/
+      - listitem [ref=f5e479]:
+        - text: 2018-02-14
+        - link "Looking for a New Maintainer of the tikzDevice Package" [ref=f5e480] [cursor=pointer]:
+          - /url: /en/2018/02/tikzdevice-maintainer/
+      - listitem [ref=f5e481]:
+        - text: 2018-02-07
+        - link "Perhaps My Documentation is not Too Bad" [ref=f5e482] [cursor=pointer]:
+          - /url: /en/2018/02/not-bad-documentation/
+      - listitem [ref=f5e483]:
+        - text: 2018-02-06
+        - link "All Hidden Features will Eventually be Discovered" [ref=f5e484] [cursor=pointer]:
+          - /url: /en/2018/02/hidden-features/
+      - listitem [ref=f5e485]:
+        - text: 2018-02-06
+        - link "Thanks, Marie Dussault, for Reading the Full blogdown Book" [ref=f5e486] [cursor=pointer]:
+          - /url: /en/2018/02/marie-dussault/
+      - listitem [ref=f5e487]:
+        - text: 2018-02-03
+        - link "What is More Convincing than a CV?" [ref=f5e488] [cursor=pointer]:
+          - /url: /en/2018/02/more-convincing/
+      - listitem [ref=f5e489]:
+        - text: 2018-02-02
+        - link "How to Pretend Typing Super Fast in RStudio" [ref=f5e490] [cursor=pointer]:
+          - /url: /en/2018/02/typing-fast/
+    - list [ref=f5e491]:
+      - listitem [ref=f5e492]:
+        - text: 2018-01-31
+        - link "The Large Variance in the Attention Level of Readers" [ref=f5e493] [cursor=pointer]:
+          - /url: /en/2018/01/attention-variance/
+      - listitem [ref=f5e494]:
+        - text: 2018-01-30
+        - link "Anything that Can Look Like Cats will Look Like Cats" [ref=f5e495] [cursor=pointer]:
+          - /url: /en/2018/01/looks-like-cats/
+      - listitem [ref=f5e496]:
+        - text: 2018-01-30
+        - link "How to Properly Write a URL" [ref=f5e497] [cursor=pointer]:
+          - /url: /en/2018/01/valid-url/
+      - listitem [ref=f5e498]:
+        - text: 2018-01-30
+        - link "Ian Lyttle is the Most Serious Conference Attendee I’ve Met" [ref=f5e499] [cursor=pointer]:
+          - /url: /en/2018/01/ian-lyttle/
+      - listitem [ref=f5e500]:
+        - text: 2018-01-30
+        - link "It is Hard to Imagine the Limit of Bureaucracy" [ref=f5e501] [cursor=pointer]:
+          - /url: /en/2018/01/limit-of-bureaucracy/
+      - listitem [ref=f5e502]:
+        - text: 2018-01-26
+        - link "Install RGtk2 From Source on macOS" [ref=f5e503] [cursor=pointer]:
+          - /url: /en/2018/01/install-rgtk2-macos/
+      - listitem [ref=f5e504]:
+        - text: 2018-01-19
+        - link "Back To The DT Package After Two Years" [ref=f5e505] [cursor=pointer]:
+          - /url: /en/2018/01/back-to-dt/
+      - listitem [ref=f5e506]:
+        - text: 2018-01-17
+        - link "Nothing Feels Better Than Someone Else Answering Questions For You" [ref=f5e507] [cursor=pointer]:
+          - /url: /en/2018/01/thanks-marcel-schilling/
+      - listitem [ref=f5e508]:
+        - text: 2018-01-16
+        - link "Screenshots Can Be Helpful, But Only Text Can Be Copied And Executed" [ref=f5e509] [cursor=pointer]:
+          - /url: /en/2018/01/screenshots-vs-text/
+      - listitem [ref=f5e510]:
+        - text: 2018-01-02
+        - link "stop() / return() Early for Shorter Code" [ref=f5e511] [cursor=pointer]:
+          - /url: /en/2018/01/stop-early/
+    - heading "2017" [level=2] [ref=f5e512]
+    - list [ref=f5e513]:
+      - listitem [ref=f5e514]:
+        - text: 2017-12-30
+        - link "I Don’t Always Offer Bounties on Stack Overflow. When I Do…" [ref=f5e515] [cursor=pointer]:
+          - /url: /en/2017/12/so-bounties/
+      - listitem [ref=f5e516]:
+        - text: 2017-12-29
+        - 'link "Help Needed: Use Sentence Styles in knitr’s Documentation" [ref=f5e517] [cursor=pointer]':
+          - /url: /en/2017/12/sentence-styles-knitr/
+      - listitem [ref=f5e518]:
+        - text: 2017-12-27
+        - 'link "library(methods): Human Time vs Computer Time" [ref=f5e519] [cursor=pointer]':
+          - /url: /en/2017/12/library-methods/
+      - listitem [ref=f5e520]:
+        - text: 2017-12-21
+        - link "Add an on.exit() Call to a Parent Function" [ref=f5e521] [cursor=pointer]:
+          - /url: /en/2017/12/on-exit-parent/
+      - listitem [ref=f5e522]:
+        - text: 2017-12-21
+        - link "Someone Should Help Prof Alice Silverberg Set Up A Blog" [ref=f5e523] [cursor=pointer]:
+          - /url: /en/2017/12/silverberg-blog/
+      - listitem [ref=f5e524]:
+        - text: 2017-12-20
+        - link "Being Busy vs Being Productive" [ref=f5e525] [cursor=pointer]:
+          - /url: /en/2017/12/busy-vs-productive/
+      - listitem [ref=f5e526]:
+        - text: 2017-12-19
+        - link "Another Year, Another R Package, Another Book, and Endless Joy" [ref=f5e527] [cursor=pointer]:
+          - /url: /en/2017/12/blogdown-book/
+      - listitem [ref=f5e528]:
+        - text: 2017-12-16
+        - link "How To Stop Sexual Harassment Or Other Misconduct At Conferences" [ref=f5e529] [cursor=pointer]:
+          - /url: /en/2017/12/stop-sexual-harassment/
+      - listitem [ref=f5e530]:
+        - text: 2017-12-16
+        - link "The Most Unexpected Discovery of An R Language Feature" [ref=f5e531] [cursor=pointer]:
+          - /url: /en/2017/12/r-dot-dot-dot/
+      - listitem [ref=f5e532]:
+        - text: 2017-12-15
+        - link "More Than “Last 13 lines of output” in R CMD check?" [ref=f5e533] [cursor=pointer]:
+          - /url: /en/2017/12/last-13-lines-of-output/
+      - listitem [ref=f5e534]:
+        - text: 2017-12-13
+        - link "One Little Thing To Consider When Naming Things (Software)" [ref=f5e535] [cursor=pointer]:
+          - /url: /en/2017/12/typing-names/
+      - listitem [ref=f5e536]:
+        - text: 2017-12-12
+        - link "save() vs saveRDS()" [ref=f5e537] [cursor=pointer]:
+          - /url: /en/2017/12/save-vs-saverds/
+      - listitem [ref=f5e538]:
+        - text: 2017-12-09
+        - link "How I Learned R" [ref=f5e539] [cursor=pointer]:
+          - /url: /en/2017/12/how-i-learned-r/
+      - listitem [ref=f5e540]:
+        - text: 2017-12-08
+        - link "The Spreadsheet Lady" [ref=f5e541] [cursor=pointer]:
+          - /url: /en/2017/12/jenny-bryan/
+      - listitem [ref=f5e542]:
+        - text: 2017-12-07
+        - link "Embed A Live Video of Yourself Through Your Camera in HTML5 Slides" [ref=f5e543] [cursor=pointer]:
+          - /url: /en/2017/12/html5-camera/
+      - listitem [ref=f5e544]:
+        - text: 2017-12-07
+        - link "How Twitter Shaped Us" [ref=f5e545] [cursor=pointer]:
+          - /url: /en/2017/12/twitter-shaped-us/
+      - listitem [ref=f5e546]:
+        - text: 2017-12-07
+        - link "Reproducible Research With A Marmot" [ref=f5e547] [cursor=pointer]:
+          - /url: /en/2017/12/rr-marmot/
+      - listitem [ref=f5e548]:
+        - text: 2017-12-07
+        - link "Why Are Some Good Old Ideas Buried in the History of Statistical Graphics?" [ref=f5e549] [cursor=pointer]:
+          - /url: /en/2017/12/good-old-ideas/
+      - listitem [ref=f5e550]:
+        - text: 2017-12-05
+        - link "A Desiccated baseR-er’s Snowflakes via Base R Graphics" [ref=f5e551] [cursor=pointer]:
+          - /url: /en/2017/12/baser-snowflakes/
+      - listitem [ref=f5e552]:
+        - text: 2017-12-04
+        - 'link "Please Help Me Test TinyTeX: A Lightweight LaTeX Distribution" [ref=f5e553] [cursor=pointer]':
+          - /url: /en/2017/12/test-tinytex/
+      - listitem [ref=f5e554]:
+        - text: 2017-12-04
+        - 'link "The #1 Reason Why I Don’t Want to Work in Academia" [ref=f5e555] [cursor=pointer]':
+          - /url: /en/2017/12/formatting-papers/
+    - list [ref=f5e556]:
+      - listitem [ref=f5e557]:
+        - text: 2017-11-22
+        - link "Generate A Verbatim Code Chunk or Inline R Expression in knitr Output" [ref=f5e558] [cursor=pointer]:
+          - /url: /en/2017/11/knitr-verbatim-code-chunk/
+      - listitem [ref=f5e559]:
+        - text: 2017-11-22
+        - 'link "One Little Thing: the knitr Chunk Option include=FALSE" [ref=f5e560] [cursor=pointer]':
+          - /url: /en/2017/11/knitr-include-false/
+      - listitem [ref=f5e561]:
+        - text: 2017-11-22
+        - link "Study the Hugo-XMin Theme If You Wish to Customize A blogdown Website" [ref=f5e562] [cursor=pointer]:
+          - /url: /en/2017/11/tweak-blogdown-site/
+      - listitem [ref=f5e563]:
+        - text: 2017-11-22
+        - link "Thanks, Elio Campitelli, for Testing My Guess!" [ref=f5e564] [cursor=pointer]:
+          - /url: /en/2017/11/thanks-elio-campitelli/
+      - listitem [ref=f5e565]:
+        - text: 2017-11-21
+        - link "Ask Only (?) 12 Questions to Fix An Issue" [ref=f5e566] [cursor=pointer]:
+          - /url: /en/2017/11/12-questions/
+      - listitem [ref=f5e567]:
+        - text: 2017-11-21
+        - link "Thanks, Sergio Oller, for Closing Your Own Pull Request!" [ref=f5e568] [cursor=pointer]:
+          - /url: /en/2017/11/thanks-sergio-oller/
+      - listitem [ref=f5e569]:
+        - text: 2017-11-20
+        - link "Thanks, TJ Mahr, for Reading the Pandoc Documentation!" [ref=f5e570] [cursor=pointer]:
+          - /url: /en/2017/11/thanks-tj-mahr/
+      - listitem [ref=f5e571]:
+        - text: 2017-11-19
+        - 'link "301 Redirect: The Most Important Technique in Maintaining Websites" [ref=f5e572] [cursor=pointer]':
+          - /url: /en/2017/11/301-redirect/
+      - listitem [ref=f5e573]:
+        - text: 2017-11-16
+        - link "On Saying No" [ref=f5e574] [cursor=pointer]:
+          - /url: /en/2017/11/on-saying-no/
+      - listitem [ref=f5e575]:
+        - text: 2017-11-16
+        - link "One Step Ahead" [ref=f5e576] [cursor=pointer]:
+          - /url: /en/2017/11/one-step-ahead/
+      - listitem [ref=f5e577]:
+        - text: 2017-11-15
+        - link "No Need to Upgrade to Pandoc 2.0 (Yet)" [ref=f5e578] [cursor=pointer]:
+          - /url: /en/2017/11/pandoc-2/
+      - listitem [ref=f5e579]:
+        - text: 2017-11-02
+        - link [ref=f5e580] [cursor=pointer]:
+          - /url: /en/2017/11/matrix-indexing/
+          - code [ref=f5e581]: x[matrix(ncol = 2)]
+      - listitem [ref=f5e582]:
+        - text: 2017-11-01
+        - link "Thanks, Rebecca Condit, for Proofreading the blogdown Manuscript!" [ref=f5e583] [cursor=pointer]:
+          - /url: /en/2017/11/becky-proofread/
+    - list [ref=f5e584]:
+      - listitem [ref=f5e585]:
+        - text: 2017-10-25
+        - link "Buy the Case and Return the Pearl" [ref=f5e586] [cursor=pointer]:
+          - /url: /en/2017/10/bookdown-pearl/
+      - listitem [ref=f5e587]:
+        - text: 2017-10-24
+        - link "I’m Also A Desiccated baseR-er Like Karl Broman" [ref=f5e588] [cursor=pointer]:
+          - /url: /en/2017/10/base-r-broman/
+      - listitem [ref=f5e589]:
+        - text: 2017-10-23
+        - 'link "R Package Vignettes: One Fundamental Contribution of Duncan Murdoch" [ref=f5e590] [cursor=pointer]':
+          - /url: /en/2017/10/duncan-vignettes/
+      - listitem [ref=f5e591]:
+        - text: 2017-10-21
+        - link "Thanks, Claus Ekstrøm, for Watching My GitHub Repo!" [ref=f5e592] [cursor=pointer]:
+          - /url: /en/2017/10/thanks-claus/
+      - listitem [ref=f5e593]:
+        - text: 2017-10-19
+        - link "A Few Joyful Moments of A Software Developer" [ref=f5e594] [cursor=pointer]:
+          - /url: /en/2017/10/joyful-moments/
+      - listitem [ref=f5e595]:
+        - text: 2017-10-19
+        - link "Schedule R Code to Be Executed Periodically in the Current R Session" [ref=f5e596] [cursor=pointer]:
+          - /url: /en/2017/10/later-recursion/
+      - listitem [ref=f5e597]:
+        - text: 2017-10-19
+        - link "The 501st Reminder About Reproducible Examples" [ref=f5e598] [cursor=pointer]:
+          - /url: /en/2017/10/501st-reminder/
+      - listitem [ref=f5e599]:
+        - text: 2017-10-13
+        - link "“I thought it was obvious to you,” he said. “No.”" [ref=f5e600] [cursor=pointer]:
+          - /url: /en/2017/10/not-obvious/
+      - listitem [ref=f5e601]:
+        - text: 2017-10-13
+        - link "Are These Still The R Manuals I Knew?!" [ref=f5e602] [cursor=pointer]:
+          - /url: /en/2017/10/r-manuals-in-bookdown/
+      - listitem [ref=f5e603]:
+        - text: 2017-10-13
+        - link "The blogdown Logo" [ref=f5e604] [cursor=pointer]:
+          - /url: /en/2017/10/the-blogdown-logo/
+      - listitem [ref=f5e605]:
+        - text: 2017-10-10
+        - link "Thanks, Karl, for Cross-referencing on GitHub!" [ref=f5e606] [cursor=pointer]:
+          - /url: /en/2017/10/github-cross-references/
+      - listitem [ref=f5e607]:
+        - text: 2017-10-09
+        - link "Emoji Stats of GitHub Issues?" [ref=f5e608] [cursor=pointer]:
+          - /url: /en/2017/10/emoji-stats-of-github-issues/
+      - listitem [ref=f5e609]:
+        - text: 2017-10-09
+        - link "Thanks, Jean-Olivier Irisson, for Mentioning Cross-posting!" [ref=f5e610] [cursor=pointer]:
+          - /url: /en/2017/10/cross-posting/
+      - listitem [ref=f5e611]:
+        - text: 2017-10-04
+        - link "Different Degrees of Freedom for Bloggers and Book Authors" [ref=f5e612] [cursor=pointer]:
+          - /url: /en/2017/10/bloggers-vs-book-authors/
+      - listitem [ref=f5e613]:
+        - text: 2017-10-03
+        - 'link "Help Me: xaringan / remark.js CSS Themes?" [ref=f5e614] [cursor=pointer]':
+          - /url: /en/2017/10/xaringan-themes/
+      - listitem [ref=f5e615]:
+        - text: 2017-10-03
+        - link "The Downside of Sharing A Personal Favorite" [ref=f5e616] [cursor=pointer]:
+          - /url: /en/2017/10/personal-favorite/
+    - list [ref=f5e617]:
+      - listitem [ref=f5e618]:
+        - text: 2017-09-29
+        - link "Thanks, Max, for Not Emailing or Messaging Me!" [ref=f5e619] [cursor=pointer]:
+          - /url: /en/2017/09/thanks-max/
+      - listitem [ref=f5e620]:
+        - text: 2017-09-19
+        - 'link "One Little Thing: knitr::fig_chunk()" [ref=f5e621] [cursor=pointer]':
+          - /url: /en/2017/09/knitr-fig-chunk/
+      - listitem [ref=f5e622]:
+        - text: 2017-09-18
+        - link "The Minimal Reproducible Example Paradox" [ref=f5e623] [cursor=pointer]:
+          - /url: /en/2017/09/the-minimal-reprex-paradox/
+      - listitem [ref=f5e624]:
+        - text: 2017-09-15
+        - 'link "One Little Thing: knitr::imgur_upload()" [ref=f5e625] [cursor=pointer]':
+          - /url: /en/2017/09/knitr-imgur-upload/
+      - listitem [ref=f5e626]:
+        - text: 2017-09-15
+        - link "Pull Requests as A Teaching Tool" [ref=f5e627] [cursor=pointer]:
+          - /url: /en/2017/09/pull-requests-as-a-teaching-tool/
+      - listitem [ref=f5e628]:
+        - text: 2017-09-12
+        - link "Some Articles on Time Management" [ref=f5e629] [cursor=pointer]:
+          - /url: /en/2017/09/time-management/
+      - listitem [ref=f5e630]:
+        - text: 2017-09-11
+        - 'link "Python: The Incredibly Confusing Language?" [ref=f5e631] [cursor=pointer]':
+          - /url: /en/2017/09/python-the-incredibly-confusing-language/
+      - listitem [ref=f5e632]:
+        - text: 2017-09-11
+        - link "Redundancy in “if (x == TRUE)”" [ref=f5e633] [cursor=pointer]:
+          - /url: /en/2017/09/redundancy-in-if-x-true/
+      - listitem [ref=f5e634]:
+        - text: 2017-09-11
+        - link "The bookdown Book in Retrospect" [ref=f5e635] [cursor=pointer]:
+          - /url: /en/2017/09/the-bookdown-book-in-retrospect/
+      - listitem [ref=f5e636]:
+        - text: 2017-09-06
+        - link "Getting Rid of the .DS_Store Crap" [ref=f5e637] [cursor=pointer]:
+          - /url: /en/2017/09/ds-store-crap/
+      - listitem [ref=f5e638]:
+        - text: 2017-09-04
+        - link "Am(az|us)ingly Arrogant" [ref=f5e639] [cursor=pointer]:
+          - /url: /en/2017/09/arrogant/
+    - list [ref=f5e640]:
+      - listitem [ref=f5e641]:
+        - text: 2017-08-31
+        - link "Incremental Slides with xaringan / remark.js" [ref=f5e642] [cursor=pointer]:
+          - /url: /en/2017/08/xaringan-incremental-slides/
+      - listitem [ref=f5e643]:
+        - text: 2017-08-31
+        - link "Twitter Threads vs Blogging" [ref=f5e644] [cursor=pointer]:
+          - /url: /en/2017/08/twitter-threads-vs-blogging/
+      - listitem [ref=f5e645]:
+        - text: 2017-08-31
+        - link "We Cannot Be Friends If You Share Source Code As Screenshots" [ref=f5e646] [cursor=pointer]:
+          - /url: /en/2017/08/source-code-as-screenshots/
+      - listitem [ref=f5e647]:
+        - text: 2017-08-29
+        - link "Why xaringan / remark.js for HTML5 Presentations?" [ref=f5e648] [cursor=pointer]:
+          - /url: /en/2017/08/why-xaringan-remark-js/
+      - listitem [ref=f5e649]:
+        - text: 2017-08-24
+        - link "Stack Overflow (or RStudio Community) First, GitHub Issues Second, and Emails Last" [ref=f5e650] [cursor=pointer]:
+          - /url: /en/2017/08/so-gh-email/
+      - listitem [ref=f5e651]:
+        - text: 2017-08-22
+        - link "Generate A Summary for A Post in Hugo" [ref=f5e652] [cursor=pointer]:
+          - /url: /en/2017/08/hugo-post-summary/
+      - listitem [ref=f5e653]:
+        - text: 2017-08-22
+        - link "Jump-start a Pull Request" [ref=f5e654] [cursor=pointer]:
+          - /url: /en/2017/08/jump-start-a-pull-request/
+    - list [ref=f5e655]:
+      - listitem [ref=f5e656]:
+        - text: 2017-07-12
+        - link "Number of Lines of Code" [ref=f5e657] [cursor=pointer]:
+          - /url: /en/2017/07/lines-of-code/
+      - listitem [ref=f5e658]:
+        - text: 2017-07-06
+        - link "On Syntax Highlighting" [ref=f5e659] [cursor=pointer]:
+          - /url: /en/2017/07/on-syntax-highlighting/
+      - listitem [ref=f5e660]:
+        - text: 2017-07-03
+        - link "How Was the JSM Attendees Data Leaked?" [ref=f5e661] [cursor=pointer]:
+          - /url: /en/2017/07/leaked-jsm-attendees-data/
+    - list [ref=f5e662]:
+      - listitem [ref=f5e663]:
+        - text: 2017-06-09
+        - link "On Formality" [ref=f5e664] [cursor=pointer]:
+          - /url: /en/2017/06/on-formality/
+      - listitem [ref=f5e665]:
+        - text: 2017-06-08
+        - link "The Ghost Printer Behind Top-level R Expressions" [ref=f5e666] [cursor=pointer]:
+          - /url: /en/2017/06/top-level-r-expressions/
+      - listitem [ref=f5e667]:
+        - text: 2017-06-07
+        - link "Consider Netlify instead of GitHub Pages for Your Static Websites" [ref=f5e668] [cursor=pointer]:
+          - /url: /en/2017/06/netlify-instead-of-github-pages/
+      - listitem [ref=f5e669]:
+        - text: 2017-06-06
+        - link "Rediscovering Rd2roxygen" [ref=f5e670] [cursor=pointer]:
+          - /url: /en/2017/06/rediscovering-rd2roxygen/
+    - list [ref=f5e671]:
+      - listitem [ref=f5e672]:
+        - text: 2017-05-22
+        - link "Finally, Four Backticks on GitHub" [ref=f5e673] [cursor=pointer]:
+          - /url: /en/2017/05/four-backticks-github/
+      - listitem [ref=f5e674]:
+        - text: 2017-05-19
+        - link "A Note on on.exit()" [ref=f5e675] [cursor=pointer]:
+          - /url: /en/2017/05/a-note-on-on-exit/
+      - listitem [ref=f5e676]:
+        - text: 2017-05-18
+        - link "How I Find, Manage, and Use GIFs" [ref=f5e677] [cursor=pointer]:
+          - /url: /en/2017/05/gifs/
+      - listitem [ref=f5e678]:
+        - text: 2017-05-17
+        - link "When in Doubt, Try to Upgrade Your Software Packages" [ref=f5e679] [cursor=pointer]:
+          - /url: /en/2017/05/when-in-doubt-upgrade/
+      - listitem [ref=f5e680]:
+        - text: 2017-05-16
+        - link "A Note on missing()" [ref=f5e681] [cursor=pointer]:
+          - /url: /en/2017/05/a-note-on-missing/
+    - list [ref=f5e682]:
+      - listitem [ref=f5e683]:
+        - text: 2017-04-14
+        - link "Some Facts about Jeff Leek" [ref=f5e684] [cursor=pointer]:
+          - /url: /en/2017/04/jeff-leek-facts/
+    - heading "2014" [level=2] [ref=f5e685]
+    - list [ref=f5e686]:
+      - listitem [ref=f5e687]:
+        - text: 2014-11-18
+        - link "A Letter of Recommendation for Nan Xiao" [ref=f5e688] [cursor=pointer]:
+          - /url: /en/2014/11/lor-nan-xiao/
+    - list [ref=f5e689]:
+      - listitem [ref=f5e690]:
+        - text: 2014-07-26
+        - link "A Few Notes on UseR! 2014" [ref=f5e691] [cursor=pointer]:
+          - /url: /en/2014/07/a-few-notes-on-user2014/
+      - listitem [ref=f5e692]:
+        - text: 2014-07-26
+        - link "library() vs require() in R" [ref=f5e693] [cursor=pointer]:
+          - /url: /en/2014/07/library-vs-require/
+    - heading "2013" [level=2] [ref=f5e694]
+    - list [ref=f5e695]:
+      - listitem [ref=f5e696]:
+        - text: 2013-10-19
+        - link "Markdown or LaTeX?" [ref=f5e697] [cursor=pointer]:
+          - /url: /en/2013/10/markdown-or-latex/
+    - list [ref=f5e698]:
+      - listitem [ref=f5e699]:
+        - text: 2013-09-30
+        - link "Testing R Packages" [ref=f5e700] [cursor=pointer]:
+          - /url: /en/2013/09/testing-r-packages/
+      - listitem [ref=f5e701]:
+        - text: 2013-09-05
+        - link "After Three Months I Cannot Reproduce My Own Book" [ref=f5e702] [cursor=pointer]:
+          - /url: /en/2013/09/cannot-reproduce-my-own-book/
+    - list [ref=f5e703]:
+      - listitem [ref=f5e704]:
+        - text: 2013-07-21
+        - link "My first Bioconductor conference (2013)" [ref=f5e705] [cursor=pointer]:
+          - /url: /en/2013/07/bioconductor-2013/
+    - list [ref=f5e706]:
+      - listitem [ref=f5e707]:
+        - text: 2013-06-27
+        - link "R Package Versioning" [ref=f5e708] [cursor=pointer]:
+          - /url: /en/2013/06/r-package-versioning/
+      - listitem [ref=f5e709]:
+        - text: 2013-06-10
+        - link "You Do Not Need to Tell Me I Have A Typo in My Documentation" [ref=f5e710] [cursor=pointer]:
+          - /url: /en/2013/06/fix-typo-in-documentation/
+      - listitem [ref=f5e711]:
+        - text: 2013-06-03
+        - link "A Few Tips for Writing an R Book" [ref=f5e712] [cursor=pointer]:
+          - /url: /en/2013/06/tips-for-writing-an-r-book/
+    - list [ref=f5e713]:
+      - listitem [ref=f5e714]:
+        - text: 2013-04-12
+        - link "Travis CI for R! (not yet)" [ref=f5e715] [cursor=pointer]:
+          - /url: /en/2013/04/travis-ci-general-purpose/
+      - listitem [ref=f5e716]:
+        - text: 2013-04-07
+        - link "Travis CI for R?" [ref=f5e717] [cursor=pointer]:
+          - /url: /en/2013/04/travis-ci-for-r/
+    - list [ref=f5e718]:
+      - listitem [ref=f5e719]:
+        - text: 2013-03-14
+        - link "On ENAR, or Statistical Meetings in General" [ref=f5e720] [cursor=pointer]:
+          - /url: /en/2013/03/on-enar-or-statistical-meetings-in-general/
+    - list [ref=f5e721]:
+      - listitem [ref=f5e722]:
+        - text: 2013-02-17
+        - link "Contribute to The R Journal with LyX/knitr" [ref=f5e723] [cursor=pointer]:
+          - /url: /en/2013/02/contribute-to-the-r-journal-with-lyx-knitr/
+      - listitem [ref=f5e724]:
+        - text: 2013-02-10
+        - link "Publishing from R+knitr to WordPress" [ref=f5e725] [cursor=pointer]:
+          - /url: /en/2013/02/publishing-from-r-knitr-to-wordpress/
+    - list [ref=f5e726]:
+      - listitem [ref=f5e727]:
+        - text: 2013-01-26
+        - link "Code Pollution With Command Prompts" [ref=f5e728] [cursor=pointer]:
+          - /url: /en/2013/01/code-pollution-with-command-prompts/
+      - listitem [ref=f5e729]:
+        - text: 2013-01-05
+        - link "Find Out Available Usernames with R" [ref=f5e730] [cursor=pointer]:
+          - /url: /en/2013/01/find-out-available-usernames-with-r/
+    - heading "2012" [level=2] [ref=f5e731]
+    - list [ref=f5e732]:
+      - listitem [ref=f5e733]:
+        - text: 2012-12-10
+        - 'link "ICERM Reproducibility Workshop: Day 1" [ref=f5e734] [cursor=pointer]':
+          - /url: /en/2012/12/icerm-reproducibility-workshop-day-1/
+    - list [ref=f5e735]:
+      - listitem [ref=f5e736]:
+        - text: 2012-11-23
+        - link "IPython vs knitr, or Python vs R" [ref=f5e737] [cursor=pointer]:
+          - /url: /en/2012/11/ipython-vs-knitr/
+    - list [ref=f5e738]:
+      - listitem [ref=f5e739]:
+        - text: 2012-10-30
+        - link "Can We Live Without Backslashes?" [ref=f5e740] [cursor=pointer]:
+          - /url: /en/2012/10/lyx-vs-latex/
+      - listitem [ref=f5e741]:
+        - text: 2012-10-29
+        - link "Build Static HTML Help Pages for R Packages" [ref=f5e742] [cursor=pointer]:
+          - /url: /en/2012/10/build-static-html-help/
+      - listitem [ref=f5e743]:
+        - text: 2012-10-29
+        - link "Visiting FHCRC, JHSPH and Meeting Xi’an" [ref=f5e744] [cursor=pointer]:
+          - /url: /en/2012/10/visiting/
+      - listitem [ref=f5e745]:
+        - text: 2012-10-03
+        - link "A Quick Note On Large 2D Data" [ref=f5e746] [cursor=pointer]:
+          - /url: /en/2012/10/on-large-2d-data/
+    - list [ref=f5e747]:
+      - listitem [ref=f5e748]:
+        - text: 2012-09-10
+        - link "R Package Vignettes with Markdown" [ref=f5e749] [cursor=pointer]:
+          - /url: /en/2012/09/r-package-markdown-vignettes/
+    - list [ref=f5e750]:
+      - listitem [ref=f5e751]:
+        - text: 2012-08-07
+        - link "For the Stupid Password Rules at Iowa State" [ref=f5e752] [cursor=pointer]:
+          - /url: /en/2012/08/stupid-iastate-password-rules/
+    - list [ref=f5e753]:
+      - listitem [ref=f5e754]:
+        - text: 2012-06-25
+        - link "Making Reproducible Research Enjoyable" [ref=f5e755] [cursor=pointer]:
+          - /url: /en/2012/06/enjoyable-reproducible-research/
+    - list [ref=f5e756]:
+      - listitem [ref=f5e757]:
+        - text: 2012-05-08
+        - link "Learn formatR in Two Minutes" [ref=f5e758] [cursor=pointer]:
+          - /url: /en/2012/05/a-formatr-video/
+      - listitem [ref=f5e759]:
+        - text: 2012-05-01
+        - link "How to Make HTML5 Slides with knitr" [ref=f5e760] [cursor=pointer]:
+          - /url: /en/2012/05/how-to-make-html5-slides-with-knitr/
+    - list [ref=f5e761]:
+      - listitem [ref=f5e762]:
+        - text: 2012-04-22
+        - link "Fancy HTML5 Slides with knitr and pandoc" [ref=f5e763] [cursor=pointer]:
+          - /url: /en/2012/04/fancy-html5-slides-with-knitr-and-pandoc/
+    - list [ref=f5e764]:
+      - listitem [ref=f5e765]:
+        - text: 2012-03-15
+        - link "Ideas on A Really Fast Statistics Journal" [ref=f5e766] [cursor=pointer]:
+          - /url: /en/2012/03/a-really-fast-statistics-journal/
+    - heading "2011" [level=2] [ref=f5e767]
+    - list [ref=f5e768]:
+      - listitem [ref=f5e769]:
+        - text: 2011-12-12
+        - link "How to Become an Efficient and Collaborative R Programmer" [ref=f5e770] [cursor=pointer]:
+          - /url: /en/2011/12/how-to-become-an-efficient-and-collaborative-r-programmer/
+      - listitem [ref=f5e771]:
+        - text: 2011-12-01
+        - 'link "knitr: Elegant, flexible and fast dynamic report generation with R" [ref=f5e772] [cursor=pointer]':
+          - /url: /en/2011/12/knitr-elegant-flexible-and-fast-dynamic-report-generation-with-r/
+    - list [ref=f5e773]:
+      - listitem [ref=f5e774]:
+        - text: 2011-08-16
+        - 'link "The fun Package: Use R for Fun!" [ref=f5e775] [cursor=pointer]':
+          - /url: /en/2011/08/the-fun-package-use-r-for-fun/
+    - list [ref=f5e776]:
+      - listitem [ref=f5e777]:
+        - text: 2011-05-25
+        - link "Sweave and pgfSweave in LyX 2.0.x (experimental)" [ref=f5e778] [cursor=pointer]:
+          - /url: /en/2011/05/sweave-and-pgfsweave-in-lyx-2-0-x-experimental/
+    - list [ref=f5e779]:
+      - listitem [ref=f5e780]:
+        - text: 2011-04-30
+        - link "Produce Authentic Math Formulas in R Graphics" [ref=f5e781] [cursor=pointer]:
+          - /url: /en/2011/04/produce-authentic-math-formulas-in-r-graphics/
+      - listitem [ref=f5e782]:
+        - text: 2011-04-09
+        - link "New versions of GGobi and rggobi for Windows users" [ref=f5e783] [cursor=pointer]:
+          - /url: /en/2011/04/new-versions-of-ggobi-and-rggobi-for-windows-users/
+    - list [ref=f5e784]:
+      - listitem [ref=f5e785]:
+        - text: 2011-01-06
+        - link "formatR update (0.1-6)" [ref=f5e786] [cursor=pointer]:
+          - /url: /en/2011/01/formatr-update-0-1-6/
+      - listitem [ref=f5e787]:
+        - text: 2011-01-04
+        - link "Customizing the Theme of Your R HTML Help" [ref=f5e788] [cursor=pointer]:
+          - /url: /en/2011/01/customizing-the-theme-of-your-r-html-help/
+      - listitem [ref=f5e789]:
+        - text: 2011-01-01
+        - link "Happy New Year with R (2011, Fireworks!)" [ref=f5e790] [cursor=pointer]:
+          - /url: /en/2011/01/happy-new-year-with-r-2011-fireworks/
+    - heading "2010" [level=2] [ref=f5e791]
+    - list [ref=f5e792]:
+      - listitem [ref=f5e793]:
+        - text: 2010-12-22
+        - 'link "A Special Graphics Device in R: the Null Device" [ref=f5e794] [cursor=pointer]':
+          - /url: /en/2010/12/a-special-graphics-device-in-r-the-null-device/
+      - listitem [ref=f5e795]:
+        - text: 2010-12-03
+        - link "formatR update (0.1-5)" [ref=f5e796] [cursor=pointer]:
+          - /url: /en/2010/12/formatr-update-0-1-5/
+      - listitem [ref=f5e797]:
+        - text: 2010-12-01
+        - 'link "Rd2roxygen: Convert Rd to roxygen documentation" [ref=f5e798] [cursor=pointer]':
+          - /url: /en/2010/12/rd2roxygen-convert-rd-to-roxygen-documentation/
+    - list [ref=f5e799]:
+      - listitem [ref=f5e800]:
+        - text: 2010-10-30
+        - link "How to Start Using (pgf)Sweave in LyX in One Minute" [ref=f5e801] [cursor=pointer]:
+          - /url: /en/2010/10/how-to-start-using-pgfsweave-in-lyx-in-one-minute/
+      - listitem [ref=f5e802]:
+        - text: 2010-10-24
+        - link "Grabbing Tables in Webpages Using the XML Package" [ref=f5e803] [cursor=pointer]:
+          - /url: /en/2010/10/grabbing-tables-in-webpages-using-the-xml-package/
+      - listitem [ref=f5e804]:
+        - text: 2010-10-17
+        - link "On the Gory Loops in R" [ref=f5e805] [cursor=pointer]:
+          - /url: /en/2010/10/on-the-gory-loops-in-r/
+    - list [ref=f5e806]:
+      - listitem [ref=f5e807]:
+        - text: 2010-09-28
+        - link "A Slider to Control Two Plotting Windows" [ref=f5e808] [cursor=pointer]:
+          - /url: /en/2010/09/a-slider-to-control-two-plotting-windows/
+      - listitem [ref=f5e809]:
+        - text: 2010-09-11
+        - link "SyntaxHighlighter Brush for the R Language" [ref=f5e810] [cursor=pointer]:
+          - /url: /en/2010/09/syntaxhighlighter-brush-for-the-r-language/
+    - list [ref=f5e811]:
+      - listitem [ref=f5e812]:
+        - text: 2010-08-22
+        - link "Numbered Figure/Table Captions in beamer" [ref=f5e813] [cursor=pointer]:
+          - /url: /en/2010/08/numbered-figure-table-captions-in-beamer/
+      - listitem [ref=f5e814]:
+        - text: 2010-08-14
+        - link "Auto-completion in Notepad++ for R Script" [ref=f5e815] [cursor=pointer]:
+          - /url: /en/2010/08/auto-completion-in-notepad-for-r-script/
+    - list [ref=f5e816]:
+      - listitem [ref=f5e817]:
+        - text: 2010-07-21
+        - link "My Talk on Animations at useR! 2010 (NIST, Gaithersburg)" [ref=f5e818] [cursor=pointer]:
+          - /url: /en/2010/07/my-talk-on-animations-at-user-2010/
+    - list [ref=f5e819]:
+      - listitem [ref=f5e820]:
+        - text: 2010-04-17
+        - 'link "alphahull: an R Package for Alpha-Convex Hull" [ref=f5e821] [cursor=pointer]':
+          - /url: /en/2010/04/alphahull-an-r-package-for-alpha-convex-hull/
+      - listitem [ref=f5e822]:
+        - text: 2010-04-15
+        - link "R is an Epic Fail?" [ref=f5e823] [cursor=pointer]:
+          - /url: /en/2010/04/r-is-an-epic-fail/
+      - listitem [ref=f5e824]:
+        - text: 2010-04-13
+        - 'link "formatR: farewell to ugly R code" [ref=f5e825] [cursor=pointer]':
+          - /url: /en/2010/04/formatr-farewell-to-ugly-r-code/
+      - listitem [ref=f5e826]:
+        - text: 2010-04-05
+        - link "Rules of Thumb to Meet R Gurus in the Help List" [ref=f5e827] [cursor=pointer]:
+          - /url: /en/2010/04/rules-of-thumb-to-meet-r-gurus-in-the-help-list/
+      - listitem [ref=f5e828]:
+        - text: 2010-04-03
+        - link "Demonstrating the Power of F Test with gWidgets" [ref=f5e829] [cursor=pointer]:
+          - /url: /en/2010/04/demonstrating-the-power-of-f-test-with-gwidgets/
+    - list [ref=f5e830]:
+      - listitem [ref=f5e831]:
+        - text: 2010-03-28
+        - link "Looking for Software Paths in Windows Registry" [ref=f5e832] [cursor=pointer]:
+          - /url: /en/2010/03/looking-for-software-paths-in-windows-registry/
+      - listitem [ref=f5e833]:
+        - text: 2010-03-24
+        - link "A Demo for the Ratio Estimation in Sampling Survey (Animation)" [ref=f5e834] [cursor=pointer]:
+          - /url: /en/2010/03/a-demo-for-the-ratio-estimation/
+      - listitem [ref=f5e835]:
+        - text: 2010-03-24
+        - link "Font Families for the R PDF Device" [ref=f5e836] [cursor=pointer]:
+          - /url: /en/2010/03/font-families-for-the-r-pdf-device/
+      - listitem [ref=f5e837]:
+        - text: 2010-03-23
+        - link "R Tips in Stat 511" [ref=f5e838] [cursor=pointer]:
+          - /url: /en/2010/03/r-tips-in-stat-511/
+      - listitem [ref=f5e839]:
+        - text: 2010-03-12
+        - link "Guess the Random Seed" [ref=f5e840] [cursor=pointer]:
+          - /url: /en/2010/03/guess-the-random-seed/
+    - list [ref=f5e841]:
+      - listitem [ref=f5e842]:
+        - text: 2010-02-18
+        - link "Press Enter in LyX Sweave as You Wish" [ref=f5e843] [cursor=pointer]:
+          - /url: /en/2010/02/press-enter-in-lyx-sweave-as-you-wish/
+    - heading "2009" [level=2] [ref=f5e844]
+    - list [ref=f5e845]:
+      - listitem [ref=f5e846]:
+        - text: 2009-12-31
+        - link "Happy New Year with R" [ref=f5e847] [cursor=pointer]:
+          - /url: /en/2009/12/happy-new-year-with-r/
+      - listitem [ref=f5e848]:
+        - text: 2009-12-24
+        - link "Merry Christmas Using R" [ref=f5e849] [cursor=pointer]:
+          - /url: /en/2009/12/merry-christmas-using-r/
+    - list [ref=f5e850]:
+      - listitem [ref=f5e851]:
+        - text: 2009-11-11
+        - link "Create Animations in PDF Documents Using R" [ref=f5e852] [cursor=pointer]:
+          - /url: /en/2009/11/create-animations-in-pdf-documents-using-r/
+    - list [ref=f5e853]:
+      - listitem [ref=f5e854]:
+        - text: 2009-10-19
+        - link "swfDevice, RGoogleTrends, FlashMXML, and SVGAnnotation" [ref=f5e855] [cursor=pointer]:
+          - /url: /en/2009/10/some-interesting-packages-in-r-swfdevice-rgoogletrends-flashmxml-svgannotation/
+      - listitem [ref=f5e856]:
+        - text: 2009-10-10
+        - link "50000 Revisions Committed to R" [ref=f5e857] [cursor=pointer]:
+          - /url: /en/2009/10/50000-revisions-committed-to-r/
+    - list [ref=f5e858]:
+      - listitem [ref=f5e859]:
+        - text: 2009-09-26
+        - link "How to Import MS Excel Data into R" [ref=f5e860] [cursor=pointer]:
+          - /url: /en/2009/09/how-to-import-ms-excel-data-into-r/
+    - list [ref=f5e861]:
+      - listitem [ref=f5e862]:
+        - text: 2009-08-31
+        - link "Formatting Decimals in Texts with R" [ref=f5e863] [cursor=pointer]:
+          - /url: /en/2009/08/formatting-decimals-in-texts-with-r/
+      - listitem [ref=f5e864]:
+        - text: 2009-08-29
+        - link "Counterintuitive Results in Flipping Coins" [ref=f5e865] [cursor=pointer]:
+          - /url: /en/2009/08/counterintuitive-results-in-flipping-coins/
+    - list [ref=f5e866]:
+      - listitem [ref=f5e867]:
+        - text: 2009-06-12
+        - link "Simulation of Burning Fire in R" [ref=f5e868] [cursor=pointer]:
+          - /url: /en/2009/06/simulation-of-burning-fire-in-r/
+      - listitem [ref=f5e869]:
+        - text: 2009-06-10
+        - link "Creating Tag Cloud Using R and Flash / JavaScript (SWFObject)" [ref=f5e870] [cursor=pointer]:
+          - /url: /en/2009/06/creating-tag-cloud-using-r-and-flash-javascript-swfobject/
+      - listitem [ref=f5e871]:
+        - text: 2009-06-04
+        - link "Insert Google Adsense Code in bbPress Forum" [ref=f5e872] [cursor=pointer]:
+          - /url: /en/2009/06/insert-google-adsense-code-in-bbpress-forum/
+    - list [ref=f5e873]:
+      - listitem [ref=f5e874]:
+        - text: 2009-05-30
+        - link "Convert MySQL Database to UTF-8 in Wordpress" [ref=f5e875] [cursor=pointer]:
+          - /url: /en/2009/05/convert-mysql-database-to-utf-8-in-wordpress/
+    - list [ref=f5e876]:
+      - listitem [ref=f5e877]:
+        - text: 2009-03-31
+        - link "Enhanced tidy.source() (Preserve Some Comments)" [ref=f5e878] [cursor=pointer]:
+          - /url: /en/2009/03/enhanced-tidy-source/
+      - listitem [ref=f5e879]:
+        - text: 2009-03-16
+        - link "Identify Data Points in Off-Screen R Graphics Devices" [ref=f5e880] [cursor=pointer]:
+          - /url: /en/2009/03/identify-data-points-in-off-screen-r-graphics-devices/
+    - list [ref=f5e881]:
+      - listitem [ref=f5e882]:
+        - text: 2009-01-07
+        - link "When Bell-shaped is Far Far Away from Gaussian" [ref=f5e883] [cursor=pointer]:
+          - /url: /en/2009/01/when-bell-shaped-is-far-far-away-from-gaussian/
+    - heading "2008" [level=2] [ref=f5e884]
+    - list [ref=f5e885]:
+      - listitem [ref=f5e886]:
+        - text: 2008-11-05
+        - link "Brownian Motion Using Google Visualization API and R" [ref=f5e887] [cursor=pointer]:
+          - /url: /en/2008/11/brownian-motion-using-google-visualization-api-and-r/
+    - list [ref=f5e888]:
+      - listitem [ref=f5e889]:
+        - text: 2008-10-20
+        - link "Quincunx (Galton box, Bean machine) in R" [ref=f5e890] [cursor=pointer]:
+          - /url: /en/2008/10/quincunx-in-r/
+      - listitem [ref=f5e891]:
+        - text: 2008-10-15
+        - link "Dynamically Selecting Points Using R" [ref=f5e892] [cursor=pointer]:
+          - /url: /en/2008/10/dynamically-selecting-points-using-r/
+      - listitem [ref=f5e893]:
+        - text: 2008-10-12
+        - link "How to Open a File from a Hyperlink" [ref=f5e894] [cursor=pointer]:
+          - /url: /en/2008/10/how-to-open-a-file-from-a-hyperlink/
+    - list [ref=f5e895]:
+      - listitem [ref=f5e896]:
+        - text: 2008-09-23
+        - link "Eyeball Test to Identify An Unfair Coin (or A False Record)" [ref=f5e897] [cursor=pointer]:
+          - /url: /en/2008/09/eyeball-test-to-identify-an-unfair-coin/
+      - listitem [ref=f5e898]:
+        - text: 2008-09-18
+        - link "To Observe Interactions in Bubble Plots" [ref=f5e899] [cursor=pointer]:
+          - /url: /en/2008/09/to-observe-interactions-in-bubble-plots/
+      - listitem [ref=f5e900]:
+        - text: 2008-09-06
+        - link "To See A Circle in A Pile of Sand" [ref=f5e901] [cursor=pointer]:
+          - /url: /en/2008/09/to-see-a-circle-in-a-pile-of-sand/
+    - list [ref=f5e902]:
+      - listitem [ref=f5e903]:
+        - text: 2008-08-14
+        - link "Statistical Animations Using R - A Talk at useR! 2008" [ref=f5e904] [cursor=pointer]:
+          - /url: /en/2008/08/statistical-animations-using-r-a-talk-at-user-2008/
+    - list [ref=f5e905]:
+      - listitem [ref=f5e906]:
+        - text: 2008-07-21
+        - link "Never Lonely" [ref=f5e907] [cursor=pointer]:
+          - /url: /en/2008/07/never-lonely/
+      - listitem [ref=f5e908]:
+        - text: 2008-07-07
+        - link "Girls / Women are Talkative?" [ref=f5e909] [cursor=pointer]:
+          - /url: /en/2008/07/girls-women-are-talkative/
+    - list [ref=f5e910]:
+      - listitem [ref=f5e911]:
+        - text: 2008-06-20
+        - link "Set framerate in pdf2swf" [ref=f5e912] [cursor=pointer]:
+          - /url: /en/2008/06/set-framerate-in-pdf2swf/
+      - listitem [ref=f5e913]:
+        - text: 2008-06-15
+        - link "Dirt in the Mouse & Glivenko-Cantelli Theorem" [ref=f5e914] [cursor=pointer]:
+          - /url: /en/2008/06/dirt-in-the-mouse-glivenko-cantelli-theorem/
+      - listitem [ref=f5e915]:
+        - text: 2008-06-13
+        - link "Flash Animations by saveSWF() in Package animation" [ref=f5e916] [cursor=pointer]:
+          - /url: /en/2008/06/flash-animations-by-saveswf-in-package-animation/
+      - listitem [ref=f5e917]:
+        - text: 2008-06-04
+        - link "Dokuwiki Plugins animation and math Added" [ref=f5e918] [cursor=pointer]:
+          - /url: /en/2008/06/dokuwiki-plugins-animation-and-math-added/
+    - list [ref=f5e919]:
+      - listitem [ref=f5e920]:
+        - text: 2008-05-31
+        - 'link "AniWiki: Animations in Statistics" [ref=f5e921] [cursor=pointer]':
+          - /url: /en/2008/05/aniwiki-animations-in-statistics/
+      - listitem [ref=f5e922]:
+        - text: 2008-05-13
+        - link "Handbook of Computational Statistics" [ref=f5e923] [cursor=pointer]:
+          - /url: /en/2008/05/handbook-of-computational-statistics/
+      - listitem [ref=f5e924]:
+        - text: 2008-05-11
+        - link "Random Number Generation on the Glasses (A Natural RNG)" [ref=f5e925] [cursor=pointer]:
+          - /url: /en/2008/05/random-number-generation-on-the-glasses/
+      - listitem [ref=f5e926]:
+        - text: 2008-05-09
+        - link "To See A World In A Range of Function" [ref=f5e927] [cursor=pointer]:
+          - /url: /en/2008/05/to-see-a-world-in-a-range-of-function/
+      - listitem [ref=f5e928]:
+        - text: 2008-05-02
+        - link "On Scientific Writing" [ref=f5e929] [cursor=pointer]:
+          - /url: /en/2008/05/on-scientific-writing/
+    - list [ref=f5e930]:
+      - listitem [ref=f5e931]:
+        - text: 2008-04-28
+        - link "How Did I Notice the Notice from Hadley Wickham" [ref=f5e932] [cursor=pointer]:
+          - /url: /en/2008/04/how-did-i-notice-the-notice-from-hadley-wickham/
+      - listitem [ref=f5e933]:
+        - text: 2008-04-26
+        - link "Animations for Spatial Patterns (simulation only!)" [ref=f5e934] [cursor=pointer]:
+          - /url: /en/2008/04/animations-for-spatial-patterns/
+      - listitem [ref=f5e935]:
+        - text: 2008-04-26
+        - link "Finding Splitting Values for A Regression Tree" [ref=f5e936] [cursor=pointer]:
+          - /url: /en/2008/04/finding-splitting-values-for-a-regression-tree/
+    - list [ref=f5e937]:
+      - listitem [ref=f5e938]:
+        - text: 2008-01-20
+        - link "Going Home" [ref=f5e939] [cursor=pointer]:
+          - /url: /en/2008/01/going-home/
+      - listitem [ref=f5e940]:
+        - text: 2008-01-17
+        - 'link "R Doc: Using R for Data Analysis and Graphics" [ref=f5e941] [cursor=pointer]':
+          - /url: /en/2008/01/r-doc-using-r-for-data-analysis-and-graphics/
+      - listitem [ref=f5e942]:
+        - text: 2008-01-11
+        - 'link "Structural Equation Modeling: Where Are Advantages?" [ref=f5e943] [cursor=pointer]':
+          - /url: /en/2008/01/structural-equation-modeling-where-are-advantages/
+      - listitem [ref=f5e944]:
+        - text: 2008-01-09
+        - link "Obligation for Statistics to Draw Conclusions?" [ref=f5e945] [cursor=pointer]:
+          - /url: /en/2008/01/obligation-for-statistics-to-draw-conclusions/
+      - listitem [ref=f5e946]:
+        - text: 2008-01-01
+        - link "A Cartoonizer Web Site" [ref=f5e947] [cursor=pointer]:
+          - /url: /en/2008/01/a-cartoonizer-web-site/
+      - listitem [ref=f5e948]:
+        - text: 2008-01-01
+        - link "At the Beginning of the Year 2008" [ref=f5e949] [cursor=pointer]:
+          - /url: /en/2008/01/at-the-beginning-of-the-year-2008/
+    - heading "2007" [level=2] [ref=f5e950]
+    - list [ref=f5e951]:
+      - listitem [ref=f5e952]:
+        - text: 2007-12-31
+        - link "Line Breaks for LaTeX Code in R Documentation Files" [ref=f5e953] [cursor=pointer]:
+          - /url: /en/2007/12/line-breaks-for-latex-code-in-r-documentation-files/
+      - listitem [ref=f5e954]:
+        - text: 2007-12-29
+        - link "Be Careful with the Value Returned in R Functions" [ref=f5e955] [cursor=pointer]:
+          - /url: /en/2007/12/be-careful-with-the-value-returned-in-r-functions/
+      - listitem [ref=f5e956]:
+        - text: 2007-12-28
+        - link "When Does Statistics Become Meaningless?" [ref=f5e957] [cursor=pointer]:
+          - /url: /en/2007/12/when-does-statistics-become-meaningless/
+      - listitem [ref=f5e958]:
+        - text: 2007-12-27
+        - link "Listening is A Better Way to Improve Pronunciation" [ref=f5e959] [cursor=pointer]:
+          - /url: /en/2007/12/listening-is-a-better-way-to-improve-pronunciation/
+      - listitem [ref=f5e960]:
+        - text: 2007-12-26
+        - link "On Christmas Eve…" [ref=f5e961] [cursor=pointer]:
+          - /url: /en/2007/12/on-christmas-eve/
+      - listitem [ref=f5e962]:
+        - text: 2007-12-24
+        - link "Availability of the PNG Device in R" [ref=f5e963] [cursor=pointer]:
+          - /url: /en/2007/12/availability-of-the-png-device-in-r/
+      - listitem [ref=f5e964]:
+        - text: 2007-12-22
+        - link "Make Optical Illusions in R Graphics System" [ref=f5e965] [cursor=pointer]:
+          - /url: /en/2007/12/make-optical-illusions-in-r-graphics-system/
+      - listitem [ref=f5e966]:
+        - text: 2007-12-20
+        - link "Terrible Functional Data Analysis?" [ref=f5e967] [cursor=pointer]:
+          - /url: /en/2007/12/terrible-functional-data-analysis/
+      - listitem [ref=f5e968]:
+        - text: 2007-12-17
+        - link "Updating the Web Site Animated Statistics Using R" [ref=f5e969] [cursor=pointer]:
+          - /url: /en/2007/12/updating-the-web-site-animated-statistics-using-r/
+      - listitem [ref=f5e970]:
+        - text: 2007-12-03
+        - link "Funny Mark Twain" [ref=f5e971] [cursor=pointer]:
+          - /url: /en/2007/12/funny-mark-twain/
+    - list [ref=f5e972]:
+      - listitem [ref=f5e973]:
+        - text: 2007-11-21
+        - link "Quick Notes for VI Editor" [ref=f5e974] [cursor=pointer]:
+          - /url: /en/2007/11/quick-notes-for-vi-editor/
+      - listitem [ref=f5e975]:
+        - text: 2007-11-12
+        - 'link "Package animation: Statistical Animations in R" [ref=f5e976] [cursor=pointer]':
+          - /url: /en/2007/11/package-animation-statistical-animations-in-r/
+      - listitem [ref=f5e977]:
+        - text: 2007-11-08
+        - 'link "Statistical Modelling: Fitting Models or Fitting Data?" [ref=f5e978] [cursor=pointer]':
+          - /url: /en/2007/11/statistical-modelling-fitting-models-or-fitting-data/
+    - list [ref=f5e979]:
+      - listitem [ref=f5e980]:
+        - text: 2007-10-29
+        - 'link "Machine Learning: Machine is Learning Like a Human Being" [ref=f5e981] [cursor=pointer]':
+          - /url: /en/2007/10/machine-learning-machine-is-learning-like-a-human-being/
+      - listitem [ref=f5e982]:
+        - text: 2007-10-25
+        - link "Animations in Survey Sampling" [ref=f5e983] [cursor=pointer]:
+          - /url: /en/2007/10/animations-in-survey-sampling/
+      - listitem [ref=f5e984]:
+        - text: 2007-10-19
+        - link "Slight Changes to Boadilla Theme in Beamer Class" [ref=f5e985] [cursor=pointer]:
+          - /url: /en/2007/10/slight-changes-to-boadilla-theme-in-beamer-class/
+      - listitem [ref=f5e986]:
+        - text: 2007-10-08
+        - link "Linux Font Equivalents for Verdana, Courier New & Georgia" [ref=f5e987] [cursor=pointer]:
+          - /url: /en/2007/10/linux-font-equivalents-for-verdana-courier-new-georgia/
+      - listitem [ref=f5e988]:
+        - text: 2007-10-05
+        - link "Spring in Fall" [ref=f5e989] [cursor=pointer]:
+          - /url: /en/2007/10/spring-in-fall/
+      - listitem [ref=f5e990]:
+        - text: 2007-10-04
+        - link "Jokes in Statistics - A Talk to be Given in CUEB (Slides & Materials)" [ref=f5e991] [cursor=pointer]:
+          - /url: /en/2007/10/jokes-in-statistics-a-talk-to-be-given-in-cueb/
+      - listitem [ref=f5e992]:
+        - text: 2007-10-03
+        - link "multicol – Multi-column Pages in LaTeX" [ref=f5e993] [cursor=pointer]:
+          - /url: /en/2007/10/multicol-multi-column-pages-in-latex/
+      - listitem [ref=f5e994]:
+        - text: 2007-10-02
+        - link "Demonstration of Confidence Intervals Using R (Animated)" [ref=f5e995] [cursor=pointer]:
+          - /url: /en/2007/10/demonstration-of-confidence-intervals-using-r/
+    - list [ref=f5e996]:
+      - listitem [ref=f5e997]:
+        - text: 2007-09-23
+        - link "All Models are Wrong, and Some Models are Useless" [ref=f5e998] [cursor=pointer]:
+          - /url: /en/2007/09/all-models-are-wrong-and-some-models-are-useless/
+      - listitem [ref=f5e999]:
+        - text: 2007-09-14
+        - 'link "Semi-transparent Colors in R: Color Image as an Example" [ref=f5e1000] [cursor=pointer]':
+          - /url: /en/2007/09/semi-transparent-colors-in-r-color-image-as-an-example/
+      - listitem [ref=f5e1001]:
+        - text: 2007-09-11
+        - link "R Language Definition File for Highlight" [ref=f5e1002] [cursor=pointer]:
+          - /url: /en/2007/09/r-language-definition-file-for-highlight/
+      - listitem [ref=f5e1003]:
+        - text: 2007-09-08
+        - link "A Lovely Donkey :-D" [ref=f5e1004] [cursor=pointer]:
+          - /url: /en/2007/09/a-lovely-donkey/
+      - listitem [ref=f5e1005]:
+        - text: 2007-09-08
+        - link "Draw A Map of China onto A Color Image" [ref=f5e1006] [cursor=pointer]:
+          - /url: /en/2007/09/draw-a-map-of-china-onto-a-color-image/
+      - listitem [ref=f5e1007]:
+        - text: 2007-09-06
+        - link "Process of Minimization by Gradient Descent (2D)" [ref=f5e1008] [cursor=pointer]:
+          - /url: /en/2007/09/process-of-minimization-by-gradient-descent/
+    - list [ref=f5e1009]:
+      - listitem [ref=f5e1010]:
+        - text: 2007-08-25
+        - link "Dare be defeated?" [ref=f5e1011] [cursor=pointer]:
+          - /url: /en/2007/08/dare-be-defeated/
+      - listitem [ref=f5e1012]:
+        - text: 2007-08-12
+        - link "Tidy up your R code" [ref=f5e1013] [cursor=pointer]:
+          - /url: /en/2007/08/tidy-up-your-r-code/
+    - generic [ref=f5e1014]: "Total: 17 years · 416 posts · 232,709 words · 1,155,641 letters · 1,383,566 characters"
+  - contentinfo [ref=f5e1015]:
+    - separator [ref=f5e1016]
+    - paragraph [ref=f5e1017]:
+      - generic [ref=f5e1018]:
+        - text: ©
+        - link "Yihui Xie" [ref=f5e1019] [cursor=pointer]:
+          - /url: /
+        - text: 2001 - 2026
+      - generic [ref=f5e1020]:
+        - link "Edit this page" [ref=f5e1021] [cursor=pointer]:
+          - /url: https://github.com/yihui/yihui.org/edit/master/content/en/_index.md
+        - link "· Subscribe" [ref=f5e1022] [cursor=pointer]:
+          - /url: /en/index.xml
+        - link "· License" [ref=f5e1023] [cursor=pointer]:
+          - /url: http://creativecommons.org/licenses/by-nc-sa/4.0/
+        - link "· Search" [ref=f5e1024] [cursor=pointer]:
+          - /url: /search/
+        - link "· Back to top" [ref=f5e1025] [cursor=pointer]:
+          - /url: "#"

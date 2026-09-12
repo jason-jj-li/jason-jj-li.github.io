@@ -18,7 +18,7 @@ export default function SeriesDetail({ lang }) {
 
   if (!series) {
     return (
-      <div className="min-h-screen pt-24 pb-16">
+      <main id="main-content" className="min-h-screen pt-24 pb-16">
         <div className="max-w-3xl mx-auto px-6">
           <div className="card rounded-xl p-8">
             <p className="text-slate-300 mb-4">
@@ -30,20 +30,20 @@ export default function SeriesDetail({ lang }) {
             </Link>
           </div>
         </div>
-      </div>
+      </main>
     );
   }
 
   const posts = series.posts || [];
 
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <main id="main-content" className="min-h-screen pt-24 pb-16">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* 返回导航 */}
         <div className="mb-6">
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 text-slate-400 hover:text-cyan-200 transition-colors"
+            className="inline-flex items-center gap-2 text-slate-400 hover:text-[var(--ink)] transition-colors"
           >
             <ChevronLeft size={18} />
             {lang === 'zh' ? '返回所有系列' : 'Back to all series'}
@@ -52,7 +52,7 @@ export default function SeriesDetail({ lang }) {
 
         {/* 系列标题 */}
         <div className="flex items-center gap-4 mb-10">
-          <div className="p-3 bg-[rgba(255,255,255,0.06)] rounded-xl text-cyan-200">
+          <div className="p-3 bg-[var(--panel)] rounded-xl text-cyan-200">
             <FolderOpen size={32} />
           </div>
           <div>
@@ -94,7 +94,7 @@ export default function SeriesDetail({ lang }) {
                 >
                   {/* 序号 */}
                   <div className="shrink-0 flex items-center justify-center md:w-16">
-                    <div className="w-12 h-12 rounded-full bg-[rgba(255,255,255,0.06)] flex items-center justify-center text-xl font-bold text-cyan-200 group-hover:bg-cyan-200 group-hover:text-slate-900 transition-colors">
+                    <div className="w-12 h-12 rounded-full bg-[var(--panel)] flex items-center justify-center text-xl font-bold text-cyan-200 group-hover:bg-cyan-200 group-hover:text-slate-900 transition-colors">
                       {index + 1}
                     </div>
                   </div>
@@ -102,7 +102,7 @@ export default function SeriesDetail({ lang }) {
                   {/* 日期 */}
                   <div className="shrink-0 flex md:flex-col items-center md:items-start gap-2 text-slate-400 md:w-24">
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-slate-400 group-hover:text-cyan-200 transition-colors">
+                      <div className="text-3xl font-bold text-slate-400 group-hover:text-[var(--ink)] transition-colors">
                         {date.day}
                       </div>
                       <div className="text-xs uppercase tracking-wider font-bold mt-1">
@@ -112,17 +112,17 @@ export default function SeriesDetail({ lang }) {
                   </div>
 
                   {/* 内容 */}
-                  <div className="flex-1 border-l-0 md:border-l-2 border-[rgba(148,163,184,0.25)] md:pl-6">
+                  <div className="flex-1 border-l-0 md:border-l-2 border-[var(--border)] md:pl-6">
                     <div className="flex items-center gap-3 mb-3">
                       <span className="text-xs font-bold text-slate-900 bg-gradient-to-r from-cyan-300 to-indigo-300 px-3 py-1 rounded-full">
                         {post.tag || (lang === 'zh' ? '文章' : 'Article')}
                       </span>
-                      <span className="text-xs font-semibold text-slate-100 bg-[rgba(255,255,255,0.06)] px-3 py-1 rounded-full flex items-center gap-1 border border-[rgba(148,163,184,0.35)]">
+                      <span className="text-xs font-semibold text-slate-100 bg-[var(--panel)] px-3 py-1 rounded-full flex items-center gap-1 border border-[var(--border)]">
                         {isNotebook ? <NotebookIcon size={14} /> : <FileText size={14} />}
                         {sourceLabel}
                       </span>
                     </div>
-                    <h3 className="font-bold text-slate-50 text-2xl mb-3 group-hover:text-cyan-200 transition-colors">
+                    <h3 className="font-bold text-slate-50 text-2xl mb-3 group-hover:text-[var(--ink)] transition-colors">
                       {post.title}
                     </h3>
                     <p className="text-slate-300 leading-relaxed">
@@ -140,6 +140,6 @@ export default function SeriesDetail({ lang }) {
           )}
         </div>
       </div>
-    </div>
+    </main>
   );
 }

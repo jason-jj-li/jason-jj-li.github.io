@@ -1,0 +1,138 @@
+- generic [ref=f7e3]:
+  - navigation [ref=f7e4]:
+    - generic [ref=f7e5]:
+      - link "JL 李佳佳" [ref=f7e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f7e7]: JL
+        - generic [ref=f7e8]: 李佳佳
+      - generic [ref=f7e9]:
+        - link "主页" [ref=f7e10] [cursor=pointer]:
+          - /url: /
+        - link "研究" [ref=f7e11] [cursor=pointer]:
+          - /url: /research
+        - link "工具" [ref=f7e12] [cursor=pointer]:
+          - /url: /tools
+        - link "教学" [ref=f7e13] [cursor=pointer]:
+          - /url: /teaching
+        - link "博客" [ref=f7e14] [cursor=pointer]:
+          - /url: /blog
+      - button "Switch to English" [ref=f7e15] [cursor=pointer]
+  - generic [ref=f7e21]:
+    - banner [ref=f7e22]:
+      - paragraph [ref=f7e23]: 研究
+      - heading "生命历程中的健康社会生产" [level=1] [ref=f7e24]
+      - paragraph [ref=f7e25]: 社会结构、社会环境与生活经历如何在不同生命阶段持续作用，并通过累积、传递、强化和补偿形成健康及健康不平等。
+    - generic [ref=f7e26]:
+      - generic [ref=f7e28]:
+        - generic [ref=f7e29]: "01"
+        - heading "概念框架" [level=2] [ref=f7e30]
+        - generic [ref=f7e31]: 生命历程中的健康形成过程
+      - figure "图 1. 生命历程中的健康社会生产过程。" [ref=f7e33]:
+        - generic [ref=f7e34]: 社会结构与制度环境
+        - generic [ref=f7e41]:
+          - generic [ref=f7e42]:
+            - heading "早期社会经历" [level=3] [ref=f7e44]
+            - list [ref=f7e45]:
+              - listitem [ref=f7e46]: 家庭社会经济条件
+              - listitem [ref=f7e47]: 家庭结构
+              - listitem [ref=f7e48]: 童年逆境
+              - listitem [ref=f7e49]: 社会关系
+          - generic [ref=f7e50]:
+            - heading "成年生活轨迹" [level=3] [ref=f7e52]
+            - list [ref=f7e53]:
+              - listitem [ref=f7e54]: 工作与职业
+              - listitem [ref=f7e55]: 婚姻与家庭
+              - listitem [ref=f7e56]: 生育历程
+              - listitem [ref=f7e57]: 照护与角色转换
+          - generic [ref=f7e58]:
+            - heading "中老年健康" [level=3] [ref=f7e60]
+            - list [ref=f7e61]:
+              - listitem [ref=f7e62]: 身体健康
+              - listitem [ref=f7e63]: 心理健康
+              - listitem [ref=f7e64]: 功能与衰弱
+              - listitem [ref=f7e65]: 认知
+              - listitem [ref=f7e66]: 生物老化
+        - generic [ref=f7e68]: 累积 · 传递 · 强化 · 补偿
+        - generic [ref=f7e73]: 健康不平等与社会分化
+    - generic [ref=f7e75]:
+      - generic [ref=f7e77]:
+        - generic [ref=f7e78]: "02"
+        - heading "研究方向" [level=2] [ref=f7e79]
+        - generic [ref=f7e80]: 研究什么
+      - generic [ref=f7e82]:
+        - generic [ref=f7e84]:
+          - generic [ref=f7e85]:
+            - generic [ref=f7e86]: "01"
+            - generic [ref=f7e87]: 早期
+          - generic [ref=f7e88]:
+            - heading "早期社会经历与远期健康" [level=3] [ref=f7e89]
+            - paragraph [ref=f7e90]: 研究童年逆境、家庭社会经济条件、家庭结构与早期社会关系如何影响后续健康，并关注早期经历的测量、共现模式及其长期健康后果。
+        - generic [ref=f7e92]:
+          - generic [ref=f7e93]:
+            - generic [ref=f7e94]: "02"
+            - generic [ref=f7e95]: 成年
+          - generic [ref=f7e96]:
+            - heading "成年生活轨迹与健康" [level=3] [ref=f7e97]
+            - paragraph [ref=f7e98]: 研究工作、婚姻、家庭形成、生育和照护等社会角色在成年阶段的长期组合与转换，以及不同生活轨迹如何延续、强化或缓冲早期社会差异，并影响中老年健康。
+            - generic [ref=f7e99]:
+              - generic [ref=f7e100]: 工作—家庭轨迹
+              - generic [ref=f7e101]: 就业史
+              - generic [ref=f7e102]: 婚姻与家庭形成
+              - generic [ref=f7e103]: 生育时机
+              - generic [ref=f7e104]: 孩次
+              - generic [ref=f7e105]: 妊娠丢失
+              - generic [ref=f7e106]: 照护
+              - generic [ref=f7e107]: 退休
+        - generic [ref=f7e109]:
+          - generic [ref=f7e110]:
+            - generic [ref=f7e111]: "03"
+            - generic [ref=f7e112]: 中老年
+          - generic [ref=f7e113]:
+            - heading "健康老龄化与社会分化" [level=3] [ref=f7e114]
+            - paragraph [ref=f7e115]: 研究不同生命历程经历如何形成中老年身体、心理、功能、认知和生物健康差异，并考察这些差异在不同性别、社会经济群体、出生队列及社会制度环境中的变化。
+    - generic [ref=f7e116]:
+      - generic [ref=f7e118]:
+        - generic [ref=f7e119]: "03"
+        - heading "研究路径" [level=2] [ref=f7e120]
+        - generic [ref=f7e121]: 如何研究
+      - paragraph [ref=f7e123]:
+        - generic [ref=f7e124]: 纵向队列
+        - generic [ref=f7e125]: ·生命史与序列分析
+        - generic [ref=f7e126]: ·跨队列协调
+        - generic [ref=f7e127]: ·跨国比较
+    - generic [ref=f7e128]:
+      - generic [ref=f7e130]:
+        - generic [ref=f7e131]: "04"
+        - heading "发表论文" [level=2] [ref=f7e132]
+        - generic [ref=f7e133]: 按年份浏览论文与链接。
+      - generic [ref=f7e135]:
+        - generic [ref=f7e136]:
+          - generic [ref=f7e137]: 展示（发表年份）
+          - generic [ref=f7e138]:
+            - button "2026" [ref=f7e139] [cursor=pointer]
+            - button "2025" [ref=f7e140] [cursor=pointer]
+            - button "2024" [ref=f7e141] [cursor=pointer]
+            - button "2023" [ref=f7e142] [cursor=pointer]
+            - button "2022" [ref=f7e143] [cursor=pointer]
+            - button "更多年份" [ref=f7e144] [cursor=pointer]
+        - generic [ref=f7e145]:
+          - link "Scholar" [ref=f7e146] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=W4ZFySoAAAAJ&hl=zh-CN&authuser=1
+          - link "ORCID" [ref=f7e151] [cursor=pointer]:
+            - /url: https://orcid.org/0000-0003-3302-5063
+      - generic [ref=f7e156]:
+        - article [ref=f7e157]:
+          - 'heading "Association of Socioeconomic Status Transition with Arthritis: A Life-Course Study" [level=4] [ref=f7e158]'
+          - paragraph [ref=f7e159]: Guilan Xie; Chiara Natalie Focacci; Jiajia Li; et al.
+          - generic [ref=f7e160]:
+            - generic [ref=f7e161]: BMC Musculoskeletal Disorders (SCI/Q2)
+            - link "DOI/链接" [ref=f7e162] [cursor=pointer]:
+              - /url: https://doi.org/10.1186/s12891-026-10410-1
+        - article [ref=f7e167]:
+          - heading "Adverse Childhood Experiences and Pain Incidence and Multisite Trajectories among Middle-Aged and Older Chinese Adults" [level=4] [ref=f7e168]
+          - paragraph [ref=f7e172]: Jiajia Li; Heming Pei; Guilan Xie; Gong Chen; Lijun Pei
+          - generic [ref=f7e173]:
+            - generic [ref=f7e174]: PAIN Reports 11(1):e1389 (SCI/Q2)
+            - generic [ref=f7e175]: 一作
+            - link "DOI/链接" [ref=f7e176] [cursor=pointer]:
+              - /url: https://doi.org/10.1097/PR9.0000000000001389

@@ -1,4 +1,4 @@
-import { Activity, Brain, Database, Globe2 } from 'lucide-react';
+import { Activity, Database, Globe2, Layers, ListOrdered, Route, Sprout } from 'lucide-react';
 
 export const SITE_DATA = {
   profile: {
@@ -14,14 +14,26 @@ export const SITE_DATA = {
     researchgate: "https://www.researchgate.net/profile/Jiajia-Li-35",
     orcid: "https://orcid.org/0000-0003-3302-5063",
     cvLink: null,
+    identity: {
+      zh: "健康社会学 · 疾病与健康的社会生产",
+      en: "Sociology of Health · The Social Production of Illness and Health"
+    },
+    researchQuestion: {
+      zh: "疾病与健康如何在生命历程中被社会性地生产？",
+      en: "How are illness and health socially produced across the life course?"
+    },
+    researchProfile: {
+      zh: "我的研究立足健康社会学，关注疾病与健康在生命历程中的社会生产过程。具体考察早期社会环境、成年工作—家庭—生育经历如何在不同生命阶段累积、传递或得到补偿，并进一步形成中老年健康及健康不平等。研究主要依托中国及国际大型纵向调查和出生队列，运用生命史分析、纵向分析和跨国比较等方法。",
+      en: "My research in the sociology of health examines the social production of illness and health across the life course. I study how early-life social conditions and adult work, family, and reproductive experiences accumulate, transmit, or offset social disadvantage, and how these processes shape later-life health and health inequalities. My work draws primarily on longitudinal surveys and birth cohorts from China and other countries, using life-history analysis, longitudinal methods, and cross-national comparisons."
+    },
     bio: {
-      zh: "我目前在北京师范大学社会学院担任讲师，主要从事人口健康、社会流行病学与老龄健康研究。我的研究兴趣源于一个朴素的问题：一个人早年经历的健康不平等，是如何在几十年后仍然影响其老年生活质量的？从兰州大学社会学本科，到北京大学人口学博士与博士后，再到牛津大学老龄研究所的访问学者，我始终关注生命历程视角下的健康公平问题，希望为理解童年不良经历的健康代价、识别可干预窗口提供证据。",
-      en: "I am a Lecturer at the School of Sociology, Beijing Normal University, working on population health, social epidemiology, and aging. My interest grew from a simple question: how do health inequalities rooted in early life still shape the quality of later life decades afterward? From a B.A. in Sociology at Lanzhou University, to a Ph.D. and postdoc in Demography at Peking University, and a visiting fellowship at the Oxford Institute of Population Ageing, I have consistently focused on life-course health equity, aiming to illuminate the health costs of childhood adversity and identify intervention windows."
+      zh: "我目前在北京师范大学社会学院任教，主要从事健康社会学与生命历程健康研究。我的研究关注疾病与健康在生命历程中的社会生产过程，重点考察早期社会环境、成年工作—家庭—生育经历如何在不同生命阶段累积、传递或得到补偿，并进一步形成中老年健康及健康不平等。研究主要依托中国及国际大型纵向调查和出生队列，开展生命史分析、纵向研究与跨国比较。",
+      en: "I am a Lecturer at the School of Sociology, Beijing Normal University. My research lies at the intersection of the sociology of health and life-course research. I study the social production of illness and health across the life course, with particular attention to early-life social conditions, adult work-family-reproductive trajectories, and the accumulation, transmission, and compensation of social risks and resources in shaping later-life health and health inequalities. My work draws on longitudinal surveys and birth cohorts from China and other countries."
     }
   },
 
   publicationStats: {
-    sciTotal: 28,
+    sciTotal: 29,
     sciFirstAuthor: 10,
     cnCoreTotal: 15,
     cnFirstAuthor: 3
@@ -29,36 +41,123 @@ export const SITE_DATA = {
 
   researchDirections: [
     {
-      key: "ace-health",
-      title: { zh: "童年不良经历与中老年多维健康", en: "Childhood Adversity & Multidimensional Later-Life Health" },
-      icon: Brain,
+      key: "early-life-health",
+      number: "01",
+      stage: { zh: "早期", en: "Early Life" },
+      title: { zh: "早期社会经历与远期健康", en: "Early-Life Social Experiences & Later-Life Health" },
+      icon: Sprout,
       desc: {
-        zh: "探讨童年早期不良经历对心血管代谢性疾病、衰弱、功能受限和心理健康等中老年多维健康结局的长期影响，识别关键风险窗口与可干预路径。",
-        en: "Examining the long-term effects of childhood adversity on cardiometabolic diseases, frailty, functional limitations, and mental health in middle-aged and older adults, identifying critical risk windows and intervention pathways."
+        zh: "研究童年逆境、家庭社会经济条件、家庭结构与早期社会关系如何影响后续健康，并关注早期经历的测量、共现模式及其长期健康后果。",
+        en: "How childhood adversity, family socioeconomic conditions, family structure, and early social relationships shape subsequent health, with attention to the measurement of early-life experiences, their co-occurrence patterns, and their long-term health consequences."
       },
-      datasets: ["CHARLS"]
+      keywords: {
+        zh: ["童年逆境", "家庭背景", "社会出身"],
+        en: ["Childhood adversity", "Family background", "Social origins"]
+      },
+      datasets: ["CHARLS", "NCDS", "BCS70", "HRS", "ELSA", "SHARE"]
     },
     {
-      key: "trajectory-comparison",
-      title: { zh: "中老年健康轨迹与跨国比较", en: "Health Trajectories & Cross-National Comparisons" },
-      icon: Globe2,
+      key: "adult-trajectories",
+      number: "02",
+      stage: { zh: "成年", en: "Adulthood" },
+      title: { zh: "成年生活轨迹与健康", en: "Adult Life Trajectories & Health" },
+      icon: Route,
       desc: {
-        zh: "基于 CHARLS、HRS、ELSA、SHARE、NCDS 和 BCS70 等队列数据，刻画中老年健康动态变化，比较不同制度与文化情境下的健康不平等。",
-        en: "Analyzing health trajectories and cross-national differences in aging using cohort data such as CHARLS, HRS, ELSA, SHARE, NCDS, and BCS70."
+        zh: "研究工作、婚姻、家庭形成、生育和照护等社会角色在成年阶段的长期组合与转换，以及不同生活轨迹如何延续、强化或缓冲早期社会差异，并影响中老年健康。",
+        en: "How social roles in work, marriage, family formation, fertility, and caregiving combine and shift across adulthood, and how different life trajectories perpetuate, amplify, or buffer early social differences to shape mid- and later-life health."
       },
-      datasets: ["CHARLS", "HRS", "ELSA", "SHARE", "NCDS", "BCS70"]
+      keywords: {
+        zh: ["工作", "家庭", "生育", "照护"],
+        en: ["Work", "Family", "Fertility", "Care"]
+      },
+      scope: {
+        zh: ["工作—家庭轨迹", "就业史", "婚姻与家庭形成", "生育时机", "孩次", "妊娠丢失", "照护", "退休"],
+        en: ["Work-family trajectories", "Employment histories", "Marriage & family formation", "Fertility timing", "Parity", "Pregnancy loss", "Caregiving", "Retirement"]
+      },
+      datasets: ["CHARLS", "HRS", "ELSA", "SHARE"]
     },
     {
-      key: "methods-platforms",
-      title: { zh: "调查研究方法与数据平台", en: "Survey Methods & Data Platforms" },
-      icon: Database,
+      key: "healthy-aging",
+      number: "03",
+      stage: { zh: "中老年", en: "Later Life" },
+      title: { zh: "健康老龄化与社会分化", en: "Healthy Aging & Social Differentiation" },
+      icon: Activity,
       desc: {
-        zh: "开发调查研究与多源异构数据分析相关的方法工具与研究平台，支持定性研究、仿真调查与可重复分析。",
-        en: "Developing methodological tools and research platforms for survey research and multi-source heterogeneous data analysis, supporting qualitative research, simulated surveys, and reproducible analysis."
+        zh: "研究不同生命历程经历如何形成中老年身体、心理、功能、认知和生物健康差异，并考察这些差异在不同性别、社会经济群体、出生队列及社会制度环境中的变化。",
+        en: "How different life-course experiences produce differences in physical, psychological, functional, cognitive, and biological health in middle and later life, and how these differences vary across gender, socioeconomic groups, birth cohorts, and institutional contexts."
       },
-      datasets: []
+      keywords: {
+        zh: ["健康老龄化", "健康不平等", "出生队列", "社会分层"],
+        en: ["Healthy aging", "Health inequalities", "Cohort", "Social stratification"]
+      },
+      datasets: ["CHARLS", "HRS", "ELSA", "SHARE"]
     }
   ],
+
+  researchFramework: {
+    title: { zh: "生命历程中疾病与健康的社会生产", en: "The Social Production of Illness and Health Across the Life Course" },
+    subtitle: {
+      zh: "社会结构、社会环境与生活经历如何在不同生命阶段持续作用，并通过累积、传递、强化和补偿形成健康及健康不平等。",
+      en: "How social structures, conditions, and experiences operate across different stages of life through accumulation, transmission, amplification, and compensation to shape health and health inequalities."
+    },
+    context: { zh: "社会结构与制度环境", en: "Social Structure & Institutional Context" },
+    stages: [
+      {
+        key: "early-life",
+        label: { zh: "早期社会经历", en: "Early-Life Social Experiences" },
+        tags: {
+          zh: ["家庭社会经济条件", "家庭结构", "童年逆境", "社会关系"],
+          en: ["Family socioeconomic conditions", "Family structure", "Childhood adversity", "Social relationships"]
+        }
+      },
+      {
+        key: "adulthood",
+        label: { zh: "成年生活轨迹", en: "Adult Life Trajectories" },
+        tags: {
+          zh: ["工作与职业", "婚姻与家庭", "生育历程", "照护与角色转换"],
+          en: ["Work & occupation", "Marriage & family", "Fertility histories", "Caregiving & role transitions"]
+        }
+      },
+      {
+        key: "later-life",
+        label: { zh: "中老年健康", en: "Health & Healthy Aging" },
+        tags: {
+          zh: ["身体健康", "心理健康", "功能与衰弱", "认知", "生物老化"],
+          en: ["Physical health", "Mental health", "Function & frailty", "Cognition", "Biological aging"]
+        }
+      }
+    ],
+    mechanisms: {
+      zh: "累积 · 传递 · 强化 · 补偿",
+      en: "Accumulation · Transmission · Amplification · Compensation"
+    },
+    outcome: { zh: "健康不平等与社会分化", en: "Health Inequalities & Social Differentiation" }
+  },
+
+  researchApproach: [
+    {
+      key: "longitudinal-cohorts",
+      title: { zh: "纵向队列", en: "Longitudinal Cohorts" },
+      icon: Database
+    },
+    {
+      key: "life-history-sequence",
+      title: { zh: "生命史与序列分析", en: "Life-History & Sequence Analysis" },
+      icon: ListOrdered
+    },
+    {
+      key: "cross-cohort-harmonization",
+      title: { zh: "跨队列协调", en: "Cross-Cohort Harmonization" },
+      icon: Layers
+    },
+    {
+      key: "cross-national-comparison",
+      title: { zh: "跨国比较", en: "Cross-National Comparison" },
+      icon: Globe2
+    }
+  ],
+
+  datasets: ["CHARLS", "HRS", "ELSA", "SHARE", "NCDS", "BCS70"],
 
   workExperience: [
     {
@@ -371,6 +470,14 @@ export const SITE_DATA = {
   posts: [],
 
   publications: [
+    {
+      year: 2026,
+      title: "Association of Socioeconomic Status Transition with Arthritis: A Life-Course Study",
+      authors: "Guilan Xie; Chiara Natalie Focacci; Jiajia Li; et al.",
+      venue: "BMC Musculoskeletal Disorders (SCI/Q2)",
+      links: { paper: "https://doi.org/10.1186/s12891-026-10410-1" },
+      highlight: false
+    },
     {
       year: 2026,
       title: "Adverse Childhood Experiences and Pain Incidence and Multisite Trajectories among Middle-Aged and Older Chinese Adults",

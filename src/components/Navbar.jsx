@@ -1,63 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Globe, Languages } from 'lucide-react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { SITE_DATA } from '../data/siteData';
 
 export default function Navbar({ lang, setLang }) {
-  const location = useLocation();
-  const t = (obj) => (typeof obj === 'string' ? obj : obj[lang] || obj['en']);
-
-  const navItems = [
-    { path: '/', label: { zh: '主页', en: 'Home' } },
-    { path: '/research', label: { zh: '研究', en: 'Research' } },
-    { path: '/tools', label: { zh: '工具', en: 'Tools' } },
-    { path: '/teaching', label: { zh: '教学', en: 'Teaching' } },
-    { path: '/blog', label: { zh: '博客', en: 'Blog' } },
-  ];
-
-  const isActive = (path) => {
-    if (path === '/') return location.pathname === '/';
-    return location.pathname.startsWith(path);
-  };
-
+  const { pathname } = useLocation();
+  const [open, setOpen] = useState(false);
+  useEffect(() => { setOpen(false); }, [pathname]);
+  useEffect(() => {
+    const onKey = (event) => { if (event.key === 'Escape') setOpen(false); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+  const items = [ ['/', '主页', 'Home'], ['/research', '研究', 'Research'], ['/tools', '工具', 'Tools'], ['/teaching', '教学', 'Teaching'], ['/blog', '博客', 'Blog'] ];
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-[rgba(10,12,26,0.82)] backdrop-blur-xl border-b border-[rgba(148,163,184,0.25)] z-50 transition-all duration-300">
-      <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link 
-          to="/"
-          className="font-serif font-bold text-xl tracking-tight text-slate-100 hover:text-cyan-200 transition-colors flex items-center gap-2"
-        >
-          <div className="w-8 h-8 bg-gradient-to-br from-indigo-600 to-cyan-400 text-white rounded-lg flex items-center justify-center font-sans text-sm shadow-[0_10px_30px_-16px_rgba(34,211,238,0.8)]">
-            JL
-          </div>
-          <span className="hidden sm:inline">{t(SITE_DATA.profile.name)}</span>
+    <header className="site-header">
+      <div className="nav-inner">
+        <Link to="/" className="wordmark" aria-label={lang === 'zh' ? '李佳佳 · 首页' : 'Jiajia Li · Home'}>
+          <span className="monogram">JL<span>.</span></span>
+          <span className="wordmark-name">{SITE_DATA.profile.name[lang]}<small>ACADEMIC WEBSITE</small></span>
         </Link>
-        
-        <div className="flex items-center gap-1 md:gap-6 px-2 py-1.5 rounded-full border border-[rgba(148,163,184,0.4)] bg-[rgba(255,255,255,0.04)] shadow-[0_10px_30px_-20px_rgba(34,211,238,0.5)]">
-          {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`relative px-3 py-1.5 text-sm font-medium rounded-full transition-all duration-300 ${
-                isActive(item.path)
-                  ? 'text-white bg-gradient-to-r from-indigo-600 to-cyan-500 shadow-[0_12px_30px_-16px_rgba(34,211,238,0.8)]'
-                  : 'text-slate-300 hover:text-cyan-100'
-              }`}
-            >
-              {t(item.label)}
-            </Link>
-          ))}
+        <nav id="primary-navigation" aria-label={lang === 'zh' ? '主导航' : 'Main navigation'} className={`nav-links ${open ? 'is-open' : ''}`}>
+          {items.map(([path, zh, en]) => {
+            const active = path === '/' ? pathname === '/' : pathname.startsWith(path);
+            return <Link key={path} to={path} aria-current={active ? 'page' : undefined} className={active ? 'active' : ''}>{lang === 'zh' ? zh : en}</Link>;
+          })}
+        </nav>
+        <div className="nav-actions">
+          <button className="language-button" onClick={() => setLang(lang === 'zh' ? 'en' : 'zh')} aria-label={lang === 'zh' ? 'Switch to English' : '切换到中文'}><span className={lang === 'zh' ? 'selected' : ''}>中</span><span className="language-divider">/</span><span className={lang === 'en' ? 'selected' : ''}>EN</span></button>
+          <a className="nav-contact" href={`mailto:${SITE_DATA.profile.email}`}>{lang === 'zh' ? '联系我' : 'Get in touch'}<ArrowUpRight size={14}/></a>
+          <button className="menu-button" aria-expanded={open} aria-controls="primary-navigation" aria-label={lang === 'zh' ? '切换导航菜单' : 'Toggle navigation'} onClick={() => setOpen(!open)}>{open ? <X size={22}/> : <Menu size={22}/>}</button>
         </div>
-
-        <button
-          onClick={() => setLang(l => l === 'zh' ? 'en' : 'zh')}
-          className="ml-2 w-9 h-9 flex items-center justify-center rounded-full bg-[rgba(255,255,255,0.06)] border border-[rgba(148,163,184,0.35)] hover:border-cyan-300 transition-colors text-cyan-200 shadow-[0_10px_30px_-20px_rgba(124,58,237,0.6)]"
-          title="Switch Language"
-          aria-label={lang === 'zh' ? 'Switch to English' : '切换到中文'}
-        >
-          <Languages size={18} />
-        </button>
       </div>
-    </nav>
+    </header>
   );
 }

@@ -11,10 +11,10 @@ export default function Blog({ lang }) {
   const uncategorized = seriesList.find((s) => s.id === 'uncategorized');
 
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <main id="main-content" className="min-h-screen pt-24 pb-16">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="flex items-center gap-3 pb-4 mb-12">
-          <div className="p-2 bg-[rgba(255,255,255,0.06)] rounded-lg shadow-sm border border-[rgba(148,163,184,0.35)] text-cyan-200">
+          <div className="p-2 bg-[var(--panel)] rounded-lg shadow-sm border border-[var(--border)] text-cyan-200">
             <BookOpen size={20} />
           </div>
           <div>
@@ -39,15 +39,15 @@ export default function Blog({ lang }) {
                 className="group card card-hover rounded-xl p-6 flex flex-col"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="p-3 bg-[rgba(255,255,255,0.06)] rounded-lg text-cyan-200 group-hover:text-cyan-300 transition-colors">
+                  <div className="p-3 bg-[var(--panel)] rounded-lg text-cyan-200 group-hover:text-[var(--ink)] transition-colors">
                     <FolderOpen size={28} />
                   </div>
-                  <span className="text-xs font-semibold text-slate-400 bg-[rgba(255,255,255,0.04)] px-2 py-1 rounded-full">
+                  <span className="text-xs font-semibold text-slate-400 bg-[var(--panel)] px-2 py-1 rounded-full">
                     {series.postCount} {lang === 'zh' ? '篇' : 'posts'}
                   </span>
                 </div>
 
-                <h3 className="font-bold text-slate-50 text-xl mb-2 group-hover:text-cyan-200 transition-colors">
+                <h3 className="font-bold text-slate-50 text-xl mb-2 group-hover:text-[var(--ink)] transition-colors">
                   {series.name}
                 </h3>
 
@@ -79,16 +79,16 @@ export default function Blog({ lang }) {
                   to={`/blog/${post.slug}`}
                   className="flex items-center gap-4 p-4 card card-hover rounded-lg group"
                 >
-                  <div className="p-2 bg-[rgba(255,255,255,0.06)] rounded text-cyan-200">
+                  <div className="p-2 bg-[var(--panel)] rounded text-cyan-200">
                     <FileText size={20} />
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold text-slate-100 group-hover:text-cyan-200 transition-colors">
+                    <h4 className="font-semibold text-slate-100 group-hover:text-[var(--ink)] transition-colors">
                       {post.title}
                     </h4>
                     <p className="text-sm text-slate-400">{post.date}</p>
                   </div>
-                  <ChevronRight size={18} className="text-slate-500 group-hover:text-cyan-200 group-hover:translate-x-1 transition-all" />
+                  <ChevronRight size={18} className="text-slate-500 group-hover:text-[var(--ink)] group-hover:translate-x-1 transition-all" />
                 </Link>
               ))}
             </div>
@@ -103,6 +103,6 @@ export default function Blog({ lang }) {
           </div>
         )}
       </div>
-    </div>
+    </main>
   );
 }
