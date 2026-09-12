@@ -79,7 +79,7 @@
 
 | 帖 | 标题 | 核心内容 | 教材锚点 |
 | --- | --- | --- | --- |
-| 1.2a | 标准化的思想与标准人口 | 直接标准化公式推导;标准人口的选择惯例(Segi 世界标准、WHO World Standard);选择的影响 | Carmichael Ch2(p.49–56);Wachter §6.5 |
+| 1.2a | [标准化的思想与标准人口](../content/blog/demographic/demographic-m1l2a-direct-standardization.ipynb) | 直接标准化公式推导;标准人口的选择惯例(Segi 世界标准、WHO World Standard);选择的影响 | Carmichael Ch2(p.49–56);Wachter §6.5 |
 | 1.2b | 直接标准化实战:重排两国死亡率座次 | 完整 worked example:同一标准人口下两国比较;Python 实现 `standardize_direct()`;结果对标准人口选择的敏感性 | Carmichael Ch2(p.56 起);Wachter §6.5 |
 
 #### Lesson 1.3 间接标准化与 SMR(2 帖)
