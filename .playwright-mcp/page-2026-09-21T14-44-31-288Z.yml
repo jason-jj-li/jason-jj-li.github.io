@@ -1,0 +1,35 @@
+- generic [ref=e3]:
+  - link "跳转到正文" [ref=e4] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - link "李佳佳 · 首页" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e8]: JL.
+        - generic [ref=e9]:
+          - text: 李佳佳
+          - generic [ref=e10]: ACADEMIC WEBSITE
+      - navigation "主导航" [ref=e11]:
+        - link "主页" [ref=e12] [cursor=pointer]:
+          - /url: /
+        - link "研究" [ref=e13] [cursor=pointer]:
+          - /url: /research
+        - link "工具" [ref=e14] [cursor=pointer]:
+          - /url: /tools
+        - link "教学" [ref=e15] [cursor=pointer]:
+          - /url: /teaching
+        - link "博客" [ref=e16] [cursor=pointer]:
+          - /url: /blog
+      - generic [ref=e17]:
+        - button "Switch to English" [ref=e18] [cursor=pointer]:
+          - generic [ref=e19]: 中
+          - generic [ref=e20]: /
+          - generic [ref=e21]: EN
+        - link "联系我" [ref=e22] [cursor=pointer]:
+          - /url: mailto:lijiajia95@hotmail.com
+  - paragraph [ref=e30]: Loading...
+  - contentinfo [ref=e31]:
+    - link "Jiajia Li." [ref=e32] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e33]: 健康社会学 · 疾病与健康的社会生产
+    - generic [ref=e34]: © 2026 李佳佳

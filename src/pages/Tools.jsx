@@ -1,112 +1,66 @@
 import React from 'react';
-import { Database, ExternalLink, Filter } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { SITE_DATA } from '../data/siteData';
 
 export default function Tools({ lang }) {
   const t = (obj) => (typeof obj === 'string' ? obj : obj?.[lang] || obj?.en);
-  const areaLabel = (key) => {
-    const found = (SITE_DATA.researchInterests || []).find((item) => item.key === key);
-    return found ? t(found) : key;
-  };
+  const zh = lang === 'zh';
 
   return (
     <main id="main-content" className="min-h-screen pt-24 pb-16">
-      <div className="max-w-5xl mx-auto px-6 space-y-10">
-        <header className="flex items-start gap-3">
-          <div className="p-2 bg-[var(--panel)] rounded-lg shadow-sm border border-[var(--border)] text-cyan-200">
-            <Database size={20} />
-          </div>
+      <div className="max-w-5xl mx-auto px-6 tools-page">
+
+        <header className="research-opening tools-opening">
           <div>
-            <h1 className="text-3xl md:text-4xl font-serif font-bold text-slate-50 tracking-tight">
-              {lang === 'zh' ? '开源工具与数据集' : 'Open Tools & Datasets'}
-            </h1>
-            <p className="text-slate-300 mt-1">
-              {lang === 'zh'
-                ? '公共资源、数据集、基准与文档链接。'
-                : 'Public resources, datasets, benchmarks, and docs.'}
+            <p className="eyebrow">{zh ? '工具 / 开放资源' : 'TOOLS / OPEN RESOURCES'}</p>
+            <h1>{zh ? '开源工具与资源' : 'Open Tools & Resources'}</h1>
+          </div>
+          <div className="research-opening-note">
+            <p>
+              {zh
+                ? '目前维护两个开源项目：QualInsight（AI 辅助定性研究平台）与 auto_sim_ai（LLM 合成受访者仿真系统），代码与文档均在 GitHub 公开。'
+                : 'Two open-source projects are maintained here: QualInsight (an AI-assisted qualitative research platform) and auto_sim_ai (an LLM-driven synthetic-respondent simulation system). Code and documentation are public on GitHub.'}
             </p>
           </div>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="tools-list">
           {SITE_DATA.openResources.map((item, idx) => (
-            <a
-              key={idx}
-              href={item.link}
-              className="group card card-hover rounded-2xl p-5"
-            >
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-xl font-semibold text-slate-50 group-hover:text-[var(--ink)] transition-colors">
-                  {t(item.name)}
-                </h3>
-                <span className="tag-ghost">{t(item.type)}</span>
-              </div>
-              <div className="flex flex-wrap items-center gap-2 text-xs text-slate-400 mb-3">
-                {item.version && (
-                  <span className="tag-ghost">{item.version}</span>
+            <article key={t(item.name)} className="tool-entry">
+              <div className="tool-identity">
+                <p className="eyebrow">
+                  {String(idx + 1).padStart(2, '0')} · {t(item.type)}
+                </p>
+                <h2>{t(item.name)}</h2>
+                <p className="tool-meta">
+                  {item.version} · {zh ? '更新于' : 'Updated'} {item.updated.replaceAll('-', '.')}
+                </p>
+                {item.stack && (
+                  <p className="tool-stack">{item.stack.join(' · ')}</p>
                 )}
-                {item.updated && (
-                  <span className="tag-ghost">
-                    {lang === 'zh' ? '更新' : 'Updated'}: {item.updated}
-                  </span>
-                )}
+                <div className="tool-links">
+                  <a href={item.link} target="_blank" rel="noreferrer" className="text-link">
+                    GitHub <ArrowUpRight size={14} />
+                  </a>
+                  {item.demo && (
+                    <a href={item.demo} target="_blank" rel="noreferrer" className="text-link">
+                      {zh ? '在线试用' : 'Live app'} <ArrowUpRight size={14} />
+                    </a>
+                  )}
+                </div>
               </div>
-              <p className="text-sm text-slate-200 leading-relaxed mb-3">
-                {t(item.desc)}
-              </p>
-              {item.stack && (
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {item.stack.map((tech) => (
-                    <span key={tech} className="tag-ghost">
-                      {tech}
-                    </span>
+              <div className="tool-body">
+                <p className="tool-lede">{t(item.desc)}</p>
+                <ul className="tool-features">
+                  {t(item.features).map((point, i) => (
+                    <li key={i}>{point}</li>
                   ))}
-                </div>
-              )}
-              {item.useCases && (
-                <div className="mb-3">
-                  <div className="text-xs font-semibold text-slate-500 mb-1">
-                    {lang === 'zh' ? '应用场景' : 'Use Cases'}
-                  </div>
-                  <ul className="list-disc list-inside text-sm text-slate-600 space-y-1">
-                    {t(item.useCases).map((point, i) => (
-                      <li key={i}>{point}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-              {item.advantages && (
-                <div className="mb-3">
-                  <div className="text-xs font-semibold text-slate-500 mb-1">
-                    {lang === 'zh' ? '核心优势' : 'Core Advantages'}
-                  </div>
-                  <ul className="list-disc list-inside text-sm text-slate-600 space-y-1">
-                    {t(item.advantages).map((point, i) => (
-                      <li key={i}>{point}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-              {item.areas && (
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {item.areas.map((area) => (
-                    <span key={area} className="tag-ghost">
-                      {areaLabel(area)}
-                    </span>
-                  ))}
-                </div>
-              )}
-              <div className="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600">
-                <span className="text-cyan-200">{lang === 'zh' ? '查看资源' : 'View resource'}</span> <ExternalLink size={12} className="text-cyan-200" />
+                </ul>
               </div>
-            </a>
+            </article>
           ))}
         </div>
 
-        <div className="flex items-center gap-2 text-xs text-slate-400">
-          <Filter size={14} />
-          {lang === 'zh' ? '开放工具、方法与资源，支持可复现的研究实践。' : 'Open tools, methods, and resources for reproducible research.'}
-        </div>
       </div>
     </main>
   );

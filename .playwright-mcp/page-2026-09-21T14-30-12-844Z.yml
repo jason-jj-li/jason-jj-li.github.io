@@ -1,0 +1,980 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - link "Skip to content" [ref=e4] [cursor=pointer]:
+        - /url: "#start-of-content"
+      - banner [ref=e9]:
+        - heading "Navigation Menu" [level=2] [ref=e10]
+        - generic [ref=e11]:
+          - link "Homepage" [ref=e13] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e16]:
+            - navigation "Global" [ref=e17]:
+              - list [ref=e18]:
+                - listitem [ref=e19]:
+                  - button "Platform" [ref=e21] [cursor=pointer]
+                - listitem [ref=e24]:
+                  - button "Solutions" [ref=e26] [cursor=pointer]
+                - listitem [ref=e29]:
+                  - button "Resources" [ref=e31] [cursor=pointer]
+                - listitem [ref=e34]:
+                  - button "Open Source" [ref=e36] [cursor=pointer]
+                - listitem [ref=e39]:
+                  - button "Enterprise" [ref=e41] [cursor=pointer]
+                - listitem [ref=e44]:
+                  - link "Pricing" [ref=e45] [cursor=pointer]:
+                    - /url: https://github.com/pricing
+            - generic [ref=e46]:
+              - button "Search or jump to, type / to search" [ref=e48] [cursor=pointer]
+              - link "Sign in" [ref=e55] [cursor=pointer]:
+                - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fjason-jj-li%2Fauto_sim_ai
+              - link "Sign up" [ref=e58] [cursor=pointer]:
+                - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=jason-jj-li%2Fauto_sim_ai
+              - button "Appearance settings" [ref=e61] [cursor=pointer]
+    - main [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - generic [ref=e72]:
+            - link "jason-jj-li" [ref=e76] [cursor=pointer]:
+              - /url: /jason-jj-li
+            - generic [ref=e77]: /
+            - strong [ref=e78]:
+              - link "auto_sim_ai" [ref=e79] [cursor=pointer]:
+                - /url: /jason-jj-li/auto_sim_ai
+            - generic [ref=e80]: Public
+          - generic [ref=e81]:
+            - list:
+              - listitem [ref=e82]:
+                - link "You must be signed in to change notification settings" [ref=e83] [cursor=pointer]:
+                  - /url: /login?return_to=%2Fjason-jj-li%2Fauto_sim_ai
+                  - text: Notifications
+              - listitem [ref=e86]:
+                - link "Fork 0" [ref=e87] [cursor=pointer]:
+                  - /url: /login?return_to=%2Fjason-jj-li%2Fauto_sim_ai
+                  - text: Fork
+                  - generic "0" [ref=e90]
+              - listitem [ref=e91]:
+                - link "You must be signed in to star a repository" [ref=e93] [cursor=pointer]:
+                  - /url: /login?return_to=%2Fjason-jj-li%2Fauto_sim_ai
+                  - text: Star
+                  - generic "1 user starred this repository" [ref=e96]: "1"
+        - navigation "Repository" [ref=e97]:
+          - list [ref=e98]:
+            - listitem [ref=e99]:
+              - link "Code" [ref=e100] [cursor=pointer]:
+                - /url: /jason-jj-li/auto_sim_ai
+            - listitem [ref=e104]:
+              - link "Issues" [ref=e105] [cursor=pointer]:
+                - /url: /jason-jj-li/auto_sim_ai/issues
+            - listitem [ref=e110]:
+              - link "Pull requests" [ref=e111] [cursor=pointer]:
+                - /url: /jason-jj-li/auto_sim_ai/pulls
+            - listitem [ref=e115]:
+              - link "Actions" [ref=e116] [cursor=pointer]:
+                - /url: /jason-jj-li/auto_sim_ai/actions
+            - listitem [ref=e120]:
+              - link "Projects" [ref=e121] [cursor=pointer]:
+                - /url: /jason-jj-li/auto_sim_ai/projects
+            - listitem [ref=e125]:
+              - link "Security and quality" [ref=e126] [cursor=pointer]:
+                - /url: /jason-jj-li/auto_sim_ai/security
+            - listitem [ref=e130]:
+              - link "Insights" [ref=e131] [cursor=pointer]:
+                - /url: /jason-jj-li/auto_sim_ai/pulse
+      - generic [ref=e148]:
+        - generic [ref=e151]:
+          - generic [ref=e152]:
+            - generic [ref=e153]:
+              - button "main branch" [ref=e155] [cursor=pointer]:
+                - generic [ref=e156]: main
+              - generic [ref=e160]:
+                - link "Branches" [ref=e161] [cursor=pointer]:
+                  - /url: /jason-jj-li/auto_sim_ai/branches
+                - link "Tags" [ref=e164] [cursor=pointer]:
+                  - /url: /jason-jj-li/auto_sim_ai/tags
+            - generic [ref=e167]:
+              - combobox "Go to file" [ref=e175]
+              - button "Code" [ref=e176] [cursor=pointer]
+          - generic [ref=e179]:
+            - generic [ref=e180]:
+              - generic [ref=e182]:
+                - heading "Latest commit" [level=2] [ref=e183]
+                - generic [ref=e186]:
+                  - heading "History" [level=2] [ref=e187]
+                  - link "31 Commits" [ref=e188] [cursor=pointer]:
+                    - /url: /jason-jj-li/auto_sim_ai/commits/main/
+              - heading "Folders and files" [level=2] [ref=e191]
+              - table "Folders and files" [ref=e192]:
+                - rowgroup:
+                  - row "Name Last commit message Last commit date":
+                    - columnheader "Name"
+                    - columnheader "Last commit message"
+                    - columnheader "Last commit date"
+                - rowgroup [ref=e193]:
+                  - row ".devcontainer, (Directory)" [ref=e194]:
+                    - cell [ref=e195]:
+                      - link ".devcontainer, (Directory)" [ref=e202] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/tree/main/.devcontainer
+                        - text: .devcontainer
+                    - cell [ref=e203]
+                    - cell [ref=e205]
+                  - row ".streamlit, (Directory)" [ref=e208]:
+                    - cell [ref=e209]:
+                      - link ".streamlit, (Directory)" [ref=e216] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/tree/main/.streamlit
+                        - text: .streamlit
+                    - cell [ref=e217]
+                    - cell [ref=e219]
+                  - row "03-website, (Directory)" [ref=e222]:
+                    - cell [ref=e223]:
+                      - link "03-website, (Directory)" [ref=e230] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/tree/main/03-website
+                        - text: 03-website
+                    - cell [ref=e231]
+                    - cell [ref=e233]
+                  - row "__pycache__, (Directory)" [ref=e236]:
+                    - cell [ref=e237]:
+                      - link "__pycache__, (Directory)" [ref=e244] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/tree/main/__pycache__
+                        - text: __pycache__
+                    - cell [ref=e245]
+                    - cell [ref=e247]
+                  - row "data, (Directory)" [ref=e250]:
+                    - cell [ref=e251]:
+                      - link "data, (Directory)" [ref=e258] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/tree/main/data
+                        - text: data
+                    - cell [ref=e259]
+                    - cell [ref=e261]
+                  - row "docs, (Directory)" [ref=e264]:
+                    - cell [ref=e265]:
+                      - link "docs, (Directory)" [ref=e272] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/tree/main/docs
+                        - text: docs
+                    - cell [ref=e273]
+                    - cell [ref=e275]
+                  - row "pages, (Directory)" [ref=e278]:
+                    - cell [ref=e279]:
+                      - link "pages, (Directory)" [ref=e286] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/tree/main/pages
+                        - text: pages
+                    - cell [ref=e287]
+                    - cell [ref=e289]
+                  - row "src, (Directory)" [ref=e292]:
+                    - cell [ref=e293]:
+                      - link "src, (Directory)" [ref=e300] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/tree/main/src
+                        - text: src
+                    - cell [ref=e301]
+                    - cell [ref=e303]
+                  - row "tests, (Directory)" [ref=e306]:
+                    - cell [ref=e307]:
+                      - link "tests, (Directory)" [ref=e314] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/tree/main/tests
+                        - text: tests
+                    - cell [ref=e315]
+                    - cell [ref=e317]
+                  - row ".gitattributes, (File)" [ref=e320]:
+                    - cell [ref=e321]:
+                      - link ".gitattributes, (File)" [ref=e328] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/blob/main/.gitattributes
+                        - text: .gitattributes
+                    - cell [ref=e329]
+                    - cell [ref=e331]
+                  - row ".gitignore, (File)" [ref=e334]:
+                    - cell [ref=e335]:
+                      - link ".gitignore, (File)" [ref=e342] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/blob/main/.gitignore
+                        - text: .gitignore
+                    - cell [ref=e343]
+                    - cell [ref=e345]
+                  - row "README.md, (File)" [ref=e348]:
+                    - cell [ref=e349]:
+                      - link "README.md, (File)" [ref=e356] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/blob/main/README.md
+                        - text: README.md
+                    - cell [ref=e357]
+                    - cell [ref=e359]
+                  - row "README_zh.md, (File)" [ref=e362]:
+                    - cell [ref=e363]:
+                      - link "README_zh.md, (File)" [ref=e370] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/blob/main/README_zh.md
+                        - text: README_zh.md
+                    - cell [ref=e371]
+                    - cell [ref=e373]
+                  - row "app.py, (File)" [ref=e376]:
+                    - cell [ref=e377]:
+                      - link "app.py, (File)" [ref=e384] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/blob/main/app.py
+                        - text: app.py
+                    - cell [ref=e385]
+                    - cell [ref=e387]
+                  - row "requirements-dev.txt, (File)" [ref=e390]:
+                    - cell [ref=e391]:
+                      - link "requirements-dev.txt, (File)" [ref=e398] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/blob/main/requirements-dev.txt
+                        - text: requirements-dev.txt
+                    - cell [ref=e399]
+                    - cell [ref=e401]
+                  - row "requirements.txt, (File)" [ref=e404]:
+                    - cell [ref=e405]:
+                      - link "requirements.txt, (File)" [ref=e412] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/blob/main/requirements.txt
+                        - text: requirements.txt
+                    - cell [ref=e413]
+                    - cell [ref=e415]
+                  - row "setup.sh, (File)" [ref=e418]:
+                    - cell [ref=e419]:
+                      - link "setup.sh, (File)" [ref=e426] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/blob/main/setup.sh
+                        - text: setup.sh
+                    - cell [ref=e427]
+                    - cell [ref=e429]
+            - generic [ref=e433]:
+              - generic [ref=e434]:
+                - heading "Repository files navigation" [level=2] [ref=e435]
+                - navigation "Repository files" [ref=e436]:
+                  - list [ref=e437]:
+                    - listitem [ref=e438]:
+                      - link "README" [ref=e439] [cursor=pointer]:
+                        - /url: "#"
+                - button "Outline" [ref=e441] [cursor=pointer]
+              - article [ref=e445]:
+                - generic [ref=e446]:
+                  - heading "Auto Sim AI - LLM Survey Simulation System" [level=1] [ref=e447]
+                  - 'link "Permalink: Auto Sim AI - LLM Survey Simulation System" [ref=e448] [cursor=pointer]':
+                    - /url: "#auto-sim-ai---llm-survey-simulation-system"
+                - generic [ref=e451]:
+                  - paragraph [ref=e452]:
+                    - strong [ref=e453]:
+                      - text: English Version |
+                      - link "中文版" [ref=e454] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/blob/main/README_zh.md
+                  - separator [ref=e455]
+                  - paragraph [ref=e456]:
+                    - text: 🔬
+                    - strong [ref=e457]: AI-Powered Survey and Intervention Simulation System
+                  - paragraph [ref=e458]: Simulate real survey research and intervention effects using LLM-driven virtual personas.
+                  - paragraph [ref=e459]:
+                    - text: 🚀
+                    - strong [ref=e460]:
+                      - link "Launch Web Application" [ref=e461] [cursor=pointer]:
+                        - /url: https://jason-jj-li-auto-sim-ai-app-gkcvcf.streamlit.app
+                    - text: 🚀
+                  - paragraph [ref=e462]:
+                    - text: �
+                    - strong [ref=e463]:
+                      - link "View Complete English Documentation" [ref=e464] [cursor=pointer]:
+                        - /url: /jason-jj-li/auto_sim_ai/blob/main/docs/en/README.md
+                  - paragraph [ref=e465]:
+                    - link "Quick Start" [ref=e466] [cursor=pointer]:
+                      - /url: /jason-jj-li/auto_sim_ai/blob/main/docs/en/quickstart/README.md
+                    - text: •
+                    - link "Features" [ref=e467] [cursor=pointer]:
+                      - /url: "#-features"
+                    - text: •
+                    - link "API Reference" [ref=e468] [cursor=pointer]:
+                      - /url: /jason-jj-li/auto_sim_ai/blob/main/docs/en/api/README.md
+                    - text: •
+                    - link "Contributing" [ref=e469] [cursor=pointer]:
+                      - /url: /jason-jj-li/auto_sim_ai/blob/main/docs/en/contributing/README.md
+                - separator [ref=e470]
+                - generic [ref=e471]:
+                  - heading "📋 Table of Contents" [level=2] [ref=e472]
+                  - 'link "Permalink: 📋 Table of Contents" [ref=e473] [cursor=pointer]':
+                    - /url: "#-table-of-contents"
+                - list [ref=e476]:
+                  - listitem [ref=e477]:
+                    - link "Overview" [ref=e478] [cursor=pointer]:
+                      - /url: "#overview"
+                  - listitem [ref=e479]:
+                    - link "Features" [ref=e480] [cursor=pointer]:
+                      - /url: "#features"
+                  - listitem [ref=e481]:
+                    - link "Quick Start" [ref=e482] [cursor=pointer]:
+                      - /url: "#quick-start"
+                  - listitem [ref=e483]:
+                    - link "User Guide" [ref=e484] [cursor=pointer]:
+                      - /url: "#user-guide"
+                  - listitem [ref=e485]:
+                    - link "Architecture" [ref=e486] [cursor=pointer]:
+                      - /url: "#architecture"
+                  - listitem [ref=e487]:
+                    - link "Advanced Features" [ref=e488] [cursor=pointer]:
+                      - /url: "#advanced-features"
+                  - listitem [ref=e489]:
+                    - link "API Reference" [ref=e490] [cursor=pointer]:
+                      - /url: "#api-reference"
+                  - listitem [ref=e491]:
+                    - link "📚 Complete Documentation" [ref=e492] [cursor=pointer]:
+                      - /url: "#complete-documentation"
+                    - list [ref=e493]:
+                      - listitem [ref=e494]:
+                        - link "Quick Start Guide" [ref=e495] [cursor=pointer]:
+                          - /url: /jason-jj-li/auto_sim_ai/blob/main/docs/en/quickstart/README.md
+                      - listitem [ref=e496]:
+                        - link "AI Persona Generation Tutorial" [ref=e497] [cursor=pointer]:
+                          - /url: /jason-jj-li/auto_sim_ai/blob/main/docs/AI_PERSONA_GENERATION.md
+                        - text: 🆕
+                      - listitem [ref=e498]:
+                        - link "API Guide" [ref=e499] [cursor=pointer]:
+                          - /url: /jason-jj-li/auto_sim_ai/blob/main/docs/en/api/README.md
+                      - listitem [ref=e500]:
+                        - link "Architecture Guide" [ref=e501] [cursor=pointer]:
+                          - /url: /jason-jj-li/auto_sim_ai/blob/main/docs/en/architecture/README.md
+                      - listitem [ref=e502]:
+                        - link "Longitudinal Study Guide" [ref=e503] [cursor=pointer]:
+                          - /url: /jason-jj-li/auto_sim_ai/blob/main/docs/en/longitudinal/README.md
+                      - listitem [ref=e504]:
+                        - link "Contributing Guide" [ref=e505] [cursor=pointer]:
+                          - /url: /jason-jj-li/auto_sim_ai/blob/main/docs/en/contributing/README.md
+                  - listitem [ref=e506]:
+                    - link "FAQ" [ref=e507] [cursor=pointer]:
+                      - /url: "#faq"
+                  - listitem [ref=e508]:
+                    - link "Contributing" [ref=e509] [cursor=pointer]:
+                      - /url: "#contributing"
+                  - listitem [ref=e510]:
+                    - link "License" [ref=e511] [cursor=pointer]:
+                      - /url: "#license"
+                  - listitem [ref=e512]:
+                    - link "Acknowledgments" [ref=e513] [cursor=pointer]:
+                      - /url: "#acknowledgments"
+                  - listitem [ref=e514]:
+                    - link "Contact" [ref=e515] [cursor=pointer]:
+                      - /url: "#contact"
+                - separator [ref=e516]
+                - paragraph
+                - generic [ref=e517]:
+                  - heading "🎯 Overview" [level=2] [ref=e518]
+                  - 'link "Permalink: 🎯 Overview" [ref=e519] [cursor=pointer]':
+                    - /url: "#-overview"
+                - paragraph [ref=e522]:
+                  - strong [ref=e523]: LLM Simulation Survey System
+                  - text: is an innovative research toolkit that leverages Large Language Models (LLMs) to generate virtual personas that emulate human responses to surveys and interventions.
+                - generic [ref=e524]:
+                  - heading "Use Cases" [level=3] [ref=e525]
+                  - 'link "Permalink: Use Cases" [ref=e526] [cursor=pointer]':
+                    - /url: "#use-cases"
+                - list [ref=e529]:
+                  - listitem [ref=e530]:
+                    - text: 🏥
+                    - strong [ref=e531]: Health Intervention Research
+                    - text: – Test the impact of health messaging on different populations
+                  - listitem [ref=e532]:
+                    - text: 📊
+                    - strong [ref=e533]: Market Research
+                    - text: – Rapidly evaluate user feedback for products or services
+                  - listitem [ref=e534]:
+                    - text: 🎓
+                    - strong [ref=e535]: Educational Research
+                    - text: – Assess teaching effectiveness across learner profiles
+                  - listitem [ref=e536]:
+                    - text: 💡
+                    - strong [ref=e537]: Policy Analysis
+                    - text: – Anticipate policy impacts on diverse communities
+                  - listitem [ref=e538]:
+                    - text: 🧪
+                    - strong [ref=e539]: A/B Testing
+                    - text: – Compare multiple approaches before real-world rollout
+                  - listitem [ref=e540]:
+                    - text: 📈
+                    - strong [ref=e541]: Prototype Validation
+                    - text: – Iterate research designs before launching costly studies
+                - generic [ref=e542]:
+                  - heading "Core Advantages" [level=3] [ref=e543]
+                  - 'link "Permalink: Core Advantages" [ref=e544] [cursor=pointer]':
+                    - /url: "#core-advantages"
+                - paragraph [ref=e547]:
+                  - text: ✅
+                  - strong [ref=e548]: Fast Iteration
+                  - text: – Complete hundreds of simulated responses in minutes ✅
+                  - strong [ref=e549]: Cost-Effective
+                  - text: – Eliminate participant recruitment overhead ✅
+                  - strong [ref=e550]: Reproducible
+                  - text: – Precisely control variables for repeatable experiments ✅
+                  - strong [ref=e551]: Diverse
+                  - text: – Create personas covering varied backgrounds, ages, and cultures ✅
+                  - strong [ref=e552]: Deep Insights
+                  - text: – Gather rich qualitative and quantitative outputs ✅
+                  - strong [ref=e553]: Flexible Deployment
+                  - text: – Run locally or through cloud APIs
+                - separator [ref=e554]
+                - paragraph
+                - generic [ref=e555]:
+                  - heading "🚀 Features" [level=2] [ref=e556]
+                  - 'link "Permalink: 🚀 Features" [ref=e557] [cursor=pointer]':
+                    - /url: "#-features"
+                - generic [ref=e560]:
+                  - heading "Core Capabilities" [level=3] [ref=e561]
+                  - 'link "Permalink: Core Capabilities" [ref=e562] [cursor=pointer]':
+                    - /url: "#core-capabilities"
+                - generic [ref=e565]:
+                  - heading "1️⃣ Virtual Persona Management" [level=4] [ref=e566]
+                  - 'link "Permalink: 1️⃣ Virtual Persona Management" [ref=e567] [cursor=pointer]':
+                    - /url: "#1️⃣-virtual-persona-management"
+                - list [ref=e570]:
+                  - listitem [ref=e571]:
+                    - strong [ref=e572]: Rich persona attributes
+                    - text: ": age, gender, occupation, education, personality traits, values, and more"
+                  - listitem [ref=e573]:
+                    - strong [ref=e574]: Batch generation
+                    - text: based on demographic distributions to mirror real populations
+                  - listitem [ref=e575]:
+                    - strong [ref=e576]: CSV import/export
+                    - text: for seamless integration with spreadsheets and databases
+                  - listitem [ref=e577]:
+                    - strong [ref=e578]: Demo templates
+                    - text: that provide ready-to-use persona examples
+                - generic [ref=e579]:
+                  - heading "2️⃣ Multiple Simulation Modes" [level=4] [ref=e580]
+                  - 'link "Permalink: 2️⃣ Multiple Simulation Modes" [ref=e581] [cursor=pointer]':
+                    - /url: "#2️⃣-multiple-simulation-modes"
+                - list [ref=e584]:
+                  - listitem [ref=e585]:
+                    - strong [ref=e586]: Survey mode
+                    - text: for standardized questionnaires (PHQ-9, GAD-7, PSS-10, etc.)
+                  - listitem [ref=e587]:
+                    - strong [ref=e588]: Intervention mode
+                    - text: to evaluate message impact across audience segments
+                  - listitem [ref=e589]:
+                    - strong [ref=e590]: A/B testing
+                    - text: to compare multiple content versions simultaneously
+                  - listitem [ref=e591]:
+                    - strong [ref=e592]: Longitudinal studies
+                    - text: for multi-wave tracking with memory
+                  - listitem [ref=e593]:
+                    - strong [ref=e594]: Sensitivity analysis
+                    - text: to measure how parameter changes influence outcomes
+                - generic [ref=e595]:
+                  - heading "3️⃣ LLM Integration" [level=4] [ref=e596]
+                  - 'link "Permalink: 3️⃣ LLM Integration" [ref=e597] [cursor=pointer]':
+                    - /url: "#3️⃣-llm-integration"
+                - list [ref=e600]:
+                  - listitem [ref=e601]:
+                    - strong [ref=e602]: Local deployment
+                    - text: via LM Studio (free, private, hardware dependent)
+                  - listitem [ref=e603]:
+                    - strong [ref=e604]: Commercial APIs
+                    - text: ":"
+                    - list [ref=e605]:
+                      - listitem [ref=e606]: DeepSeek (cost-effective, Chinese optimized)
+                      - listitem [ref=e607]: OpenAI (GPT-4, GPT-3.5)
+                      - listitem [ref=e608]: Other OpenAI-compatible providers
+                  - listitem [ref=e609]:
+                    - strong [ref=e610]: Flexible switching
+                    - text: to change models and providers without code changes
+                - generic [ref=e611]:
+                  - heading "4️⃣ Advanced Analysis" [level=4] [ref=e612]
+                  - 'link "Permalink: 4️⃣ Advanced Analysis" [ref=e613] [cursor=pointer]':
+                    - /url: "#4️⃣-advanced-analysis"
+                - list [ref=e616]:
+                  - listitem [ref=e617]:
+                    - strong [ref=e618]: Automatic scoring
+                    - text: for validated scales (PHQ-9, GAD-7, PSS-10, etc.)
+                  - listitem [ref=e619]:
+                    - strong [ref=e620]: Statistical summaries
+                    - text: covering descriptive stats, correlations, and group comparisons
+                  - listitem [ref=e621]:
+                    - strong [ref=e622]: Consistency checks
+                    - text: to validate response logic and internal coherence
+                  - listitem [ref=e623]:
+                    - strong [ref=e624]: Interactive visualizations
+                    - text: including charts, distributions, and word clouds
+                  - listitem [ref=e625]:
+                    - strong [ref=e626]: Data exports
+                    - text: to CSV, JSON, or ready-to-run Python/R analysis scripts
+                - generic [ref=e627]:
+                  - heading "5️⃣ Performance Optimization" [level=4] [ref=e628]
+                  - 'link "Permalink: 5️⃣ Performance Optimization" [ref=e629] [cursor=pointer]':
+                    - /url: "#5️⃣-performance-optimization"
+                - list [ref=e632]:
+                  - listitem [ref=e633]:
+                    - strong [ref=e634]: Asynchronous execution
+                    - text: to process many personas in parallel
+                  - listitem [ref=e635]:
+                    - strong [ref=e636]: Smart caching
+                    - text: that avoids duplicate LLM calls and reduces cost
+                  - listitem [ref=e637]:
+                    - strong [ref=e638]: Checkpointing
+                    - text: for pause-and-resume workflows
+                  - listitem [ref=e639]:
+                    - strong [ref=e640]: Progress tracking
+                    - text: with real-time completion estimates
+                - separator [ref=e641]
+                - paragraph
+                - generic [ref=e642]:
+                  - heading "⚡ Quick Start" [level=2] [ref=e643]
+                  - 'link "Permalink: ⚡ Quick Start" [ref=e644] [cursor=pointer]':
+                    - /url: "#-quick-start"
+                - generic [ref=e647]:
+                  - heading "System Requirements" [level=3] [ref=e648]
+                  - 'link "Permalink: System Requirements" [ref=e649] [cursor=pointer]':
+                    - /url: "#system-requirements"
+                - list [ref=e652]:
+                  - listitem [ref=e653]:
+                    - strong [ref=e654]: Python
+                    - text: ": 3.8 or higher"
+                  - listitem [ref=e655]:
+                    - strong [ref=e656]: Memory
+                    - text: ": 8 GB RAM recommended"
+                  - listitem [ref=e657]:
+                    - strong [ref=e658]: LLM Provider
+                    - text: "(choose one):"
+                    - list [ref=e659]:
+                      - listitem [ref=e660]: LM Studio for local, offline inference
+                      - listitem [ref=e661]: DeepSeek or OpenAI API key for hosted models
+                - generic [ref=e662]:
+                  - heading "1. Clone the Project" [level=3] [ref=e663]
+                  - 'link "Permalink: 1. Clone the Project" [ref=e664] [cursor=pointer]':
+                    - /url: "#1-clone-the-project"
+                - generic [ref=e667]:
+                  - generic [ref=e668]: git clone https://github.com/jason-jj-li/auto_sim_ai.git cd auto_sim_ai
+                  - button "Copy code to clipboard" [ref=e670] [cursor=pointer]
+                - generic [ref=e674]:
+                  - heading "2. Install Dependencies" [level=3] [ref=e675]
+                  - 'link "Permalink: 2. Install Dependencies" [ref=e676] [cursor=pointer]':
+                    - /url: "#2-install-dependencies"
+                - generic [ref=e679]:
+                  - generic [ref=e680]:
+                    - generic [ref=e681]: "# Create a virtual environment (recommended)"
+                    - text: python -m venv venv source venv/bin/activate
+                    - generic [ref=e682]: "# Windows: venv\\Scripts\\activate"
+                    - generic [ref=e683]: "# Install runtime requirements"
+                    - text: pip install -r requirements.txt
+                  - button "Copy code to clipboard" [ref=e685] [cursor=pointer]
+                - paragraph [ref=e689]: "Or use the automated setup script:"
+                - generic [ref=e690]:
+                  - generic [ref=e691]: chmod +x setup.sh ./setup.sh
+                  - button "Copy code to clipboard" [ref=e693] [cursor=pointer]
+                - generic [ref=e697]:
+                  - heading "3. Configure LLM Access" [level=3] [ref=e698]
+                  - 'link "Permalink: 3. Configure LLM Access" [ref=e699] [cursor=pointer]':
+                    - /url: "#3-configure-llm-access"
+                - paragraph [ref=e702]:
+                  - strong [ref=e703]: "Option A: LM Studio (local, recommended for development)"
+                - list [ref=e704]:
+                  - listitem [ref=e705]:
+                    - text: Download
+                    - link "LM Studio" [ref=e706] [cursor=pointer]:
+                      - /url: https://lmstudio.ai/
+                    - text: .
+                  - listitem [ref=e707]:
+                    - text: Install a compatible model (
+                    - code [ref=e708]: mistral-7b-instruct
+                    - text: ","
+                    - code [ref=e709]: llama-2-7b-chat
+                    - text: ", or any 7B+ model)."
+                  - listitem [ref=e710]:
+                    - text: Open the "Local Server" tab, select the model, click
+                    - strong [ref=e711]: Start Server
+                    - text: ", and confirm the endpoint"
+                    - code [ref=e712]: http://localhost:1234
+                    - text: .
+                - paragraph [ref=e713]:
+                  - strong [ref=e714]: "Option B: Hosted APIs (recommended for production)"
+                - generic [ref=e715]:
+                  - generic [ref=e716]:
+                    - text: cp env.example .env
+                    - generic [ref=e717]: "# Edit .env and add your credentials"
+                    - generic [ref=e718]: "# DEEPSEEK_API_KEY=your_api_key"
+                    - generic [ref=e719]: "# OPENAI_API_KEY=your_api_key"
+                  - button "Copy code to clipboard" [ref=e721] [cursor=pointer]
+                - generic [ref=e725]:
+                  - heading "4. Launch the Streamlit App" [level=3] [ref=e726]
+                  - 'link "Permalink: 4. Launch the Streamlit App" [ref=e727] [cursor=pointer]':
+                    - /url: "#4-launch-the-streamlit-app"
+                - generic [ref=e730]:
+                  - generic [ref=e731]: streamlit run app.py
+                  - button "Copy code to clipboard" [ref=e733] [cursor=pointer]
+                - paragraph [ref=e737]:
+                  - text: The UI will open at
+                  - code [ref=e738]: http://localhost:8501
+                  - text: .
+                - generic [ref=e739]:
+                  - heading "First Run Checklist" [level=3] [ref=e740]
+                  - 'link "Permalink: First Run Checklist" [ref=e741] [cursor=pointer]':
+                    - /url: "#first-run-checklist"
+                - list [ref=e744]:
+                  - listitem [ref=e745]:
+                    - strong [ref=e746]: Connect the LLM
+                    - text: – Pick a provider, test the connection, and wait for the "System Ready" status.
+                  - listitem [ref=e747]:
+                    - strong [ref=e748]: Create Personas
+                    - text: – Use "Create Demo Personas", manually add entries, or import from CSV.
+                  - listitem [ref=e749]:
+                    - strong [ref=e750]: Run a Simulation
+                    - text: – Choose the mode (survey/intervention/A/B), select personas, set questions, and start the run.
+                  - listitem [ref=e751]:
+                    - strong [ref=e752]: Review Results
+                    - text: – Inspect individual responses, explore analytics, and export data for further analysis.
+                - separator [ref=e753]
+                - paragraph
+                - generic [ref=e754]:
+                  - heading "📖 User Guide" [level=2] [ref=e755]
+                  - 'link "Permalink: 📖 User Guide" [ref=e756] [cursor=pointer]':
+                    - /url: "#-user-guide"
+                - generic [ref=e759]:
+                  - heading "Persona Design Best Practices" [level=3] [ref=e760]
+                  - 'link "Permalink: Persona Design Best Practices" [ref=e761] [cursor=pointer]':
+                    - /url: "#persona-design-best-practices"
+                - generic [ref=e764]:
+                  - heading "Create High-Quality Personas" [level=4] [ref=e765]
+                  - 'link "Permalink: Create High-Quality Personas" [ref=e766] [cursor=pointer]':
+                    - /url: "#create-high-quality-personas"
+                - generic [ref=e769]:
+                  - generic [ref=e770]: "# Strong example: specific, detailed, and believable { \"name\": \"Li Ming\", \"age\": 32, \"gender\": \"Male\", \"occupation\": \"Software engineer at a startup\", \"education\": \"BSc Computer Science\", \"location\": \"Beijing\", \"background\": \"Works long hours in a fast-growing tech company. Recently stressed with poor sleep. Enjoys exercise but rarely has time.\", \"personality_traits\": [\"Perfectionist\", \"Responsible\", \"Slightly anxious\"], \"values\": [\"Career growth\", \"Work-life balance\", \"Family health\"] } # Weak example: vague and generic { \"name\": \"John Doe\", \"age\": 30, \"gender\": \"Male\", \"occupation\": \"Engineer\", \"background\": \"Average person\", \"personality_traits\": [\"Normal\"], \"values\": [\"Happiness\"] }"
+                  - button "Copy code to clipboard" [ref=e772] [cursor=pointer]
+                - generic [ref=e776]:
+                  - heading "Ensure Persona Diversity" [level=4] [ref=e777]
+                  - 'link "Permalink: Ensure Persona Diversity" [ref=e778] [cursor=pointer]':
+                    - /url: "#ensure-persona-diversity"
+                - list [ref=e781]:
+                  - listitem [ref=e782]:
+                    - strong [ref=e783]: Age
+                    - text: ": represent multiple age brackets (18–80)"
+                  - listitem [ref=e784]:
+                    - strong [ref=e785]: Gender
+                    - text: ": include male, female, and non-binary identities"
+                  - listitem [ref=e786]:
+                    - strong [ref=e787]: Occupation
+                    - text: ": cover industries and seniority levels"
+                  - listitem [ref=e788]:
+                    - strong [ref=e789]: Education
+                    - text: ": range from high school to graduate degrees"
+                  - listitem [ref=e790]:
+                    - strong [ref=e791]: Location
+                    - text: ": mix of urban, rural, and regional contexts"
+                  - listitem [ref=e792]:
+                    - strong [ref=e793]: Cultural background
+                    - text: ": incorporate different ethnicities, religions, and traditions"
+                - generic [ref=e794]:
+                  - heading "Questionnaire Design Tips" [level=3] [ref=e795]
+                  - 'link "Permalink: Questionnaire Design Tips" [ref=e796] [cursor=pointer]':
+                    - /url: "#questionnaire-design-tips"
+                - generic [ref=e799]:
+                  - heading "Characteristics of Strong Questions" [level=4] [ref=e800]
+                  - 'link "Permalink: Characteristics of Strong Questions" [ref=e801] [cursor=pointer]':
+                    - /url: "#characteristics-of-strong-questions"
+                - paragraph [ref=e804]:
+                  - text: ✅
+                  - strong [ref=e805]: Clear and specific
+                - generic [ref=e806]:
+                  - code [ref=e808]: "Good: In the past two weeks, how many days did you feel down or depressed? Poor: How have you been feeling lately?"
+                  - button "Copy code to clipboard" [ref=e810] [cursor=pointer]
+                - paragraph [ref=e814]:
+                  - text: ✅
+                  - strong [ref=e815]: Avoid double-barreled questions
+                - generic [ref=e816]:
+                  - code [ref=e818]: "Good: How many times do you exercise each week? How long is each session? Poor: How often do you exercise, how long, and at what intensity?"
+                  - button "Copy code to clipboard" [ref=e820] [cursor=pointer]
+                - paragraph [ref=e824]:
+                  - text: ✅
+                  - strong [ref=e825]: Use standardized scales when possible
+                - generic [ref=e826]:
+                  - code [ref=e828]: Never (0) – Rarely (1) – Often (2) – Always (3)
+                  - button "Copy code to clipboard" [ref=e830] [cursor=pointer]
+                - generic [ref=e834]:
+                  - heading "Leverage Built-In Templates" [level=4] [ref=e835]
+                  - 'link "Permalink: Leverage Built-In Templates" [ref=e836] [cursor=pointer]':
+                    - /url: "#leverage-built-in-templates"
+                - paragraph [ref=e839]: "The app ships with validated questionnaires such as:"
+                - list [ref=e840]:
+                  - listitem [ref=e841]:
+                    - strong [ref=e842]: PHQ-9
+                    - text: for depression screening
+                  - listitem [ref=e843]:
+                    - strong [ref=e844]: GAD-7
+                    - text: for anxiety screening
+                  - listitem [ref=e845]:
+                    - strong [ref=e846]: PSS-10
+                    - text: for perceived stress
+                  - listitem [ref=e847]: Additional templates are continuously added
+                - generic [ref=e848]:
+                  - heading "Simulation Settings" [level=3] [ref=e849]
+                  - 'link "Permalink: Simulation Settings" [ref=e850] [cursor=pointer]':
+                    - /url: "#simulation-settings"
+                - generic [ref=e853]:
+                  - heading "Temperature" [level=4] [ref=e854]
+                  - 'link "Permalink: Temperature" [ref=e855] [cursor=pointer]':
+                    - /url: "#temperature"
+                - paragraph [ref=e858]: "Controls output variability:"
+                - list [ref=e859]:
+                  - listitem [ref=e860]:
+                    - strong [ref=e861]: 0.0 – 0.3
+                    - text: ": highly consistent, suited to standardized responses"
+                  - listitem [ref=e862]:
+                    - strong [ref=e863]: 0.5 – 0.7
+                    - text: ": balanced; recommended default for most surveys"
+                  - listitem [ref=e864]:
+                    - strong [ref=e865]: 0.8 – 1.0
+                    - text: ": diverse and creative; use for exploratory studies"
+                - generic [ref=e866]:
+                  - heading "Max Tokens" [level=4] [ref=e867]
+                  - 'link "Permalink: Max Tokens" [ref=e868] [cursor=pointer]':
+                    - /url: "#max-tokens"
+                - list [ref=e871]:
+                  - listitem [ref=e872]:
+                    - strong [ref=e873]: 150–300
+                    - text: ": short answers (Likert items, scale ratings)"
+                  - listitem [ref=e874]:
+                    - strong [ref=e875]: 300–500
+                    - text: ": medium-length responses (short answer questions)"
+                  - listitem [ref=e876]:
+                    - strong [ref=e877]: 500–1000
+                    - text: ": long-form narratives or in-depth interviews"
+                - generic [ref=e878]:
+                  - heading "Parallelism" [level=4] [ref=e879]
+                  - 'link "Permalink: Parallelism" [ref=e880] [cursor=pointer]':
+                    - /url: "#parallelism"
+                - list [ref=e883]:
+                  - listitem [ref=e884]:
+                    - strong [ref=e885]: Small runs (<10 personas)
+                    - text: ": 2–3 concurrent workers"
+                  - listitem [ref=e886]:
+                    - strong [ref=e887]: Medium runs (10–50 personas)
+                    - text: ": 5–10 concurrent workers"
+                  - listitem [ref=e888]:
+                    - strong [ref=e889]: Large runs (>50 personas)
+                    - text: ": 10–15 workers (monitor API rate limits)"
+                - separator [ref=e890]
+                - paragraph
+                - generic [ref=e891]:
+                  - heading "🏗️ Architecture" [level=2] [ref=e892]
+                  - 'link "Permalink: 🏗️ Architecture" [ref=e893] [cursor=pointer]':
+                    - /url: "#️-architecture"
+                - paragraph [ref=e896]:
+                  - text: Refer to the detailed
+                  - strong [ref=e897]:
+                    - link "Architecture Guide" [ref=e898] [cursor=pointer]:
+                      - /url: /jason-jj-li/auto_sim_ai/blob/main/docs/en/architecture/README.md
+                  - text: for diagrams and deep dives.
+                - generic [ref=e899]:
+                  - heading "Project Layout" [level=3] [ref=e900]
+                  - 'link "Permalink: Project Layout" [ref=e901] [cursor=pointer]':
+                    - /url: "#project-layout"
+                - generic [ref=e904]:
+                  - code [ref=e906]: "auto_sim_ai/ ├── app.py # Streamlit entry point ├── pages/ # Multi-page UI │ ├── 1_Setup.py # Persona management │ ├── 2_Simulation.py # Simulation workflows │ └── 3_Results.py # Results visualization ├── src/ # Core engine modules │ ├── llm_client.py # LLM clients (sync & async) │ ├── persona.py # Persona model utilities │ ├── simulation.py # Simulation orchestration │ ├── storage.py # Persistent storage helpers │ ├── cache.py # Response caching layer │ ├── checkpoint.py # Pause/resume checkpoints │ ├── scoring.py # Standardized scoring utilities │ ├── ab_testing.py # A/B testing helpers │ ├── intervention_study.py # Legacy intervention engine │ ├── longitudinal_study.py # Recommended longitudinal engine │ ├── persona_generator.py # Batch persona generation │ ├── survey_templates.py # Questionnaire templates │ ├── survey_config.py # Survey configuration schemas │ ├── tools.py # Tool registry │ ├── ui_components.py # Shared Streamlit widgets │ ├── styles.py # Design system definitions │ └── validators.py # Input validation rules ├── data/ # Working data artifacts │ ├── personas/ # Persona definitions │ ├── results/ # Simulation outputs │ ├── cache/ # Cached LLM responses │ ├── checkpoints/ # Checkpoint snapshots │ └── survey_configs/ # Survey configuration bundles ├── docs/ # Multilingual documentation ├── tests/ # Automated test suite ├── requirements.txt # Runtime dependencies └── pytest.ini # Pytest configuration"
+                  - button "Copy code to clipboard" [ref=e908] [cursor=pointer]
+                - generic [ref=e912]:
+                  - heading "Core Modules" [level=3] [ref=e913]
+                  - 'link "Permalink: Core Modules" [ref=e914] [cursor=pointer]':
+                    - /url: "#core-modules"
+                - list [ref=e917]:
+                  - listitem [ref=e918]:
+                    - strong [ref=e919]:
+                      - code [ref=e920]: llm_client.py
+                    - text: – Unified sync/async clients compatible with LM Studio and OpenAI-style APIs.
+                  - listitem [ref=e921]:
+                    - strong [ref=e922]:
+                      - code [ref=e923]: simulation.py
+                    - text: – Sequential and parallel execution engines with retries, aggregation, and progress callbacks.
+                  - listitem [ref=e924]:
+                    - strong [ref=e925]:
+                      - code [ref=e926]: cache.py
+                    - text: – Hash-based response caching to reuse identical prompts and cut latency and cost.
+                  - listitem [ref=e927]:
+                    - strong [ref=e928]:
+                      - code [ref=e929]: scoring.py
+                    - text: – Automates calculation of standardized scales with support for custom scoring rules.
+                - separator [ref=e930]
+                - paragraph
+                - generic [ref=e931]:
+                  - heading "🔬 Advanced Features" [level=2] [ref=e932]
+                  - 'link "Permalink: 🔬 Advanced Features" [ref=e933] [cursor=pointer]':
+                    - /url: "#-advanced-features"
+                - blockquote [ref=e936]:
+                  - paragraph [ref=e937]:
+                    - text: 💡
+                    - strong [ref=e938]: Tip
+                    - text: ": Additional usage examples are available in the"
+                    - link "API Guide" [ref=e939] [cursor=pointer]:
+                      - /url: /jason-jj-li/auto_sim_ai/blob/main/docs/en/api/README.md
+                    - text: .
+                - generic [ref=e940]:
+                  - heading "1. A/B Testing" [level=3] [ref=e941]
+                  - 'link "Permalink: 1. A/B Testing" [ref=e942] [cursor=pointer]':
+                    - /url: "#1-ab-testing"
+                - generic [ref=e945]:
+                  - generic [ref=e946]: from src import ABTestManager, Condition condition_a = Condition( name="Version A", intervention_text="Meditating 10 minutes daily reduces stress.", questions=["Would you try this method?"] ) condition_b = Condition( name="Version B", intervention_text="Studies show daily 10-minute meditation can cut stress by 30%.", questions=["Would you try this method?"] ) manager = ABTestManager() results = manager.run_test([condition_a, condition_b], personas)
+                  - button "Copy code to clipboard" [ref=e948] [cursor=pointer]
+                - generic [ref=e952]:
+                  - heading "2. Longitudinal Studies" [level=3] [ref=e953]
+                  - 'link "Permalink: 2. Longitudinal Studies" [ref=e954] [cursor=pointer]':
+                    - /url: "#2-longitudinal-studies"
+                - generic [ref=e957]:
+                  - generic [ref=e958]: from src import LongitudinalStudyEngine, WaveConfig, LongitudinalStudyConfig waves = [ WaveConfig( wave_number=1, wave_name="Baseline", questions=["Rate your current stress (1-10)."], days_from_baseline=0 ), WaveConfig( wave_number=2, wave_name="1 Month", questions=["Rate your current stress (1-10)."], days_from_baseline=30, intervention_text="Practice 10 minutes of meditation daily." ) ] config = LongitudinalStudyConfig( study_id="stress", study_name="Stress Intervention", waves=waves ) engine = LongitudinalStudyEngine(llm_client) results = engine.run_study(personas, config)
+                  - button "Copy code to clipboard" [ref=e960] [cursor=pointer]
+                - generic [ref=e964]:
+                  - heading "3. Batch Persona Generation" [level=3] [ref=e965]
+                  - 'link "Permalink: 3. Batch Persona Generation" [ref=e966] [cursor=pointer]':
+                    - /url: "#3-batch-persona-generation"
+                - generic [ref=e969]:
+                  - generic [ref=e970]: "from src import PersonaGenerator, DistributionConfig config = DistributionConfig( age_distribution={\"18-30\": 0.3, \"31-50\": 0.4, \"51-70\": 0.3}, gender_distribution={\"Male\": 0.48, \"Female\": 0.52} ) generator = PersonaGenerator() personas = generator.generate_batch( count=100, distribution_config=config, llm_client=client )"
+                  - button "Copy code to clipboard" [ref=e972] [cursor=pointer]
+                - generic [ref=e976]:
+                  - heading "4. Response Validation" [level=3] [ref=e977]
+                  - 'link "Permalink: 4. Response Validation" [ref=e978] [cursor=pointer]':
+                    - /url: "#4-response-validation"
+                - generic [ref=e981]:
+                  - generic [ref=e982]: from src import ResponseValidator, ConsistencyChecker validator = ResponseValidator() checker = ConsistencyChecker() is_valid = validator.validate_response(response, question_type) metrics = checker.check_consistency(persona_responses) print(metrics.consistency_score)
+                  - button "Copy code to clipboard" [ref=e984] [cursor=pointer]
+                - separator [ref=e988]
+                - paragraph
+                - generic [ref=e989]:
+                  - heading "🧰 API Reference" [level=2] [ref=e990]
+                  - 'link "Permalink: 🧰 API Reference" [ref=e991] [cursor=pointer]':
+                    - /url: "#-api-reference"
+                - generic [ref=e994]:
+                  - heading "PersonaManager" [level=3] [ref=e995]
+                  - 'link "Permalink: PersonaManager" [ref=e996] [cursor=pointer]':
+                    - /url: "#personamanager"
+                - generic [ref=e999]:
+                  - generic [ref=e1000]: "from src import PersonaManager manager = PersonaManager() # Add a persona manager.add_persona(persona) # Retrieve all personas personas = manager.get_all_personas() # Filter by attributes young_adults = manager.filter_personas( age_range=(18, 30), manager.load_from_file(\"personas.json\") ### SimulationEngine ```python from src import SimulationEngine gine = SimulationEngine( llm_client=client, cache=cache, # Run a survey survey_result = engine.run_survey( personas=personas, questions=questions, temperature=0.7, max_tokens=300 ) # Run an intervention intervention_result = engine.run_intervention( personas=personas, intervention_text=\"Health intervention content\", questions=followup_questions )"
+                  - button "Copy code to clipboard" [ref=e1002] [cursor=pointer]
+                - paragraph [ref=e1006]: from src import ResultsStorage
+                - paragraph [ref=e1007]: storage = ResultsStorage()
+                - paragraph [ref=e1008]: results = storage.load_all_results()
+                - generic [ref=e1009]:
+                  - heading "Export to CSV" [level=1] [ref=e1010]
+                  - 'link "Permalink: Export to CSV" [ref=e1011] [cursor=pointer]':
+                    - /url: "#export-to-csv"
+                - paragraph [ref=e1014]: storage.export_to_csv(simulation_result, "output.csv")
+                - generic [ref=e1015]:
+                  - heading "Generate analysis scripts" [level=1] [ref=e1016]
+                  - 'link "Permalink: Generate analysis scripts" [ref=e1017] [cursor=pointer]':
+                    - /url: "#generate-analysis-scripts"
+                - paragraph [ref=e1020]: storage.export_analysis_script(simulation_result, "analysis.py", language="python")
+                - generic [ref=e1021]:
+                  - code [ref=e1023]: "--- <a id=\"complete-documentation\"></a> ## 📚 Complete Documentation - [Quick Start Guide](./docs/en/quickstart/README.md) - [API Guide](./docs/en/api/README.md) - [Architecture Guide](./docs/en/architecture/README.md) - [Longitudinal Study Guide](./docs/en/longitudinal/README.md) - [Contributing Guide](./docs/en/contributing/README.md) <a id=\"faq\"></a> ## ❓ FAQ ### How many LLM API calls will I need? ### How long do simulations take? ### How reliable are the results? LLM simulations are exploratory. They excel at prototyping, hypothesis generation, and pretesting questionnaires but do **not** replace human studies. ### How can I improve response quality? 3. Tune temperature for the desired variability. 5. Enable validation and consistency checks. ### What does it cost? - **LM Studio**: free (requires capable local hardware) - **DeepSeek API**: ≈ $0.0001 per 1K tokens - **OpenAI GPT-3.5**: ≈ $0.002 per 1K tokens - **OpenAI GPT-4**: ≈ $0.03 per 1K tokens ### Is data secure? - **Local mode** keeps data on-premises. - **API mode** follows each provider's privacy policy. - Prefer local mode for sensitive datasets. --- <a id=\"contributing\"></a> ## 🤝 Contributing We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for the complete workflow. ### Development Setup ```bash pip install -r requirements-dev.txt pytest black src/ tests/ isort src/ tests/ mypy src/"
+                  - button "Copy code to clipboard" [ref=e1025] [cursor=pointer]
+                - generic [ref=e1029]:
+                  - heading "Report Issues" [level=3] [ref=e1030]
+                  - 'link "Permalink: Report Issues" [ref=e1031] [cursor=pointer]':
+                    - /url: "#report-issues"
+                - paragraph [ref=e1034]:
+                  - text: Encountered a bug or have an idea?
+                  - link "Open an issue" [ref=e1035] [cursor=pointer]:
+                    - /url: https://github.com/jason-jj-li/auto_sim_ai/issues
+                  - text: on GitHub.
+                - separator [ref=e1036]
+                - paragraph
+                - generic [ref=e1037]:
+                  - heading "📄 License" [level=2] [ref=e1038]
+                  - 'link "Permalink: 📄 License" [ref=e1039] [cursor=pointer]':
+                    - /url: "#-license"
+                - paragraph [ref=e1042]:
+                  - text: This project is released under the MIT License. See
+                  - link "LICENSE" [ref=e1043] [cursor=pointer]:
+                    - /url: /jason-jj-li/auto_sim_ai/blob/main/LICENSE
+                  - text: for details.
+                - separator [ref=e1044]
+                - paragraph
+                - generic [ref=e1045]:
+                  - heading "🙏 Acknowledgments" [level=2] [ref=e1046]
+                  - 'link "Permalink: 🙏 Acknowledgments" [ref=e1047] [cursor=pointer]':
+                    - /url: "#-acknowledgments"
+                - list [ref=e1050]:
+                  - listitem [ref=e1051]:
+                    - link "Streamlit" [ref=e1052] [cursor=pointer]:
+                      - /url: https://streamlit.io/
+                    - text: – Python web framework
+                  - listitem [ref=e1053]:
+                    - link "LM Studio" [ref=e1054] [cursor=pointer]:
+                      - /url: https://lmstudio.ai/
+                    - text: – Local LLM runtime
+                  - listitem [ref=e1055]:
+                    - link "OpenAI" [ref=e1056] [cursor=pointer]:
+                      - /url: https://openai.com/
+                    - text: – API compatibility standard
+                  - listitem [ref=e1057]:
+                    - link "DeepSeek" [ref=e1058] [cursor=pointer]:
+                      - /url: https://www.deepseek.com/
+                    - text: – Cost-effective LLM provider
+                - separator [ref=e1059]
+                - paragraph
+                - generic [ref=e1060]:
+                  - heading "📞 Contact" [level=2] [ref=e1061]
+                  - 'link "Permalink: 📞 Contact" [ref=e1062] [cursor=pointer]':
+                    - /url: "#-contact"
+                - list [ref=e1065]:
+                  - listitem [ref=e1066]:
+                    - strong [ref=e1067]: Maintainer
+                    - text: ": Jason Li"
+                  - listitem [ref=e1068]:
+                    - strong [ref=e1069]: GitHub
+                    - text: ":"
+                    - link "@jason-jj-li" [ref=e1070] [cursor=pointer]:
+                      - /url: https://github.com/jason-jj-li
+                  - listitem [ref=e1071]:
+                    - strong [ref=e1072]: Email
+                    - text: ": Please reach out via GitHub issues"
+                - separator [ref=e1073]
+                - generic [ref=e1074]:
+                  - paragraph [ref=e1075]:
+                    - strong [ref=e1076]: ⭐ If this project helps you, please give it a star!
+                  - paragraph [ref=e1077]: Made with ❤️ by Jason Li
+        - generic [ref=e1080]:
+          - generic [ref=e1081]:
+            - heading "About" [level=2] [ref=e1082]
+            - generic [ref=e1083]: No description, website, or topics provided.
+            - heading "Resources" [level=3] [ref=e1084]
+            - link "Readme" [ref=e1086] [cursor=pointer]:
+              - /url: "#readme-ov-file"
+            - link "Activity" [ref=e1090] [cursor=pointer]:
+              - /url: /jason-jj-li/auto_sim_ai/activity
+            - heading "Stars" [level=3] [ref=e1093]
+            - generic [ref=e1095]:
+              - strong [ref=e1098]: "1"
+              - text: star
+            - heading "Watchers" [level=3] [ref=e1099]
+            - generic [ref=e1101]:
+              - strong [ref=e1104]: "0"
+              - text: watching
+            - heading "Forks" [level=3] [ref=e1105]
+            - link [ref=e1107] [cursor=pointer]:
+              - /url: /jason-jj-li/auto_sim_ai/forks
+              - strong [ref=e1111]: "0"
+              - text: forks
+            - link "Report repository" [ref=e1113] [cursor=pointer]:
+              - /url: /contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Fjason-jj-li%2Fauto_sim_ai&report=jason-jj-li+%28user%29
+          - heading "Releases" [level=2] [ref=e1115]
+          - heading "Packages" [level=2] [ref=e1119]
+          - heading "Contributors" [level=2] [ref=e1122]
+          - heading "Languages" [level=2] [ref=e1125]
+    - contentinfo [ref=e1128]:
+      - heading "Footer" [level=2] [ref=e1129]
+      - generic [ref=e1130]:
+        - generic [ref=e1131]:
+          - link "GitHub Homepage" [ref=e1132] [cursor=pointer]:
+            - /url: https://github.com
+          - generic [ref=e1135]: © 2026 GitHub, Inc.
+        - navigation "Footer" [ref=e1136]:
+          - heading "Footer navigation" [level=3] [ref=e1137]
+          - list "Footer navigation" [ref=e1138]:
+            - listitem [ref=e1139]:
+              - link "Terms" [ref=e1140] [cursor=pointer]:
+                - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+            - listitem [ref=e1141]:
+              - link "Privacy" [ref=e1142] [cursor=pointer]:
+                - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+            - listitem [ref=e1143]:
+              - link "Security" [ref=e1144] [cursor=pointer]:
+                - /url: https://github.com/security
+            - listitem [ref=e1145]:
+              - link "Status" [ref=e1146] [cursor=pointer]:
+                - /url: https://www.githubstatus.com/
+            - listitem [ref=e1147]:
+              - link "Community" [ref=e1148] [cursor=pointer]:
+                - /url: https://github.community/
+            - listitem [ref=e1149]:
+              - link "Docs" [ref=e1150] [cursor=pointer]:
+                - /url: https://docs.github.com/
+            - listitem [ref=e1151]:
+              - link "Contact" [ref=e1152] [cursor=pointer]:
+                - /url: https://support.github.com?tags=dotcom-footer
+            - listitem [ref=e1153]:
+              - button "Manage cookies" [ref=e1155] [cursor=pointer]
+            - listitem [ref=e1156]:
+              - button "Do not share my personal information" [ref=e1158] [cursor=pointer]
+  - alert [ref=e1161]

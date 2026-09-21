@@ -210,103 +210,81 @@ export const SITE_DATA = {
   openResources: [
     {
       name: { zh: "QualInsight", en: "QualInsight" },
-      type: { zh: "工具", en: "Tooling" },
+      type: { zh: "定性研究", en: "Qualitative research" },
       desc: {
-        zh: "AI 辅助定性研究平台，支持编码分析、主题识别、情感分析、话语分析、叙事分析等，无需数据库，保护数据隐私。",
-        en: "AI-assisted qualitative research platform supporting coding analysis, theme identification, sentiment analysis, discourse analysis, and narrative analysis. No database required, data privacy assured."
+        zh: "AI 辅助定性研究平台，支持编码分析、主题识别、情感分析、话语分析与叙事分析。无需数据库，数据保留在浏览器会话中。",
+        en: "AI-assisted qualitative research platform for coding, theme identification, sentiment, discourse, and narrative analysis. No database required; data stays in the browser session."
       },
       link: "https://github.com/jason-jj-li/AI_quali",
       version: "v4.1",
-      updated: "2025-01-16",
+      updated: "2026-01-16",
       stack: ["Python", "Streamlit", "Plotly"],
-      useCases: {
+      features: {
         zh: [
-          "🏷️ AI 编码：演绎/归纳编码，分层结构，智能缓存",
-          "🎯 主题分析：AI 主题识别，层次关系，跨案例比较",
-          "📊 可视化：10+ 种图表类型（热力图、网络图等）",
-          "🔬 高级分析：情感、话语、叙事分析，编码信度",
-          "📝 报告生成：IMRAD 结构，双语支持",
-          "💾 导出系统：多格式导出，项目打包"
+          "AI 编码：演绎与归纳编码，分层结构与智能缓存",
+          "主题识别：层次关系梳理与跨案例比较",
+          "可视化：热力图、网络图等 10+ 种图表",
+          "高级分析：情感、话语、叙事分析与编码信度",
+          "报告生成：IMRAD 结构，中英双语",
+          "隐私优先：本地运行或可选云端 LLM，开箱即用"
         ],
         en: [
-          "🏷️ AI Coding: Deductive/Inductive coding, hierarchical structure, smart caching",
-          "🎯 Theme Analysis: AI theme identification, hierarchical relationships, cross-case analysis",
-          "📊 Visualization: 10+ chart types (heatmaps, network graphs)",
-          "🔬 Advanced Analysis: Sentiment, discourse, narrative analysis, coding reliability",
-          "📝 Report Generation: IMRAD structure, bilingual support",
-          "💾 Export System: Multi-format export, project packaging"
-        ]
-      },
-      advantages: {
-        zh: [
-          "✅ 单会话分析：上传 → 分析 → 下载",
-          "✅ 无需数据库：数据存储在浏览器会话中",
-          "✅ 隐私保护：本地运行或可选云端 LLM",
-          "✅ 多 LLM 支持：OpenAI、Anthropic、Deepseek、LM Studio",
-          "✅ 开箱即用：pip install + streamlit run 即可启动",
-          "✅ MIT 许可：开源免费，欢迎贡献"
-        ],
-        en: [
-          "✅ Single-session workflow: Upload → Analyze → Download",
-          "✅ No database: Data stored in browser session",
-          "✅ Privacy: Run locally or optional cloud LLMs",
-          "✅ Multiple LLMs: OpenAI, Anthropic, Deepseek, LM Studio",
-          "✅ Ready to use: pip install + streamlit run",
-          "✅ MIT License: Open source, contributions welcome"
+          "AI coding: deductive and inductive, hierarchical structure, smart caching",
+          "Theme identification: hierarchical relations and cross-case comparison",
+          "Visualization: heatmaps, network graphs, and 10+ chart types",
+          "Advanced analysis: sentiment, discourse, narrative, coding reliability",
+          "Report generation: IMRAD structure, bilingual output",
+          "Privacy-first: run locally or with optional cloud LLMs; ready out of the box"
         ]
       }
     },
     {
       name: { zh: "auto_sim_ai", en: "auto_sim_ai" },
-      type: { zh: "工具", en: "Tooling" },
+      type: { zh: "仿真研究", en: "Simulation research" },
       desc: {
-        zh: "LLM 驱动的虚拟受访者仿真系统，可生成多样化画像，模拟问卷与干预响应。",
-        en: "LLM Simulation Survey System that generates virtual personas to emulate human responses to surveys and interventions."
+        zh: "LLM 驱动的合成受访者研究工作台：构建可追踪的虚拟人群，运行问卷、信息测试、A/B 与纵向追踪四类仿真研究，并提供效度检查与可复现导出。",
+        en: "An LLM-driven synthetic-audience workspace: build a traceable virtual population, run survey, message-testing, A/B, and longitudinal studies, with validity checks and reproducible exports."
       },
       link: "https://github.com/jason-jj-li/auto_sim_ai",
-      version: "v0.3.1",
-      updated: "2024-05-12",
-      stack: ["Python", "Gym-style APIs", "CLI"],
-      useCases: {
+      demo: "https://jason-jj-li-auto-sim-ai-app-gkcvcf.streamlit.app/",
+      version: "v5",
+      updated: "2026-09-21",
+      stack: ["Python", "Streamlit", "OpenAI-compatible APIs"],
+      features: {
         zh: [
-          "🏥 健康干预：测试健康信息在不同人群的影响",
-          "📊 市场调研：快速评估产品/服务反馈",
-          "🎓 教育研究：检验教学效果与学习者画像",
-          "💡 政策分析：预判政策对多元群体的影响",
-          "🧪 A/B 测试：上线前比较多种方案",
-          "📈 原型验证：低成本迭代研究设计"
+          "四类研究模式：问卷、信息测试、A/B 比较、纵向多轮追踪",
+          "画像引擎：按人口分布批量生成，CSV 导入导出，稳定画像 ID",
+          "量表支持：PHQ-9、GAD-7、PSS-10 等自动计分",
+          "可复现上下文：模型、种子、人群与研究配置随结果保存",
+          "效度检查：无效响应保持可见，报告答案塌缩与亚组模式",
+          "多 LLM 后端：LM Studio 本地推理，DeepSeek / OpenAI 兼容 API"
         ],
         en: [
-          "🏥 Health interventions: test messaging across populations",
-          "📊 Market research: rapid feedback on products/services",
-          "🎓 Educational research: assess teaching effectiveness by learner profile",
-          "💡 Policy analysis: anticipate impacts on diverse communities",
-          "🧪 A/B testing: compare approaches before rollout",
-          "📈 Prototype validation: iterate study designs cheaply"
-        ]
-      },
-      advantages: {
-        zh: [
-          "✅ 快速迭代：分钟级完成数百条仿真响应",
-          "✅ 成本友好：免招募受试者成本",
-          "✅ 可复现：精准控制变量便于重复实验",
-          "✅ 多样性：覆盖不同背景、年龄与文化的画像",
-          "✅ 深度洞察：生成定性 + 定量输出",
-          "✅ 灵活部署：本地或云 API 运行"
-        ],
-        en: [
-          "✅ Fast iteration: hundreds of simulated responses in minutes",
-          "✅ Cost-effective: no participant recruitment overhead",
-          "✅ Reproducible: controlled variables for repeatable experiments",
-          "✅ Diverse: personas across backgrounds, ages, cultures",
-          "✅ Deep insights: qualitative + quantitative outputs",
-          "✅ Flexible deployment: run locally or via cloud APIs"
+          "Four study modes: survey, message testing, A/B comparison, longitudinal tracking",
+          "Persona engine: batch generation from demographic distributions, CSV import/export, stable IDs",
+          "Validated scales: automatic scoring for PHQ-9, GAD-7, PSS-10, and more",
+          "Reproducible context: model, seed, population, and study configuration saved with results",
+          "Validity checks: invalid responses stay visible; answer-collapse and subgroup patterns reported",
+          "Multiple LLM backends: local LM Studio inference, DeepSeek / OpenAI-compatible APIs"
         ]
       }
     }
   ],
 
   highlights: [
+    {
+      date: "2026-09-21",
+      title: {
+        zh: "auto_sim_ai v5 发布",
+        en: "auto_sim_ai v5 Released"
+      },
+      desc: {
+        zh: "合成受访者研究工作台整体重写：问卷、信息测试、A/B 与纵向四类研究模式，效度检查与可复现导出，支持在线试用。",
+        en: "A full rewrite of the synthetic-audience workspace: survey, message-testing, A/B, and longitudinal study modes, validity checks, reproducible exports, and a live web app."
+      },
+      tag: { zh: "工具", en: "Tool" },
+      link: "https://jason-jj-li-auto-sim-ai-app-gkcvcf.streamlit.app/"
+    },
     {
       date: "2026-01-16",
       title: {

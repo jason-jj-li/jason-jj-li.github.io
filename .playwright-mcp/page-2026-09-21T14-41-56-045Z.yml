@@ -1,0 +1,83 @@
+- generic [ref=f6e3]:
+  - link "跳转到正文" [ref=f6e4] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f6e5]:
+    - generic [ref=f6e6]:
+      - link "李佳佳 · 首页" [ref=f6e7] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f6e8]: JL.
+        - generic [ref=f6e9]:
+          - text: 李佳佳
+          - generic [ref=f6e10]: ACADEMIC WEBSITE
+      - navigation "主导航" [ref=f6e11]:
+        - link "主页" [ref=f6e12] [cursor=pointer]:
+          - /url: /
+        - link "研究" [ref=f6e13] [cursor=pointer]:
+          - /url: /research
+        - link "工具" [ref=f6e14] [cursor=pointer]:
+          - /url: /tools
+        - link "教学" [ref=f6e15] [cursor=pointer]:
+          - /url: /teaching
+        - link "博客" [ref=f6e16] [cursor=pointer]:
+          - /url: /blog
+      - generic [ref=f6e17]:
+        - button "Switch to English" [ref=f6e18] [cursor=pointer]:
+          - generic [ref=f6e19]: 中
+          - generic [ref=f6e20]: /
+          - generic [ref=f6e21]: EN
+        - link "联系我" [ref=f6e22] [cursor=pointer]:
+          - /url: mailto:lijiajia95@hotmail.com
+  - main [ref=f6e27]:
+    - generic [ref=f6e28]:
+      - generic [ref=f6e29]:
+        - generic [ref=f6e30]:
+          - paragraph [ref=f6e31]: 工具 / 开放资源
+          - heading "自己造的研究工具， 开源给所有人。" [level=1] [ref=f6e32]: 自己造的研究工具，开源给所有人。
+          - paragraph [ref=f6e33]: MIT 许可 · 代码与文档公开
+        - generic [ref=f6e34]:
+          - paragraph [ref=f6e35]: 研究中反复用到的流程，我把它做成工具沉淀下来：从 AI 辅助定性分析到 LLM 合成受访者仿真。欢迎试用、反馈与贡献。
+          - link "全部代码在 GitHub" [ref=f6e36] [cursor=pointer]:
+            - /url: https://github.com/jason-jj-li
+      - generic [ref=f6e40]:
+        - article [ref=f6e41]:
+          - generic [ref=f6e42]:
+            - paragraph [ref=f6e43]: 01 · 定性研究
+            - heading "QualInsight" [level=2] [ref=f6e44]
+            - paragraph [ref=f6e45]: v4.1 · 更新于 2026.01.16
+            - paragraph [ref=f6e46]: Python · Streamlit · Plotly
+            - link "GitHub" [ref=f6e48] [cursor=pointer]:
+              - /url: https://github.com/jason-jj-li/AI_quali
+          - generic [ref=f6e52]:
+            - paragraph [ref=f6e53]: AI 辅助定性研究平台，支持编码分析、主题识别、情感分析、话语分析与叙事分析。无需数据库，数据保留在浏览器会话中。
+            - list [ref=f6e54]:
+              - listitem [ref=f6e55]: AI 编码：演绎与归纳编码，分层结构与智能缓存
+              - listitem [ref=f6e56]: 主题识别：层次关系梳理与跨案例比较
+              - listitem [ref=f6e57]: 可视化：热力图、网络图等 10+ 种图表
+              - listitem [ref=f6e58]: 高级分析：情感、话语、叙事分析与编码信度
+              - listitem [ref=f6e59]: 报告生成：IMRAD 结构，中英双语
+              - listitem [ref=f6e60]: 隐私优先：本地运行或可选云端 LLM，开箱即用
+        - article [ref=f6e61]:
+          - generic [ref=f6e62]:
+            - paragraph [ref=f6e63]: 02 · 仿真研究
+            - heading "auto_sim_ai" [level=2] [ref=f6e64]
+            - paragraph [ref=f6e65]: v5 · 更新于 2026.09.21
+            - paragraph [ref=f6e66]: Python · Streamlit · OpenAI-compatible APIs
+            - generic [ref=f6e67]:
+              - link "GitHub" [ref=f6e68] [cursor=pointer]:
+                - /url: https://github.com/jason-jj-li/auto_sim_ai
+              - link "在线试用" [ref=f6e72] [cursor=pointer]:
+                - /url: https://jason-jj-li-auto-sim-ai-app-gkcvcf.streamlit.app/
+          - generic [ref=f6e76]:
+            - paragraph [ref=f6e77]: LLM 驱动的合成受访者研究工作台：构建可追踪的虚拟人群，运行问卷、信息测试、A/B 与纵向追踪四类仿真研究，并提供效度检查与可复现导出。
+            - list [ref=f6e78]:
+              - listitem [ref=f6e79]: 四类研究模式：问卷、信息测试、A/B 比较、纵向多轮追踪
+              - listitem [ref=f6e80]: 画像引擎：按人口分布批量生成，CSV 导入导出，稳定画像 ID
+              - listitem [ref=f6e81]: 量表支持：PHQ-9、GAD-7、PSS-10 等自动计分
+              - listitem [ref=f6e82]: 可复现上下文：模型、种子、人群与研究配置随结果保存
+              - listitem [ref=f6e83]: 效度检查：无效响应保持可见，报告答案塌缩与亚组模式
+              - listitem [ref=f6e84]: 多 LLM 后端：LM Studio 本地推理，DeepSeek / OpenAI 兼容 API
+  - contentinfo [ref=f6e85]:
+    - link "Jiajia Li." [ref=f6e86] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f6e87]: 健康社会学 · 疾病与健康的社会生产
+    - generic [ref=f6e88]: © 2026 李佳佳

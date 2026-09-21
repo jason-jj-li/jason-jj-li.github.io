@@ -1,0 +1,14 @@
+[    8037ms] [LOG] INITIAL -> (5, 0, ) -> RUNNING @ https://jason-jj-li-auto-sim-ai-app-gkcvcf.streamlit.app/-/build/assets/bufferedData-ymD0tp_Q.js:4
+[    8046ms] [WARNING] Unrecognized feature: 'ambient-light-sensor'. @ https://jason-jj-li-auto-sim-ai-app-gkcvcf.streamlit.app/-/build/assets/cn-BZAAGw-p.js:0
+[    8046ms] [WARNING] Unrecognized feature: 'battery'. @ https://jason-jj-li-auto-sim-ai-app-gkcvcf.streamlit.app/-/build/assets/cn-BZAAGw-p.js:0
+[    8046ms] [WARNING] Unrecognized feature: 'document-domain'. @ https://jason-jj-li-auto-sim-ai-app-gkcvcf.streamlit.app/-/build/assets/cn-BZAAGw-p.js:0
+[    8046ms] [WARNING] Unrecognized feature: 'layout-animations'. @ https://jason-jj-li-auto-sim-ai-app-gkcvcf.streamlit.app/-/build/assets/cn-BZAAGw-p.js:0
+[    8046ms] [WARNING] Unrecognized feature: 'legacy-image-formats'. @ https://jason-jj-li-auto-sim-ai-app-gkcvcf.streamlit.app/-/build/assets/cn-BZAAGw-p.js:0
+[    8046ms] [WARNING] Unrecognized feature: 'oversized-images'. @ https://jason-jj-li-auto-sim-ai-app-gkcvcf.streamlit.app/-/build/assets/cn-BZAAGw-p.js:0
+[    8046ms] [WARNING] Unrecognized feature: 'vr'. @ https://jason-jj-li-auto-sim-ai-app-gkcvcf.streamlit.app/-/build/assets/cn-BZAAGw-p.js:0
+[    8046ms] [WARNING] Unrecognized feature: 'wake-lock'. @ https://jason-jj-li-auto-sim-ai-app-gkcvcf.streamlit.app/-/build/assets/cn-BZAAGw-p.js:0
+[    8338ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ https://jason-jj-li-auto-sim-ai-app-gkcvcf.streamlit.app/~/+/:0
+[    8458ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://jason-jj-li-auto-sim-ai-app-gkcvcf.streamlit.app/api/v2/user/details:0
+[   18868ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://jason-jj-li-auto-sim-ai-app-gkcvcf.streamlit.app/api/v2/user/details:0
+[   44279ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://jason-jj-li-auto-sim-ai-app-gkcvcf.streamlit.app/api/v2/user/details:0
+[   64690ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://jason-jj-li-auto-sim-ai-app-gkcvcf.streamlit.app/api/v2/user/details:0

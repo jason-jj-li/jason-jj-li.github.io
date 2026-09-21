@@ -1,0 +1,139 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e5]:
+    - iframe [ref=f1e6]:
+      - generic [ref=f4e6]:
+        - generic [ref=f4e8]:
+          - generic [ref=f4e9]: ●auto_sim_ai
+          - button [ref=f4e20] [cursor=pointer]:
+            - generic "Home" [ref=f4e21]:
+              - paragraph [ref=f4e25]: Home
+          - button [ref=f4e30] [cursor=pointer]:
+            - generic "Setup" [ref=f4e31]:
+              - paragraph [ref=f4e35]: Setup
+          - button [ref=f4e40] [cursor=pointer]:
+            - generic "Simulate" [ref=f4e41]:
+              - paragraph [ref=f4e45]: Simulate
+          - button [ref=f4e50] [cursor=pointer]:
+            - generic "Results" [ref=f4e51]:
+              - paragraph [ref=f4e55]: Results
+          - generic [ref=f4e62]:
+            - generic [ref=f4e63]: No model — connect on Setup
+            - generic [ref=f4e64]: 0 personas
+            - generic [ref=f4e65]: 0 results
+        - generic [ref=f4e72]:
+          - generic [ref=f4e73]: auto_sim_ai
+          - heading "Synthetic audience research in one workspace." [level=1] [ref=f4e75]:
+            - text: Synthetic audience research in one workspace.
+            - generic [ref=f4e76]:
+              - link "Link to heading":
+                - /url: "#synthetic-audience-research-in-one-workspace"
+          - paragraph [ref=f4e77]: Create a traceable population, run four kinds of AI-assisted studies, and inspect response quality before using the results.
+        - generic [ref=f4e79]:
+          - button [ref=f4e84] [cursor=pointer]:
+            - generic "Set up workspace →" [ref=f4e85]:
+              - paragraph [ref=f4e89]: Set up workspace →
+          - button [ref=f4e94] [cursor=pointer]:
+            - generic "Explore simulation" [ref=f4e95]:
+              - paragraph [ref=f4e99]: Explore simulation
+        - generic [ref=f4e106]:
+          - generic [ref=f4e107]:
+            - generic [ref=f4e108]: "01"
+            - generic [ref=f4e109]:
+              - strong [ref=f4e110]: Set up
+              - paragraph [ref=f4e111]: Connect a model and build the population.
+          - generic [ref=f4e112]:
+            - generic [ref=f4e113]: "02"
+            - generic [ref=f4e114]:
+              - strong [ref=f4e115]: Simulate
+              - paragraph [ref=f4e116]: Configure a study and generate responses.
+          - generic [ref=f4e117]:
+            - generic [ref=f4e118]: "03"
+            - generic [ref=f4e119]:
+              - strong [ref=f4e120]: Analyze
+              - paragraph [ref=f4e121]: Check validity, compare groups, and export.
+        - generic [ref=f4e122]: Study modes
+        - generic [ref=f4e131]:
+          - article [ref=f4e132]:
+            - generic [ref=f4e133]: Survey
+            - heading "Questionnaire simulation" [level=3] [ref=f4e135]:
+              - text: Questionnaire simulation
+              - generic [ref=f4e136]:
+                - link "Link to heading":
+                  - /url: "#questionnaire-simulation"
+            - paragraph [ref=f4e137]: Run open-ended questions or structured scales across the selected population.
+          - article [ref=f4e138]:
+            - generic [ref=f4e139]: Message testing
+            - heading "Reaction testing" [level=3] [ref=f4e141]:
+              - text: Reaction testing
+              - generic [ref=f4e142]:
+                - link "Link to heading":
+                  - /url: "#reaction-testing"
+            - paragraph [ref=f4e143]: Show one message or intervention to each persona, then collect independent reactions.
+          - article [ref=f4e144]:
+            - generic [ref=f4e145]: A/B testing
+            - heading "Condition comparison" [level=3] [ref=f4e147]:
+              - text: Condition comparison
+              - generic [ref=f4e148]:
+                - link "Link to heading":
+                  - /url: "#condition-comparison"
+            - paragraph [ref=f4e149]: Assign weighted or stratified groups and compare numeric outcomes with corrected tests.
+          - article [ref=f4e150]:
+            - generic [ref=f4e151]: Longitudinal
+            - heading "Multi-wave research" [level=3] [ref=f4e153]:
+              - text: Multi-wave research
+              - generic [ref=f4e154]:
+                - link "Link to heading":
+                  - /url: "#multi-wave-research"
+            - paragraph [ref=f4e155]: Follow the same stable persona IDs over time with memory and optional interventions.
+        - generic [ref=f4e156]: What the application keeps visible
+        - generic [ref=f4e165]:
+          - article [ref=f4e166]:
+            - generic [ref=f4e167]: Population
+            - heading "Stable respondent identity" [level=3] [ref=f4e169]:
+              - text: Stable respondent identity
+              - generic [ref=f4e170]:
+                - link "Link to heading":
+                  - /url: "#stable-respondent-identity"
+            - paragraph [ref=f4e171]: Prompt-generated and CSV-imported personas retain demographics, custom fields, and unique IDs.
+          - article [ref=f4e172]:
+            - generic [ref=f4e173]: Execution
+            - heading "Reproducible run context" [level=3] [ref=f4e175]:
+              - text: Reproducible run context
+              - generic [ref=f4e176]:
+                - link "Link to heading":
+                  - /url: "#reproducible-run-context"
+            - paragraph [ref=f4e177]: Saved results include model, seed, population, provider, validation state, and study configuration.
+          - article [ref=f4e178]:
+            - generic [ref=f4e179]: Quality
+            - heading "Auditable synthetic evidence" [level=3] [ref=f4e181]:
+              - text: Auditable synthetic evidence
+              - generic [ref=f4e182]:
+                - link "Link to heading":
+                  - /url: "#auditable-synthetic-evidence"
+            - paragraph [ref=f4e183]: Invalid responses remain visible; answer collapse, subgroup patterns, and condition effects are reported.
+        - generic [ref=f4e187]:
+          - generic [ref=f4e189]:
+            - paragraph [ref=f4e194]:
+              - strong [ref=f4e195]: Ready to begin?
+            - paragraph [ref=f4e200]: Setup places model configuration and population construction together before simulation.
+          - button [ref=f4e205] [cursor=pointer]:
+            - generic "Open Setup →" [ref=f4e206]:
+              - paragraph [ref=f4e210]: Open Setup →
+        - generic [ref=f4e211]: Synthetic responses are exploratory evidence and do not replace human participants or external validation.
+    - link [ref=f1e7] [cursor=pointer]:
+      - /url: https://streamlit.io/cloud
+      - paragraph [ref=f1e8]: Hosted with Streamlit
+    - generic [ref=f1e15]:
+      - paragraph [ref=f1e16]: Created by jason-jj-li
+      - link [ref=f1e17] [cursor=pointer]:
+        - /url: https://share.streamlit.io/user/jason-jj-li
+        - img "App Creator Avatar" [ref=f1e18]
+  - iframe [aria-hidden] [ref=f1e19]:
+    - generic [ref=f2e2]:
+      - generic [ref=f2e11]:
+        - heading [level=1] [ref=f2e12]:
+          - paragraph [ref=f2e13]: Status embed installed correctly
+        - generic [ref=f2e14]: This will be shown if an incident or maintenance is posted on your status page.
+        - link "View latest updates" [ref=f2e16] [cursor=pointer]:
+          - /url: https://www.streamlitstatus.com?utm_source=embed
+      - button [ref=f2e18] [cursor=pointer]
