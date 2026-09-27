@@ -1,0 +1,35 @@
+- generic [ref=e3]:
+  - link "Skip to content" [ref=e4] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - link "Jiajia Li · Home" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e8]: JL.
+        - generic [ref=e9]:
+          - text: Jiajia Li
+          - generic [ref=e10]: ACADEMIC WEBSITE
+      - navigation "Main navigation" [ref=e11]:
+        - link "Home" [ref=e12] [cursor=pointer]:
+          - /url: /
+        - link "Research" [ref=e13] [cursor=pointer]:
+          - /url: /research
+        - link "Tools" [ref=e14] [cursor=pointer]:
+          - /url: /tools
+        - link "Teaching" [ref=e15] [cursor=pointer]:
+          - /url: /teaching
+        - link "Blog" [ref=e16] [cursor=pointer]:
+          - /url: /blog
+      - generic [ref=e17]:
+        - button "切换到中文" [ref=e18] [cursor=pointer]:
+          - generic [ref=e19]: 中
+          - generic [ref=e20]: /
+          - generic [ref=e21]: EN
+        - link "Get in touch" [ref=e22] [cursor=pointer]:
+          - /url: mailto:lijiajia95@hotmail.com
+  - paragraph [ref=e30]: Loading...
+  - contentinfo [ref=e31]:
+    - link "Jiajia Li." [ref=e32] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e33]: Sociology of Health · Illness & Health
+    - generic [ref=e34]: © 2026 Jiajia Li

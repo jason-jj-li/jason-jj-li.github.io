@@ -86,7 +86,7 @@
 
 | 帖 | 标题 | 核心内容 | 教材锚点 |
 | --- | --- | --- | --- |
-| 1.3a | 间接标准化与标准化死亡比 | 何时不得不用间接法(年龄别死亡数太小);SMR 计算与解释;"期望死亡数"的思想 | Carmichael Ch2(p.68) |
+| 1.3a | [间接标准化与标准化死亡比](../content/blog/demographic/demographic-m1l3a-indirect-standardization-smr.ipynb) | 何时不得不用间接法(年龄别死亡数太小);SMR 计算与解释;"期望死亡数"的思想 | Carmichael Ch2(p.68) |
 | 1.3b | 直接 vs 间接:对比与标准化的局限 | 两种方法结果对比;标准化不是万能的(依赖标准人口);何时该直接看分年龄率 | Carmichael Ch2(p.72 Additional Points) |
 
 #### Lesson 1.4 队列生命表(2 帖)
