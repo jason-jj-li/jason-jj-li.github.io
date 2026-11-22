@@ -87,13 +87,13 @@
 | 帖 | 标题 | 核心内容 | 教材锚点 |
 | --- | --- | --- | --- |
 | 1.3a | [间接标准化与标准化死亡比](../content/blog/demographic/demographic-m1l3a-indirect-standardization-smr.ipynb) | 何时不得不用间接法(年龄别死亡数太小);SMR 计算与解释;"期望死亡数"的思想 | Carmichael Ch2(p.68) |
-| 1.3b | 直接 vs 间接:对比与标准化的局限 | 两种方法结果对比;标准化不是万能的(依赖标准人口);何时该直接看分年龄率 | Carmichael Ch2(p.72 Additional Points) |
+| 1.3b | [直接 vs 间接:对比与标准化的局限](../content/blog/demographic/demographic-m1l3b-direct-vs-indirect.ipynb) | 两种方法对比(SMR 即"以自身结构为标准的直接标准化");标准化不是万能的(依赖权重与年龄范围);何时该直接看分年龄率 | Carmichael Ch2(p.72 Additional Points) |
 
 #### Lesson 1.4 队列生命表(2 帖)
 
 | 帖 | 标题 | 核心内容 | 教材锚点 |
 | --- | --- | --- | --- |
-| 1.4a | 跟随一个队列走过一生 | 队列死亡率直觉;死亡概率 q 与死亡率 m 的本质区别;存活概率 | Wachter §3.1–3.2;Berkeley Wk III |
+| 1.4a | [跟随一个队列走过一生](../content/blog/demographic/demographic-m1l4a-cohort-survival.ipynb) | 队列死亡率直觉;死亡概率 q 与死亡率 m 的本质区别;存活概率;q 的换算与不可加性 | Wachter §3.1–3.2;Berkeley Wk III |
 | 1.4b | 生命表各列的直觉:从 King Edward 的孩子们说起 | 历史案例引入生命表;lx、dx、qx 各列含义;队列生命表的局限(要等 100 年)引出时期表 | Wachter §3.3(§3.3.1 案例) |
 
 #### Lesson 1.5 时期生命表(上):逐列构建(3 帖)
