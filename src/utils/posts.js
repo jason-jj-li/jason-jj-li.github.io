@@ -10,14 +10,11 @@ const notebookAssets = import.meta.glob('/content/blog/**/*.ipynb', {
   eager: true,
 });
 
+// Notebook HTML is emitted as a static asset and fetched only when an article
+// page opens. Importing it eagerly would put every notebook (with base64
+// figures) into the blog listing's JavaScript bundle.
 const htmlAssets = import.meta.glob('/content/blog/**/*.html', {
   query: '?url',
-  import: 'default',
-  eager: true,
-});
-
-const htmlRawAssets = import.meta.glob('/content/blog/**/*.html', {
-  query: '?raw',
   import: 'default',
   eager: true,
 });
@@ -118,13 +115,6 @@ function resolveHtmlUrl(mdPath, htmlName) {
   return htmlAssets[key] || null;
 }
 
-function resolveHtmlContent(mdPath, htmlName) {
-  if (!htmlName) return null;
-  const dir = mdPath.slice(0, mdPath.lastIndexOf('/'));
-  const key = `${dir}/${htmlName}`;
-  return htmlRawAssets[key] || null;
-}
-
 function sanitizeHtmlContent(rawHtml) {
   if (!rawHtml) return null;
 
@@ -146,6 +136,31 @@ function sanitizeHtmlContent(rawHtml) {
   return { content, styles };
 }
 
+/**
+ * Fetch a notebook's nbconvert HTML and return its embeddable body and styles.
+ * Called by the article page so listings never download article bodies.
+ * Results are cached per URL for the session, so revisiting an article does not
+ * refetch or re-parse it.
+ */
+const htmlCache = new Map();
+
+export async function loadPostHtml(htmlUrl) {
+  if (!htmlUrl) return null;
+  if (htmlCache.has(htmlUrl)) return htmlCache.get(htmlUrl);
+
+  const request = (async () => {
+    const response = await fetch(htmlUrl);
+    if (!response.ok) {
+      throw new Error(`Failed to load article HTML: ${response.status}`);
+    }
+    return sanitizeHtmlContent(await response.text());
+  })();
+
+  htmlCache.set(htmlUrl, request);
+  request.catch(() => htmlCache.delete(htmlUrl));
+  return request;
+}
+
 function normalizePost(path, raw) {
   const { data, body } = parseFrontmatter(raw);
   const slug = data.slug || path.split('/').pop().replace(/\.md$/, '');
@@ -153,10 +168,6 @@ function normalizePost(path, raw) {
   const sourceValue = data.source === 'jupyter' ? 'notebook' : (data.source || 'markdown');
   const notebookUrl = resolveNotebookUrl(path, data.notebook);
   const htmlUrl = resolveHtmlUrl(path, data.html || data.html_file);
-  const htmlContentRaw = resolveHtmlContent(path, data.html || data.html_file);
-  const sanitized = sanitizeHtmlContent(htmlContentRaw);
-  const htmlContent = sanitized?.content || null;
-  const htmlStyles = sanitized?.styles || [];
   const plainText = markdownToPlainText(body);
   const shortSummary = plainText.length > 220 ? `${plainText.slice(0, 220)}...` : plainText;
 
@@ -167,8 +178,6 @@ function normalizePost(path, raw) {
     source: sourceValue,
     notebookUrl,
     htmlUrl,
-    htmlContent,
-    htmlStyles,
     // 系列相关字段
     series: data.series || null,
     seriesName: {

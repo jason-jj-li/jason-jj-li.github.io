@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Tag, Notebook as NotebookIcon, FileText, Download } from 'lucide-react';
-import { getPostBySlug } from '../utils/posts';
+import { getPostBySlug, loadPostHtml } from '../utils/posts';
 
 const formatDateLabel = (value, lang) => {
   const date = new Date(value);
@@ -16,12 +16,47 @@ const formatDateLabel = (value, lang) => {
 export default function BlogPost({ lang }) {
   const { slug } = useParams();
   const post = getPostBySlug(slug, lang);
+  const htmlUrl = post?.htmlUrl || null;
+  const [htmlContent, setHtmlContent] = useState(null);
+  const [htmlStyles, setHtmlStyles] = useState([]);
+  const [htmlStatus, setHtmlStatus] = useState('idle');
+
+  // Notebook HTML is a static asset that is fetched only for the open article,
+  // so blog listings never download article bodies.
+  useEffect(() => {
+    if (!htmlUrl) {
+      setHtmlContent(null);
+      setHtmlStyles([]);
+      setHtmlStatus('ready');
+      return undefined;
+    }
+    let cancelled = false;
+    setHtmlContent(null);
+    setHtmlStyles([]);
+    setHtmlStatus('loading');
+    loadPostHtml(htmlUrl)
+      .then((result) => {
+        if (cancelled) return;
+        if (!result?.content) {
+          setHtmlStatus('error');
+          return;
+        }
+        setHtmlContent(result.content);
+        setHtmlStyles(result.styles);
+        setHtmlStatus('ready');
+      })
+      .catch(() => {
+        if (!cancelled) setHtmlStatus('error');
+      });
+    return () => { cancelled = true; };
+  }, [slug, htmlUrl]);
 
   useEffect(() => {
-    if (window.MathJax?.typesetPromise) {
-      window.MathJax.typesetPromise();
+    if (htmlContent && window.MathJax?.typesetPromise) {
+      window.MathJax.typesetPromise().catch(() => {});
     }
-  }, [post]);
+  }, [htmlContent]);
+
   const htmlScopedStyles = `
     .post-html { overflow-x: auto; color: #0f172a; }
     .post-html pre {
@@ -130,23 +165,35 @@ export default function BlogPost({ lang }) {
             {post.title}
           </h1>
 
-          {post.htmlContent ? (
+          {htmlContent ? (
             <div className="post-html space-y-4 leading-relaxed text-slate-800" style={{ overflowX: 'auto' }}>
               <style>
                 {htmlScopedStyles}
-                {(post.htmlStyles || []).join('\n')}
+                {htmlStyles.join('\n')}
               </style>
-              <div dangerouslySetInnerHTML={{ __html: post.htmlContent }} />
+              <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
             </div>
           ) : post.htmlUrl ? (
-            <div className="border border-slate-200 rounded-xl overflow-hidden">
-              <iframe
-                src={post.htmlUrl}
-                title={post.title}
-                className="w-full min-h-[600px] md:min-h-[800px] border-0"
-                style={{ height: '70vh' }}
-              />
-            </div>
+            htmlStatus === 'error' ? (
+              <div className="py-14 text-center text-sm text-slate-500">
+                <p className="mb-3">
+                  {lang === 'zh' ? '文章内容加载失败。' : 'The article content could not be loaded.'}
+                </p>
+                <a
+                  href={post.htmlUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 text-indigo-600 hover:underline font-medium"
+                >
+                  {lang === 'zh' ? '在新窗口打开 HTML 版本' : 'Open the HTML version in a new window'}
+                </a>
+              </div>
+            ) : (
+              <div className="py-20 flex flex-col items-center gap-3 text-sm text-slate-500">
+                <div className="w-8 h-8 rounded-full border-2 border-slate-200 border-t-[var(--steel)] animate-spin" />
+                <p>{lang === 'zh' ? '正在加载文章…' : 'Loading article…'}</p>
+              </div>
+            )
           ) : (
             <div
               className="space-y-4 leading-relaxed text-slate-800"
